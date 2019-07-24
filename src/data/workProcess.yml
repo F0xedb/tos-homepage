@@ -1,0 +1,12 @@
+step:
+  - title: "Research and Plan"
+    icon: "images/icons/plan.png"
+    content: "We take the time too research and plan on how to manage and change the arch linux world so that our product help the people trying to use it."
+
+  - title: "Design and Develop"
+    icon: "images/icons/design.png"
+    content: "Even developers like nice UI/UX so we take the time to build products that have nice interfaces."
+
+  - title: "Deliver"
+    icon: "images/icons/print.png"
+    content: "Our live ISO's are a representation of the finished install. They contain every piece of software needed. This makes installation that much easier compaired to arch. We even have custom installer scripts build just for you"

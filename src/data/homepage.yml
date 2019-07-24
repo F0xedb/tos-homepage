@@ -1,0 +1,165 @@
+# banner
+banner:
+  title: "TOS GNU/Linux"
+
+# about
+about:
+  enable: true
+  content: "TOS linux started of as an arch based distribution build for technical linux user. It has a lot of features build in that make arch based installations much more reliable and faster"
+  button:
+    btnText: "know more"
+    URL: "/about"
+
+# skill
+skill:
+  enable: true
+  skillbar:
+    - title: "Encryption"
+      progress: "100%"
+      color: "#f95959"
+
+    - title: "Customizable"
+      progress: "95%"
+      color: "#9473e6"
+
+    - title: "Learning curve"
+      progress: "80%"
+      color: "#17d365"
+
+    - title: "Install time"
+      progress: "10%"
+      color: "#fdb157"
+
+# experience
+experience:
+  enable: true
+  item:
+    - logo: "images/experience/lock.png"
+      title: "Fast and secure"
+      duration: "LUKS encryption"
+
+    - logo: "images/experience/ram.png"
+      title: "Light weight"
+      duration: "Under 200MB of ram"
+
+    - logo: "images/experience/i3.png"
+      title: "Tiling window manager"
+      duration: "i3 or sway"
+
+    - logo: "images/experience/wayland.png"
+      title: "xorg and wayland"
+      duration: "supports xorg and wayland"
+
+# education
+education:
+  enable: false
+  item:
+    - title: "Marters in UX Design"
+      year: "2006"
+      academy: "Masassusets Institute of Technology"
+
+    - title: "Honours in Fine Arts"
+      year: "2004"
+      academy: "Harvard University"
+
+    - title: "Higher Secondary Certificat"
+      year: "2000"
+      academy: "Cardiff School"
+
+    - title: "Secondary School Certificate"
+      year: "1998"
+      academy: "Cardiff School"
+
+# service
+service:
+  enable: false
+  item:
+    - title: "UI Design"
+      icon: "ti-palette"
+      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted: false
+
+    - title: "UX Design"
+      icon: "ti-vector"
+      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted: true
+
+    - title: "Interaction Design"
+      icon: "ti-panel"
+      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted: false
+
+# portfolio
+preview:
+  enable: true
+  item:
+    - image: "images/preview/tos-plain.png"
+      projectURL: "#"
+      id: "tos-plain-modal"
+      title: "TOS desktop"
+
+    - image: "images/preview/tos-plain2.png"
+      projectURL: "#"
+      id: "tos-plain-2-modal"
+      title: "Tos desktop theme 2"
+
+    - image: "images/preview/vscode.png"
+      projectURL: "#"
+      id: "vscode-modal"
+      title: "vs code"
+
+    - image: "images/preview/st.png"
+      projectURL: "#"
+      id: "tos-st-modal"
+      title: "suckless terminal"
+
+    - image: "images/preview/Firefox.png"
+      projectURL: "#"
+      id: "firefox-modal"
+      title: "firefox"
+
+# testimonial
+testimonial:
+  enable: true
+  item:
+    - name: "Tom Meyets"
+      image: "images/about/author.jpg"
+      designation: "Developer"
+      content: "I mainly use TOS for all my development devices. It is very quick to setup my daily routines and so responsive."
+# client slider
+clientSlider:
+  enable: false
+  item:
+    - logo: "images/clients-logo/client-logo-1.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-2.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-3.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-4.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-5.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-1.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-2.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-3.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-4.png"
+      URL: "#"
+
+    - logo: "images/clients-logo/client-logo-5.png"
+      URL: "#"
+
+# blog
+blog:
+  enable: true

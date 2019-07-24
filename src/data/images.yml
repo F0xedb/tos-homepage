@@ -1,0 +1,35 @@
+# portfolio filter list
+list:
+  - title: "General preview"
+    type: "desktop"
+
+  - title: "Applications"
+    type: "apps"
+
+# portfolio item
+item:
+  - image: "images/preview/Firefox.png"
+    projectURL: "#"
+    projectType:
+      - type: "apps"
+      - type: "desktop"
+
+  - image: "images/preview/tos-plain.png"
+    projectURL: "#"
+    projectType:
+      - type: "desktop"
+
+  - image: "images/preview/vscode.png"
+    projectURL: "#"
+    projectType:
+      - type: "apps"
+
+  - image: "images/preview/tos-plain2.png"
+    projectURL: "#"
+    projectType:
+      - type: "desktop"
+
+  - image: "images/preview/st.png"
+    projectURL: "#"
+    projectType:
+      - type: "desktop"
