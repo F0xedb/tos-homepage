@@ -1,0 +1,73 @@
+baseURL = "https://tos.pbfp.xyz"
+languageCode = "en-us"
+title = "Tom OS - GNU/Linux"
+theme = "kross-hugo-portfolio-template"
+summaryLength = "10"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify-icons/themify-icons.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/shuffle/shuffle.min.js"
+
+
+# navigation
+[menu]
+    
+  [[menu.main]]
+  name = "About"
+  URL = "about"
+  weight = 2
+  
+  [[menu.main]]
+  name = "Blog"
+  URL = "blog"
+  weight = 3
+  
+  [[menu.main]]
+  name = "Download"
+  URL = "download"
+  weight = 4
+  
+  [[menu.main]]
+  name = "Contact"
+  URL = "contact"
+  weight = 5
+
+
+[params]
+logo = "images/logo.svg"
+home = "Home"
+# Meta data
+description = "Homepage of tos GNU/Linux"
+author = "Tom Meyers"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+
+  # Preloader
+  [params.preloader]
+  enable = true
+
+  [params.contact]
+  enable = true
+  formAction = "https://formspree.io/tommeyers.tm127@gmail.com" #contact form works with formspree.io
+
+  [params.footer]
+  email = "tom@pbfp.xyz"
