@@ -56,16 +56,16 @@ TOS divides its arguments in a few subcategories
 $ tos screen
 ```
 
-All the suboptions starting with **screen** are screen related
+All the suboptions starting with `screen` are screen related
 
-| option             |                      effect                       |
-| ------------------ | :-----------------------------------------------: |
-| get                 |            Display screen information             |
-| duplicate <in> <out>     |         duplication screen <in> to <out>          |
+| option                |                      effect                       |
+| --------------------- | :-----------------------------------------------: |
+| get                   |            Display screen information             |
+| duplicate <in> <out>  |         duplication screen <in> to <out>          |
 | toggle <in> <on\|off> |       turn the screen called <in> on or off       |
-| reset <in>           |   reset the screen <in> to ist default settings   |
-| resolution <in> <res>   |    set the screen <in> to the resolution <res>    |
-| refresh <in> <rate> | change the frequentie of screen <in> to <rate> Hz |
+| reset <in>            |   reset the screen <in> to ist default settings   |
+| resolution <in> <res> |    set the screen <in> to the resolution <res>    |
+| refresh <in> <rate>   | change the frequentie of screen <in> to <rate> Hz |
 
 #### volume
 
@@ -73,14 +73,14 @@ All the suboptions starting with **screen** are screen related
 $ tos volume
 ```
 
-All the suboptions starting with **volume** are volume related
+All the suboptions starting with `volume` are volume related
 
 | option        |                              effect                               |
 | ------------- | :---------------------------------------------------------------: |
-| get            |                Display current volume information                 |
-| change <num>     | change the volume by the amount of <num> (can be negative values) |
+| get           |                Display current volume information                 |
+| change <num>  | change the volume by the amount of <num> (can be negative values) |
 | set <percent> |              Set the volume to <percent> percentage               |
-| toggle           |            Toggle the current volume channel on or off            |
+| toggle        |            Toggle the current volume channel on or off            |
 
 #### Bluetooth
 
@@ -88,16 +88,16 @@ All the suboptions starting with **volume** are volume related
 $ tos bluetooth
 ```
 
-All the suboptions starting with **-b** are bluetooth related
+All the suboptions starting with `-b` are bluetooth related
 
-| option    |                       effect                       |
-| --------- | :------------------------------------------------: |
-| get        |           Display bluetooth information            |
-| connect <dev> |         connect to the device called <dev>         |
+| option           |                       effect                       |
+| ---------------- | :------------------------------------------------: |
+| get              |           Display bluetooth information            |
+| connect <dev>    |         connect to the device called <dev>         |
 | disconnect <dev> |      disconnect from the device called <dev>       |
-| list       |          list all known and found devices          |
-| list scan  | do the same as above but also scan for new devices |
-| full       |      go into an interactive bluetooth prompt       |
+| list             |          list all known and found devices          |
+| list scan        | do the same as above but also scan for new devices |
+| full             |      go into an interactive bluetooth prompt       |
 
 #### Themes
 
@@ -105,15 +105,15 @@ All the suboptions starting with **-b** are bluetooth related
 $ tos theme
 ```
 
-All the suboptions starting with **theme** are theme related
+All the suboptions starting with `theme` are theme related
 
-| option          |                  effect                  |
-| --------------- | :--------------------------------------: |
-| set <pic>        |        Change the theme to <pic>         |
-| time <time>      | set the timeout for theme randomization  |
-| add <pic>       |   add a picture to the theme database    |
+| option             |                  effect                  |
+| ------------------ | :--------------------------------------: |
+| set <pic>          |        Change the theme to <pic>         |
+| time <time>        | set the timeout for theme randomization  |
+| add <pic>          |   add a picture to the theme database    |
 | delete <pic>       | delete a picture from the theme database |
-| list             |         List all known pictures          |
+| list               |         List all known pictures          |
 | random <on \| off> |    Turn theme randomization on or off    |
 
 This one needs some explination. How can you change a theme based on a picture?
@@ -160,6 +160,22 @@ $ tos theme time 0.5h
 ```
 
 You can work with fractions of time 0.5 hours is effectively 30m
+
+#### Network
+
+```bash
+$ tos network
+```
+
+All options starting with `network` are network related
+
+| option                     |                   effect                    |
+| -------------------------- | :-----------------------------------------: |
+| connect <ssid>             |        connect to wifi by its <ssid>        |
+| device                     |        Show all the network devices         |
+| list                       |         list all network interfaces         |
+| metric <interface> <value> | change the metric of <interface> to <value> |
+| restart                    |           List all known pictures           |
 
 #### MISC
 
