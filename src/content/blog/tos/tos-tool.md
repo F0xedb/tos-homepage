@@ -53,68 +53,68 @@ TOS divides its arguments in a few subcategories
 #### Screen
 
 ```bash
-$ tos -s*
+$ tos screen
 ```
 
-All the suboptions starting with **-s** are screen related
+All the suboptions starting with **screen** are screen related
 
 | option             |                      effect                       |
 | ------------------ | :-----------------------------------------------: |
-| -s                 |            Display screen information             |
-| -sd <in> <out>     |         duplication screen <in> to <out>          |
-| -st <in> <on\|off> |       turn the screen called <in> on or off       |
-| -sr <in>           |   reset the screen <in> to ist default settings   |
-| -sres <in> <res>   |    set the screen <in> to the resolution <res>    |
-| -srate <in> <rate> | change the frequentie of screen <in> to <rate> Hz |
+| get                 |            Display screen information             |
+| duplicate <in> <out>     |         duplication screen <in> to <out>          |
+| toggle <in> <on\|off> |       turn the screen called <in> on or off       |
+| reset <in>           |   reset the screen <in> to ist default settings   |
+| resolution <in> <res>   |    set the screen <in> to the resolution <res>    |
+| refresh <in> <rate> | change the frequentie of screen <in> to <rate> Hz |
 
 #### volume
 
 ```bash
-$ tos -v*
+$ tos volume
 ```
 
-All the suboptions starting with **-v** are volume related
+All the suboptions starting with **volume** are volume related
 
 | option        |                              effect                               |
 | ------------- | :---------------------------------------------------------------: |
-| -v            |                Display current volume information                 |
-| -vc <num>     | change the volume by the amount of <num> (can be negative values) |
-| -vs <percent> |              Set the volume to <percent> percentage               |
-| -vt           |            Toggle the current volume channel on or off            |
+| get            |                Display current volume information                 |
+| change <num>     | change the volume by the amount of <num> (can be negative values) |
+| set <percent> |              Set the volume to <percent> percentage               |
+| toggle           |            Toggle the current volume channel on or off            |
 
 #### Bluetooth
 
 ```bash
-$ tos -b*
+$ tos bluetooth
 ```
 
 All the suboptions starting with **-b** are bluetooth related
 
 | option    |                       effect                       |
 | --------- | :------------------------------------------------: |
-| -b        |           Display bluetooth information            |
-| -bc <dev> |         connect to the device called <dev>         |
-| -bd <dev> |      disconnect from the device called <dev>       |
-| -bl       |          list all known and found devices          |
-| -bl scan  | do the same as above but also scan for new devices |
-| -bf       |      go into an interactive bluetooth prompt       |
+| get        |           Display bluetooth information            |
+| connect <dev> |         connect to the device called <dev>         |
+| disconnect <dev> |      disconnect from the device called <dev>       |
+| list       |          list all known and found devices          |
+| list scan  | do the same as above but also scan for new devices |
+| full       |      go into an interactive bluetooth prompt       |
 
 #### Themes
 
 ```bash
-$ tos -t*
+$ tos theme
 ```
 
-All the suboptions starting with **-t** are theme related
+All the suboptions starting with **theme** are theme related
 
 | option          |                  effect                  |
 | --------------- | :--------------------------------------: |
-| -t <pic>        |        Change the theme to <pic>         |
-| -tt <time>      | set the timeout for theme randomization  |
-| -ta <pic>       |   add a picture to the theme database    |
-| -td <pic>       | delete a picture from the theme database |
-| -tl             |         List all known pictures          |
-| -tr <on \| off> |    Turn theme randomization on or off    |
+| set <pic>        |        Change the theme to <pic>         |
+| time <time>      | set the timeout for theme randomization  |
+| add <pic>       |   add a picture to the theme database    |
+| delete <pic>       | delete a picture from the theme database |
+| list             |         List all known pictures          |
+| random <on \| off> |    Turn theme randomization on or off    |
 
 This one needs some explination. How can you change a theme based on a picture?
 Well that is actually pretty easy. We scan the picture and generate a color pallet out of it. This color pallet will be applied to every application installed onto the system. This way we have uniform coloring across every component of the system.
@@ -125,13 +125,13 @@ Now you know the basic implementation of our theme but what about randomization?
 This one is pretty easy as well. First you must add pictures to a database by doing
 
 ```bash
-$ tos -ta <pic>
+$ tos theme add <pic>
 ```
 
 After that you enable theme randomization
 
 ```bash
-$ tos -tr on
+$ tos theme random on
 ```
 
 Now every 1000 seconds you will get a random theme from the database.
@@ -141,22 +141,22 @@ This will change the theme every x seconds so that you don't get bored of the lo
 Now how do you change the time?
 
 ```bash
-$ tos -tt 3600 # change to 1 hour
-$ tos -tt 10 # change theme every 10 seconds
-$ tos -tt 86400 # change every day
+$ tos theme time 3600 # change to 1 hour
+$ tos t t 10 # change theme every 10 seconds
+$ tos theme time 86400 # change every day
 ```
 
 As you can see typing in large numbers can be a pain because you can only type in seconds but we have a solution. You can change the time in days, hours, minutes and seconds as well All you have to do is use this syntax
 
 ```bash
-$ tos -tt 1d-2h-3m-4s
+$ tos t time 1d-2h-3m-4s
 ```
 
 As you can guess 1d is one day, 2h is 2 hours etc.
 This effectively says that every 1 day and 2 hours 3minutes and 4 seconds the theme will change. But thats not all. You can also do this
 
 ```bash
-$ tos -tt 0.5h
+$ tos theme time 0.5h
 ```
 
 You can work with fractions of time 0.5 hours is effectively 30m
