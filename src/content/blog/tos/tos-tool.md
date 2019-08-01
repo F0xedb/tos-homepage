@@ -183,17 +183,12 @@ All options starting with `network` are network related
 $ tos -*
 ```
 
-All the suboptions starting with **-\*** are misc options
+All the suboptions starting with `-\*` are misc options
 
 | option              |                              effect                              |
 | ------------------- | :--------------------------------------------------------------: |
 | -iso -g             |                     Install TOS graphically                      |
 | -h                  |                      print help information                      |
-| -m <device> <value> | Change the metric of a network device called <device> to <value> |
 | -c                  |                       generate crypto keys                       |
 | -c <user>@<ip>      |              copy your public key to that location               |
-| -cw <ssid>          |                  login to wifi with ssid <ssid>                  |
-| -lw                 |                      list all wifi devices                       |
-| -dl                 |                     list all network devices                     |
-| -r                  |                       Restart your network                       |
 | -rs                 |                  Perform a basic system repair                   |
