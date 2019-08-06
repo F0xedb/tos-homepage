@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Website for tos linux
+> Website for tos linux with blog
 
 ### 🏠 [Homepage](https://tos.pbfp.xyz)
 
