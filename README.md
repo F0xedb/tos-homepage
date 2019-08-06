@@ -44,7 +44,7 @@ docker-compose up
 ```sh
 docker-compose restart hugo
 ```
-
+Don't forget to use the jenkins pipeline
 
 ## Author
 
