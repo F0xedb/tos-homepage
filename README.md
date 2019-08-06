@@ -2,17 +2,19 @@
 <p>
 </p>
 
-> Website for tos linux
+> Website for tos linux using hugo
 
 ### 🏠 [Homepage](https://tos.pbfp.xyz)
 
 ## explanation
+
 Deploy this repo on your server. There are 2 containers
 
 * web-server
 * go builder
 
 The web-server hosts our static website
+
 The go builder uses hugo to build the current version of the website.
 
 ## Install
@@ -42,7 +44,7 @@ docker-compose up
 ```sh
 docker-compose restart hugo
 ```
-
+Don't forget to use the jenkins pipeline
 
 ## Author
 
