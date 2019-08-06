@@ -13,6 +13,7 @@ Deploy this repo on your server. There are 2 containers
 * go builder
 
 The web-server hosts our static website
+
 The go builder uses hugo to build the current version of the website.
 
 ## Install
