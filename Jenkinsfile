@@ -1,24 +1,26 @@
 pipeline {
-    agent {
-        docker {
-            image 'jojomi/hugo:latest'
-            args '-v tos_work:/output'
-        }
-    }
+    agent none
     stages {
         stage('clone') {
+            agent {
+              docker {
+                 image 'jojomi/hugo:latest'
+                  args '-v tos_work:/output'
+               }
+            }
             steps{
                 git 'https://github.com/F0xedb/tos-homepage.git'
             }
         }
         stage('Build') {
-            steps {
-                sh 'hugo'
+            agent {
+              docker {
+                 image 'jojomi/hugo:latest'
+                  args '-v tos_work:/output'
+               }
             }
-        }
-        stage('Deliver') {
             steps {
-                sh './deliver.sh'
+                sh 'cd src && hugo --destination="/output"'
             }
         }
     }
