@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+        stage('clone') {
+            steps{
+                git 'https://github.com/F0xedb/tos-homepage.git'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'hugo'
