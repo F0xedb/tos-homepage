@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Website for tos linux with blog
+> Website for tos linux using hugo
 
 ### 🏠 [Homepage](https://tos.pbfp.xyz)
 
@@ -44,7 +44,7 @@ docker-compose up
 ```sh
 docker-compose restart hugo
 ```
-
+Don't forget to use the jenkins pipeline
 
 ## Author
 
