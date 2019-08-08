@@ -4,6 +4,8 @@
 
 > Website for tos linux using hugo
 
+[![Build Status](https://jenkins.pbfp.xyz/buildStatus/icon?job=Hugo)](https://jenkins.pbfp.xyz/job/Hugo/)
+
 ### 🏠 [Homepage](https://tos.pbfp.xyz)
 
 ## explanation
