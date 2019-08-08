@@ -1,3 +1,13 @@
+void setBuildStatus(String message, String state) {
+  step([
+      $class: "GitHubCommitStatusSetter",
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/F0xedb/tos-live"],
+      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status/repo"],
+      errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
+      statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
+  ]);
+}
+
 pipeline {
     agent {
               docker {
@@ -16,5 +26,17 @@ pipeline {
                 sh 'cd src && hugo --destination="/output"'
             }
         }
+    }
+    post {
+        success {
+            setBuildStatus("Build succeeded", "SUCCESS");
+        }
+        unstable {
+            setBuildStatus("Build is unstable", "UNSTABLE");
+        }
+        failure {
+            setBuildStatus("Build failed", "FAILED");
+        }
+        
     }
 }
