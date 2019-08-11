@@ -47,6 +47,8 @@ docker-compose up
 docker-compose restart hugo
 ```
 Don't forget to use the jenkins pipeline
+Your jenkins build will need access to docker.
+Alternatively you can have hugo installed and discard docker 
 
 ## Author
 
