@@ -5,6 +5,7 @@
 > Website for tos linux using hugo
 
 [![Build Status](https://jenkins.pbfp.xyz/buildStatus/icon?job=Hugo)](https://jenkins.pbfp.xyz/job/Hugo/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FF0xedb%2Ftos-homepage.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FF0xedb%2Ftos-homepage?ref=badge_shield)
 
 ### 🏠 [Homepage](https://tos.pbfp.xyz)
 
@@ -62,3 +63,7 @@ Give a ⭐️ if this project helped you!
 
 ---
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FF0xedb%2Ftos-homepage.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FF0xedb%2Ftos-homepage?ref=badge_large)
