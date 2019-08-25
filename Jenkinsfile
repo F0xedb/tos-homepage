@@ -1,7 +1,7 @@
 void setBuildStatus(String message, String state) {
   step([
       $class: "GitHubCommitStatusSetter",
-      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/F0xedb/tos-homepage"],
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/ODEX-TOS/tos-homepage"],
       contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
       errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
       statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('clone') {
             steps{
-                git 'https://github.com/F0xedb/tos-homepage.git'
+                git 'https://github.com/ODEX-TOS/tos-homepage.git'
             }
         }
         stage('Build') {
