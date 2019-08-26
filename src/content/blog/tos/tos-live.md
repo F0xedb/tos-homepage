@@ -56,7 +56,7 @@ We recommend that you test out your daily routine and see if it is feasable.
 Once you are happy with the result and choose to continue you can open the terminal and type
 
 ```bash
-$ tos -iso -g
+$ tos -iso
 ```
 
 This will start the installation. Follow all the steps and you will have a working OS within 15-20 minutes.
@@ -87,7 +87,7 @@ And now you are in a GUI. Use the keybinds you used in the live iso.
 > Note: this section assumes you are familiar with git and repo's
 
 If you wish to customize how your environment looks and feels it can easily be done by forking my dotfiles repo
-https://www.github.com/F0xedb/dotfiles
+https://www.github.com/ODEX-TOS/dotfiles
 The files you should change are the following
 
 - i3/config (to change i3 related stuff like keybindings and window management)
@@ -104,7 +104,7 @@ At least until there are blogposts for these applications.
 #### scripts and binary files
 
 If you build custom script please put them inside the ~/bin folder. That folder houses all scripts that might come in handy later. If you wish to version control it simply fork this repo
-https://www.github.com/F0xedb/helper-scripts
+https://www.github.com/ODEX-TOS/tools
 
 #### TOS update
 
@@ -125,19 +125,19 @@ and check the remotes you might see something like this
 
 ```bash
 $ git remote --verbose
-origin  git@github.com:F0xedb/helper-scripts.git (fetch)
-origin  git@github.com:F0xedb/helper-scripts.git (push)
-fork  git@github.com:forker/helper-scripts.git (fetch)
-fork  git@github.com:forker/helper-scripts.git (push)
+origin  git@github.com:ODEX-TOS/tools.git (fetch)
+origin  git@github.com:ODEX-TOS/tools.git (push)
+fork  git@github.com:forker/tools.git (fetch)
+fork  git@github.com:forker/tools.git (push)
 ```
 
-This means that the updates happen upstream (F0xedb repo)
+This means that the updates happen upstream (ODEX-TOS repo)
 
 You will have to delete my reference to origin and make that reference yours
 
 ```bash
 $ git remote rm origin
-$ git remote add origin git@github.com:forker/helper-scripts.git
+$ git remote add origin git@github.com:forker/tools.git
 ```
 
 Now origin is pointing to your fork and it is included in the updating mechanism.

@@ -177,6 +177,24 @@ All options starting with `network` are network related
 | metric <interface> <value> | change the metric of <interface> to <value> |
 | restart                    |           List all known pictures           |
 
+#### GPG
+
+```bash
+$ tos gpg
+```
+
+All options starting with `gpg` are network related
+
+| option                 |                                  effect                                   |
+| ---------------------- | :-----------------------------------------------------------------------: |
+| info                   |                    Get general information of all keys                    |
+| key                    |                            show keys there id                             |
+| export <key>           |                     export a key by its id to a file                      |
+| import <file>          |                          import a key by a file                           |
+| upload <key> <?server> | upload a key to a server. If server is added then it will use that server |
+| generate               |                              generate a key                               |
+| git                    |                    add a key to your git configuration                    |
+
 #### MISC
 
 ```bash
@@ -185,10 +203,10 @@ $ tos -*
 
 All the suboptions starting with `-\*` are misc options
 
-| option              |                              effect                              |
-| ------------------- | :--------------------------------------------------------------: |
-| -iso -g             |                     Install TOS graphically                      |
-| -h                  |                      print help information                      |
-| -c                  |                       generate crypto keys                       |
-| -c <user>@<ip>      |              copy your public key to that location               |
-| -rs                 |                  Perform a basic system repair                   |
+| option         |                effect                 |
+| -------------- | :-----------------------------------: |
+| -iso -g        |        Install TOS graphically        |
+| -h             |        print help information         |
+| -c             |         generate crypto keys          |
+| -c <user>@<ip> | copy your public key to that location |
+| -rs            |     Perform a basic system repair     |
