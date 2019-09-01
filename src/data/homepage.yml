@@ -122,7 +122,7 @@ preview:
 testimonial:
   enable: true
   item:
-    - name: "Tom Meyets"
+    - name: "Tom Meyers"
       image: "images/about/author.jpg"
       designation: "Developer"
       content: "I mainly use TOS for all my development devices. It is very quick to setup my daily routines and so responsive."
