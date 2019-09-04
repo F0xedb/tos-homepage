@@ -70,4 +70,4 @@ googleAnalitycsID = "Your ID"
   formAction = "https://formspree.io/tommeyers.tm127@gmail.com" #contact form works with formspree.io
 
   [params.footer]
-  email = "tom@pbfp.xyz"
+  email = "tom@odex.be"
