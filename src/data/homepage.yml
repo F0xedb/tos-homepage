@@ -34,19 +34,19 @@ skill:
 experience:
   enable: true
   item:
-    - logo: "images/experience/lock.png"
+    - logo: "images/experience/icon-1.png"
       title: "Fast and secure"
       duration: "LUKS encryption"
 
-    - logo: "images/experience/ram.png"
+    - logo: "images/experience/icon-2.png"
       title: "Light weight"
       duration: "Under 200MB of ram"
 
-    - logo: "images/experience/i3.png"
+    - logo: "images/experience/icon-3.png"
       title: "Tiling window manager"
       duration: "i3 or sway"
 
-    - logo: "images/experience/wayland.png"
+    - logo: "images/experience/icon-4.png"
       title: "xorg and wayland"
       duration: "supports xorg and wayland"
 
