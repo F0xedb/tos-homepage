@@ -26,7 +26,7 @@ Make sure docker and docker-compose are installed
 
 ```sh
 # Launch without traefik
-docker-compose up docker-compose-notraefik.yml
+docker-compose up -f docker-compose-notraefik.yml
 ```
 
 ```sh
