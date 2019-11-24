@@ -44,11 +44,11 @@ experience:
 
     - logo: "images/experience/icon-3.png"
       title: "Tiling window manager"
-      duration: "i3 or sway"
+      duration: "Customized version of wAwesomeWM"
 
     - logo: "images/experience/icon-4.png"
-      title: "xorg and wayland"
-      duration: "supports xorg and wayland"
+      title: "Configuration"
+      duration: "Easy to customize and configure"
 
 # education
 education:
