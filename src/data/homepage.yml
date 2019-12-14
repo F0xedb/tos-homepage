@@ -23,7 +23,7 @@ skill:
       color: "#9473e6"
 
     - title: "Learning curve"
-      progress: "80%"
+      progress: "50%"
       color: "#17d365"
 
     - title: "Install time"
