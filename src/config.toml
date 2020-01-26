@@ -1,4 +1,4 @@
-baseURL = "https://tos.pbfp.xyz"
+baseURL = "https://tos.odex.be"
 languageCode = "en-us"
 title = "Tom OS - GNU/Linux"
 theme = "kross-hugo-portfolio-template"
