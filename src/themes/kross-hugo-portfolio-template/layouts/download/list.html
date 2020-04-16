@@ -1,6 +1,4 @@
-{{ define "main" }}
-
-{{ partial "page-title.html" . }}
+{{ define "main" }} {{ partial "page-title.html" . }}
 
 <style>
   @font-face {
@@ -147,9 +145,18 @@
       display: block;
     }
   }
+  .center {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+  }
   .cell {
     display: table-cell;
     font-size: 1.2rem !important;
+  }
+  .btn-secondary {
+    padding: 5px;
+    font-size: 12px;
   }
   @media screen and (max-width: 768px) {
     .cell {
@@ -244,97 +251,27 @@
               Download now
             </div>
           </div>
+          {{ range .Site.Data.download.iso }}
           <div class="row row-hover text-center">
             <div class="cell" data-title="Name">
-              TOS Live
+              {{.name}}
             </div>
             <div class="cell" data-title="Description">
-              The base iso for your desktop (Legacy edition)
+              {{.desc}}
             </div>
             <div class="cell download-link" data-title="Download">
-              <a
-                class="btn btn-primary"
-                href="https://repo.odex.be/toslive.iso"
-                >Link</a
-              >
+              <a class="btn btn-primary" href="{{.link}}">Download</a>
+              <a class="btn btn-secondary" href="{{.sha}}">sha265</a>
+              <a class="btn btn-secondary" href="{{.gpg}}">GPG</a>
             </div>
           </div>
-          <div class="row row-hover text-center">
-            <div class="cell" data-title="Name">
-              TOS Server
-            </div>
-            <div class="cell" data-title="Description">
-              A minimalist iso for running a server
-            </div>
-            <div class="cell download-link" data-title="Download">
-              <a
-                class="btn btn-primary"
-                href="https://repo.odex.be/tosserver.iso"
-                >Link</a
-              >
-            </div>
-          </div>
-          <div class="row row-hover text-center">
-            <div class="cell" data-title="Name">
-              TOS awesome edition
-            </div>
-            <div class="cell" data-title="Description">
-              A live iso with awesomewm as the frontend (new default).
-            </div>
-            <div class="cell download-link" data-title="Download">
-              <a
-                class="btn btn-primary"
-                href="https://repo.odex.be/toslive-awesome.iso"
-                >Link</a
-              >
-            </div>
-          </div>
-          <div class="row row-hover text-center">
-            <div class="cell" data-title="Name">
-              TOS Live AZERTY edition
-            </div>
-            <div class="cell" data-title="Description">
-              A base iso for your desktop (legacy edition)
-            </div>
-            <div class="cell download-link" data-title="Download">
-              <a
-                class="btn btn-primary"
-                href="https://repo.odex.be/toslive-azerty.iso"
-                >Link</a
-              >
-            </div>
-          </div>
-          <div class="row row-hover text-center">
-            <div class="cell" data-title="Name">
-              TOS Server AZERTY edition
-            </div>
-            <div class="cell" data-title="Description">
-              A minimalist iso for running a server build with the azerty
-              keyboard layout
-            </div>
-            <div class="cell download-link" data-title="Download">
-              <a
-                class="btn btn-primary"
-                href="https://repo.odex.be/tosserver-azerty.iso"
-                >Link</a
-              >
-            </div>
-          </div>
-          <div class="row row-hover text-center">
-            <div class="cell" data-title="Name">
-              TOS Awesome AZERTY edition
-            </div>
-            <div class="cell" data-title="Description">
-              The default tos edition with azerty as the default layout.
-            </div>
-            <div class="cell download-link" data-title="Download">
-              <a
-                class="btn btn-primary"
-                href="https://repo.odex.be/toslive-awesome-azerty.iso"
-                >Link</a
-              >
-            </div>
-          </div>
+          {{ end }}
+        </div>
+        <div class="center">
+          <h3>GPG Key</h3>
+          <a class="btn btn-primary" href="https://repo.odex.be/public.gpg"
+            >Public GPG key</a
+          >
         </div>
       </div>
     </div>
