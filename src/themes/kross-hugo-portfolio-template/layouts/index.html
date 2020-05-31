@@ -5,41 +5,73 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-11 mx-auto">
-        <h1 class="text-white font-tertiary">{{ .Site.Data.homepage.banner.title | safeHTML }}</h1>
+        <h1 class="text-white font-tertiary">
+          {{ .Site.Data.homepage.banner.title | safeHTML }}
+        </h1>
       </div>
     </div>
   </div>
   <div class="layer-bg w-100">
-    <img class="img-fluid w-100" src="{{`images/illustrations/leaf-bg.svg` | relURL}}" alt="bg-shape">
+    <img
+      class="img-fluid w-100"
+      src="{{`images/illustrations/leaf-bg.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l2">
-    <img src="{{`images/illustrations/dots-cyan.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/dots-cyan.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l3">
-    <img src="{{`images/illustrations/leaf-orange.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/leaf-orange.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l4">
-    <img src="{{`images/illustrations/dots-orange.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/dots-orange.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l5">
-    <img src="{{`images/illustrations/leaf-yellow.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/leaf-yellow.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l6">
-    <img src="{{`images/illustrations/leaf-cyan.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/leaf-cyan.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l7">
-    <img src="{{`images/illustrations/dots-group-orange.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/dots-group-orange.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l8">
-    <img src="{{`images/illustrations/leaf-pink-round.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/leaf-pink-round.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <div class="layer" id="l9">
-    <img src="{{`images/illustrations/leaf-cyan-2.svg` | relURL}}" alt="bg-shape">
+    <img
+      src="{{`images/illustrations/leaf-cyan-2.svg` | relURL}}"
+      alt="bg-shape"
+    />
   </div>
   <!-- social icon -->
   <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
     {{ range .Site.Data.homepage.banner.socialLinks }}
-    <li class="mb-3"><a class="text-white" href="{{.URL}}"><i class="{{.icon}}"></i></a></li>
+    <li class="mb-3">
+      <a class="text-white" href="{{.URL}}"><i class="{{.icon}}"></i></a>
+    </li>
     {{ end }}
   </ul>
   <!-- /social icon -->
@@ -55,18 +87,16 @@
         {{ with .Site.Data.homepage.about }}
         <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
         {{ with .button }}
-        <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.btnText}}</a>
-        {{ end }}
-        {{ end }}
+        <a href="{{ .URL | absURL }}" class="btn btn-transparent"
+          >{{.btnText}}</a
+        >
+        {{ end }} {{ end }}
       </div>
     </div>
   </div>
 </section>
 <!-- /about -->
-{{ end }}
-
-
-{{ if .Site.Data.homepage.preview.enable }}
+{{ end }} {{ if .Site.Data.homepage.preview.enable }}
 <!-- portfolio -->
 <section class="section">
   <div class="container">
@@ -79,10 +109,19 @@
       {{ range .Site.Data.homepage.preview.item }}
       <div class="col-lg-4 col-6 mb-4 shuffle-item">
         <div class="position-relative rounded hover-wrapper">
-          <img src="{{.image | absURL }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
+          <img
+            src="{{.image | absURL }}"
+            alt="portfolio-image"
+            class="img-fluid rounded w-100 d-block"
+          />
           <div class="hover-overlay">
             <div class="hover-content">
-              <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#{{ .id }}">
+              <button
+                type="button"
+                class="btn btn-light btn-sm"
+                data-toggle="modal"
+                data-target="#{{ .id }}"
+              >
                 view fullscreen
               </button>
             </div>
@@ -94,11 +133,7 @@
   </div>
 </section>
 <!-- /portfolio -->
-{{ end }}
-
-
-
-{{ if .Site.Data.homepage.skill.enable }}
+{{ end }} {{ if .Site.Data.homepage.skill.enable }}
 <!-- skills -->
 <section class="section">
   <div class="container">
@@ -109,11 +144,18 @@
       {{ range .Site.Data.homepage.skill.skillbar }}
       <div class="col-lg-3 col-sm-6 mb-4">
         <div class="card shadow text-center">
-          <div class="position-relative rounded-top progress-wrapper" data-color="{{.color}}">
+          <div
+            class="position-relative rounded-top progress-wrapper"
+            data-color="{{.color}}"
+          >
             <div class="wave" data-progress="{{.progress}}"></div>
           </div>
           <div class="card-footer bg-white">
+            {{ if .enable }}
             <h4 class="card-title">{{.title }} ({{.progress}})</h4>
+            {{ else }}
+            <h4 class="card-title">{{.title }}</h4>
+            {{ end }}
           </div>
         </div>
       </div>
@@ -122,9 +164,7 @@
   </div>
 </section>
 <!-- /skills -->
-{{ end }}
-
-{{ if .Site.Data.homepage.experience.enable }}
+{{ end }} {{ if .Site.Data.homepage.experience.enable }}
 <!-- experience -->
 <section class="section">
   <div class="container">
@@ -134,7 +174,7 @@
       </div>
       {{ range .Site.Data.homepage.experience.item }}
       <div class="col-lg-3 col-md-4 text-center">
-        <img class="features-img" src="{{.logo}}" alt="icon">
+        <img class="features-img" src="{{.logo}}" alt="icon" />
         <p class="mb-0">{{.duration}}</p>
         <h4>{{.title }}</h4>
         <h6 class="text-light">{{.company }}</h6>
@@ -144,9 +184,7 @@
   </div>
 </section>
 <!-- ./experience -->
-{{ end }}
-
-{{ if .Site.Data.homepage.education.enable }}
+{{ end }} {{ if .Site.Data.homepage.education.enable }}
 <!-- education -->
 <section class="section position-relative">
   <div class="container">
@@ -158,7 +196,9 @@
       <div class="col-lg-6 col-md-6 mb-80">
         <div class="d-flex">
           <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+            <i
+              class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"
+            ></i>
           </div>
           <div>
             <p class="text-dark mb-1">{{.year}}</p>
@@ -171,13 +211,14 @@
     </div>
   </div>
   <!-- bg image -->
-  <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="bg-image">
+  <img
+    class="img-fluid edu-bg-image w-100"
+    src="{{`images/backgrounds/education-bg.png`|relURL}}"
+    alt="bg-image"
+  />
 </section>
 <!-- /education -->
-{{ end }}
-
-
-{{ if .Site.Data.homepage.service.enable }}
+{{ end }} {{ if .Site.Data.homepage.service.enable }}
 <!-- services -->
 <section class="section">
   <div class="container">
@@ -187,7 +228,9 @@
       </div>
       {{ range .Site.Data.homepage.service.item }}
       <div class="col-md-4 mb-4">
-        <div class="card {{if .highlighted }} active-bg-primary {{end}} hover-shadow shadow">
+        <div
+          class="card {{if .highlighted }} active-bg-primary {{end}} hover-shadow shadow"
+        >
           <div class="card-body text-center px-4 py-5">
             <i class="{{.icon }} icon mb-5 d-inline-block"></i>
             <h4 class="mb-4">{{.title}}</h4>
@@ -200,10 +243,7 @@
   </div>
 </section>
 <!-- /services -->
-{{ end }}
-
-
-{{ if .Site.Data.homepage.testimonial.enable }}
+{{ end }} {{ if .Site.Data.homepage.testimonial.enable }}
 <!-- testimonial -->
 <section class="section bg-primary position-relative testimonial-bg-shapes">
   <div class="container">
@@ -217,8 +257,11 @@
         <div class="text-center testimonial-content">
           <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
           <p class="text-white mb-4">{{.content | markdownify}}</p>
-          <img class="img-fluid rounded-circle mb-4 d-inline-block test-img" src="{{.image | absURL }}"
-            alt="client-image">
+          <img
+            class="img-fluid rounded-circle mb-4 d-inline-block test-img"
+            src="{{.image | absURL }}"
+            alt="client-image"
+          />
           <h4 class="text-white">{{.name }}</h4>
           <h6 class="text-light mb-4">{{ .designation }}</h6>
         </div>
@@ -227,16 +270,39 @@
     </div>
   </div>
   <!-- bg shapes -->
-  <img src="{{`images/backgrounds/map.png` | relURL }}" alt="map" class="img-fluid bg-map">
-  <img src="{{`images/illustrations/dots-group-v.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-1">
-  <img src="{{`images/illustrations/leaf-orange.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-2">
-  <img src="{{`images/illustrations/dots-group-sm.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-3">
-  <img src="{{`images/illustrations/leaf-pink-round.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-4">
-  <img src="{{`images/illustrations/leaf-cyan.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-5">
+  <img
+    src="{{`images/backgrounds/map.png` | relURL }}"
+    alt="map"
+    class="img-fluid bg-map"
+  />
+  <img
+    src="{{`images/illustrations/dots-group-v.svg` | relURL }}"
+    alt="bg-shape"
+    class="img-fluid bg-shape-1"
+  />
+  <img
+    src="{{`images/illustrations/leaf-orange.svg` | relURL }}"
+    alt="bg-shape"
+    class="img-fluid bg-shape-2"
+  />
+  <img
+    src="{{`images/illustrations/dots-group-sm.svg` | relURL }}"
+    alt="bg-shape"
+    class="img-fluid bg-shape-3"
+  />
+  <img
+    src="{{`images/illustrations/leaf-pink-round.svg` | relURL }}"
+    alt="bg-shape"
+    class="img-fluid bg-shape-4"
+  />
+  <img
+    src="{{`images/illustrations/leaf-cyan.svg` | relURL }}"
+    alt="bg-shape"
+    class="img-fluid bg-shape-5"
+  />
 </section>
 <!-- /testimonial -->
 {{ end }}
-
 
 <!--{{ if .Site.Data.homepage.clientSlider.enable }}-->
 <!-- client logo slider -->
@@ -259,12 +325,19 @@
       {{ range first 3 .Data.Pages }}
       <div class="col-lg-4 col-sm-6 mb-4">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="{{.Params.Image | absURL}}" alt="post-thumb">
+          <img
+            class="rounded card-img-top"
+            src="{{.Params.Image | absURL}}"
+            alt="post-thumb"
+          />
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
+            <h4 class="card-title">
+              <a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
             </h4>
             <p class="cars-text">{{.Summary}}</p>
-            <a href="{{.Permalink}}" class="btn btn-xs btn-primary">Read More</a>
+            <a href="{{.Permalink}}" class="btn btn-xs btn-primary"
+              >Read More</a
+            >
           </div>
         </article>
       </div>
@@ -273,26 +346,31 @@
   </div>
 </section>
 <!-- /blog -->
-{{ end }}
-
-{{ if .Site.Data.homepage.preview.enable }}
-{{ range .Site.Data.homepage.preview.item }}
+{{ end }} {{ if .Site.Data.homepage.preview.enable }} {{ range
+.Site.Data.homepage.preview.item }}
 <div class="modal fade" id="{{ .id }}" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-large modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">{{ .title }}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img src="{{.image | absURL }}" alt="portfolio-image" class="modal-img">
+        <img
+          src="{{.image | absURL }}"
+          alt="portfolio-image"
+          class="modal-img"
+        />
       </div>
     </div>
   </div>
 </div>
 <!-- modal preview -->
-{{ end }}
-{{ end }}
-{{ end }}
+{{ end }} {{ end }} {{ end }}

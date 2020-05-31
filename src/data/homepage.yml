@@ -14,19 +14,23 @@ about:
 skill:
   enable: true
   skillbar:
-    - title: "Encryption"
+    - title: "Encryption (LUKS)"
+      enable: false
       progress: "100%"
       color: "#f95959"
 
     - title: "Customizable"
+      enable: true
       progress: "95%"
       color: "#9473e6"
 
     - title: "Learning curve"
+      enable: true
       progress: "50%"
       color: "#17d365"
 
-    - title: "Install time"
+    - title: "Install time (10 Min)"
+      enable: false
       progress: "10%"
       color: "#fdb157"
 
