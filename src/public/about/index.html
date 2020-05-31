@@ -95,127 +95,93 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <p>TOS or Tom Linux is an arch based Distribution. Once you download the live iso you will be greeted by a nice user interface. This interface is I3.
-It looks scarry at first but it actually has a few nice features.
-The thing you need to understand about i3 is that it is a tiling window manager. This means that if you open a window it will ocupy the entire display.
-If you open a second window it will split the size in half. Each part then takes 50% of the window. Here is a short table telling you how to use i3</p>
-<table>
-<thead>
-<tr>
-<th>keybind</th>
-<th align="center">effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mod+enter</td>
-<td align="center">open a terminal</td>
-</tr>
-<tr>
-<td>mod+Shift+w</td>
-<td align="center">open firefox-developer-edition</td>
-</tr>
-<tr>
-<td>mod+arrow_key</td>
-<td align="center">focus to the window that the arrow points to</td>
-</tr>
-<tr>
-<td>mod+Shift+arrow_key</td>
-<td align="center">move window to the direction</td>
-</tr>
-<tr>
-<td>mod+d</td>
-<td align="center">open rofi (used to open apps)</td>
-</tr>
-<tr>
-<td>mod+number</td>
-<td align="center">move to workspace number</td>
-</tr>
-<tr>
-<td>mod+shift+number</td>
-<td align="center">move the current focused window to workspace number</td>
-</tr>
-<tr>
-<td>mod+q</td>
-<td align="center">kill current program</td>
-</tr>
-<tr>
-<td>mod+f</td>
-<td align="center">toggle program into and from fullscreen</td>
-</tr>
-<tr>
-<td>function keys</td>
-<td align="center">perform the standard function</td>
-</tr>
-<tr>
-<td>mod+r</td>
-<td align="center">enter resize mode</td>
-</tr>
-<tr>
-<td>mod+arrow</td>
-<td align="center">In resize mode use arrow keys to resize current window</td>
-</tr>
-<tr>
-<td>mod+esc or mod+enter</td>
-<td align="center">exit resize mode</td>
-</tr>
-</tbody>
-</table>
-<p>As you can see mod+d opens a prompt asking you which app to open.</p>
-<p>Play around with the os and see if you like it.
-If you wish to install it then that can be done. Open a terminal (mod+enter)</p>
-<p>type the followings</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">\$</span> tos -iso -g</code></pre></td></tr></table>
-</div>
-</div>
-<p>This will start the installation. Follow all the instructions.</p>
-<h2 id="tos-features">Tos features</h2>
-<p>Tos has some features which make it better than stock arch</p>
+        <p>TOS is an operating system developed by <code>Tom Meyers</code>
+The idea has been created because of one main reason.
+Installing arch always took a lot of time.
+After you installed it and had all software installed you spend an entire day of work.
+TOS aims to provide all benefits of arch but with next to no time spent preparing everything.
+The project is very similar to <code>Manjaro</code> however they solve this problem a bit different.
+The TOS repo&rsquo;s follow Arch very strictly while Manjaro does not.</p>
+<p>TOS GNU/Linux is an operating system designed to be lightweight yet modern.
+This operating system is designed to be Rolling Release It supports most hardware and can run on low end systems while still retaining all functionality.</p>
+<blockquote>
+<p>These types of operating systems get updates very fast. This means you will always have the latest versions of you software. The drawback is that you need to update frequently (you can still choose when) and that there is a small change something breaks</p>
+</blockquote>
+<h4 id="default-applicationsfeatures">Default applications/features</h4>
+<p>TOS uses the awesome window manager by default combined with sddm as the display manager.
+The default user shell is <code>zsh</code> combined with <code>oh-my-zsh</code> for a better user experience.
+We also install <code>firefox-developer-edition</code> and <code>visual-studio-code-insiders</code> to make your browsing and editing more pleasant.
+<code>tlp</code> is installed by default to consume less energy the normal linux installations.
+We also detect things like <code>ssd trim support</code> to extend the live of your ssd&rsquo;s and support <code>amd-ucode</code> and <code>intel-ucode</code> for near instant zero day cpu bug fixes.
+All other default features compare to the default settings of <code>Arch Linux</code> with a boost of the tos configuration.</p>
+<h4 id="logo">Logo</h4>
+<p>You have to know our logo/mascot</p>
+<!-- raw HTML omitted -->
+<p>We also call him(or her) <code>Archion</code> as a tribute to <code>Arch GNU/Linux</code> the Operating System that <code>TOS</code> is build on top of.</p>
+<p>Below is some information to help you get started!</p>
+<hr>
+<h3 id="getting-started">Getting Started</h3>
 <ul>
-<li>Default LUKS (encryption) support</li>
-<li>Easy to install xorg or wayland (or both)</li>
-<li>Installs AMD, Intel or NVIDIA drivers automatically</li>
-<li>Setup graphical environment (i3 or way)</li>
-<li>Default shell is ZSH with oh-my-zsh</li>
-<li>Custom scripts to make your life easier</li>
-<li>Supports Worg and Wayland</li>
-<li>Live disk works as an installer or rescue cd</li>
-<li>Live disk ships with tos tool (helps with fixing and chrooting)</li>
-<li>More complete kernel (more patches)</li>
-<li>More power efficient</li>
-<li>Change themes easily</li>
-<li>Supports both EFI and MBR</li>
-<li>Much more</li>
+<li>
+<p><a href="https://wiki.odex.be/Intro/download"><strong>Download</strong> | Complete Download guide</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Intro/basics"><strong>Basic usage</strong> | How to work in the TOS environment</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Intro/maintain"><strong>Maintanance</strong> | Everything you need to know to maintain a tos system</a></p>
+</li>
 </ul>
-<h2 id="tos-tool">TOS tool</h2>
-<p>See blog posts for more information</p>
-<p>TOS also ships with a tool called tos. It helps you with basic system management.
-Its features are</p>
+<h3 id="end-users">End users</h3>
 <ul>
-<li>Update system</li>
-<li>Package management</li>
-<li>Change themes / background</li>
-<li>Manage wifi</li>
-<li>Manage bluetooth</li>
-<li>Manage screens</li>
-<li>Manage installation</li>
-<li>Manage volume</li>
-<li>Manage ssh</li>
-<li>Much more</li>
+<li>
+<p><a href="https://wiki.odex.be/Usage/update"><strong>Updates</strong> | Updating your system</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Usage/config"><strong>Configuration</strong> | Configure/tweak your system</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Usage/navigate"><strong>Navigation</strong> | Navigate around your system</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Usage/tool"><strong>TOS tool</strong> | Use the TOS tool to make your life easier</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Usage/tiling"><strong>Tiling Window Manager</strong> | Explain what a tiling window manager is (referenced thoughout this documentation)</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Usage/wifi"><strong>Setting Up Wi-Fi</strong> | Quickly describe how to configure wifi in TOS</a></p>
+</li>
 </ul>
-<p>Things you can also do with tos.</p>
+<h3 id="development">Development</h3>
 <ul>
-<li>Install plain arch. (This makes arch installs much more quickly)</li>
-<li>Fix broken systems</li>
-<li>Quickly customize your system.</li>
-<li>Easy and fast installation.</li>
-<li>Helper tools for arch</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/general"><strong>General</strong> | General development information</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/repo"><strong>Repository</strong> | Everything needed to work on the tos repo</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/iso"><strong>Live iso</strong> | Everything needed to build the live iso</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/tbs"><strong>Tos Build System</strong> | Simplyfy your life with tbs</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/awesome"><strong>Window Manager</strong> | Extend the functionality of AwesomeWM</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/linux"><strong>Linux</strong> | Extend the Linux kernel</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/update"><strong>System Updater</strong> | Automatically mitigate Arch Linux manual interventions</a></p>
+</li>
+<li>
+<p><a href="https://wiki.odex.be/Developer/calamares"><strong>Installer</strong> | Extend the Calamares Installer</a></p>
+</li>
 </ul>
+<hr>
+<p>Thank for looking into TOS</p>
 
       </div>
       <div class="col-md-4 text-center drag-lg-top">

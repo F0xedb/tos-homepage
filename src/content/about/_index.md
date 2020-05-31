@@ -7,81 +7,82 @@ authorImage: "images/about/author.jpg"
 authorSignature: "images/about/signature.png"
 ---
 
-TOS or Tom Linux is an arch based Distribution. Once you download the live iso you will be greeted by a nice user interface. This interface is I3.
-It looks scarry at first but it actually has a few nice features.
-The thing you need to understand about i3 is that it is a tiling window manager. This means that if you open a window it will ocupy the entire display.
-If you open a second window it will split the size in half. Each part then takes 50% of the window. Here is a short table telling you how to use i3
+TOS is an operating system developed by `Tom Meyers`
+The idea has been created because of one main reason.
+Installing arch always took a lot of time.
+After you installed it and had all software installed you spend an entire day of work.
+TOS aims to provide all benefits of arch but with next to no time spent preparing everything.
+The project is very similar to `Manjaro` however they solve this problem a bit different.
+The TOS repo's follow Arch very strictly while Manjaro does not.
 
-| keybind              |                         effect                         |
-| -------------------- | :----------------------------------------------------: |
-| mod+enter            |                    open a terminal                     |
-| mod+Shift+w          |             open firefox-developer-edition             |
-| mod+arrow_key        |      focus to the window that the arrow points to      |
-| mod+Shift+arrow_key  |              move window to the direction              |
-| mod+d                |             open rofi (used to open apps)              |
-| mod+number           |                move to workspace number                |
-| mod+shift+number     |  move the current focused window to workspace number   |
-| mod+q                |                  kill current program                  |
-| mod+f                |        toggle program into and from fullscreen         |
-| function keys        |             perform the standard function              |
-| mod+r                |                   enter resize mode                    |
-| mod+arrow            | In resize mode use arrow keys to resize current window |
-| mod+esc or mod+enter |                    exit resize mode                    |
+TOS GNU/Linux is an operating system designed to be lightweight yet modern.
+This operating system is designed to be Rolling Release It supports most hardware and can run on low end systems while still retaining all functionality.
 
-As you can see mod+d opens a prompt asking you which app to open.
+> These types of operating systems get updates very fast. This means you will always have the latest versions of you software. The drawback is that you need to update frequently (you can still choose when) and that there is a small change something breaks
 
-Play around with the os and see if you like it.
-If you wish to install it then that can be done. Open a terminal (mod+enter)
+#### Default applications/features
 
-type the followings
+TOS uses the awesome window manager by default combined with sddm as the display manager.
+The default user shell is `zsh` combined with `oh-my-zsh` for a better user experience.
+We also install `firefox-developer-edition` and `visual-studio-code-insiders` to make your browsing and editing more pleasant.
+`tlp` is installed by default to consume less energy the normal linux installations.
+We also detect things like `ssd trim support` to extend the live of your ssd's and support `amd-ucode` and `intel-ucode` for near instant zero day cpu bug fixes.
+All other default features compare to the default settings of `Arch Linux` with a boost of the tos configuration.
 
-{{< highlight bash "linenos=table" >}}
-\$ tos -iso -g
-{{< / highlight >}}
+#### Logo
 
-This will start the installation. Follow all the instructions.
+You have to know our logo/mascot
 
-## Tos features
+<a href="https://github.com/ODEX-TOS">
+  <img src="https://tos.odex.be/images/logo.svg" alt="Logo" width="300" height="400" style="display: block; margin-left: auto; margin-right: auto;">
+</a>
 
-Tos has some features which make it better than stock arch
+We also call him(or her) `Archion` as a tribute to `Arch GNU/Linux` the Operating System that `TOS` is build on top of.
 
-- Default LUKS (encryption) support
-- Easy to install xorg or wayland (or both)
-- Installs AMD, Intel or NVIDIA drivers automatically
-- Setup graphical environment (i3 or way)
-- Default shell is ZSH with oh-my-zsh
-- Custom scripts to make your life easier
-- Supports Worg and Wayland
-- Live disk works as an installer or rescue cd
-- Live disk ships with tos tool (helps with fixing and chrooting)
-- More complete kernel (more patches)
-- More power efficient
-- Change themes easily
-- Supports both EFI and MBR
-- Much more
+Below is some information to help you get started!
 
-## TOS tool
+---
 
-See blog posts for more information
+### Getting Started
 
-TOS also ships with a tool called tos. It helps you with basic system management.
-Its features are
+- [**Download** | Complete Download guide](https://wiki.odex.be/Intro/download)
 
-- Update system
-- Package management
-- Change themes / background
-- Manage wifi
-- Manage bluetooth
-- Manage screens
-- Manage installation
-- Manage volume
-- Manage ssh
-- Much more
+- [**Basic usage** | How to work in the TOS environment](https://wiki.odex.be/Intro/basics)
 
-Things you can also do with tos.
+- [**Maintanance** | Everything you need to know to maintain a tos system](https://wiki.odex.be/Intro/maintain)
 
-- Install plain arch. (This makes arch installs much more quickly)
-- Fix broken systems
-- Quickly customize your system.
-- Easy and fast installation.
-- Helper tools for arch
+### End users
+
+- [**Updates** | Updating your system](https://wiki.odex.be/Usage/update)
+
+- [**Configuration** | Configure/tweak your system](https://wiki.odex.be/Usage/config)
+
+- [**Navigation** | Navigate around your system](https://wiki.odex.be/Usage/navigate)
+
+- [**TOS tool** | Use the TOS tool to make your life easier](https://wiki.odex.be/Usage/tool)
+
+- [**Tiling Window Manager** | Explain what a tiling window manager is (referenced thoughout this documentation)](https://wiki.odex.be/Usage/tiling)
+
+- [**Setting Up Wi-Fi** | Quickly describe how to configure wifi in TOS](https://wiki.odex.be/Usage/wifi)
+
+### Development
+
+- [**General** | General development information](https://wiki.odex.be/Developer/general)
+
+- [**Repository** | Everything needed to work on the tos repo](https://wiki.odex.be/Developer/repo)
+
+- [**Live iso** | Everything needed to build the live iso](https://wiki.odex.be/Developer/iso)
+
+- [**Tos Build System** | Simplyfy your life with tbs](https://wiki.odex.be/Developer/tbs)
+
+- [**Window Manager** | Extend the functionality of AwesomeWM](https://wiki.odex.be/Developer/awesome)
+
+- [**Linux** | Extend the Linux kernel](https://wiki.odex.be/Developer/linux)
+
+- [**System Updater** | Automatically mitigate Arch Linux manual interventions](https://wiki.odex.be/Developer/update)
+
+- [**Installer** | Extend the Calamares Installer](https://wiki.odex.be/Developer/calamares)
+
+---
+
+Thank for looking into TOS
