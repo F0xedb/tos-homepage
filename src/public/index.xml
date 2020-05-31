@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tom OS - GNU/Linux</title>
+    <link>https://tos.odex.be/</link>
+    <description>Recent content on Tom OS - GNU/Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jul 2019 17:11:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://tos.odex.be/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash scripting</title>
+      <link>https://tos.odex.be/blog/bash/bash-scripting/</link>
+      <pubDate>Fri, 26 Jul 2019 17:11:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/bash/bash-scripting/</guid>
+      <description>We have arrived at one of the most powerful features of a shell.</description>
+    </item>
+    
+    <item>
+      <title>TOS SERVER</title>
+      <link>https://tos.odex.be/blog/tos/tos-server/</link>
+      <pubDate>Thu, 18 Jul 2019 17:42:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/tos/tos-server/</guid>
+      <description>TOS server is in a PRE-alpha stage. Installer may be buggy</description>
+    </item>
+    
+    <item>
+      <title>Package Build</title>
+      <link>https://tos.odex.be/blog/arch/pkgbuild/</link>
+      <pubDate>Thu, 18 Jul 2019 15:35:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/arch/pkgbuild/</guid>
+      <description>Today we will cover how to build your own packages or applications and maintain them with pacman/yay/tos.</description>
+    </item>
+    
+    <item>
+      <title>Bash extended</title>
+      <link>https://tos.odex.be/blog/bash/bash-extended/</link>
+      <pubDate>Wed, 17 Jul 2019 19:09:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/bash/bash-extended/</guid>
+      <description>Today we will talk about more advanced functionality of the shell.</description>
+    </item>
+    
+    <item>
+      <title>Package manager</title>
+      <link>https://tos.odex.be/blog/arch/pacman/</link>
+      <pubDate>Sat, 13 Jul 2019 19:36:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/arch/pacman/</guid>
+      <description>Every distribution has a package manager, today we will look at pacman/tos.</description>
+    </item>
+    
+    <item>
+      <title>TOS REPO</title>
+      <link>https://tos.odex.be/blog/tos/tos-repo/</link>
+      <pubDate>Sat, 13 Jul 2019 17:43:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/tos/tos-repo/</guid>
+      <description>TOS also has a repo available for you to use. In this blogpost we will be talking on how to setup our repository with your arch based distribution and what the good effects are.</description>
+    </item>
+    
+    <item>
+      <title>Bash basics</title>
+      <link>https://tos.odex.be/blog/bash/bash-basics/</link>
+      <pubDate>Sat, 13 Jul 2019 13:20:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/bash/bash-basics/</guid>
+      <description>Bash is the default shell in most linux systems. TOS also provides bash support but the user is normally put into a zsh environment when starting the terminal (mod+enter) In this blogpost we will cover the basics of using bash.</description>
+    </item>
+    
+    <item>
+      <title>TOS LIVE</title>
+      <link>https://tos.odex.be/blog/tos/tos-live/</link>
+      <pubDate>Thu, 11 Jul 2019 22:32:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/tos/tos-live/</guid>
+      <description>TOS is in a PRE-alpha stage. Installer may be buggy</description>
+    </item>
+    
+    <item>
+      <title>TOS TOOL</title>
+      <link>https://tos.odex.be/blog/tos/tos-tool/</link>
+      <pubDate>Thu, 11 Jul 2019 17:33:00 +0200</pubDate>
+      
+      <guid>https://tos.odex.be/blog/tos/tos-tool/</guid>
+      <description>TOS tool is for when you want to manage your system but keep forgetting all the different tools and commands.</description>
+    </item>
+    
+  </channel>
+</rss>

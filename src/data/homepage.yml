@@ -115,7 +115,7 @@ preview:
     - image: "images/preview/st.png"
       projectURL: "#"
       id: "tos-st-modal"
-      title: "suckless terminal"
+      title: "Simple Terminal"
 
     - image: "images/preview/Firefox.png"
       projectURL: "#"
@@ -166,4 +166,4 @@ clientSlider:
 
 # blog
 blog:
-  enable: true
+  enable: false

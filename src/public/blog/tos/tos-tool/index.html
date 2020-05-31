@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="The tool that manages tos">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">TOS TOOL</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">TOS TOOL</h3>
+          <p class="font-secondary">Published on Jul 11, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/tos-tool.jpg" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>TOS tool is for when you want to manage your system but keep forgetting all the different tools and commands.</p>
+<p>It support a bunch of different things you generally need when managing a system.
+Tools like</p>
+<ul>
+<li>Screen support</li>
+<li>Bluetooth connections</li>
+<li>Wifi connections</li>
+<li>Volume changing</li>
+<li>SSH management</li>
+<li>Package management</li>
+<li>Theme management</li>
+</ul>
+<p>And more.</p>
+<p>TOS solves this by combining most of these tools into one package.</p>
+<p>This blog post will cover how to use TOS Tool and how to install it.</p>
+<blockquote>
+<p>Note: tos tool only works for arch based distributions</p>
+</blockquote>
+<p>Installation is pretty straight forward.</p>
+<p>Run these commands and you have TOS tool installed</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pacman -Syu python-pywal git curl xrandr bluez bluez-utils networkmanager
+$ curl https://raw.githubusercontent.com/F0xedb/helper-scripts/master/tos &gt; /usr/bin/tos
+
+$ tos -h
+</code></pre></div><p>Now you have installed tos together with all its dependencies.</p>
+<p>If you ran</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -h
+</code></pre></div><p>You will see its help page.
+TOS divides its arguments in a few subcategories</p>
+<h4 id="screen">Screen</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos screen
+</code></pre></div><p>All the suboptions starting with <code>screen</code> are screen related</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get</td>
+<td align="center">Display screen information</td>
+</tr>
+<tr>
+<td>duplicate <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">duplication screen <!-- raw HTML omitted --> to <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>toggle <!-- raw HTML omitted --> &lt;on|off&gt;</td>
+<td align="center">turn the screen called <!-- raw HTML omitted --> on or off</td>
+</tr>
+<tr>
+<td>reset <!-- raw HTML omitted --></td>
+<td align="center">reset the screen <!-- raw HTML omitted --> to ist default settings</td>
+</tr>
+<tr>
+<td>resolution <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">set the screen <!-- raw HTML omitted --> to the resolution <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>refresh <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">change the frequentie of screen <!-- raw HTML omitted --> to <!-- raw HTML omitted --> Hz</td>
+</tr>
+</tbody>
+</table>
+<h4 id="volume">volume</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos volume
+</code></pre></div><p>All the suboptions starting with <code>volume</code> are volume related</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get</td>
+<td align="center">Display current volume information</td>
+</tr>
+<tr>
+<td>change <!-- raw HTML omitted --></td>
+<td align="center">change the volume by the amount of <!-- raw HTML omitted --> (can be negative values)</td>
+</tr>
+<tr>
+<td>set <!-- raw HTML omitted --></td>
+<td align="center">Set the volume to <!-- raw HTML omitted --> percentage</td>
+</tr>
+<tr>
+<td>toggle</td>
+<td align="center">Toggle the current volume channel on or off</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bluetooth">Bluetooth</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos bluetooth
+</code></pre></div><p>All the suboptions starting with <code>-b</code> are bluetooth related</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get</td>
+<td align="center">Display bluetooth information</td>
+</tr>
+<tr>
+<td>connect <!-- raw HTML omitted --></td>
+<td align="center">connect to the device called <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>disconnect <!-- raw HTML omitted --></td>
+<td align="center">disconnect from the device called <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>list</td>
+<td align="center">list all known and found devices</td>
+</tr>
+<tr>
+<td>list scan</td>
+<td align="center">do the same as above but also scan for new devices</td>
+</tr>
+<tr>
+<td>full</td>
+<td align="center">go into an interactive bluetooth prompt</td>
+</tr>
+</tbody>
+</table>
+<h4 id="themes">Themes</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos theme
+</code></pre></div><p>All the suboptions starting with <code>theme</code> are theme related</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set <!-- raw HTML omitted --></td>
+<td align="center">Change the theme to <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>time <!-- raw HTML omitted --></td>
+<td align="center">set the timeout for theme randomization</td>
+</tr>
+<tr>
+<td>add <!-- raw HTML omitted --></td>
+<td align="center">add a picture to the theme database</td>
+</tr>
+<tr>
+<td>delete <!-- raw HTML omitted --></td>
+<td align="center">delete a picture from the theme database</td>
+</tr>
+<tr>
+<td>list</td>
+<td align="center">List all known pictures</td>
+</tr>
+<tr>
+<td>random &lt;on | off&gt;</td>
+<td align="center">Turn theme randomization on or off</td>
+</tr>
+</tbody>
+</table>
+<p>This one needs some explination. How can you change a theme based on a picture?
+Well that is actually pretty easy. We scan the picture and generate a color pallet out of it. This color pallet will be applied to every application installed onto the system. This way we have uniform coloring across every component of the system.
+Afterwards we set the desktop background to that image as well.</p>
+<p>Now you know the basic implementation of our theme but what about randomization?</p>
+<p>This one is pretty easy as well. First you must add pictures to a database by doing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos theme add &lt;pic&gt;
+</code></pre></div><p>After that you enable theme randomization</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos theme random on
+</code></pre></div><p>Now every 1000 seconds you will get a random theme from the database.</p>
+<p>This will change the theme every x seconds so that you don&rsquo;t get bored of the looks</p>
+<p>Now how do you change the time?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos theme time <span style="color:#ae81ff">3600</span> <span style="color:#75715e"># change to 1 hour</span>
+$ tos t t <span style="color:#ae81ff">10</span> <span style="color:#75715e"># change theme every 10 seconds</span>
+$ tos theme time <span style="color:#ae81ff">86400</span> <span style="color:#75715e"># change every day</span>
+</code></pre></div><p>As you can see typing in large numbers can be a pain because you can only type in seconds but we have a solution. You can change the time in days, hours, minutes and seconds as well All you have to do is use this syntax</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos t time 1d-2h-3m-4s
+</code></pre></div><p>As you can guess 1d is one day, 2h is 2 hours etc.
+This effectively says that every 1 day and 2 hours 3minutes and 4 seconds the theme will change. But thats not all. You can also do this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos theme time 0.5h
+</code></pre></div><p>You can work with fractions of time 0.5 hours is effectively 30m</p>
+<h4 id="network">Network</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos network
+</code></pre></div><p>All options starting with <code>network</code> are network related</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>connect <!-- raw HTML omitted --></td>
+<td align="center">connect to wifi by its <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>device</td>
+<td align="center">Show all the network devices</td>
+</tr>
+<tr>
+<td>list</td>
+<td align="center">list all network interfaces</td>
+</tr>
+<tr>
+<td>metric <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">change the metric of <!-- raw HTML omitted --> to <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>restart</td>
+<td align="center">List all known pictures</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gpg">GPG</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos gpg
+</code></pre></div><p>All options starting with <code>gpg</code> are network related</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>info</td>
+<td align="center">Get general information of all keys</td>
+</tr>
+<tr>
+<td>key</td>
+<td align="center">show keys there id</td>
+</tr>
+<tr>
+<td>export <!-- raw HTML omitted --></td>
+<td align="center">export a key by its id to a file</td>
+</tr>
+<tr>
+<td>import <!-- raw HTML omitted --></td>
+<td align="center">import a key by a file</td>
+</tr>
+<tr>
+<td>upload <!-- raw HTML omitted --> &lt;?server&gt;</td>
+<td align="center">upload a key to a server. If server is added then it will use that server</td>
+</tr>
+<tr>
+<td>generate</td>
+<td align="center">generate a key</td>
+</tr>
+<tr>
+<td>git</td>
+<td align="center">add a key to your git configuration</td>
+</tr>
+</tbody>
+</table>
+<h4 id="misc">MISC</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -*
+</code></pre></div><p>All the suboptions starting with <code>-\*</code> are misc options</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-iso -g</td>
+<td align="center">Install TOS graphically</td>
+</tr>
+<tr>
+<td>-h</td>
+<td align="center">print help information</td>
+</tr>
+<tr>
+<td>-c</td>
+<td align="center">generate crypto keys</td>
+</tr>
+<tr>
+<td>-c <!-- raw HTML omitted -->@<!-- raw HTML omitted --></td>
+<td align="center">copy your public key to that location</td>
+</tr>
+<tr>
+<td>-rs</td>
+<td align="center">Perform a basic system repair</td>
+</tr>
+</tbody>
+</table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>

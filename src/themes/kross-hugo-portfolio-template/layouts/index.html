@@ -345,9 +345,12 @@
     </div>
   </div>
 </section>
+{{ end }}
 <!-- /blog -->
-{{ end }} {{ if .Site.Data.homepage.preview.enable }} {{ range
-.Site.Data.homepage.preview.item }}
+
+{{ if .Site.Data.homepage.preview.enable }}
+<!-- Loop over data -->
+{{ range .Site.Data.homepage.preview.item }}
 <div class="modal fade" id="{{ .id }}" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-large modal-dialog-centered" role="document">
     <div class="modal-content">

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="TOS repo">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">TOS REPO</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">TOS REPO</h3>
+          <p class="font-secondary">Published on Jul 13, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/pacman.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>TOS also has a repo available for you to use.
+In this blogpost we will be talking on how to setup our repository with your arch based distribution and what the good effects are.</p>
+<blockquote>
+<p>TOS repo brings AUR packages to the main repo and offer custom compilations as well.</p>
+</blockquote>
+<p>Currently TOS repo (from now on called repo) brings only a handfull of packages to your system.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Sl tos | wc -l
+&gt; <span style="color:#ae81ff">12</span>
+</code></pre></div><p>or if you are using arch</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pacman -Sl tos | wc -l
+&gt; <span style="color:#ae81ff">12</span>
+</code></pre></div><p>There are as of writing only 12 packages maintained by the tos project namely these</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ccat
+i3lock-color
+i3lock-next-git
+linux-tos
+linux-tos-docs
+linux-tos-headers
+nerd-fonts-complete
+polybar-git
+r8152-dkms
+siji-git
+ttf-symbola
+visual-studio-code-insiders
+</code></pre></div><p>Why do we manage these packages you may ask?</p>
+<p>Well there are 2 simple reasons.</p>
+<p>First we like to maintain the versions of these packages since they are used in the core version of our os and live iso.</p>
+<p>Secondly we make these packages with custom patches and source code. This means that if you want our version and you didn&rsquo;t use this repo that you need to manually compile the project.
+Here is an example: The linux-tos package provides the linux kernel. We add modules and patches to the kernel to ensure maximum support for x86_64 devices.</p>
+<h3 id="adding-tos-repo-to-your-pacman-list">Adding tos repo to your pacman list</h3>
+<p>This is actually very simple just open the file /etc/pacman.conf
+go to the line containing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[core]
+Include = /etc/pacman.d/mirrorlist
+</code></pre></div><p>And add the following just above it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[tos]
+SigLevel = Optional TrustAll
+Server = https://repo.pbfp.xyz
+</code></pre></div><p>Now save the file and pull in the repo database</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Syu
+</code></pre></div><p>or if you are using arch</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pacman -Syu
+</code></pre></div><p>Now you have tos repo support. To see a list of all packages in the repo run this command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Sl tos
+</code></pre></div><p>And again if you are running arch</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pacman -Sl tos
+</code></pre></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>

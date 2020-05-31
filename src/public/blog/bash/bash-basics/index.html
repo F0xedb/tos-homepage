@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Talking about all the basics you must know before using bash">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Bash basics</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">Bash basics</h3>
+          <p class="font-secondary">Published on Jul 13, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/bash.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>Bash is the default shell in most linux systems. TOS also provides bash support but the user is normally put into a zsh environment when starting the terminal (mod+enter)
+In this blogpost we will cover the basics of using bash. The reason we are going to talk about bash is because as a linux user you need to be familiar with the bash syntax (which also works in zsh) since pretty much every system ships with bash support.</p>
+<h3 id="what-is-bash">What is bash?</h3>
+<p>Bash is the Bourne Again Shell. It is a replacement for the Bourne Shell. A shell is an interpreter for commands. In other words it takes in commands executes them and asks you to give another command. Commands are executable programs that perform a task. In bash you can run commands but also script them. What I mean with scripting is that you can execute commands and based on there behaviour make other commands use them.</p>
+<blockquote>
+<p>If that sounds diffucult to understand don&rsquo;t be frightend. You will gradually learn how to use everything.</p>
+</blockquote>
+<h3 id="getting-started">Getting started</h3>
+<blockquote>
+<p>If you wish to learn and follow this blog please execute the commands listed here.</p>
+</blockquote>
+<p>First things first open a terminal (in tos this is mod+enter, in other linux environments search for terminal).
+The screen you are seeing now is called the terminal. It is used to show you the shell (by default zsh in tos)</p>
+<p>Before starting I would like to explain a few things. Everything that is show below is a command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+&gt; Desktop Documents Pictures Music
+$ cd Documents
+Documents ~ $ ls
+&gt; test.txt test2.txt
+</code></pre></div><p>Every line that starts with $ is the command you need to type in
+every line that starts with &gt; is the output of the command
+If you see a line like Documents ~ $ That is also a line where you need to type a command on . All this extra info tells you that you are in the folder called Documents</p>
+<p>Every section will end with a table showing you the commands you have learned. At the end I will show you a complete table of all commands you have seen in this blog post</p>
+<h3 id="basic-file-management-commands">Basic file management commands</h3>
+<p>From this point on you must understand what a file is.
+A file is a place to store data in. Think of it as a file on your desk it contains text.
+You must also understand a directory.
+Directories are a place where you can store multiple files.
+Think of it like a map, you can put multiple files (or pieces of paper) in a map.
+One other thing you must understand about directories is that you can also put a directory inside another directory.
+So in other words you can put directories and files inside a directory</p>
+<h4 id="your-first-few-command">Your first few command</h4>
+<p>Lets learn how to make a file.</p>
+<p>Execute the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ touch firstfile
+</code></pre></div><p>This will create a file.
+To see the effect run the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+&gt; firstfile
+</code></pre></div><p>As you can see it shows <strong>firstfile</strong> This is the file you have created.
+Now how do we delete a file? This one is very simple. Run the following command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rm firstfile
+</code></pre></div><blockquote>
+<p>You have already learned how to make a file and how to delete it. Good job</p>
+</blockquote>
+<p>But we can do more with files. We can copy it, we can rename the file and ofcourse edit them.
+Lets see how you do that. First we make a file, then copy it and ofcourse see if it is correct</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ touch secondfile <span style="color:#75715e"># make a file called secondfile</span>
+$ ls <span style="color:#75715e"># list the current directory</span>
+&gt; secondfile
+$ cp secondfile copy <span style="color:#75715e"># make a copy of secondfile called copy</span>
+$ ls <span style="color:#75715e"># Check if we made a copy</span>
+&gt; secondfile copy
+</code></pre></div><p>Now we have 2 files in our directory.
+Lets rename the original file to another name.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv secondfile original
+$ ls
+&gt; original copy
+</code></pre></div><p>As we can see <strong>mv</strong> renamed the file <strong>secondfile</strong> to <strong>original</strong> In reality we moved the file to another file.</p>
+<p>The last thing to learn is how to edit the content of a file.
+Run the next code snippet.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano original
+</code></pre></div><p>You will be put into a text editor.
+Type something simple like <strong>hello from within the file</strong></p>
+<blockquote>
+<p>To save the file and exit use these keybindings
+<strong>CTRL+O</strong> to save the content
+<strong>CTRL+X</strong> to exit nano</p>
+</blockquote>
+<p>Great you have changed the content of the file!</p>
+<p>To verify if you changed the file use this command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat original <span style="color:#75715e"># print out the content of original</span>
+&gt; hello from within the file
+</code></pre></div><blockquote>
+<p>Good job you now know how to make files, delete them, list, copy, rename and edit them</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>keybind</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>touch <!-- raw HTML omitted --></td>
+<td align="center">make a file called <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>rm <!-- raw HTML omitted --></td>
+<td align="center">remove the file called <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>ls</td>
+<td align="center">List all content of a directory</td>
+</tr>
+<tr>
+<td>cp <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">copy file1 to the file called new</td>
+</tr>
+<tr>
+<td>mv <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">move original to the file called new</td>
+</tr>
+<tr>
+<td>nano <!-- raw HTML omitted --></td>
+<td align="center">Open the file called <!-- raw HTML omitted --> in the text editor called nano</td>
+</tr>
+<tr>
+<td>cat <!-- raw HTML omitted --></td>
+<td align="center">dump the content of the file into your terminal</td>
+</tr>
+</tbody>
+</table>
+<p>Before going to the next section please get familiar with these command. You will use them a lot in the next few sections.</p>
+<h4 id="directories">Directories</h4>
+<blockquote>
+<p>If you have forgotten commands on how to make files please read the table in the previous section.</p>
+</blockquote>
+<p>Now that you know how to make files the next step is to learn how to navigate around your directorie structure.
+Lets begin by making a new folder</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir firstdir
+$ ls
+&gt; original copy firstdir
+</code></pre></div><p>as you can see we now have the 2 files from the previous section (original and copy) but we see a third entry called firstdir.
+This is called a directory.
+lets open the directory</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd firstdir
+firstdir ~ $ ls
+&gt;
+</code></pre></div><p>As you can see our files are gone? Why is that? Well we have moved inside the directory called firstdir and there are no files in that directory.
+Lets make some!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">firstdir ~ $ touch a b c <span style="color:#75715e"># make 3 files called a, b, c</span>
+firstdir ~ $ ls
+&gt; a b c
+</code></pre></div><blockquote>
+<p>You now created a folder called firstdir with the content a b and c</p>
+</blockquote>
+<p>Lets make a new directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">firstdir ~ $ mkdir secondfolder
+firstdir ~ $ ls
+&gt; a b c secondfolder
+</code></pre></div><p>Now how do we delete folders?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">firstdir ~ $ rmdir secondfolder
+firstdir ~ $ ls
+&gt; a b c
+</code></pre></div><p><strong>rmdir</strong> remove an empty folder
+if you wish to remove a full folder use the following command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rm -rf &lt;folder&gt;
+</code></pre></div><p>Where <strong>&lt;folder&gt;</strong> is the name of the folder to delete</p>
+<blockquote>
+<p>Nice! you can already make folders and remove folders. But as you can see you can quickly forget in which folder you are and where.</p>
+</blockquote>
+<p>Lets start from an empty slate again.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">firstdir ~ $ cd
+$ ls
+&gt; original copy firstdir
+$ rmdir firstdir <span style="color:#75715e"># We cannot remove a directory that contains files</span>
+&gt; firstdir is not an empty directory
+$ rm -rf firstdir <span style="color:#75715e"># this command force deletes a full directory</span>
+$ ls
+&gt; original copy
+</code></pre></div><p>Try to understand what is happening in the code snippet above before continuing.</p>
+<p>Now to keep track where we are we can issue the following command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pwd
+&gt; /home/alpha
+</code></pre></div><p>What does this do?</p>
+<p><strong>/home/alpha</strong> it the current directory we are in.
+home is the parent directory.
+alpha is the directory we are in.
+In other words the directory alpha is in the directory home.</p>
+<p>Lets see an example of that in code</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pwd
+&gt; /home/alpha
+$ mkdir test <span style="color:#75715e"># make a directory called test</span>
+$ cd test <span style="color:#75715e"># go inside that directory</span>
+test ~ $ pwd
+&gt; /home/alpha/test
+</code></pre></div><p>As you can see we moved in the directory test. (test is also inside a directory called alpha which is in the directory home)
+So with cd we can go a directory deeper.
+But cd can do even more . Like how do we go out of the directory called test? back to <strong>/home/alpha</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">test ~ $ pwd
+&gt; /home/alpha/test
+test ~ $ cd ../ <span style="color:#75715e"># move a directory back</span>
+$ pwd
+&gt; /home/alpha
+$ cd test
+test ~ $ pwd
+&gt; /home/alpha/test
+test ~ $ cd ../
+$ pwd
+&gt; /home/alpha
+$ cd ../
+$ pwd
+&gt; /home
+$ cd ../
+$ pwd
+&gt; /
+cd home/alpha/test
+test ~ $ pwd
+&gt; /home/aplha/test
+</code></pre></div><p>The long code snippet above is showing you how to move up or down a directory, how to move multiple directories in one command and how to check the current location in your directory structure.</p>
+<blockquote>
+<p>Good job you have seen even more commands. If you master directories and files you can finally navigate your system in the terminal. Try to get good at this. You will need it!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>keybind</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ls <!-- raw HTML omitted --></td>
+<td align="center">List all content of a directory</td>
+</tr>
+<tr>
+<td>mkdir <!-- raw HTML omitted --></td>
+<td align="center">Make a directory called dir</td>
+</tr>
+<tr>
+<td>rmdir <!-- raw HTML omitted --></td>
+<td align="center">remove a directory called dir</td>
+</tr>
+<tr>
+<td>cd <!-- raw HTML omitted --></td>
+<td align="center">go into the directory called dir</td>
+</tr>
+<tr>
+<td>pwd <!-- raw HTML omitted --></td>
+<td align="center">print the location where we are in the system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="general-commands">general commands</h3>
+<p>Lets see some command that you use to manage your system.</p>
+<blockquote>
+<p>Don&rsquo;t worry these are easier that the file/directory command</p>
+</blockquote>
+<h4 id="lsblk">lsblk</h4>
+<p>lsblk stand for list block devices. It just shows you your hard drives</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsblk
+&gt;NAME     MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sda        8:0    <span style="color:#ae81ff">0</span>  477G  <span style="color:#ae81ff">0</span> disk
+├─sda1     8:1    <span style="color:#ae81ff">0</span>    1G  <span style="color:#ae81ff">0</span> part  /boot
+├─sda2     8:3    <span style="color:#ae81ff">0</span> 15.9G  <span style="color:#ae81ff">0</span> part  <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+└─sda3     8:4    <span style="color:#ae81ff">0</span>  460G  <span style="color:#ae81ff">0</span> part
+</code></pre></div><p>sda is the hard drive (477 Gigabytes)
+this drive has 3 partitions.
+sda1 is the boot partition
+sda2 is the swap partition
+sda3 is the filesystem</p>
+<h4 id="uname">uname</h4>
+<p>uname prints system information</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ uname -a
+&gt; Linux core 5.2.0-TOS-1-tos <span style="color:#75715e">#3 SMP PREEMPT Thu Jul 11 17:49:44 UTC 2019 x86_64 GNU/Linux</span>
+</code></pre></div><p>Linux is the kernel.
+core is the name of the computer.
+5.2.0-TOS-1-tos is the kernel version</p>
+<h4 id="ssh">ssh</h4>
+<p>ssh is secure shell. It is a way to connect to a remote machine.
+You need credentials of the remote machine to make this work</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh root@1.1.1.1
+root@1.1.1.1 password:
+root@1.1.1.1 $ cat welcome
+&gt; this file is printed from the computer with ip 1.1.1.1
+</code></pre></div><h4 id="free">free</h4>
+<p>Free gives you basic information about your ram usage.
+The -h option makes free print out the sizes in human readable form.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ free -h
+&gt;              total        used        free      shared  buff/cache   available
+Mem:           15Gi       1.8Gi       1.5Gi       233Mi        12Gi        13Gi
+Swap:          15Gi       0.0Ki        15Gi
+
+</code></pre></div><p>Swap is actually your hard drive/solid state drive and not your ram. It is used when your ram is full.
+Each column should speak for itself.</p>
+<h3 id="zipunzip">zip/unzip</h3>
+<p>Zip is like tar in that it compresses and puts all files into on file. But it is also supported by windows</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+&gt; file
+$ zip file file.zip
+$ ls
+&gt; file file.zip
+$ rm file
+&gt; unzip file.zip
+$ ls
+&gt; file file.zip
+</code></pre></div><h3 id="topglances">top/glances</h3>
+<p>Show system info per process.
+Howmuch cpu and memory a process uses and more</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ top
+$ glances
+</code></pre></div><p>These 2 command simply show you information about the system</p>
+<h3 id="ps">ps</h3>
+<p>List all the processes with there information</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ps -aux
+&gt; ... output ommited due to being to large ...
+</code></pre></div><p>I am not going to show the output since it is to large to display
+If you want to find a single process use the next snippet</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ps -aux | grep tos
+&gt;alpha      <span style="color:#ae81ff">1505</span>  0.0  0.0   <span style="color:#ae81ff">7364</span>  <span style="color:#ae81ff">3580</span> ?        S    Jul12   0:00 /bin/bash /home/alpha/bin/tos --theme-daemon
+alpha      <span style="color:#ae81ff">4686</span>  0.0  0.0   <span style="color:#ae81ff">6264</span>  <span style="color:#ae81ff">2276</span> pts/2    S+   14:34   0:00 grep --color<span style="color:#f92672">=</span>auto --exclude-dir<span style="color:#f92672">=</span>.bzr --exclude-dir<span style="color:#f92672">=</span>CVS --exclude-dir<span style="color:#f92672">=</span>.git --exclude-dir<span style="color:#f92672">=</span>.hg --exclude-dir<span style="color:#f92672">=</span>.svn tos
+</code></pre></div><p>As you can see we get 2 results one with <strong>tos &ndash;theme-daemon</strong> and one with <strong>grep</strong>
+The second process is the one we just launched.
+The first one is the process we care about.
+Each process gets assigned a number. The first one has a number 1505. This is the process id (PID). If you want to run command on that process you must use its PID. Each process get a unique id.</p>
+<h3 id="kill">kill</h3>
+<p>Kill a process based on its unique id called a pid (process id)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kill <span style="color:#ae81ff">1505</span>
+</code></pre></div><p>We just killed the <strong>tos &ndash;theme-daemon</strong> process
+lets verify</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ps -aux | grep tos
+&gt;alpha      <span style="color:#ae81ff">4686</span>  0.0  0.0   <span style="color:#ae81ff">6264</span>  <span style="color:#ae81ff">2276</span> pts/2    S+   14:34   0:00 grep --color<span style="color:#f92672">=</span>auto --exclude-dir<span style="color:#f92672">=</span>.bzr --exclude-dir<span style="color:#f92672">=</span>CVS --exclude-dir<span style="color:#f92672">=</span>.git --exclude-dir<span style="color:#f92672">=</span>.hg --exclude-dir<span style="color:#f92672">=</span>.svn tos
+</code></pre></div><p>We don&rsquo;t get the pid 1505 back because we killed it (stopped it)</p>
+<h3 id="ping">ping</h3>
+<p>Check if a network/ip is alive by sending it ping packets</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ping 1.1.1.1
+&gt; PING 1.1.1.1 <span style="color:#f92672">(</span>1.1.1.1<span style="color:#f92672">)</span> 56<span style="color:#f92672">(</span>84<span style="color:#f92672">)</span> bytes of data.
+<span style="color:#ae81ff">64</span> bytes from 1.1.1.1: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">57</span> time<span style="color:#f92672">=</span>14.8 ms
+<span style="color:#ae81ff">64</span> bytes from 1.1.1.1: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> ttl<span style="color:#f92672">=</span><span style="color:#ae81ff">57</span> time<span style="color:#f92672">=</span>15.5 ms
+--- 1.1.1.1 ping statistics ---
+<span style="color:#ae81ff">2</span> packets transmitted, <span style="color:#ae81ff">2</span> received, 0% packet loss, time 2ms
+rtt min/avg/max/mdev <span style="color:#f92672">=</span> 14.836/15.158/15.480/0.322 ms
+
+</code></pre></div><p>Ping will never stop. If you want it to stop anyway simple use ctrl+c to kill the process that is currently active</p>
+<h3 id="man">man</h3>
+<p>man is used if you forgot how a command works. This command gives all information about how to used said command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ man cd
+</code></pre></div><p>The above snippet get a detailed list on how to use cd.</p>
+<table>
+<thead>
+<tr>
+<th>keybind</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lsblk</td>
+<td align="center">List your hard drives</td>
+</tr>
+<tr>
+<td>uname</td>
+<td align="center">List info about your kernel</td>
+</tr>
+<tr>
+<td>ssh <!-- raw HTML omitted -->@<!-- raw HTML omitted --></td>
+<td align="center">Get shell acces to a remote machine</td>
+</tr>
+<tr>
+<td>free</td>
+<td align="center">Get information about your memory</td>
+</tr>
+<tr>
+<td>zip/unzip</td>
+<td align="center">zip and unzip files</td>
+</tr>
+<tr>
+<td>top/glances</td>
+<td align="center">get a nice view for system info</td>
+</tr>
+<tr>
+<td>ps</td>
+<td align="center">show a list of processes</td>
+</tr>
+<tr>
+<td>kill <!-- raw HTML omitted --></td>
+<td align="center">kill a process based on its pid</td>
+</tr>
+<tr>
+<td>ping <!-- raw HTML omitted --></td>
+<td align="center">check if a connection is working</td>
+</tr>
+<tr>
+<td>man <!-- raw HTML omitted --></td>
+<td align="center">get a manual page for a given command</td>
+</tr>
+<tr>
+<td>CTRL+C</td>
+<td align="center">Kill the current process/command</td>
+</tr>
+</tbody>
+</table>
+<h3 id="complete-command-list">Complete command list</h3>
+<table>
+<thead>
+<tr>
+<th>keybind</th>
+<th align="center">effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>touch <!-- raw HTML omitted --></td>
+<td align="center">make a file called <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>rm <!-- raw HTML omitted --></td>
+<td align="center">remove the file called <!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>ls</td>
+<td align="center">List all content of a directory</td>
+</tr>
+<tr>
+<td>cp <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">copy file1 to the file called new</td>
+</tr>
+<tr>
+<td>mv <!-- raw HTML omitted --> <!-- raw HTML omitted --></td>
+<td align="center">move original to the file called new</td>
+</tr>
+<tr>
+<td>nano <!-- raw HTML omitted --></td>
+<td align="center">Open the file called <!-- raw HTML omitted --> in the text editor called nano</td>
+</tr>
+<tr>
+<td>cat <!-- raw HTML omitted --></td>
+<td align="center">dump the content of the file into your terminal</td>
+</tr>
+<tr>
+<td>mkdir <!-- raw HTML omitted --></td>
+<td align="center">Make a directory called dir</td>
+</tr>
+<tr>
+<td>rmdir <!-- raw HTML omitted --></td>
+<td align="center">remove a directory called dir</td>
+</tr>
+<tr>
+<td>cd <!-- raw HTML omitted --></td>
+<td align="center">go into the directory called dir</td>
+</tr>
+<tr>
+<td>pwd <!-- raw HTML omitted --></td>
+<td align="center">print the location where we are in the system</td>
+</tr>
+<tr>
+<td>lsblk</td>
+<td align="center">List your hard drives</td>
+</tr>
+<tr>
+<td>uname</td>
+<td align="center">List info about your kernel</td>
+</tr>
+<tr>
+<td>ssh <!-- raw HTML omitted -->@<!-- raw HTML omitted --></td>
+<td align="center">Get shell acces to a remote machine</td>
+</tr>
+<tr>
+<td>free</td>
+<td align="center">Get information about your memory</td>
+</tr>
+<tr>
+<td>zip/unzip</td>
+<td align="center">zip and unzip files</td>
+</tr>
+<tr>
+<td>top/glances</td>
+<td align="center">get a nice view for system info</td>
+</tr>
+<tr>
+<td>ps</td>
+<td align="center">show a list of processes</td>
+</tr>
+<tr>
+<td>kill <!-- raw HTML omitted --></td>
+<td align="center">kill a process based on its pid</td>
+</tr>
+<tr>
+<td>ping <!-- raw HTML omitted --></td>
+<td align="center">check if a connection is working</td>
+</tr>
+<tr>
+<td>man <!-- raw HTML omitted --></td>
+<td align="center">get a manual page for a given command</td>
+</tr>
+<tr>
+<td>CTRL+C</td>
+<td align="center">Kill the current process/command</td>
+</tr>
+</tbody>
+</table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>

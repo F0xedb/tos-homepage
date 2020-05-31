@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Extend upon the basics of bash by using powerfull features">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Bash extended</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">Bash extended</h3>
+          <p class="font-secondary">Published on Jul 17, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/bash.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>Today we will talk about more advanced functionality of the shell. In this blogpost we will cover streams, piping output, stream redirect, jobs, chaining command and more.</p>
+<blockquote>
+<p>Before starting this blogpost you must understand the post about bash basics. Otherwise this will be very difficult to follow.</p>
+</blockquote>
+<h3 id="what-are-streams">What are streams?</h3>
+<p>To understand what streams are we first have to think about the states all applications (or commands) can be in.
+An application can be in normal mode (this is where the application is running as expected) In this mode all output is going to &ldquo;stream 1&rdquo;
+Stream 1 (or somethimes called file descriptor 1) is commenly known as standard output(stdout). Here is a quick example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+&gt; Desktop Pictures Music Documents file.txt
+</code></pre></div><p>The output of ls is in this case beeing outputted in the first stream (1) because this is expected behaviour.
+But as you might have guessed the application can also go into an error mode (because it received faulty information or something unexpected has happend)</p>
+<p>In this example we will change directory in a file with cd but as you know cd only works with directories (not a file) so this is unexpected behaviour.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd file.txt
+&gt; cd: not a directory: file.txt
+</code></pre></div><p>The output of cd is happening in the second stream commenly known as standard error(stderr)</p>
+<p>So bash and other shells use streams to handle different states that happen inside programs/commands. Bash can support up to 10 streams but mainly use stream 1 and 2.</p>
+<h3 id="stream-redirect">Stream redirect</h3>
+<p>Now what can we do with the streams stdout and stderr?
+Well we can manipulate streams into doing certain things. This part of the blog will cover those manipulations.</p>
+<p>First of all we can redirect a stream to a file.
+This is done by using the <strong>&gt;</strong> operator. The syntax looks like the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls 1&gt; output.txt
+</code></pre></div><p>The above code snippet puts the output of ls (stdout) into the file called output.txt
+The number 1 indicates that we should redirect stream 1 to the file.
+the &gt; operator override all content that is currently present in the file. To append you can use the &raquo; operator</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;content appended&#34;</span> 1&gt;&gt; output.txt
+</code></pre></div><p>As you can see in the file both outputs are inside the file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;content deleted&#34;</span> 1&gt; output.txt
+</code></pre></div><p>If you now look at the file you will see that the old content has been overriden.</p>
+<p>Now by simply replacing the 1 to a 2 you are now redirecting only stderr(errors) so if an error occurs in a command that that will be placed inside the file but stdout stays just in the terminal (not in the file)</p>
+<p>There are a few more usefull stream redirects you should know about</p>
+<blockquote>
+<p>&amp;&gt; Redirects both stdout and stderr instead of one or the other. A usefull example is firefox &amp;&gt; /dev/null. This redirects all output to a special file that is effectivly a trash dump. It doesn&rsquo;t store the data.</p>
+</blockquote>
+<p>Now instead of moving a stream to a file you can also merge streams.</p>
+<p>For instance you can merge stderr into stdout so that everything is treated as stdout.</p>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls &gt; output_with_errors.txt 2&gt;&amp;<span style="color:#ae81ff">1</span>
+</code></pre></div><p>Here we redirect stdout to <code>output_with_errors.txt</code> but stderr is also send to stdout so we see both stderr and stdout.</p>
+<blockquote>
+<p>There also exists a special file descriptor called stdin. This takes an input from the keyboard (or other programms) and threat it like a normal stream.</p>
+</blockquote>
+<p>Here are some examples with stdin</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat &lt; output.txt
+</code></pre></div><p>The first example sends the content of the file output.txt to the program cat as input.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat <span style="color:#e6db74">&lt;&lt;EOF
+</span><span style="color:#e6db74">echo &#34;hello&#34;
+</span><span style="color:#e6db74">echo &#34;this is beeing treated like a file&#34;
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><p>In the second example we don&rsquo;t use a file but rather fake a file by typing it in the terminal.
+The stream is beeing treated like a fil. And as far as the program is concerned it is a file.
+The syntax for this is &laquo;delimiter content delimiter Where delimiter tells use when the input of our fake file is done
+In this case it is EOF (stands for End Of File)
+We can go even further by outputing stdout to a file. This way we can quickly write a file without going into a text editor</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat <span style="color:#e6db74">&lt;&lt;EOF &gt; output.sh
+</span><span style="color:#e6db74">echo &#34;hello&#34;
+</span><span style="color:#e6db74">echo &#34;This is written from the terminal and saved into a file&#34;
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><h3 id="piping">Piping</h3>
+<p>Now comes a section that is much easier that streams but makes heavy use of them.
+Piping is effectivelly a way to make the output of commands the input of other commands.
+For example we want to list out a file but filter certain parts of it. What we can do is print out the file (using cat) and then pipe it into another command that does the filtering.</p>
+<p>Lets have a look at the file called /etc/passwd. It contains all the users in our system. But as you can see it also contains a lot of &ldquo;junk&rdquo; like home directories, groups and much more but we only want the username. How should we do this?</p>
+<p>Here commes piping to the rescue. We have a command called cat which will output everything.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/passwd
+</code></pre></div><p>But now we just want the username. If you analyse 1 line for example
+alpha:x:1000:985::/home/alpha:/bin/zsh
+You see that the username is the first entry and that each entry is divided by a :
+There exists a command called cut which &ldquo;cuts&rdquo; a line by its delimiter (in our case :) and you simply tell which parts to print
+the cut commands looks like the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cut -d: -f1 /etc/passwd
+&gt; alpha
+$ cut -d: -f3 /etc/passwd
+&gt; <span style="color:#ae81ff">1000</span>
+</code></pre></div><p>The -d: tells cut to treat : as the delimiter and -f tells cut which entry to print /etc/passwd is the file to look into</p>
+<p>Now we can rewrite cut to use piping (taking output from one command and putting that as input for another)
+In this case we will print out the file and take that as the input for cut</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/passwd | cut -d: -f1
+&gt; alpha
+</code></pre></div><p>This does the same thing as above but using piping.
+Now you may ask why should we do this? Well we can keep piping output from cut for example into another program.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/passwd | cut -d: -f1 <span style="color:#75715e"># print the user</span>
+&gt; /home/alpha
+$ cat /etc/passwd | cut -d: -f1 | head -n2 <span style="color:#75715e"># only print the first 2 entries of cut</span>
+&gt; /root
+&gt; /home/alpha
+</code></pre></div><p>Here we only print the first 2 entries returned from cut instead of printing out all entries.
+If you want a nice visualisation follow the following snippets</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pacman -Syu fortune lolcat cowsay
+$ fortune
+$ fortune | cowsay
+$ fortune | cowsay | lolcat
+</code></pre></div><p>Here you will visually see what piping in effect does. Have fun playing with these 3 commands.</p>
+<h3 id="command-chaining">Command chaining</h3>
+<p>echo hello &amp;&amp; echo true || echo error</p>
+<p>In the previous section you have seen piping. A very usefull tool. Because it can interact between commands. This opens a lot of oppertunities for you.
+But imaging the following situation. You have a command like getting a file from the internet. Once it is downloaded you would like to open the file in a text editor to change some stuff. But you only what that when the file is downloaded. If an error occured during the download we shouldn&rsquo;t be in the text editor because the file doesn&rsquo;t exist. If that makes sense that I can show you that in code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://repo.pbfp.xyz -o index.html
+</code></pre></div><p>The above script downloads the tos repo home page and saves it under the name index.html
+If an error occurs (for instance no network connectivity) than we won&rsquo;t have a file index.html so we can&rsquo;t edit it.</p>
+<p>This is the syntax <code>&lt;command&gt; &amp;&amp; &lt;command2&gt;</code> if command doesn&rsquo;t contain an error than command2 will be ran.</p>
+<p>example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://repo.pbfp.xyz -o index.html <span style="color:#f92672">&amp;&amp;</span> nano index.html
+</code></pre></div><p>Here we only run <code>nano index.html</code> if the file is downloaded.</p>
+<p>Test it out by using a wrong url to see if it opens index.html (don&rsquo;t forget to first delete index.html)</p>
+<p>Now we can also do the same for errors. Lets jump right into the code</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://repo.pbfp.xyz -o index.html <span style="color:#f92672">&amp;&amp;</span> nano index.html <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#34;An error occured&#34;</span>
+</code></pre></div><p>This is the syntax <code>&lt;command&gt;||&lt;command2&gt;</code> if command contains an error than command2 will be ran. In the above piece of code you can see both in action at the same time.</p>
+<h3 id="jobs">Jobs</h3>
+<p>Jobs are very usefull for commands that take a very long time to complete.</p>
+<p>Lets see a command that takes a long time</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sleep <span style="color:#ae81ff">5</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;Faking a command that takes time&#34;</span>
+</code></pre></div><p>This will take about 5 seconds. Run it to see it in action. Now lets make it take even longer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sleep <span style="color:#ae81ff">60</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;Faking for even longer&#34;</span>
+</code></pre></div><p>Now you don&rsquo;t want to wait for that command to complete before you have acces to your terminal. That can be annoying but there is a solution.
+The solutions is called jobs (or background jobs) It basically send the command to the background so that you can keep using your terminal.
+To make a command a background job simply use &amp;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sleep <span style="color:#ae81ff">15</span> &amp;
+</code></pre></div><p>If you run the above a number will be printed (this is the pid or process id)
+As you can see you still have access to your terminal. But the command is still running in the background.
+To verify this you can run</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ jobs
+</code></pre></div><p>This lists all processes running in the background
+But as you may have noticed they keep there output in the terminal.
+If you haven&rsquo;t noticed then run the following command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yes &amp;
+</code></pre></div><p>you can remove the output by using stream redirects</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yes &amp;&gt; /dev/null &amp;
+</code></pre></div><p>This ignores all the output and makes the command run in the background eg</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ firefox &amp;&gt; /dev/null &amp;
+</code></pre></div><p>Now lets see how our program can run back as a normal process (as if we never typed &amp;)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sleep <span style="color:#ae81ff">10</span> &amp;
+$ fg
+</code></pre></div><p>This will put the latest process into the forground. (If you want to kill the process type in CTRL+C)</p>
+<p>The last thing you must know is that ctrl+Z stops the current process and only resumes when typing in <code>fg</code></p>
+<h3 id="aliases">aliases</h3>
+<p>Aliases are very easy to grasp. They are basically a command existing of commands. That might seem confusing at first but I will show you by using examples</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ alias hello<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;echo hi&#34;</span>
+$ hello
+&gt; hi
+</code></pre></div><p>Here we made an alias called hello. And when we call hello it will execute <code>echo hi</code> thus printing hi</p>
+<p>Ofcourse you can still use everything we have learned so far. For example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ alias prt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;echo&#34;</span>
+$ prt hello
+&gt; hello
+$ alias showuser<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cut -d: -f1&#34;</span>
+$ cat /etc/passwd | showuser
+&gt; alpha
+</code></pre></div><p>If you are using certain commands often aliases can help you make then shorter and more easy to understand.</p>
+<h3 id="globbing">Globbing</h3>
+<p>Bash also includes globbing which makes it easy for you to select multiple files or directories.</p>
+<p>Lets say you see the following output of ls</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+&gt; a.txt b.txt c.txt d.txt e.txt aa.txt bb.txt abc.txt def.abc hahah.abc
+</code></pre></div><p>imaging if you want a directory and put all the .txt files inside that directory. That would mean you have to follow these steps.</p>
+<ul>
+<li>make a directory</li>
+<li>move file a.txt to that directory</li>
+<li>move file b.txt to that directory</li>
+<li>move all the files manually in that directory.</li>
+</ul>
+<p>You would have to do something like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir text
+$ mv a.txt text
+$ mv d.txt text
+$ mv c.txt text
+$ mv d.txt text
+$ mv e.txt text
+$ mv aa.txt text
+$ mv bb.txt text
+$ mv abc.txt text
+$ ls
+&gt; text def.abc hahah.abc
+</code></pre></div><p>As you can see we just typed a lot of commands for a relativily simple task.
+This is where globbing comes into play. bash by default has 2 special characters to help you select a group of files. The characters are <code>* and ?</code></p>
+<ul>
+<li>* will match any set of characters</li>
+<li>? will match one place to any character.</li>
+</ul>
+<p>I find it more easy to just show you</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv *.txt text <span style="color:#75715e"># this will move anytinh that ends with .txt</span>
+&gt; a.txt text d.txt c.txt d.txt e.txt aa.txt bb.txt abc.txt
+$ mv ?.txt text  <span style="color:#75715e"># this will move anything that only has one character before .txt</span>
+&gt; a.txt text d.txt c.txt d.txt e.txt
+$ mv ??.txt text <span style="color:#75715e"># this will move anything that has exactly 2 characters before .txt</span>
+&gt; aa.txt bb.txt
+$ mv ???.* <span style="color:#75715e"># this will move anything that has exactly 3 characters before the . and has something behind the .</span>
+&gt; def.abc
+</code></pre></div><blockquote>
+<p>Good job. You can now manpulate programs to work with eachother, put commands in the background, select multiple files with globbing and overall simplify your life.</p>
+</blockquote>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>

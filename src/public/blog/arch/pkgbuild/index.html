@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="How to build/maintain packages">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Package Build</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">Package Build</h3>
+          <p class="font-secondary">Published on Jul 18, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/package.jpg" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>Today we will cover how to build your own packages or applications and maintain them with pacman/yay/tos.
+The reason you want to do that is that it is easy to maintain package upgrades/new versions.</p>
+<p>In arch based systems you have the utility <code>makepkg</code> This utility reads out a <code>PKGBUILD</code> script and will install a package apropriotly.</p>
+<p>If you want to version control your package then you will need to make a PKGBUILD and tell it what to do.</p>
+<blockquote>
+<p>Since PKGBUILD files are actually bash scripts you should understand bash scripting. If you don&rsquo;t please read the blogpost about bash scripting.</p>
+</blockquote>
+<p>Consider this bash script as your app.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;-h&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;-h | help menu&#34;</span>
+    echo <span style="color:#e6db74">&#34;-p &lt;text&gt; | print out text&#34;</span>
+    echo <span style="color:#e6db74">&#34;-c file | print the content of a file&#34;</span>
+<span style="color:#66d9ef">elif</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;-p&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">elif</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    cat <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>If you have read our blogpost about bash scripting then you should understand the code above.</p>
+<p>This is the PKGBUILD of this simple application.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pkgname<span style="color:#f92672">=</span>blog_tool
+pkgver<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+pkgrel<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+pkgdesc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A basic tool to show the PKGBUILD functionality&#34;</span>
+arch<span style="color:#f92672">=(</span>any<span style="color:#f92672">)</span>
+url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://tos.pbfp.xyz&#34;</span>
+license<span style="color:#f92672">=(</span><span style="color:#e6db74">&#39;GPL&#39;</span><span style="color:#f92672">)</span>
+
+source<span style="color:#f92672">=(</span><span style="color:#e6db74">&#34;tool&#34;</span><span style="color:#f92672">)</span>
+md5sums<span style="color:#f92672">=(</span>17c3d3f2053e5ad5da3d304d27b19cdb<span style="color:#f92672">)</span>
+
+prepare<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    chmod +x tool <span style="color:#75715e"># Make sure our package is executable</span>
+    echo <span style="color:#e6db74">&#34;Preparing the source files&#34;</span>
+<span style="color:#f92672">}</span>
+
+build<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    echo <span style="color:#e6db74">&#34;Compiling source&#34;</span>
+<span style="color:#f92672">}</span>
+
+check<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    echo <span style="color:#e6db74">&#34;Verifying if files are correct, eg unit testing, make check&#34;</span>
+<span style="color:#f92672">}</span>
+
+package<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    echo <span style="color:#e6db74">&#34;Packaging the compiled files&#34;</span>
+    mkdir -p $pkgdir/usr/bin
+    cp tool $pkgdir/usr/bin
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Each PKGBUILD should at least contain these variables.</p>
+<ul>
+<li>pkgname | The name of the package (this will show up in pacman -Ss)</li>
+<li>pkgver | The current version of the package</li>
+<li>pkgdesc | extra description about said package (should not contain the pakage name)</li>
+<li>arch | supported architectures eg x86_64, i686, armv7h, aarch64 etc</li>
+<li>license | The license of the package.</li>
+</ul>
+<p>Each package also should at least implement these functions</p>
+<ul>
+<li>build | all the commands necesarry to build/compile the package</li>
+<li>package | all the commands necesarry to move the executable to the right location of the filesystem eg /usr/bin.</li>
+</ul>
+<h3 id="variables">Variables</h3>
+<p>Lets quickly go over all available PKGBUILD variables and there functions.</p>
+<p><code>pkgname</code> This variable holds the name of the package. This will be found when looking through all the packages and it is what pacman will display.</p>
+<p><code>pkgdesc</code> This will contain a brief description about the package. It should not contain the package name. eg</p>
+<blockquote>
+<p>pkgdesc=&quot;a text editor for X11&rdquo; not pkgdesc=&quot;nedit is a text editor for x11&rdquo;</p>
+</blockquote>
+<p><code>source</code> This is an array containing all the source code needed to build the package. It can be locale files or URL&rsquo;s to the location of the source code.</p>
+<p><code>arch</code> This variable should contain a list of supported architectures. Eg x86_64 (for intel/amd chips), aarch64 for arm based chips etc. If all architectures are supported you could use &ldquo;any&rdquo;</p>
+<p><code>url</code> This variable should contain a url for this piece of software.</p>
+<p><code>license</code> The license under which this software falls. eg GPL (it can also be an array of different licenses)</p>
+<p><code>groups</code> If you wish to install multiple packages as a &ldquo;group&rdquo; than include all other packages in this array</p>
+<p><code>depends</code> This contains an array of all dependencies that this package uses to work correctly</p>
+<p><code>optdepends</code> Same as above. But these packages are not needed for the program to function</p>
+<p><code>makedepends</code> Include all packages needed here for compilation of your application. Eg make, ninja, cpython etc</p>
+<p><code>checkdepends</code> Include all the dependencies needed to perform checks on your software. eg unit testing software.</p>
+<p><code>md5sums</code> An array of md5 checksums (can be calculated with md5sum) in the sequence of the source array.</p>
+<p><code>validpgpkeys</code> This is an array of PGP fingerprints. If used makepkg will only accept signatures of the keys present in this array.</p>
+<p><code>replaces</code> This is an array that specify which packages will be replaced by this package. eg wireshard-qt replaces wireshark</p>
+<p><code>conflicts</code> An array of packages that conflict with this package. eg they share the same resources.</p>
+<p><code>provides</code> An array of additional packages that the software provides.</p>
+<h3 id="functions">Functions</h3>
+<p><code>prepare</code> This function is used to prepare source files like patching extra code. This function is ran immidiatly after downloading the source files.</p>
+<p><code>pkgver</code> This function is ran right after prepare. It is used to update the pkgver variable in case an update happend upstream.</p>
+<p><code>build</code> In this function you should build/compile the source code so that an executable is present. Usually you should cd into the uncompressed tarball first and then compile</p>
+<p><code>check</code> Perform a package test tom make sure your package is working as intended. It makes sure that potential users are getting the right application.</p>
+<p><code>package</code> The final step to having a finished package. Here you will have to move your executable file and extras to the right location. eg if you want your file in the /usr/bin directory you should do cp file $pkgdir/usr/bin.
+Since the compressed tarball will be held in a chrooted env and $pkgdir points to that environment.</p>
+<h3 id="verifying-your-package-and-installing-it">Verifying your package and installing it</h3>
+<p>Building and testing your PKGBUILD</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ makepkg <span style="color:#75715e"># this will read our PKGBUILD and make a tarball out of it</span>
+</code></pre></div><blockquote>
+<p>if the PKGBUILD was succesfull you should see a *.pkg.tar.xz file</p>
+</blockquote>
+<p>To verify your package build you can run <code>$ namcap PKGBUILD</code> and <code>$ namcap package.pkg.tar.xz</code></p>
+<p>If everything happend as expected than you can install your package. Either bu installing it from the tarball or by using makepkg</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pacman -U *.pkg.tar.xz
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ makepkg -i
+</code></pre></div><blockquote>
+<p>Good luck building packages. All you now need to do is upload your package to the AUR.</p>
+</blockquote>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tos.odex.be/blog/bash/bash-scripting/</loc>
+    <lastmod>2019-07-26T17:11:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/</loc>
+    <lastmod>2019-07-26T17:11:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/tos/tos-server/</loc>
+    <lastmod>2019-07-18T17:42:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/arch/pkgbuild/</loc>
+    <lastmod>2019-07-18T15:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/bash/bash-extended/</loc>
+    <lastmod>2019-07-17T19:09:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/arch/pacman/</loc>
+    <lastmod>2019-07-13T19:36:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/tos/tos-repo/</loc>
+    <lastmod>2019-07-13T17:43:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/bash/bash-basics/</loc>
+    <lastmod>2019-07-13T13:20:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/tos/tos-live/</loc>
+    <lastmod>2019-07-11T22:32:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/tos/tos-tool/</loc>
+    <lastmod>2019-07-11T17:33:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/about/</loc>
+    <lastmod>2019-05-12T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/blog/</loc>
+    <lastmod>2019-05-12T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/contact/</loc>
+    <lastmod>2019-05-12T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/download/</loc>
+    <lastmod>2019-05-12T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://tos.odex.be/tags/</loc>
+  </url>
+  
+</urlset>

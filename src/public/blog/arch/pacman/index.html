@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="TOS package manager">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Package manager</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">Package manager</h3>
+          <p class="font-secondary">Published on Jul 13, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/package.jpg" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>Every distribution has a package manager, today we will look at pacman/tos.</p>
+<p>TOS comes preinstalled with pacman, yay and tos. These three package managers all use pacman as a base manager.
+A package manager takes care of all the components in a system. Think of it like this.
+You have a few different pieces of software installed. eg firefox, vscode, file browser etc. Instead of downloading these pieces of sofware and manually installing them you use a package manager. They will install software for you and keep them up to date. This ensures that you don&rsquo;t forget too ever update a single package. The package managers also keep your operating system up to date.</p>
+<p>Now you know the basics of a package manager and know that TOS uses pacman under the hood.
+But we must cover a few more components before jumping in on how to use a package manager.</p>
+<p>Repo&rsquo;s or repositories are a set of program&rsquo;s combined and maintained by an entity. An entity can be the os maintainer, a company or an individual. TOS ships with a set of repo&rsquo;s giving you access to about 60 000 different packages (aka programs). All you have to do to install a program is to tell tos to install these.
+A repository is always served on a server. That server has a files that describes all the software that you can install and also contains that piece of software.
+Tos ships with 5 repo&rsquo;s</p>
+<ul>
+<li>TOS - Extra needed packages that are custom to the TOS echosystem</li>
+<li>Core - All packages that are needed to run an OS (things like the kernel)</li>
+<li>Extra - Packages that are usefull but not necessary to run an OS</li>
+<li>Community - Packages that are contributed by the community but are maintained by the arch linux maintainers</li>
+<li>AUR - Packages contributed by the community and maintained by the community.</li>
+</ul>
+<blockquote>
+<p>If you are choosing to install packages via pacman know that the AUR isn&rsquo;t supported and you need to do extra steps to install that software, If you use yay or tos then the AUR is supported.</p>
+</blockquote>
+<p>Today we won&rsquo;t cover everything you can do with a package manager because they are very complicated and can do a lot of stuff. But we will cover most of the things to get you started.</p>
+<blockquote>
+<p>Before beginning you can use all flags with all package managers. They all support the same style. Just substitute tos with either tos, pacman or yay and it will work</p>
+</blockquote>
+<h3 id="updating-software">Updating software</h3>
+<p>Before installing the software you must know what packages exist do this by downloading the database file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Syu
+</code></pre></div><p>This simply checks if everything is up to date otherwise start updating out of date packages.</p>
+<h3 id="installing-software">Installing software</h3>
+<blockquote>
+<p>Only install software if the database is downloaded on your computer otherwise you can have broken packages</p>
+</blockquote>
+<p>Installing can be done by issueing this command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -S &lt;Package&gt;
+</code></pre></div><blockquote>
+<p>It is recommended to install and update at the same time. Just for safety</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Syu &lt;Package&gt;
+</code></pre></div><h3 id="searching-a-package">Searching a package</h3>
+<p>Now before installing you would like to know the name of a package. This can easily be done be executing this command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Ss &lt;search query&gt;
+</code></pre></div><p>For example we want to find the linux kernel for tos than you would type the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Ss linux tos
+&gt;aur/appimage-git r1587.ce61b83-1 <span style="color:#f92672">(</span>+30 0.00%<span style="color:#f92672">)</span>
+    Package desktop applications as AppImages that run on common Linux-based operating systems, such as RHEL, CentOS, Ubuntu, Fedora, debian and derivatives.
+tos/linux-tos-headers 5.2.arch2-1 <span style="color:#f92672">(</span>17.6 MiB 119.2 MiB<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Installed<span style="color:#f92672">)</span>
+    Header files and scripts <span style="color:#66d9ef">for</span> building modules <span style="color:#66d9ef">for</span> Linux-tos kernel
+tos/linux-tos-docs 5.2.arch2-1 <span style="color:#f92672">(</span>16.8 MiB 101.3 MiB<span style="color:#f92672">)</span>
+    Kernel hackers manual - HTML documentation that comes with the Linux-tos kernel
+tos/linux-tos 5.2.arch2-1 <span style="color:#f92672">(</span>72.6 MiB 81.4 MiB<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Installed<span style="color:#f92672">)</span>
+    The Linux-tos kernel and modules
+</code></pre></div><p>As we can see linux-tos is the linux kernel for tos. That is also what we want.</p>
+<p>So now we can install that package</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Syu linux-tos
+</code></pre></div><h3 id="removing-a-package">Removing a package</h3>
+<p>Removing a package is a must know. Because sometimes we simply install the wrong packages.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -R &lt;package&gt;
+</code></pre></div><blockquote>
+<p>Simply removing a package is not recommended since the dependencies (other packages that this package requires to work) won&rsquo;t be uninstalled if no other package uses it</p>
+</blockquote>
+<p>Removing a package + dependencies</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Rns &lt;package&gt;
+</code></pre></div><h3 id="querying-local-package-database">Querying local package database</h3>
+<p>Sometimes you want to clean up all software you aren&rsquo;t using but how do you know what is installed?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Q
+</code></pre></div><p>This will print out all installed packages (explicitly installed + dependencies)</p>
+<p>But we only want to see the packages you explicitly installed. That can be done as well</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Qe
+</code></pre></div><h3 id="misc">Misc</h3>
+<p>Remove all packages that aren&rsquo;t installed by the user and are not needed anymore</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Rns <span style="color:#66d9ef">$(</span>tos -Qdtq<span style="color:#66d9ef">)</span>
+</code></pre></div><p>Removing packages from the cache (This will clear up storage)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tos -Sc
+</code></pre></div><p>Now you know how to keep your system up to date and manage your packages. Best of luck!</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>

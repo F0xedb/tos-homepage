@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Tom OS - GNU/Linux</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Tie everything you have learned into one script">
+  <meta name="author" content="Tom Meyers">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tos.odex.be/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tos.odex.be/css/style.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tos.odex.be/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+</div>
+<!-- preloader end -->
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://tos.odex.be"><img class="logo" src="https://tos.odex.be/images/logo.svg"
+        alt="Tom OS - GNU/Linux"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://tos.odex.be"> Home </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/about/index.html">About</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/download/index.html">Download</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://tos.odex.be/contact/index.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Bash scripting</h1>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/images/illustrations/page-title.svg" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
+  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
+  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
+  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
+  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
+  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="font-tertiary mb-5">Bash scripting</h3>
+          <p class="font-secondary">Published on Jul 26, 2019 by <span class="text-primary">Tom Meyers</span></p>
+          <div class="content">
+            <img src="https://tos.odex.be/images/blog/bash.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <p>We have arrived at one of the most powerful features of a shell. Naimly scripting. Scripting makes it possible for you to make different programs interact with eachother. So that you can master your operating system and make it do very powerfull things.</p>
+<blockquote>
+<p>Before reading this you should understand bash basics and bash extended. We will use a lot of different commands, globbing, piping, streams and more. If you don&rsquo;t understand that yet than please read the previous blogposts.</p>
+</blockquote>
+<h3 id="what-is-scripting">What is scripting</h3>
+<p>Scripting is automating the execution of a task. In other words we make the computer do things instead of doing them manually. We have already seen some basic examples of making the computer. Here is a short example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir text
+$ mv *.txt text
+</code></pre></div><p>Instead of manually moving all the txt files we make the computer figure out those files and then move them all.
+Scripting works in much the same way. Bash scripting is nothing more than a series of commands executed after each other instead of typinh them out.</p>
+<h3 id="basics">Basics</h3>
+<p>To make a script you simple make a file with the extention .sh</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ touch script.sh
+</code></pre></div><p>lets edit our first script with <code>nano</code>
+Fill in the following.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;Hello from our script&#34;</span>
+echo <span style="color:#e6db74">&#34;This is a second command&#34;</span>
+echo <span style="color:#e6db74">&#34;Now I will list your directory&#34;</span>
+ls
+</code></pre></div><p>This script will execute 4 commands from top to bottom. It is exactly the same as typing it in manually.
+Now lets execute this script.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ bash script.sh
+&gt; Hello from our script
+This is a second command
+Now I will list your directory
+script.sh
+</code></pre></div><p>As you can see by simply typing <code>bash script.sh</code> we have executed 4 commands.</p>
+<p>Now <code>bash script.sh</code> is one of many ways to execute a script. we for example can also execute the script by doing the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat script.sh | bash
+</code></pre></div><p>You can even execute it with a different shell. Since bash isn&rsquo;t the only shell that exists.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sh script.sh
+</code></pre></div><blockquote>
+<p>Note sh is a bare bones shell. It has much fewer options than bash and some commands or options won&rsquo;t work in sh.</p>
+</blockquote>
+<h3 id="usefull-commands">Usefull commands</h3>
+<blockquote>
+<p>Everything you do in this blogpost should be in a script. Later you should execute the file containing that script.</p>
+</blockquote>
+<p>Before writing more complicated scripts we will cover a few simple commands that can come in handy.</p>
+<h4 id="echo">echo</h4>
+<p>This command will simply print text to the screen. Usefull for debugging of giving information to the script user.</p>
+<p>example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;hello simple user&#34;</span>
+&gt; hello simple user
+$ echo <span style="color:#e6db74">&#34;Hello World&#34;</span>
+&gt; Hello World
+</code></pre></div><h4 id="read">read</h4>
+<p>Read asks for user input. This input can then be used to be processed later on.</p>
+<p>example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;Give a name for a directory and this script will create it&#34;</span>
+read name
+mkdir $name
+</code></pre></div><blockquote>
+<p>If you don&rsquo;t understand what name and $name are do not worry. Those are variables and they will be covered in a later section</p>
+</blockquote>
+<p>To put it simply read will wait for a user to type something in and that value will be stored in a &ldquo;box&rdquo; called name later in the script we use the &ldquo;box&rdquo; name and look at the value. That value is used to make a directory</p>
+<p>As you can see read just waits for user input. But we can also make it print something out</p>
+<p>exampe:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">read -p <span style="color:#e6db74">&#34;Say something&#34;</span> something
+echo <span style="color:#e6db74">&#34;</span>$something<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>If you run this script you will see that the script always responds with the thing you type.</p>
+<h4 id="sleep">sleep</h4>
+<p>Sleep if much easier to understand than read. It simply waits the time in seconds that you tell it to</p>
+<p>example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sleep <span style="color:#ae81ff">1</span>
+echo <span style="color:#e6db74">&#34;hello&#34;</span> <span style="color:#75715e"># this is printed out after one second</span>
+</code></pre></div><h4 id="clear">clear</h4>
+<p>All that clear does is remove all output on your terminal.
+To try it simply type in the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;I will be erased&#34;</span>
+sleep <span style="color:#ae81ff">1</span>
+clear
+</code></pre></div><h3 id="simple-examples">Simple Examples</h3>
+<p>Now that you have seen how to write and execute a script and how to use it. Here are some basic examples to make them easier to understand.</p>
+<p>example 1: great you based on your name</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">read -p <span style="color:#e6db74">&#34;Tell me your name:&#34;</span> name
+echo <span style="color:#e6db74">&#34;hello </span>$name<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>example 2: remove a directory interactivly</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;The following content is the current directory&#34;</span>
+sleep 0.5
+ls
+sleep 0.5
+read -p <span style="color:#e6db74">&#34;What do you want me to remove?&#34;</span> dir
+rm -rf $dir
+ls
+</code></pre></div><p>example 3: remove all files with a exstention</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;This is the content of the current directory&#34;</span>
+sleep 0.5
+ls
+sleep 0.5
+read -p <span style="color:#e6db74">&#34;Which filetype do I have to delete?&#34;</span> type
+rm *.<span style="color:#e6db74">&#34;</span>$type<span style="color:#e6db74">&#34;</span>
+ls
+</code></pre></div><p>Short explenation of what each script does.</p>
+<p>example 1 will ask you to type your name in. It will then respond with hello followed with your name.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash example1.sh
+&gt; Tell me your name:tom
+&gt; Hello tom
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash example1.sh
+&gt; Tell me your name:simba
+&gt; Hello simba
+</code></pre></div><p>example 2 will remove a directory based on what you type.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash example2.sh
+&gt;The following content is the current directory
+&gt; script.sh example.sh example2.sh example3.sh testdir testdir2
+&gt; What <span style="color:#66d9ef">do</span> you want me to remove? testdir
+&gt; script.sh example.sh example2.sh example3.sh testdir2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash example2.sh
+&gt;The following content is the current directory
+&gt; script.sh example.sh example2.sh example3.sh testdir2
+&gt; What <span style="color:#66d9ef">do</span> you want me to remove? testdir2
+&gt; script.sh example.sh example2.sh example3.sh
+</code></pre></div><p>example 3 will remove all files of a specific exstention eg .jpg .png .pdf or something other</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash example3.sh
+&gt; This is the content of the current directory
+&gt; script.sh example.sh example2.sh example3.sh a.jpg b.jpg c.jpg a.txt haha.txt example.txt test.txt2
+&gt; What filetype <span style="color:#66d9ef">do</span> I have to delete?jpg
+&gt; script.sh example.sh example2.sh example3.sh a.txt haha.txt example.txt test.txt2
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bash example3.sh
+&gt; This is the content of the current directory
+&gt; script.sh example.sh example2.sh example3.sh a.jpg b.jpg c.jpg a.txt haha.txt example.txt test.txt2
+&gt; What filetype <span style="color:#66d9ef">do</span> I have to delete?txt
+&gt; script.sh example.sh example2.sh example3.sh test.txt2
+</code></pre></div><blockquote>
+<p>Do not type in sh in the last example or you will lose all the shell scripts you just wrote</p>
+</blockquote>
+<blockquote>
+<p>Don&rsquo;t continue with the rest of the blogpost until you understand the 3 examples above. Try to experiment with the examples given and try to come up with a unique script yourself. This way you will quickly learn how to deal with scripts.</p>
+</blockquote>
+<h3 id="what-are-shebangs">What are shebangs?</h3>
+<p>Shebangs might seen scary but they aren&rsquo;t. Up until now you have always had to type in <code>bash name.sh</code> where name is the name of your file. Shebangs are present at the first line of a file and tell the computer which program should run the file. if you add a shebang to your file you don&rsquo;t need to type <code>bash name.sh</code> anymore after that you can simply type in <code>./name.sh</code> bash will read the shebang and know which program should run the script</p>
+<p>example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>echo <span style="color:#e6db74">&#34;I can run from a shebang&#34;</span>
+</code></pre></div><p>Now try to type in (if your file is called shebang.sh)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./shebang.sh
+&gt; zsh: permission denied: ./shebang.sh
+</code></pre></div><p>As you can see your script didn&rsquo;t run. Why is that?
+Well if you want to use a shebang than you need to tell linux that the file is executable</p>
+<p>simply run the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod +x shebang.sh
+$ ./shebang.sh
+&gt; I can run from a shebang
+</code></pre></div><p>Now the file has executable permissions. Do know that you only need to do <code>chmod +x</code> once. This simply makes a file executable. After that you can <code>./shebang.sh</code> as much as you like.</p>
+<h3 id="variables">Variables</h3>
+<blockquote>
+<p>From this point onward the blog will become more difficult to understand for people without programming backgrounds. It is of the utmost importance that you understand all of the above before starting here. If you don&rsquo;t fully understand something then read that section again or gather more information via google or wikipedia.</p>
+</blockquote>
+<p>Variables are a way to store data. In the example above we have seen how a variable could work with the command <code>read</code> In this section we will cover it in more depth.
+Lets see a simple example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+var<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hello&#34;</span>
+echo <span style="color:#e6db74">&#34;</span>$var<span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;</span>$var<span style="color:#e6db74"> to you too&#34;</span>
+</code></pre></div><p>Here we have a variable called <code>var</code> that holds the data <code>hello</code>. We can then use that variable in multiple places throughout our script.
+Try to change the name of <code>var</code> to something else like <code>printable</code>. Don&rsquo;t forget to change to name in all places.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+printable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hello&#34;</span>
+echo <span style="color:#e6db74">&#34;</span>$printable<span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;</span>$printable<span style="color:#e6db74"> to you too&#34;</span>
+</code></pre></div><p>Variables can be named as long as you would like but we recomend to use names that make sense. for example use the name <code>directory</code> when the variable holds a directory.</p>
+<p>You can&rsquo;t give a variable all names possible. Here are the rescrictions.</p>
+<ul>
+<li>It must start with a letter.</li>
+<li>It can only contain letters (lower or uppercase) and numbers</li>
+<li>it can also contain special characters such as - _</li>
+</ul>
+<p>You can generaly do 2 thing with a variable.
+You can assign a value to it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">var1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#75715e"># now holds the value 1</span>
+var2<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#75715e"># a different variable holds the value of 2</span>
+</code></pre></div><p>Or you can read the value from it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;</span>$var1<span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># read the value from var1</span>
+echo <span style="color:#e6db74">&#34;</span>$var2<span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># read the value from var2</span>
+var3<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$var2<span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># read the value from var2 and put it in var3</span>
+</code></pre></div><p>When creating a variable you simply use the name followed by a <code>=</code> everything after that is the value that is inside the variable.
+When reading the value from a variable you type in <code>$</code> followed by the name. That entire piece will then be replaced with the value.</p>
+<h3 id="special-variables">special variables</h3>
+<p>Your script can get parameters. Parameters are strings of text after your command eg <code>rm hello.txt</code> where <code>rm</code> is the command and <code>hello.txt</code> is the parameter.</p>
+<p>your script can also work with parameters. Here is a simple example to make you understand them.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;Hello&#34;</span>
+echo <span style="color:#e6db74">&#34;First parameter </span>$1<span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;Second parameter </span>$2<span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;All parameters </span>$@<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>Lets name the above script test.sh</p>
+<p>try to run this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./script.sh
+&gt; Hello
+&gt; First parameter
+&gt; Second parameter
+&gt; All parameters
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./script.sh hi
+&gt; Hello
+&gt; First parameter hi
+&gt; Second parameter
+&gt; All parameters hi
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./script.sh hi how
+&gt; Hello
+&gt; First parameter hi
+&gt; Second parameter how
+&gt; All parameters hi how
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./script.sh hi how are you
+&gt; Hello
+&gt; First parameter hi
+&gt; Second parameter how
+&gt; All parameters hi how are you
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./script.sh <span style="color:#e6db74">&#34;hi how are&#34;</span> you
+&gt; Hello
+&gt; First parameter hi how are
+&gt; Second parameter you
+&gt; All parameters hi how are you
+</code></pre></div><p>As you can see each parameter is seperated by a space</p>
+<p>the first parameter supplied to your script is <code>$1</code> the second <code>$2</code> the third <code>$3</code> etc. If you want a list of all parameters you can use the special <code>$@</code>. But what if one parameter contains a space. Well than you can surround that parameter by <code>&quot;&quot;</code> This way bash knows to treat it as one parameter. Just as in the last example.</p>
+<h3 id="environment-variables">environment variables</h3>
+<p>Bash also has environment variables. These are ultra special variables that exist outside of the scope of your script. In other words they exist in all script simultaniously. They are common.</p>
+<p>bash has many environment variables. Here are a few.</p>
+<p><code>$HOME</code> : The directory of the currently logged in user</p>
+<p><code>$PWD</code> : The current working directory</p>
+<p><code>$SHELL</code> : The current shell executing commands</p>
+<p><code>$PPID</code> : The process id of the parent</p>
+<p><code>$LANG</code> : The current language</p>
+<p>And many more. If you want to make an environement variable just do this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export ENVVAR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hello&#34;</span>
+</code></pre></div><p>The variabel <code>ENVVAR</code> is now accesable everywhere on your system.</p>
+<blockquote>
+<p>Environment variables are usually all in capital letters. It is also recommended to follow this guidline to know if a variable is local or global.</p>
+</blockquote>
+<h3 id="conditional-logic">Conditional logic</h3>
+<p>Conditional logic is a way to make your program take descisions.</p>
+<p>For example only execute something when the user is older than 18.
+Or execute something based on gender.</p>
+<p>Here is an example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+age<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;19&#34;</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$age<span style="color:#e6db74">&#34;</span> -gt <span style="color:#e6db74">&#34;18&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;older than 18&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+age<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;17&#34;</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$age<span style="color:#e6db74">&#34;</span> -gt <span style="color:#e6db74">&#34;18&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;older than 18&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>run both programs.
+As you can see in the first example the <code>echo &quot;older than 18&quot;</code> is printed. This is because the program performs a check. The check is <code>[[ &quot;$age&quot; -gt &quot;18&quot; ]]</code> which you can read as <code>is age greater than 18?</code> if it is run everything between <code>then</code> and <code>fi</code></p>
+<p>The <code>-gt</code> stands for greater than. This makes comparisions between numbers much easier.</p>
+<p>there also exists these comparisions</p>
+<ul>
+<li>-lt : less than</li>
+<li>-ge : greater than or equal</li>
+<li>-le : less than or equal</li>
+<li>== : equal</li>
+<li>!= : not equal</li>
+</ul>
+<p>Try to play with the above example and change the comparisions to one of the list above.</p>
+<blockquote>
+<p>Note in the control structure you must use all spaces you see. If you forget on the code won&rsquo;t work properly.</p>
+</blockquote>
+<p>Lets elaborate on the above a bit more</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+age<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;17&#34;</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$age<span style="color:#e6db74">&#34;</span> -ge <span style="color:#e6db74">&#34;18&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;You are older than 18&#34;</span>
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;You are younger than 18&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>Everytinh behind <code>else</code> will be executed if the condition is not met.</p>
+<p>Usefull example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+read -p <span style="color:#e6db74">&#34;What file do you want to delete&#34;</span> file
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> -f <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    rm <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;That is not a file&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+read -p <span style="color:#e6db74">&#34;What file do you want to delete&#34;</span> file
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> -f <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+    read -p <span style="color:#e6db74">&#34;are you sure? (y/N)&#34;</span> answer
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$answer<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;y&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+        rm <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;That is not a file&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><blockquote>
+<p>There exists more conditional logic. Than what is shown above but this post is to get you started with scripting not by making you a professional. If you wish to get more info look up bash coditional logic, bash switch or bash elif</p>
+</blockquote>
+<h3 id="loops">Loops</h3>
+<p>Loops work in much the same way that conditional logic but itterate over something.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+a<span style="color:#f92672">=(</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> 3<span style="color:#f92672">)</span>
+
+<span style="color:#66d9ef">for</span> num in $a; <span style="color:#66d9ef">do</span>
+    echo <span style="color:#e6db74">&#34;Looping&#34;</span>
+    echo <span style="color:#e6db74">&#34;</span>$num<span style="color:#e6db74">&#34;</span>
+    sleep 0.5
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>If you run this you will get</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./loop.sh
+&gt;Looping
+<span style="color:#ae81ff">1</span>
+Looping
+<span style="color:#ae81ff">2</span>
+Looping
+<span style="color:#ae81ff">3</span>
+</code></pre></div><p>As you can see the body between <code>do</code> and <code>done</code> are executed for each entry in <code>$a</code>. Each entry is then assigned to the value <code>$num</code> which you specified in the for loop.
+You could for instance make a file for every entry</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+a<span style="color:#f92672">=(</span><span style="color:#e6db74">&#34;a.txt&#34;</span> <span style="color:#e6db74">&#34;b.txt&#34;</span> <span style="color:#e6db74">&#34;c.txt&#34;</span><span style="color:#f92672">)</span>
+
+ls
+
+<span style="color:#66d9ef">for</span> num in $a; <span style="color:#66d9ef">do</span>
+    echo <span style="color:#e6db74">&#34;making file </span>$num<span style="color:#e6db74">&#34;</span>
+    touch $num
+<span style="color:#66d9ef">done</span>
+
+echo <span style="color:#e6db74">&#34;Done making files&#34;</span>
+echo <span style="color:#e6db74">&#34;Showing you the file structure&#34;</span>
+sleep 0.5
+ls
+</code></pre></div><p>This will loop through <code>$a</code> and make a file for each entry.</p>
+<blockquote>
+<p>For more information or more type of loops look up bash loops, bash while, bash do while.</p>
+</blockquote>
+<h3 id="functions">functions</h3>
+<p>The last part that we will cover in this blog is functions. Think of them like scripts in scripts.
+A function is basically a small script you can call that executes a series of commands.</p>
+<p>Here is a very basic example of functions that serves no other purpose than to display the syntax.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">function</span> show_hello <span style="color:#f92672">{</span>
+    echo <span style="color:#e6db74">&#34;hello&#34;</span>
+<span style="color:#f92672">}</span>
+
+show_hello
+sleep 0.5
+show_hello
+</code></pre></div><p>If your run the script above then you will see that it would act the same as this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;hello&#34;</span>
+sleep 0.5
+echo <span style="color:#e6db74">&#34;hello&#34;</span>
+</code></pre></div><p>But functions can do more. Here is an example of running multiple commands in a function</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+logfile<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;functions.log&#34;</span>
+<span style="color:#66d9ef">function</span> DisplayAndLog_Hello <span style="color:#f92672">{</span>
+    text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hello&#34;</span>
+    echo <span style="color:#e6db74">&#34;</span>$text<span style="color:#e6db74">&#34;</span>
+    echo <span style="color:#e6db74">&#34;</span>$text<span style="color:#e6db74">&#34;</span> &gt;&gt; <span style="color:#e6db74">&#34;</span>$logfile<span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">}</span>
+
+displayandlog_hello
+</code></pre></div><p>If you run the above then you will see the function printed out hello and also added it to the <code>functions.log</code> file.
+by running the command <code>DisplayAndLog_Hello</code> executed the body of the function.</p>
+<p>Now functions can do some more cool stuff. Lets display and log arbitrary data instead of always the string hello</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+logfile<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;functions.log&#34;</span>
+<span style="color:#66d9ef">function</span> DisplayAndLog <span style="color:#f92672">{</span>
+    echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+    echo <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> &gt;&gt; <span style="color:#e6db74">&#34;</span>$logfile<span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">}</span>
+
+DisplayAndLog <span style="color:#e6db74">&#34;Data supplied to a function&#34;</span>
+DisplayAndLog <span style="color:#e6db74">&#34;Even more data&#34;</span>
+DisplayAndLog <span style="color:#e6db74">&#34;Now the data is different&#34;</span>
+DisplayAndLog <span style="color:#e6db74">&#34;Now even more different&#34;</span>
+</code></pre></div><p>As you can see we called the function 4 times but each time with different content. In the function body we used <code>$1</code> but from the section special variables we know that those are parameters supplied to the bash script. Well functions can also have parameters and inside those functions the variables <code>$1 $2 $@</code> change depending on the supplied values.</p>
+<blockquote>
+<p>Great if you understand all blog posts covering bash you already know quite a few things. You should be proficient enough to controll your linux install. If you still wish to learn more consider the following topics</p>
+</blockquote>
+<h3 id="must-know">Must know</h3>
+<ul>
+<li>absolute and relative directory paths</li>
+<li>package managers</li>
+<li>git</li>
+<li>systemctl</li>
+</ul>
+<h3 id="extras">Extra&rsquo;s</h3>
+<ul>
+<li>display/window manager</li>
+<li>linux kernel</li>
+<li>completion functions</li>
+<li>NetworkManager</li>
+</ul>
+<h3 id="usefull-commands-to-master">Usefull commands to master</h3>
+<ul>
+<li>grep</li>
+<li>find</li>
+<li>sed</li>
+<li>awk</li>
+<li>cut</li>
+<li>tr</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section section-on-footer" data-background="https://tos.odex.be/images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="https://formspree.io/tommeyers.tm127@gmail.com" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">tom@odex.be</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS Plugins -->
+
+<script src="https://tos.odex.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/slick/slick.min.js"></script>
+
+<script src="https://tos.odex.be/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tos.odex.be/js/script.min.js"></script></body>
+</html>
