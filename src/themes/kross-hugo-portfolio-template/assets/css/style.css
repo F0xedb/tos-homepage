@@ -890,6 +890,8 @@ blockquote {
 .test-img {
   width: 100px;
   height: 100px;
+  // fix image strecthing
+  object-fit: cover;
 }
 
 .features-img {
