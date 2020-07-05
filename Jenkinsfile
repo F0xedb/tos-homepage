@@ -26,6 +26,9 @@ pipeline {
                 sh 'cd src && hugo --destination="/output"'
             }
         }
+        stage('copy over pandoc') {
+            sh 'cd src && cp -r public/docs/ /output'
+        }
     }
     post {
         success {
