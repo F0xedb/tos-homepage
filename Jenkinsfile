@@ -27,7 +27,9 @@ pipeline {
             }
         }
         stage('copy over pandoc') {
-            sh 'cd src && cp -r public/docs/ /output'
+            steps {
+                sh 'cd src && cp -r public/docs/ /output'
+            }
         }
     }
     post {
