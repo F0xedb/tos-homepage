@@ -23,12 +23,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'cd src && hugo --destination="/output"'
+                sh 'cd tos-homepage/src && hugo --destination="/output"'
             }
         }
         stage('copy over pandoc') {
             steps {
-                sh 'cd src && cp -r public/docs/doc/ /output/docs/'
+                sh 'cd tos-homepage/src && cp -r public/docs/doc/ /output/docs/'
             }
         }
     }
