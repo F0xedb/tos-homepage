@@ -110,6 +110,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -181,10 +186,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -558,7 +574,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">buttons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of <a href="../input_handling/awful.button.html#">awful.button</a> objects. Optionally, it can have
   a <code>group</code> entry. If set, the <code>group</code> property will be set on all <code>awful.buttons</code>
   objects.
@@ -574,7 +590,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item763 class="hide_extra">
+    <span id=item778 class="hide_extra">
     </span>
 
 </dd>
@@ -604,7 +620,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item764 class="hide_extra">
+    <span id=item779 class="hide_extra">
     </span>
 
 </dd>
@@ -632,13 +648,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button765>
-     <a class="show_more_button" onclick="show_extra('765')">
+     <center id=button780>
+     <a class="show_more_button" onclick="show_extra('780')">
       Click to display more
      </a>
      </center>
 
-    <span id=item765 class="hide_extra">
+    <span id=item780 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -684,7 +700,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item766 class="hide_extra">
+    <span id=item781 class="hide_extra">
     </span>
 
 </dd>
@@ -715,7 +731,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item767 class="hide_extra">
+    <span id=item782 class="hide_extra">
     </span>
 
 </dd>
@@ -748,13 +764,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button768>
-     <a class="show_more_button" onclick="show_extra('768')">
+     <center id=button783>
+     <a class="show_more_button" onclick="show_extra('783')">
       Click to display more
      </a>
      </center>
 
-    <span id=item768 class="hide_extra">
+    <span id=item783 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>client_mousebinding::added</code></span>  </li>
@@ -778,7 +794,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">buttons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table containing <a href="../input_handling/awful.button.html#">awful.button</a> objects.
         </li>
     </ul>
@@ -795,7 +811,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item769 class="hide_extra">
+    <span id=item784 class="hide_extra">
     </span>
 
 </dd>
@@ -832,7 +848,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item770 class="hide_extra">
+    <span id=item785 class="hide_extra">
     </span>
 
 </dd>
@@ -892,7 +908,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
            <span class="types"><span class="type">integer</span></span>
         table.y The vertical position</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         table.buttons Table containing the status of buttons, e.g. field [1] is true
   when button 1 is pressed.</li>
     </ol>
@@ -911,7 +927,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </ul>
 
 
-    <span id=item771 class="hide_extra">
+    <span id=item786 class="hide_extra">
     </span>
 
 </dd>
@@ -935,7 +951,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item772 class="hide_extra">
+    <span id=item787 class="hide_extra">
     </span>
 
 </dd>
@@ -962,7 +978,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item773 class="hide_extra">
+    <span id=item788 class="hide_extra">
     </span>
 
 </dd>
@@ -989,7 +1005,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item774 class="hide_extra">
+    <span id=item789 class="hide_extra">
     </span>
 
 </dd>
@@ -1006,7 +1022,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">list</span>
-            <span class="types"><span class="type">nil</span> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The widget list
         </li>
     </ul>
@@ -1016,7 +1032,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item775 class="hide_extra">
+    <span id=item790 class="hide_extra">
     </span>
 
 </dd>
@@ -1047,7 +1063,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item776 class="hide_extra">
+    <span id=item791 class="hide_extra">
     </span>
 
 </dd>
@@ -1064,7 +1080,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">The</span>
-            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          geometry.
         </li>
     </ul>
@@ -1078,7 +1094,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item777 class="hide_extra">
+    <span id=item792 class="hide_extra">
     </span>
 
 </dd>
@@ -1095,7 +1111,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">A</span>
-            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          list of geometry tables.
         </li>
     </ul>
@@ -1109,7 +1125,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item778 class="hide_extra">
+    <span id=item793 class="hide_extra">
     </span>
 
 </dd>
@@ -1129,7 +1145,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item779 class="hide_extra">
+    <span id=item794 class="hide_extra">
     </span>
 
 </dd>
@@ -1149,7 +1165,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item780 class="hide_extra">
+    <span id=item795 class="hide_extra">
     </span>
 
 </dd>
@@ -1169,7 +1185,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item781 class="hide_extra">
+    <span id=item796 class="hide_extra">
     </span>
 
 </dd>
@@ -1193,7 +1209,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item782 class="hide_extra">
+    <span id=item797 class="hide_extra">
     </span>
 
 </dd>
@@ -1213,7 +1229,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item783 class="hide_extra">
+    <span id=item798 class="hide_extra">
     </span>
 
 </dd>
@@ -1240,7 +1256,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item784 class="hide_extra">
+    <span id=item799 class="hide_extra">
     </span>
 
 </dd>
@@ -1267,7 +1283,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item785 class="hide_extra">
+    <span id=item800 class="hide_extra">
     </span>
 
 </dd>
@@ -1299,7 +1315,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item786 class="hide_extra">
+    <span id=item801 class="hide_extra">
     </span>
 
 </dd>
@@ -1327,7 +1343,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item787 class="hide_extra">
+    <span id=item802 class="hide_extra">
     </span>
 
 </dd>
@@ -1347,7 +1363,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item788 class="hide_extra">
+    <span id=item803 class="hide_extra">
     </span>
 
 </dd>
@@ -1367,7 +1383,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item789 class="hide_extra">
+    <span id=item804 class="hide_extra">
     </span>
 
 </dd>
@@ -1387,7 +1403,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item790 class="hide_extra">
+    <span id=item805 class="hide_extra">
     </span>
 
 </dd>
@@ -1424,13 +1440,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button791>
-     <a class="show_more_button" onclick="show_extra('791')">
+     <center id=button806>
+     <a class="show_more_button" onclick="show_extra('806')">
       Click to display more
      </a>
      </center>
 
-    <span id=item791 class="hide_extra">
+    <span id=item806 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1466,7 +1482,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item792 class="hide_extra">
+    <span id=item807 class="hide_extra">
     </span>
 
 </dd>
@@ -1487,7 +1503,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          (<em>default</em> client.focus)
         </li>
         <li><span class="parameter">corner</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The corner to use: auto, top<em>left, top</em>right, bottom<em>left,
  bottom</em>right, left, right, top bottom. Default is auto, and auto find the
  nearest corner.
@@ -1497,7 +1513,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Returns:</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         The corner name</li>
         <li>
            <span class="types"><span class="type">number</span></span>
@@ -1511,7 +1527,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item793 class="hide_extra">
+    <span id=item808 class="hide_extra">
     </span>
 
 </dd>
@@ -1532,11 +1548,11 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The client to resize, or the focused one by default.
         </li>
         <li><span class="parameter">corner</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The corner to grab on resize. Auto detected by default.
         </li>
         <li><span class="parameter">args</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A set of <a href="../libraries/awful.placement.html#">awful.placement</a> arguments
          (<em>default</em> {})
         </li>
@@ -1545,7 +1561,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         The corner (or side) name
     </ol>
 
@@ -1553,13 +1569,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button794>
-     <a class="show_more_button" onclick="show_extra('794')">
+     <center id=button809>
+     <a class="show_more_button" onclick="show_extra('809')">
       Click to display more
      </a>
      </center>
 
-    <span id=item794 class="hide_extra">
+    <span id=item809 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1594,7 +1610,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item795 class="hide_extra">
+    <span id=item810 class="hide_extra">
     </span>
 
 </dd>
@@ -1614,7 +1630,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item796 class="hide_extra">
+    <span id=item811 class="hide_extra">
     </span>
 
 </dd>
@@ -1638,7 +1654,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">m</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The mode
         </li>
     </ul>
@@ -1648,7 +1664,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item797 class="hide_extra">
+    <span id=item812 class="hide_extra">
     </span>
 
 </dd>
@@ -1669,7 +1685,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The callback (or nil)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The callback context
         </li>
     </ul>
@@ -1679,7 +1695,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item798 class="hide_extra">
+    <span id=item813 class="hide_extra">
     </span>
 
 </dd>
@@ -1701,7 +1717,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The callback (or nil)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The callback context
         </li>
     </ul>
@@ -1711,7 +1727,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item799 class="hide_extra">
+    <span id=item814 class="hide_extra">
     </span>
 
 </dd>
@@ -1732,7 +1748,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The callback (or nil)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The callback context
         </li>
     </ul>
@@ -1742,7 +1758,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item800 class="hide_extra">
+    <span id=item815 class="hide_extra">
     </span>
 
 </dd>
@@ -1775,11 +1791,11 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          A client.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The resizing context.
         </li>
         <li><span class="parameter">args</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A set of <a href="../libraries/awful.placement.html#">awful.placement</a> arguments.
          (<em>default</em> {})
         </li>
@@ -1790,13 +1806,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button801>
-     <a class="show_more_button" onclick="show_extra('801')">
+     <center id=button816>
+     <a class="show_more_button" onclick="show_extra('816')">
       Click to display more
      </a>
      </center>
 
-    <span id=item801 class="hide_extra">
+    <span id=item816 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1851,7 +1867,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item802 class="hide_extra">
+    <span id=item817 class="hide_extra">
     </span>
 
 </dd>
@@ -1862,7 +1878,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

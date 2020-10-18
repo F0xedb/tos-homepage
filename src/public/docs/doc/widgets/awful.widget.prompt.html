@@ -106,6 +106,11 @@
   <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
   <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -177,10 +182,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -479,7 +495,7 @@ myprompt:run()
         <li><span class="parameter">args</span> Prompt arguments.
         <ul>
         <li><span class="parameter">prompt</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Prompt text.
          (<em>default</em> "Run: ")
         </li>
@@ -515,7 +531,7 @@ myprompt:run()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -552,7 +568,7 @@ myprompt:run()
          (<em>default</em> `awful.completion.shell`)
         </li>
         <li><span class="parameter">history_path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          File path where the history should be saved.
          (<em>default</em> `gears.filesystem.get_cache_dir() .. '/history'`)
         </li>
@@ -587,7 +603,7 @@ myprompt:run()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">hooks</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Similar to <a href="../input_handling/awful.key.html#">awful.key</a>. It will call a function
    for the matching modifiers + key. See <a href="../libraries/awful.prompt.html#awful.prompt.run">awful.prompt.run</a> for details.
          (<em>optional</em>)
@@ -606,7 +622,7 @@ myprompt:run()
 
 
 
-    <span id=item1003 class="hide_extra">
+    <span id=item1018 class="hide_extra">
     </span>
 
 </dd>
@@ -634,7 +650,7 @@ myprompt:run()
 
 
 
-    <span id=item1004 class="hide_extra">
+    <span id=item1019 class="hide_extra">
     </span>
 
 </dd>
@@ -652,7 +668,7 @@ myprompt:run()
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -662,7 +678,7 @@ myprompt:run()
 
 
 
-    <span id=item1005 class="hide_extra">
+    <span id=item1020 class="hide_extra">
     </span>
 
 </dd>
@@ -683,7 +699,7 @@ myprompt:run()
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -693,7 +709,7 @@ myprompt:run()
 
 
 
-    <span id=item1006 class="hide_extra">
+    <span id=item1021 class="hide_extra">
     </span>
 
 </dd>
@@ -721,7 +737,7 @@ myprompt:run()
 
 
 
-    <span id=item1007 class="hide_extra">
+    <span id=item1022 class="hide_extra">
     </span>
 
 </dd>
@@ -749,7 +765,7 @@ myprompt:run()
 
 
 
-    <span id=item1008 class="hide_extra">
+    <span id=item1023 class="hide_extra">
     </span>
 
 </dd>
@@ -778,7 +794,7 @@ myprompt:run()
 
 
 
-    <span id=item1009 class="hide_extra">
+    <span id=item1024 class="hide_extra">
     </span>
 
 </dd>
@@ -799,7 +815,7 @@ myprompt:run()
 
 
 
-    <span id=item1010 class="hide_extra">
+    <span id=item1025 class="hide_extra">
     </span>
 
 </dd>
@@ -826,7 +842,7 @@ myprompt:run()
 
 
 
-    <span id=item1011 class="hide_extra">
+    <span id=item1026 class="hide_extra">
     </span>
 
 </dd>
@@ -858,7 +874,7 @@ myprompt:run()
 
 
 
-    <span id=item1012 class="hide_extra">
+    <span id=item1027 class="hide_extra">
     </span>
 
 </dd>
@@ -886,7 +902,7 @@ myprompt:run()
 
 
 
-    <span id=item1013 class="hide_extra">
+    <span id=item1028 class="hide_extra">
     </span>
 
 </dd>
@@ -906,7 +922,7 @@ myprompt:run()
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -921,7 +937,7 @@ myprompt:run()
 
 
 
-    <span id=item1014 class="hide_extra">
+    <span id=item1029 class="hide_extra">
     </span>
 
 </dd>
@@ -939,7 +955,7 @@ myprompt:run()
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -954,7 +970,7 @@ myprompt:run()
 
 
 
-    <span id=item1015 class="hide_extra">
+    <span id=item1030 class="hide_extra">
     </span>
 
 </dd>
@@ -972,7 +988,7 @@ myprompt:run()
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -986,7 +1002,7 @@ myprompt:run()
 
 
 
-    <span id=item1016 class="hide_extra">
+    <span id=item1031 class="hide_extra">
     </span>
 
 </dd>
@@ -1011,7 +1027,7 @@ myprompt:run()
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1025,7 +1041,7 @@ myprompt:run()
 
 
 
-    <span id=item1017 class="hide_extra">
+    <span id=item1032 class="hide_extra">
     </span>
 
 </dd>
@@ -1056,7 +1072,7 @@ myprompt:run()
 
 
 
-    <span id=item1018 class="hide_extra">
+    <span id=item1033 class="hide_extra">
     </span>
 
 </dd>
@@ -1083,7 +1099,7 @@ myprompt:run()
 
 
 
-    <span id=item1019 class="hide_extra">
+    <span id=item1034 class="hide_extra">
     </span>
 
 </dd>
@@ -1100,7 +1116,7 @@ myprompt:run()
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1118,7 +1134,7 @@ myprompt:run()
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1180,7 +1196,7 @@ myprompt:run()
 
 
 
-    <span id=item1020 class="hide_extra">
+    <span id=item1035 class="hide_extra">
     </span>
 
 </dd>
@@ -1197,7 +1213,7 @@ myprompt:run()
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1215,7 +1231,7 @@ myprompt:run()
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1277,7 +1293,7 @@ myprompt:run()
 
 
 
-    <span id=item1021 class="hide_extra">
+    <span id=item1036 class="hide_extra">
     </span>
 
 </dd>
@@ -1294,7 +1310,7 @@ myprompt:run()
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1356,7 +1372,7 @@ myprompt:run()
 
 
 
-    <span id=item1022 class="hide_extra">
+    <span id=item1037 class="hide_extra">
     </span>
 
 </dd>
@@ -1373,7 +1389,7 @@ myprompt:run()
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1435,7 +1451,7 @@ myprompt:run()
 
 
 
-    <span id=item1023 class="hide_extra">
+    <span id=item1038 class="hide_extra">
     </span>
 
 </dd>
@@ -1463,7 +1479,7 @@ myprompt:run()
 
 
 
-    <span id=item1024 class="hide_extra">
+    <span id=item1039 class="hide_extra">
     </span>
 
 </dd>
@@ -1487,7 +1503,7 @@ myprompt:run()
 
 
 
-    <span id=item1025 class="hide_extra">
+    <span id=item1040 class="hide_extra">
     </span>
 
 </dd>
@@ -1498,7 +1514,7 @@ myprompt:run()
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

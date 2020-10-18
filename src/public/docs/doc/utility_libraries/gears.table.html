@@ -115,6 +115,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -173,10 +178,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -376,7 +392,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Tables to join.
         </li>
     </ul>
@@ -384,7 +400,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A new table containing all entries from the arguments.
     </ol>
 
@@ -392,7 +408,7 @@ end
 
 
 
-    <span id=item2680 class="hide_extra">
+    <span id=item2700 class="hide_extra">
     </span>
 
 </dd>
@@ -411,11 +427,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          the table to be overriden
         </li>
         <li><span class="parameter">set</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          the table used to override members of <code>t</code>
         </li>
         <li><span class="parameter">raw</span>
@@ -428,7 +444,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         t (for convenience)
     </ol>
 
@@ -436,7 +452,7 @@ end
 
 
 
-    <span id=item2681 class="hide_extra">
+    <span id=item2701 class="hide_extra">
     </span>
 
 </dd>
@@ -458,7 +474,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A potentially sparse table.
         </li>
     </ul>
@@ -466,7 +482,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A packed table with only numeric keys.
     </ol>
 
@@ -474,7 +490,7 @@ end
 
 
 
-    <span id=item2682 class="hide_extra">
+    <span id=item2702 class="hide_extra">
     </span>
 
 </dd>
@@ -491,7 +507,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table.
         </li>
         <li><span class="parameter">item</span>
@@ -502,7 +518,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">number</span></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">number</span></span>
         The key of the item.
     </ol>
      <h3>Or</h3>
@@ -518,7 +534,7 @@ end
 
 
 
-    <span id=item2683 class="hide_extra">
+    <span id=item2703 class="hide_extra">
     </span>
 
 </dd>
@@ -535,7 +551,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table.
         </li>
         <li><span class="parameter">matcher</span>
@@ -559,7 +575,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
         An ordered table with all the keys or <code>nil</code> if none were
    found.
     </ol>
@@ -568,7 +584,7 @@ end
 
 
 
-    <span id=item2684 class="hide_extra">
+    <span id=item2704 class="hide_extra">
     </span>
 
 </dd>
@@ -585,7 +601,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table.
         </li>
         <li><span class="parameter">matcher</span>
@@ -611,7 +627,7 @@ end
 
 
 
-    <span id=item2685 class="hide_extra">
+    <span id=item2705 class="hide_extra">
     </span>
 
 </dd>
@@ -628,7 +644,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table for which the keys to get.
         </li>
     </ul>
@@ -636,7 +652,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with keys.
     </ol>
 
@@ -644,7 +660,7 @@ end
 
 
 
-    <span id=item2686 class="hide_extra">
+    <span id=item2706 class="hide_extra">
     </span>
 
 </dd>
@@ -661,11 +677,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to retrieve the keys for.
         </li>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The types to look for.
         </li>
     </ul>
@@ -673,7 +689,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A filtered table.
     </ol>
 
@@ -681,7 +697,7 @@ end
 
 
 
-    <span id=item2687 class="hide_extra">
+    <span id=item2707 class="hide_extra">
     </span>
 
 </dd>
@@ -698,7 +714,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to reverse.
         </li>
     </ul>
@@ -706,7 +722,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A reversed table.
     </ol>
 
@@ -714,7 +730,7 @@ end
 
 
 
-    <span id=item2688 class="hide_extra">
+    <span id=item2708 class="hide_extra">
     </span>
 
 </dd>
@@ -731,7 +747,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to clone.
         </li>
         <li><span class="parameter">deep</span>
@@ -744,7 +760,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A clone of <code>t</code>.
     </ol>
 
@@ -752,7 +768,7 @@ end
 
 
 
-    <span id=item2689 class="hide_extra">
+    <span id=item2709 class="hide_extra">
     </span>
 
 </dd>
@@ -772,7 +788,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The input table.
         </li>
         <li><span class="parameter">value</span>
@@ -810,7 +826,7 @@ end
 
 
 
-    <span id=item2690 class="hide_extra">
+    <span id=item2710 class="hide_extra">
     </span>
 
 </dd>
@@ -830,7 +846,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to iterate.
         </li>
         <li><span class="parameter">filter</span>
@@ -859,7 +875,7 @@ end
 
 
 
-    <span id=item2691 class="hide_extra">
+    <span id=item2711 class="hide_extra">
     </span>
 
 </dd>
@@ -876,11 +892,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The container table
         </li>
         <li><span class="parameter">set</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The mixin table.
         </li>
     </ul>
@@ -888,7 +904,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         (for convenience).
     </ol>
 
@@ -896,7 +912,7 @@ end
 
 
 
-    <span id=item2692 class="hide_extra">
+    <span id=item2712 class="hide_extra">
     </span>
 
 </dd>
@@ -923,11 +939,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">target</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to modify.
         </li>
         <li><span class="parameter">new</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table which contains the new content.
         </li>
         <li><span class="parameter">identifier</span>
@@ -948,16 +964,16 @@ end
     <h3>Returns:</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The target table (for daisy chaining).</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The new entries.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The removed entries.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The updated entries.</li>
     </ol>
 
@@ -971,7 +987,7 @@ end
     </ul>
 
 
-    <span id=item2693 class="hide_extra">
+    <span id=item2713 class="hide_extra">
     </span>
 
 </dd>
@@ -995,7 +1011,7 @@ end
          The function to be applied to each value in the table.
         </li>
         <li><span class="parameter">tbl</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The container table whose values will be operated on.
         </li>
     </ul>
@@ -1003,7 +1019,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
 
 
@@ -1013,7 +1029,7 @@ end
 
 
 
-    <span id=item2694 class="hide_extra">
+    <span id=item2714 class="hide_extra">
     </span>
 
 </dd>
@@ -1024,7 +1040,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

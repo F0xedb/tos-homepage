@@ -115,6 +115,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -173,10 +178,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -356,7 +372,7 @@
 
 
 
-    <span id=item2642 class="hide_extra">
+    <span id=item2662 class="hide_extra">
     </span>
 
 </dd>
@@ -373,7 +389,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">list</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of geometry tables.
         </li>
         <li><span class="parameter">x</span>
@@ -396,7 +412,7 @@
 
 
 
-    <span id=item2643 class="hide_extra">
+    <span id=item2663 class="hide_extra">
     </span>
 
 </dd>
@@ -416,7 +432,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">list</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of geometry tables.
         </li>
         <li><span class="parameter">x</span>
@@ -440,7 +456,7 @@
 
 
 
-    <span id=item2644 class="hide_extra">
+    <span id=item2664 class="hide_extra">
     </span>
 
 </dd>
@@ -458,15 +474,15 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">dir</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The direction, can be either <em>up</em>, <em>down</em>, <em>left</em> or <em>right</em>.
         </li>
         <li><span class="parameter">recttbl</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of rectangle specifications.
         </li>
         <li><span class="parameter">cur</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current rectangle.
         </li>
     </ul>
@@ -481,7 +497,7 @@
 
 
 
-    <span id=item2645 class="hide_extra">
+    <span id=item2665 class="hide_extra">
     </span>
 
 </dd>
@@ -500,11 +516,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">a</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The area.
         </li>
         <li><span class="parameter">b</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The other area.
         </li>
     </ul>
@@ -520,7 +536,7 @@
 
 
 
-    <span id=item2646 class="hide_extra">
+    <span id=item2666 class="hide_extra">
     </span>
 
 </dd>
@@ -541,11 +557,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">a</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The smaller area.
         </li>
         <li><span class="parameter">b</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The larger area.
         </li>
     </ul>
@@ -565,7 +581,7 @@
 
 
 
-    <span id=item2647 class="hide_extra">
+    <span id=item2667 class="hide_extra">
     </span>
 
 </dd>
@@ -582,11 +598,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">a</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The area.
         </li>
         <li><span class="parameter">b</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The other area.
         </li>
     </ul>
@@ -601,7 +617,7 @@
 
 
 
-    <span id=item2648 class="hide_extra">
+    <span id=item2668 class="hide_extra">
     </span>
 
 </dd>
@@ -660,7 +676,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The intersect area.
     </ol>
 
@@ -672,7 +688,7 @@
 
 
 
-    <span id=item2649 class="hide_extra">
+    <span id=item2669 class="hide_extra">
     </span>
 
 </dd>
@@ -690,7 +706,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">areas</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Table of areas.
         </li>
         <li><span class="parameter">elem</span> Area to remove.
@@ -724,7 +740,7 @@
 
 
 
-    <span id=item2650 class="hide_extra">
+    <span id=item2670 class="hide_extra">
     </span>
 
 </dd>
@@ -735,7 +751,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -103,6 +103,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -174,10 +179,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Classes</h2>
@@ -356,8 +372,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
         buttons = {
             awful.button({ }, <span class="number">1</span>, <span class="keyword">function</span> () awful.layout.inc( <span class="number">1</span>) <span class="keyword">end</span>),
             awful.button({ }, <span class="number">3</span>, <span class="keyword">function</span> () awful.layout.inc(-<span class="number">1</span>) <span class="keyword">end</span>),
-            awful.button({ }, <span class="number">4</span>, <span class="keyword">function</span> () awful.layout.inc( <span class="number">1</span>) <span class="keyword">end</span>),
-            awful.button({ }, <span class="number">5</span>, <span class="keyword">function</span> () awful.layout.inc(-<span class="number">1</span>) <span class="keyword">end</span>),
+            awful.button({ }, <span class="number">4</span>, <span class="keyword">function</span> () awful.layout.inc(-<span class="number">1</span>) <span class="keyword">end</span>),
+            awful.button({ }, <span class="number">5</span>, <span class="keyword">function</span> () awful.layout.inc( <span class="number">1</span>) <span class="keyword">end</span>),
         }
     }
 
@@ -378,8 +394,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
                                                 client.focus:toggle_tag(t)
                                             <span class="keyword">end</span>
                                         <span class="keyword">end</span>),
-            awful.button({ }, <span class="number">4</span>, <span class="keyword">function</span>(t) awful.tag.viewnext(t.screen) <span class="keyword">end</span>),
-            awful.button({ }, <span class="number">5</span>, <span class="keyword">function</span>(t) awful.tag.viewprev(t.screen) <span class="keyword">end</span>),
+            awful.button({ }, <span class="number">4</span>, <span class="keyword">function</span>(t) awful.tag.viewprev(t.screen) <span class="keyword">end</span>),
+            awful.button({ }, <span class="number">5</span>, <span class="keyword">function</span>(t) awful.tag.viewnext(t.screen) <span class="keyword">end</span>),
         }
     }
 
@@ -392,8 +408,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
                 c:activate { context = <span class="string">"tasklist"</span>, action = <span class="string">"toggle_minimization"</span> }
             <span class="keyword">end</span>),
             awful.button({ }, <span class="number">3</span>, <span class="keyword">function</span>() awful.menu.client_list { theme = { width = <span class="number">250</span> } } <span class="keyword">end</span>),
-            awful.button({ }, <span class="number">4</span>, <span class="keyword">function</span>() awful.client.focus.byidx( <span class="number">1</span>) <span class="keyword">end</span>),
-            awful.button({ }, <span class="number">5</span>, <span class="keyword">function</span>() awful.client.focus.byidx(-<span class="number">1</span>) <span class="keyword">end</span>),
+            awful.button({ }, <span class="number">4</span>, <span class="keyword">function</span>() awful.client.focus.byidx(-<span class="number">1</span>) <span class="keyword">end</span>),
+            awful.button({ }, <span class="number">5</span>, <span class="keyword">function</span>() awful.client.focus.byidx( <span class="number">1</span>) <span class="keyword">end</span>),
         }
     }
 
@@ -424,8 +440,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
 <span class="comment">-- {{{ Mouse bindings
 </span>awful.mouse.append_global_mousebindings({
     awful.button({ }, <span class="number">3</span>, <span class="keyword">function</span> () mymainmenu:toggle() <span class="keyword">end</span>),
-    awful.button({ }, <span class="number">4</span>, awful.tag.viewnext),
-    awful.button({ }, <span class="number">5</span>, awful.tag.viewprev),
+    awful.button({ }, <span class="number">4</span>, awful.tag.viewprev),
+    awful.button({ }, <span class="number">5</span>, awful.tag.viewnext),
 })
 <span class="comment">-- }}}
 </span>
@@ -798,7 +814,7 @@ naughty.connect_signal(<span class="string">"request::display"</span>, <span cla
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

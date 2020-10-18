@@ -119,6 +119,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -176,10 +181,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -360,7 +376,7 @@ month_calendar:attach( mytextclock, "tr" )
         <li><span class="parameter">args</span> Properties of the widget
         <ul>
         <li><span class="parameter">position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Two-character position of the calendar in the screen
         </li>
         <li><span class="parameter">screen</span>
@@ -372,11 +388,11 @@ month_calendar:attach( mytextclock, "tr" )
          Wibox opacity
         </li>
         <li><span class="parameter">bg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Wibox background color
         </li>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Calendar font
         </li>
         <li><span class="parameter">spacing</span>
@@ -400,27 +416,27 @@ month_calendar:attach( mytextclock, "tr" )
          Format the weekdays with three characters instead of two
         </li>
         <li><span class="parameter">style_month</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Container style for the month calendar (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_header</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the month calendar header (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_weekday</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the weekday cells (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_weeknumber</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the weeknumber cells (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_normal</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the normal day cells (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_focus</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the current day cell (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         </li></ul>
@@ -437,7 +453,7 @@ month_calendar:attach( mytextclock, "tr" )
 
 
 
-    <span id=item2522 class="hide_extra">
+    <span id=item2542 class="hide_extra">
     </span>
 
 </dd>
@@ -467,7 +483,7 @@ month_calendar:attach( mytextclock, "tr" )
         <li><span class="parameter">args</span> Properties of the widget
         <ul>
         <li><span class="parameter">position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Two-character position of the calendar in the screen
         </li>
         <li><span class="parameter">screen</span>
@@ -479,11 +495,11 @@ month_calendar:attach( mytextclock, "tr" )
          Wibox opacity
         </li>
         <li><span class="parameter">bg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Wibox background color
         </li>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Calendar font
         </li>
         <li><span class="parameter">spacing</span>
@@ -507,36 +523,36 @@ month_calendar:attach( mytextclock, "tr" )
          Format the weekdays with three characters instead of two
         </li>
         <li><span class="parameter">style_year</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Container style for the year calendar (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_month</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Container style for the month calendar (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>).
  This field can also be called <code>style_monthheader</code>.
         </li>
         <li><span class="parameter">style_yearheader</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the year calendar header (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_header</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the month calendar header (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_weekday</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the weekday cells (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_weeknumber</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the weeknumber cells (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_normal</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the normal day cells (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         <li><span class="parameter">style_focus</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Cell style for the current day cell (see <a href="../popups_and_bars/awful.widget.calendar_popup.html#cell_properties">cell_properties</a>)
         </li>
         </li></ul>
@@ -553,7 +569,7 @@ month_calendar:attach( mytextclock, "tr" )
 
 
 
-    <span id=item2523 class="hide_extra">
+    <span id=item2543 class="hide_extra">
     </span>
 
 </dd>
@@ -578,7 +594,7 @@ month_calendar:attach( mytextclock, "tr" )
          Offset with respect to current month or year
         </li>
         <li><span class="parameter">position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Two-character position of the calendar in the screen
         </li>
         <li><span class="parameter">screen</span>
@@ -598,7 +614,7 @@ month_calendar:attach( mytextclock, "tr" )
 
 
 
-    <span id=item2524 class="hide_extra">
+    <span id=item2544 class="hide_extra">
     </span>
 
 </dd>
@@ -618,7 +634,7 @@ month_calendar:attach( mytextclock, "tr" )
 
 
 
-    <span id=item2525 class="hide_extra">
+    <span id=item2545 class="hide_extra">
     </span>
 
 </dd>
@@ -646,7 +662,7 @@ month_calendar:attach(mytextclock, 'tr')
          Widget to attach the calendar
         </li>
         <li><span class="parameter">position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Two characters string defining the position on the screen
          (<em>default</em> "tr")
         </li>
@@ -671,7 +687,7 @@ month_calendar:attach(mytextclock, 'tr')
 
 
 
-    <span id=item2526 class="hide_extra">
+    <span id=item2546 class="hide_extra">
     </span>
 
 </dd>
@@ -704,7 +720,7 @@ month_calendar:attach(mytextclock, 'tr')
 
 
 
-    <span id=item2527 class="hide_extra">
+    <span id=item2547 class="hide_extra">
     </span>
 
 </dd>
@@ -754,7 +770,7 @@ month_calendar:attach(mytextclock, 'tr')
 
 
 
-    <span id=item2528 class="hide_extra">
+    <span id=item2548 class="hide_extra">
     </span>
 
 </dd>
@@ -800,7 +816,7 @@ month_calendar:attach(mytextclock, 'tr')
 
 
 
-    <span id=item2529 class="hide_extra">
+    <span id=item2549 class="hide_extra">
     </span>
 
 </dd>
@@ -811,7 +827,7 @@ month_calendar:attach(mytextclock, 'tr')
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

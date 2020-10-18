@@ -127,6 +127,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -198,10 +203,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -492,8 +508,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
         buttons = {
             <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">1</span>, <span class="keyword">function</span> () <span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.inc">awful.layout.inc</a></span>( <span class="number">1</span>) <span class="keyword">end</span>),
             <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">3</span>, <span class="keyword">function</span> () <span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.inc">awful.layout.inc</a></span>(-<span class="number">1</span>) <span class="keyword">end</span>),
-            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="keyword">function</span> () <span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.inc">awful.layout.inc</a></span>( <span class="number">1</span>) <span class="keyword">end</span>),
-            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="keyword">function</span> () <span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.inc">awful.layout.inc</a></span>(-<span class="number">1</span>) <span class="keyword">end</span>),
+            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="keyword">function</span> () <span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.inc">awful.layout.inc</a></span>(-<span class="number">1</span>) <span class="keyword">end</span>),
+            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="keyword">function</span> () <span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.inc">awful.layout.inc</a></span>( <span class="number">1</span>) <span class="keyword">end</span>),
         }
     }
 
@@ -514,8 +530,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
                                                 client.focus:toggle_tag(t)
                                             <span class="keyword">end</span>
                                         <span class="keyword">end</span>),
-            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="keyword">function</span>(t) <span class="backtick"><code>awful.tag.viewnext</code></span>(t.screen) <span class="keyword">end</span>),
-            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="keyword">function</span>(t) <span class="backtick"><code>awful.tag.viewprev</code></span>(t.screen) <span class="keyword">end</span>),
+            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="keyword">function</span>(t) <span class="backtick"><code>awful.tag.viewprev</code></span>(t.screen) <span class="keyword">end</span>),
+            <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="keyword">function</span>(t) <span class="backtick"><code>awful.tag.viewnext</code></span>(t.screen) <span class="keyword">end</span>),
         }
     }
 </pre>
@@ -533,8 +549,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
             c:activate { context = <span class="string">"tasklist"</span>, action = <span class="string">"toggle_minimization"</span> }
         <span class="keyword">end</span>),
         <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">3</span>, <span class="keyword">function</span>() <span class="backtick"><code>awful.menu.client</code></span>_list { theme = { width = <span class="number">250</span> } } <span class="keyword">end</span>),
-        <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="keyword">function</span>() <span class="backtick"><code>awful.client.focus.byidx</code></span>( <span class="number">1</span>) <span class="keyword">end</span>),
-        <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="keyword">function</span>() <span class="backtick"><code>awful.client.focus.byidx</code></span>(-<span class="number">1</span>) <span class="keyword">end</span>),
+        <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="keyword">function</span>() <span class="backtick"><code>awful.client.focus.byidx</code></span>(-<span class="number">1</span>) <span class="keyword">end</span>),
+        <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="keyword">function</span>() <span class="backtick"><code>awful.client.focus.byidx</code></span>( <span class="number">1</span>) <span class="keyword">end</span>),
     }
 }
 </pre>
@@ -579,8 +595,8 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
 <pre>
 <span class="backtick"><code>awful.mouse.append</code></span>_global_mousebindings({
     <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">3</span>, <span class="keyword">function</span> () mymainmenu:toggle() <span class="keyword">end</span>),
-    <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="backtick"><code>awful.tag.viewnext</code></span>),
-    <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="backtick"><code>awful.tag.viewprev</code></span>),
+    <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">4</span>, <span class="backtick"><code>awful.tag.viewprev</code></span>),
+    <span class="backtick"><a href="../input_handling/awful.button.html#">awful.button</a></span>({ }, <span class="number">5</span>, <span class="backtick"><code>awful.tag.viewnext</code></span>),
 })
 </pre>
 
@@ -1073,7 +1089,7 @@ client.connect_signal(<span class="string">"mouse::enter"</span>, <span class="k
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

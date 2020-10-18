@@ -105,6 +105,11 @@
   <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
   <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -176,10 +181,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -495,7 +511,7 @@ wibox.widget {
 
 
 
-    <span id=item1253 class="hide_extra">
+    <span id=item1268 class="hide_extra">
     </span>
 
 </dd>
@@ -520,13 +536,13 @@ wibox.widget {
 
 
      <br />
-     <center id=button1254>
-     <a class="show_more_button" onclick="show_extra('1254')">
+     <center id=button1269>
+     <a class="show_more_button" onclick="show_extra('1269')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1254 class="hide_extra">
+    <span id=item1269 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::notification</code></span>  When the <a href="../widgets/naughty.widget.icon.html#notification">notification</a> value changes.</li>
@@ -571,13 +587,13 @@ wibox.widget {
 
 
      <br />
-     <center id=button1255>
-     <a class="show_more_button" onclick="show_extra('1255')">
+     <center id=button1270>
+     <a class="show_more_button" onclick="show_extra('1270')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1255 class="hide_extra">
+    <span id=item1270 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::resize_strategy</code></span>  When the <a href="../widgets/naughty.widget.icon.html#resize_strategy">resize_strategy</a> value changes.</li>
@@ -612,7 +628,7 @@ wibox.widget {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -622,7 +638,7 @@ wibox.widget {
 
 
 
-    <span id=item1256 class="hide_extra">
+    <span id=item1271 class="hide_extra">
     </span>
 
 </dd>
@@ -643,7 +659,7 @@ wibox.widget {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -653,7 +669,7 @@ wibox.widget {
 
 
 
-    <span id=item1257 class="hide_extra">
+    <span id=item1272 class="hide_extra">
     </span>
 
 </dd>
@@ -681,7 +697,7 @@ wibox.widget {
 
 
 
-    <span id=item1258 class="hide_extra">
+    <span id=item1273 class="hide_extra">
     </span>
 
 </dd>
@@ -709,7 +725,7 @@ wibox.widget {
 
 
 
-    <span id=item1259 class="hide_extra">
+    <span id=item1274 class="hide_extra">
     </span>
 
 </dd>
@@ -738,7 +754,7 @@ wibox.widget {
 
 
 
-    <span id=item1260 class="hide_extra">
+    <span id=item1275 class="hide_extra">
     </span>
 
 </dd>
@@ -759,7 +775,7 @@ wibox.widget {
 
 
 
-    <span id=item1261 class="hide_extra">
+    <span id=item1276 class="hide_extra">
     </span>
 
 </dd>
@@ -786,7 +802,7 @@ wibox.widget {
 
 
 
-    <span id=item1262 class="hide_extra">
+    <span id=item1277 class="hide_extra">
     </span>
 
 </dd>
@@ -818,7 +834,7 @@ wibox.widget {
 
 
 
-    <span id=item1263 class="hide_extra">
+    <span id=item1278 class="hide_extra">
     </span>
 
 </dd>
@@ -846,7 +862,7 @@ wibox.widget {
 
 
 
-    <span id=item1264 class="hide_extra">
+    <span id=item1279 class="hide_extra">
     </span>
 
 </dd>
@@ -866,7 +882,7 @@ wibox.widget {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -881,7 +897,7 @@ wibox.widget {
 
 
 
-    <span id=item1265 class="hide_extra">
+    <span id=item1280 class="hide_extra">
     </span>
 
 </dd>
@@ -899,7 +915,7 @@ wibox.widget {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -914,7 +930,7 @@ wibox.widget {
 
 
 
-    <span id=item1266 class="hide_extra">
+    <span id=item1281 class="hide_extra">
     </span>
 
 </dd>
@@ -932,7 +948,7 @@ wibox.widget {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -946,7 +962,7 @@ wibox.widget {
 
 
 
-    <span id=item1267 class="hide_extra">
+    <span id=item1282 class="hide_extra">
     </span>
 
 </dd>
@@ -971,7 +987,7 @@ wibox.widget {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -985,7 +1001,7 @@ wibox.widget {
 
 
 
-    <span id=item1268 class="hide_extra">
+    <span id=item1283 class="hide_extra">
     </span>
 
 </dd>
@@ -1016,7 +1032,7 @@ wibox.widget {
 
 
 
-    <span id=item1269 class="hide_extra">
+    <span id=item1284 class="hide_extra">
     </span>
 
 </dd>
@@ -1043,7 +1059,7 @@ wibox.widget {
 
 
 
-    <span id=item1270 class="hide_extra">
+    <span id=item1285 class="hide_extra">
     </span>
 
 </dd>
@@ -1060,7 +1076,7 @@ wibox.widget {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1078,7 +1094,7 @@ wibox.widget {
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1140,7 +1156,7 @@ wibox.widget {
 
 
 
-    <span id=item1271 class="hide_extra">
+    <span id=item1286 class="hide_extra">
     </span>
 
 </dd>
@@ -1157,7 +1173,7 @@ wibox.widget {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1175,7 +1191,7 @@ wibox.widget {
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1237,7 +1253,7 @@ wibox.widget {
 
 
 
-    <span id=item1272 class="hide_extra">
+    <span id=item1287 class="hide_extra">
     </span>
 
 </dd>
@@ -1254,7 +1270,7 @@ wibox.widget {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1316,7 +1332,7 @@ wibox.widget {
 
 
 
-    <span id=item1273 class="hide_extra">
+    <span id=item1288 class="hide_extra">
     </span>
 
 </dd>
@@ -1333,7 +1349,7 @@ wibox.widget {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1395,7 +1411,7 @@ wibox.widget {
 
 
 
-    <span id=item1274 class="hide_extra">
+    <span id=item1289 class="hide_extra">
     </span>
 
 </dd>
@@ -1406,7 +1422,7 @@ wibox.widget {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -105,6 +105,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -176,10 +181,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -590,7 +606,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The source name.
         </li>
     </ul>
@@ -606,7 +622,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item831 class="hide_extra">
+    <span id=item846 class="hide_extra">
     </span>
 
 </dd>
@@ -637,7 +653,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item832 class="hide_extra">
+    <span id=item847 class="hide_extra">
     </span>
 
 </dd>
@@ -654,7 +670,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A valid rule.
         </li>
     </ul>
@@ -664,7 +680,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item833 class="hide_extra">
+    <span id=item848 class="hide_extra">
     </span>
 
 </dd>
@@ -681,7 +697,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with rules.
         </li>
     </ul>
@@ -691,7 +707,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item834 class="hide_extra">
+    <span id=item849 class="hide_extra">
     </span>
 
 </dd>
@@ -708,7 +724,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A valid rule.
         </li>
     </ul>
@@ -718,7 +734,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item835 class="hide_extra">
+    <span id=item850 class="hide_extra">
     </span>
 
 </dd>
@@ -739,7 +755,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The provider name. It must be unique.
         </li>
         <li><span class="parameter">callback</span> The callback that is called to produce properties.
@@ -749,24 +765,24 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
          The client
         </li>
         <li><span class="parameter">properties</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current properties. The callback should
   add to and overwrite properties in this table
         </li>
         <li><span class="parameter">callbacks</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of all callbacks scheduled to be
   executed after the main properties are applied.
         </li>
         </li></ul>
         <li><span class="parameter">depends_on</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source depends on
   (sources that must be executed <em>before</em> <code>name</code>.
          (<em>default</em> {})
         </li>
         <li><span class="parameter">precede</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source have a
   priority over.
          (<em>default</em> {})
@@ -784,7 +800,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item836 class="hide_extra">
+    <span id=item851 class="hide_extra">
     </span>
 
 </dd>
@@ -812,7 +828,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item837 class="hide_extra">
+    <span id=item852 class="hide_extra">
     </span>
 
 </dd>
@@ -836,7 +852,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item838 class="hide_extra">
+    <span id=item853 class="hide_extra">
     </span>
 
 </dd>
@@ -861,7 +877,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item839 class="hide_extra">
+    <span id=item854 class="hide_extra">
     </span>
 
 </dd>
@@ -886,7 +902,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item840 class="hide_extra">
+    <span id=item855 class="hide_extra">
     </span>
 
 </dd>
@@ -911,7 +927,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item841 class="hide_extra">
+    <span id=item856 class="hide_extra">
     </span>
 
 </dd>
@@ -936,7 +952,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item842 class="hide_extra">
+    <span id=item857 class="hide_extra">
     </span>
 
 </dd>
@@ -961,7 +977,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item843 class="hide_extra">
+    <span id=item858 class="hide_extra">
     </span>
 
 </dd>
@@ -988,7 +1004,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item844 class="hide_extra">
+    <span id=item859 class="hide_extra">
     </span>
 
 </dd>
@@ -1015,7 +1031,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item845 class="hide_extra">
+    <span id=item860 class="hide_extra">
     </span>
 
 </dd>
@@ -1042,7 +1058,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item846 class="hide_extra">
+    <span id=item861 class="hide_extra">
     </span>
 
 </dd>
@@ -1069,7 +1085,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item847 class="hide_extra">
+    <span id=item862 class="hide_extra">
     </span>
 
 </dd>
@@ -1092,7 +1108,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item848 class="hide_extra">
+    <span id=item863 class="hide_extra">
     </span>
 
 </dd>
@@ -1112,7 +1128,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item849 class="hide_extra">
+    <span id=item864 class="hide_extra">
     </span>
 
 </dd>
@@ -1148,7 +1164,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     </ul>
 
 
-    <span id=item850 class="hide_extra">
+    <span id=item865 class="hide_extra">
     </span>
 
 </dd>
@@ -1182,7 +1198,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     </ul>
 
 
-    <span id=item851 class="hide_extra">
+    <span id=item866 class="hide_extra">
     </span>
 
 </dd>
@@ -1216,7 +1232,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     </ul>
 
 
-    <span id=item852 class="hide_extra">
+    <span id=item867 class="hide_extra">
     </span>
 
 </dd>
@@ -1227,7 +1243,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

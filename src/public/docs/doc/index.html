@@ -95,6 +95,11 @@
   <li><a href="widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -166,10 +171,21 @@
   <li><a href="libraries/dbus.html">dbus</a></li>
   <li><a href="libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="libraries/naughty.html">naughty</a></li>
   <li><a href="libraries/selection.html">selection</a></li>
+  <li><a href="libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -212,15 +228,11 @@
 <div id="content">
 
 
-  <h2>API documentation for TDE a desktop environment build on top of awesomeWM  v4.3-856-ge7113d719-dirty).</h2>
+  <h2>API documentation for TDE a desktop environment build on top of awesomeWM  v4.3-894-gcc67a5b40-dirty).</h2>
   <p>Welcome to the documentation for TDE. Below you find an
 overview of the individual parts which links to the full documentation.</p>
 
-<p>If you are a new user, you may want to read <a href="documentation/07-my-first-awesome.md.html#">07-my-first-awesome.md</a> to get
-started. In <a href="documentation/05-awesomerc.md.html#">05-awesomerc.md</a>, the default configuration is explained.</p>
-
-<p>If you already used awesome or TDE in the past, <a href="documentation/89-NEWS.md.html#">89-NEWS.md</a> and <a href="documentation/17-porting-tips.md.html#">17-porting-tips.md</a>
-should be useful for you.</p>
+<p>If you area new user you should read our wiki https://wiki.odex.be for more introductory information</p>
 
 <h2>Core_components</h2>
 <table class="module_list">
@@ -410,6 +422,17 @@ should be useful for you.</p>
   <tr>
     <td class="name"  ><a href="widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></td>
     <td class="summary">Text clock widget.</td>
+  </tr>
+</table>
+<h2>TDE</h2>
+<table class="module_list">
+  <tr>
+    <td class="name"  ><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></td>
+    <td class="summary">This module helps with running applications as defined in autostart</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde/lib-tde.function.common.html">lib-tde.function.common</a></td>
+    <td class="summary">This module adds extra functionality to widgets by exposing commonly used functions.</td>
   </tr>
 </table>
 <h2>Widget_containers</h2>
@@ -662,6 +685,14 @@ should be useful for you.</p>
 </td>
   </tr>
   <tr>
+    <td class="name"  ><a href="libraries/lib-tde.html">lib-tde</a></td>
+    <td class="summary">Set of helper functions and libraries for desktop environments</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/lib-tde.function.html">lib-tde.function</a></td>
+    <td class="summary">A set of functions designed as a general helper</td>
+  </tr>
+  <tr>
     <td class="name"  ><a href="libraries/menubar.menu_gen.html">menubar.menu_gen</a></td>
     <td class="summary">Menu generation module for menubar</td>
   </tr>
@@ -676,6 +707,52 @@ should be useful for you.</p>
   <tr>
     <td class="name"  ><a href="libraries/selection.html">selection</a></td>
     <td class="summary">awesome selection (clipboard) API</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.collision.util.html">tde.collision.util</a></td>
+    <td class="summary">Draw an arrow path.</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></td>
+    <td class="summary">Separating Multiple Monitor functions as a separeted module (taken from awesome wiki)
+ TODO: add a display duplication option</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></td>
+    <td class="summary">Bluetooth Widget for Awesome Window Manager
+ Shows the bluetooth status using the bluetoothctl command
+ Better with Blueman Manager</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.calculator.html">tde.widget.calculator</a></td>
+    <td class="summary">Basic Calculator Widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.dpi.html">tde.widget.dpi</a></td>
+    <td class="summary">Rofi widget for Awesome Window Manager
+ Shows the application list
+ Better with Compton tryone fork for blur fx</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></td>
+    <td class="summary">Battery Widget for Awesome Window Manager
+ Shows the battery status using the ACPI tool
+ More details could be found here:
+ https://github.com/streetturtle/awesome-wm-widgets/tree/master/battery-widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.search.html">tde.widget.search</a></td>
+    <td class="summary">Rofi widget for Awesome Window Manager
+ Shows the application list
+ Better with Compton tryone fork for blur fx</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></td>
+    <td class="summary">Common method to create buttons.</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="libraries/tde.widget.task-list.html">tde.widget.task-list</a></td>
+    <td class="summary">Common method to create buttons.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="libraries/wibox.widget.html">wibox.widget</a></td>
@@ -803,7 +880,7 @@ should be useful for you.</p>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

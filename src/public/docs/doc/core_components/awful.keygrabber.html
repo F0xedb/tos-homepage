@@ -109,6 +109,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -180,10 +185,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -618,17 +634,17 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
         <ul>
         <li><span class="parameter">stop_event</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Release event ("press" or "release")
          (<em>default</em> "press")
         </li>
         <li><span class="parameter">stop_key</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The key that has to be kept pressed.
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">keybindings</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          All keybindings.
         </li>
         <li><span class="parameter">timeout</span>
@@ -678,13 +694,13 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
          (<em>optional</em>)
         </li>
         <li><span class="parameter">allowed_keys</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          A table with all keys that
   <strong>wont</strong> stop the keygrabber.
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">root_keybindings</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The root (global) keybindings.
          (<em>optional</em>)
         </li>
@@ -712,7 +728,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item172 class="hide_extra">
+    <span id=item185 class="hide_extra">
     </span>
 
 </dd>
@@ -733,7 +749,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The signal name.
         </li>
         <li><span class="parameter">callback</span>
@@ -747,7 +763,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item173 class="hide_extra">
+    <span id=item186 class="hide_extra">
     </span>
 
 </dd>
@@ -764,7 +780,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The signal name.
         </li>
         <li><span class="parameter">callback</span>
@@ -778,7 +794,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item174 class="hide_extra">
+    <span id=item187 class="hide_extra">
     </span>
 
 </dd>
@@ -799,7 +815,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The signal name.
         </li>
         <li><span class="parameter">...</span>
@@ -812,7 +828,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item175 class="hide_extra">
+    <span id=item188 class="hide_extra">
     </span>
 
 </dd>
@@ -851,7 +867,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
     </ul>
 
 
-    <span id=item176 class="hide_extra">
+    <span id=item189 class="hide_extra">
     </span>
 
 </dd>
@@ -900,7 +916,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item177 class="hide_extra">
+    <span id=item190 class="hide_extra">
     </span>
 
 </dd>
@@ -934,7 +950,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item178 class="hide_extra">
+    <span id=item191 class="hide_extra">
     </span>
 
 </dd>
@@ -966,7 +982,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item179 class="hide_extra">
+    <span id=item192 class="hide_extra">
     </span>
 
 </dd>
@@ -990,7 +1006,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item180 class="hide_extra">
+    <span id=item193 class="hide_extra">
     </span>
 
 </dd>
@@ -1018,7 +1034,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item181 class="hide_extra">
+    <span id=item194 class="hide_extra">
     </span>
 
 </dd>
@@ -1110,7 +1126,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item182 class="hide_extra">
+    <span id=item195 class="hide_extra">
     </span>
 
 </dd>
@@ -1138,7 +1154,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item183 class="hide_extra">
+    <span id=item196 class="hide_extra">
     </span>
 
 </dd>
@@ -1162,7 +1178,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">allowed_keys</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          The list of keys.
          (<em>default</em> nil)
         </li>
@@ -1180,7 +1196,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item184 class="hide_extra">
+    <span id=item197 class="hide_extra">
     </span>
 
 </dd>
@@ -1216,7 +1232,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item185 class="hide_extra">
+    <span id=item198 class="hide_extra">
     </span>
 
 </dd>
@@ -1250,13 +1266,13 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
      <br />
-     <center id=button186>
-     <a class="show_more_button" onclick="show_extra('186')">
+     <center id=button199>
+     <a class="show_more_button" onclick="show_extra('199')">
       Click to display more
      </a>
      </center>
 
-    <span id=item186 class="hide_extra">
+    <span id=item199 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/awful.keygrabber.html#started">started</a></span>  </li>
@@ -1282,13 +1298,13 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
      <br />
-     <center id=button187>
-     <a class="show_more_button" onclick="show_extra('187')">
+     <center id=button200>
+     <a class="show_more_button" onclick="show_extra('200')">
       Click to display more
      </a>
      </center>
 
-    <span id=item187 class="hide_extra">
+    <span id=item200 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/awful.keygrabber.html#stopped">stopped</a></span>  </li>
@@ -1322,7 +1338,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item188 class="hide_extra">
+    <span id=item201 class="hide_extra">
     </span>
 
 </dd>
@@ -1340,7 +1356,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -1355,7 +1371,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item189 class="hide_extra">
+    <span id=item202 class="hide_extra">
     </span>
 
 </dd>
@@ -1373,7 +1389,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1387,7 +1403,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item190 class="hide_extra">
+    <span id=item203 class="hide_extra">
     </span>
 
 </dd>
@@ -1412,7 +1428,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1426,7 +1442,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item191 class="hide_extra">
+    <span id=item204 class="hide_extra">
     </span>
 
 </dd>
@@ -1449,7 +1465,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item192 class="hide_extra">
+    <span id=item205 class="hide_extra">
     </span>
 
 </dd>
@@ -1468,7 +1484,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item193 class="hide_extra">
+    <span id=item206 class="hide_extra">
     </span>
 
 </dd>
@@ -1487,7 +1503,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item194 class="hide_extra">
+    <span id=item207 class="hide_extra">
     </span>
 
 </dd>
@@ -1520,7 +1536,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item195 class="hide_extra">
+    <span id=item208 class="hide_extra">
     </span>
 
 </dd>
@@ -1601,7 +1617,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item196 class="hide_extra">
+    <span id=item209 class="hide_extra">
     </span>
 
 </dd>
@@ -1631,7 +1647,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item197 class="hide_extra">
+    <span id=item210 class="hide_extra">
     </span>
 
 </dd>
@@ -1647,15 +1663,15 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current transaction object.
         </li>
         <li><span class="parameter">stop_key</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The key(s) that stop the keygrabbing (if any)
         </li>
         <li><span class="parameter">stop_mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers key (if any)
         </li>
         <li><span class="parameter">sequence</span>
@@ -1680,7 +1696,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item198 class="hide_extra">
+    <span id=item211 class="hide_extra">
     </span>
 
 </dd>
@@ -1705,7 +1721,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item199 class="hide_extra">
+    <span id=item212 class="hide_extra">
     </span>
 
 </dd>
@@ -1722,19 +1738,19 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current transaction object.
         </li>
         <li><span class="parameter">mod</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current modifiers (like "Control" or "Shift").
         </li>
         <li><span class="parameter">key</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The key name.
         </li>
         <li><span class="parameter">event</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The event ("press" or "release").
         </li>
     </ul>
@@ -1750,7 +1766,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item200 class="hide_extra">
+    <span id=item213 class="hide_extra">
     </span>
 
 </dd>
@@ -1767,19 +1783,19 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current transaction object.
         </li>
         <li><span class="parameter">mod</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current modifiers (like "Control" or "Shift").
         </li>
         <li><span class="parameter">key</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The key name.
         </li>
         <li><span class="parameter">event</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The event ("press" or "release")
         </li>
     </ul>
@@ -1795,7 +1811,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item201 class="hide_extra">
+    <span id=item214 class="hide_extra">
     </span>
 
 </dd>
@@ -1825,13 +1841,13 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
      <br />
-     <center id=button202>
-     <a class="show_more_button" onclick="show_extra('202')">
+     <center id=button215>
+     <a class="show_more_button" onclick="show_extra('215')">
       Click to display more
      </a>
      </center>
 
-    <span id=item202 class="hide_extra">
+    <span id=item215 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/awful.keygrabber.html#property::current_instance">property::current_instance</a></span>  </li>
@@ -1855,7 +1871,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item203 class="hide_extra">
+    <span id=item216 class="hide_extra">
     </span>
 
 </dd>
@@ -1866,7 +1882,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

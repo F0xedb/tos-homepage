@@ -106,6 +106,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -177,10 +182,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -661,7 +677,7 @@ awful.spawn(<span class="string">'xterm'</span>)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A valid rule.
         </li>
     </ul>
@@ -671,7 +687,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item803 class="hide_extra">
+    <span id=item818 class="hide_extra">
     </span>
 
 </dd>
@@ -687,7 +703,7 @@ awful.spawn(<span class="string">'xterm'</span>)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with rules.
         </li>
     </ul>
@@ -697,7 +713,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item804 class="hide_extra">
+    <span id=item819 class="hide_extra">
     </span>
 
 </dd>
@@ -713,7 +729,7 @@ awful.spawn(<span class="string">'xterm'</span>)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A valid rule or a name passed in the <a href="../declarative_rules/ruled.client.html#id">id</a> value
   when calling <a href="../declarative_rules/ruled.client.html#module.append_rule">append_rule</a>.
         </li>
@@ -724,7 +740,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item805 class="hide_extra">
+    <span id=item820 class="hide_extra">
     </span>
 
 </dd>
@@ -749,7 +765,7 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client.
         </li>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rule to check.
         </li>
     </ul>
@@ -765,7 +781,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item806 class="hide_extra">
+    <span id=item821 class="hide_extra">
     </span>
 
 </dd>
@@ -786,7 +802,7 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client.
         </li>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rule to check.
         </li>
     </ul>
@@ -802,7 +818,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item807 class="hide_extra">
+    <span id=item822 class="hide_extra">
     </span>
 
 </dd>
@@ -823,7 +839,7 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client.
         </li>
         <li><span class="parameter">entry</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Rule entry (with keys <a href="../declarative_rules/ruled.client.html#rule">rule</a>, <a href="../declarative_rules/ruled.client.html#rule_any">rule_any</a>, <a href="../declarative_rules/ruled.client.html#except">except</a> and/or
    <a href="../declarative_rules/ruled.client.html#except_any">except_any</a>).
         </li>
@@ -842,7 +858,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item808 class="hide_extra">
+    <span id=item823 class="hide_extra">
     </span>
 
 </dd>
@@ -863,7 +879,7 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client.
         </li>
         <li><span class="parameter">_rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rules to check. List with "rule", "rule<em>any", "except" and
    "except</em>any" keys.
         </li>
@@ -872,7 +888,7 @@ awful.spawn(<span class="string">'xterm'</span>)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The list of matched rules.
     </ol>
 
@@ -880,7 +896,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item809 class="hide_extra">
+    <span id=item824 class="hide_extra">
     </span>
 
 </dd>
@@ -901,7 +917,7 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client.
         </li>
         <li><span class="parameter">_rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rules to check. List of tables with <a href="../declarative_rules/ruled.client.html#rule">rule</a>, <a href="../declarative_rules/ruled.client.html#rule_any">rule_any</a>,
    <a href="../declarative_rules/ruled.client.html#except">except</a> and <a href="../declarative_rules/ruled.client.html#except_any">except_any</a> keys.
         </li>
@@ -918,7 +934,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item810 class="hide_extra">
+    <span id=item825 class="hide_extra">
     </span>
 
 </dd>
@@ -935,7 +951,7 @@ awful.spawn(<span class="string">'xterm'</span>)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The source name.
         </li>
     </ul>
@@ -951,7 +967,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item811 class="hide_extra">
+    <span id=item826 class="hide_extra">
     </span>
 
 </dd>
@@ -978,7 +994,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item812 class="hide_extra">
+    <span id=item827 class="hide_extra">
     </span>
 
 </dd>
@@ -1022,7 +1038,7 @@ awful.spawn(<span class="string">'xterm'</span>)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The provider name. It must be unique.
         </li>
         <li><span class="parameter">callback</span> The callback that is called to produce properties.
@@ -1032,24 +1048,24 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client
         </li>
         <li><span class="parameter">properties</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current properties. The callback should
   add to and overwrite properties in this table
         </li>
         <li><span class="parameter">callbacks</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of all callbacks scheduled to be
   executed after the main properties are applied.
         </li>
         </li></ul>
         <li><span class="parameter">depends_on</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source depends on
   (sources that must be executed <em>before</em> <code>name</code>.
          (<em>default</em> {})
         </li>
         <li><span class="parameter">precede</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source have a
   priority over.
          (<em>default</em> {})
@@ -1067,7 +1083,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item813 class="hide_extra">
+    <span id=item828 class="hide_extra">
     </span>
 
 </dd>
@@ -1089,11 +1105,11 @@ awful.spawn(<span class="string">'xterm'</span>)
          The client.
         </li>
         <li><span class="parameter">props</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Properties to apply.
         </li>
         <li><span class="parameter">callbacks</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Callbacks to apply.
          (<em>optional</em>)
         </li>
@@ -1104,13 +1120,13 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
      <br />
-     <center id=button814>
-     <a class="show_more_button" onclick="show_extra('814')">
+     <center id=button829>
+     <a class="show_more_button" onclick="show_extra('829')">
       Click to display more
      </a>
      </center>
 
-    <span id=item814 class="hide_extra">
+    <span id=item829 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1150,7 +1166,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item815 class="hide_extra">
+    <span id=item830 class="hide_extra">
     </span>
 
 </dd>
@@ -1178,7 +1194,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item816 class="hide_extra">
+    <span id=item831 class="hide_extra">
     </span>
 
 </dd>
@@ -1212,7 +1228,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item817 class="hide_extra">
+    <span id=item832 class="hide_extra">
     </span>
 
 </dd>
@@ -1240,7 +1256,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item818 class="hide_extra">
+    <span id=item833 class="hide_extra">
     </span>
 
 </dd>
@@ -1264,7 +1280,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item819 class="hide_extra">
+    <span id=item834 class="hide_extra">
     </span>
 
 </dd>
@@ -1289,7 +1305,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item820 class="hide_extra">
+    <span id=item835 class="hide_extra">
     </span>
 
 </dd>
@@ -1314,7 +1330,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item821 class="hide_extra">
+    <span id=item836 class="hide_extra">
     </span>
 
 </dd>
@@ -1339,7 +1355,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item822 class="hide_extra">
+    <span id=item837 class="hide_extra">
     </span>
 
 </dd>
@@ -1364,7 +1380,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item823 class="hide_extra">
+    <span id=item838 class="hide_extra">
     </span>
 
 </dd>
@@ -1389,7 +1405,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item824 class="hide_extra">
+    <span id=item839 class="hide_extra">
     </span>
 
 </dd>
@@ -1416,7 +1432,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item825 class="hide_extra">
+    <span id=item840 class="hide_extra">
     </span>
 
 </dd>
@@ -1443,7 +1459,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item826 class="hide_extra">
+    <span id=item841 class="hide_extra">
     </span>
 
 </dd>
@@ -1470,7 +1486,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item827 class="hide_extra">
+    <span id=item842 class="hide_extra">
     </span>
 
 </dd>
@@ -1513,7 +1529,7 @@ end
 
 
 
-    <span id=item828 class="hide_extra">
+    <span id=item843 class="hide_extra">
     </span>
 
 </dd>
@@ -1553,7 +1569,7 @@ end
 
 
 
-    <span id=item829 class="hide_extra">
+    <span id=item844 class="hide_extra">
     </span>
 
 </dd>
@@ -1573,7 +1589,7 @@ end
 
 
 
-    <span id=item830 class="hide_extra">
+    <span id=item845 class="hide_extra">
     </span>
 
 </dd>
@@ -1584,7 +1600,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

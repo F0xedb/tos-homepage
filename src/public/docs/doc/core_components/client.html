@@ -115,6 +115,11 @@
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -186,10 +191,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -1886,7 +1902,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item204 class="hide_extra">
+    <span id=item217 class="hide_extra">
     </span>
 
 </dd>
@@ -1918,7 +1934,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with clients.
     </ol>
 
@@ -1932,7 +1948,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     </ul>
 
 
-    <span id=item205 class="hide_extra">
+    <span id=item218 class="hide_extra">
     </span>
 
 </dd>
@@ -1949,7 +1965,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1963,7 +1979,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item206 class="hide_extra">
+    <span id=item219 class="hide_extra">
     </span>
 
 </dd>
@@ -1980,7 +1996,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -1995,7 +2011,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item207 class="hide_extra">
+    <span id=item220 class="hide_extra">
     </span>
 
 </dd>
@@ -2012,7 +2028,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2026,7 +2042,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item208 class="hide_extra">
+    <span id=item221 class="hide_extra">
     </span>
 
 </dd>
@@ -2077,7 +2093,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     </ul>
 
 
-    <span id=item209 class="hide_extra">
+    <span id=item222 class="hide_extra">
     </span>
 
 </dd>
@@ -2094,7 +2110,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">dir</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The direction, can be either "up", "down", "left" or "right".
         </li>
         <li><span class="parameter">c</span>
@@ -2122,7 +2138,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item210 class="hide_extra">
+    <span id=item223 class="hide_extra">
     </span>
 
 </dd>
@@ -2142,7 +2158,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">dir</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The direction, can be either "up", "down", "left" or "right".
         </li>
         <li><span class="parameter">sel</span>
@@ -2165,13 +2181,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button211>
-     <a class="show_more_button" onclick="show_extra('211')">
+     <center id=button224>
+     <a class="show_more_button" onclick="show_extra('224')">
       Click to display more
      </a>
      </center>
 
-    <span id=item211 class="hide_extra">
+    <span id=item224 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -2222,7 +2238,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item212 class="hide_extra">
+    <span id=item225 class="hide_extra">
     </span>
 
 </dd>
@@ -2270,7 +2286,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item213 class="hide_extra">
+    <span id=item226 class="hide_extra">
     </span>
 
 </dd>
@@ -2303,7 +2319,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item214 class="hide_extra">
+    <span id=item227 class="hide_extra">
     </span>
 
 </dd>
@@ -2320,11 +2336,11 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">prop</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The property name.
         </li>
         <li><span class="parameter">kind</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The type (used for register_xproperty).
    One of "string", "number" or "boolean".
         </li>
@@ -2335,7 +2351,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item215 class="hide_extra">
+    <span id=item228 class="hide_extra">
     </span>
 
 </dd>
@@ -2385,7 +2401,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
     </ul>
 
 
-    <span id=item216 class="hide_extra">
+    <span id=item229 class="hide_extra">
     </span>
 
 </dd>
@@ -2414,7 +2430,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item217 class="hide_extra">
+    <span id=item230 class="hide_extra">
     </span>
 
 </dd>
@@ -2443,7 +2459,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item218 class="hide_extra">
+    <span id=item231 class="hide_extra">
     </span>
 
 </dd>
@@ -2472,7 +2488,7 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
 
-    <span id=item219 class="hide_extra">
+    <span id=item232 class="hide_extra">
     </span>
 
 </dd>
@@ -2501,13 +2517,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button220>
-     <a class="show_more_button" onclick="show_extra('220')">
+     <center id=button233>
+     <a class="show_more_button" onclick="show_extra('233')">
       Click to display more
      </a>
      </center>
 
-    <span id=item220 class="hide_extra">
+    <span id=item233 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::window</code></span>  When the <a href="../core_components/client.html#window">window</a> value changes.</li>
@@ -2543,13 +2559,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button221>
-     <a class="show_more_button" onclick="show_extra('221')">
+     <center id=button234>
+     <a class="show_more_button" onclick="show_extra('234')">
       Click to display more
      </a>
      </center>
 
-    <span id=item221 class="hide_extra">
+    <span id=item234 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::name</code></span>  When the <a href="../core_components/client.html#name">name</a> value changes.</li>
@@ -2589,13 +2605,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button222>
-     <a class="show_more_button" onclick="show_extra('222')">
+     <center id=button235>
+     <a class="show_more_button" onclick="show_extra('235')">
       Click to display more
      </a>
      </center>
 
-    <span id=item222 class="hide_extra">
+    <span id=item235 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::skip_taskbar</code></span>  When the <a href="../core_components/client.html#skip_taskbar">skip_taskbar</a> value changes.</li>
@@ -2658,13 +2674,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button223>
-     <a class="show_more_button" onclick="show_extra('223')">
+     <center id=button236>
+     <a class="show_more_button" onclick="show_extra('236')">
       Click to display more
      </a>
      </center>
 
-    <span id=item223 class="hide_extra">
+    <span id=item236 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::type</code></span>  When the <a href="../core_components/client.html#type">type</a> value changes.</li>
@@ -2717,13 +2733,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button224>
-     <a class="show_more_button" onclick="show_extra('224')">
+     <center id=button237>
+     <a class="show_more_button" onclick="show_extra('237')">
       Click to display more
      </a>
      </center>
 
-    <span id=item224 class="hide_extra">
+    <span id=item237 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::class</code></span>  When the <a href="../core_components/client.html#class">class</a> value changes.</li>
@@ -2773,13 +2789,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button225>
-     <a class="show_more_button" onclick="show_extra('225')">
+     <center id=button238>
+     <a class="show_more_button" onclick="show_extra('238')">
       Click to display more
      </a>
      </center>
 
-    <span id=item225 class="hide_extra">
+    <span id=item238 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::instance</code></span>  When the <a href="../core_components/client.html#instance">instance</a> value changes.</li>
@@ -2809,13 +2825,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button226>
-     <a class="show_more_button" onclick="show_extra('226')">
+     <center id=button239>
+     <a class="show_more_button" onclick="show_extra('239')">
       Click to display more
      </a>
      </center>
 
-    <span id=item226 class="hide_extra">
+    <span id=item239 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::pid</code></span>  When the <a href="../core_components/client.html#pid">pid</a> value changes.</li>
@@ -2848,13 +2864,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button227>
-     <a class="show_more_button" onclick="show_extra('227')">
+     <center id=button240>
+     <a class="show_more_button" onclick="show_extra('240')">
       Click to display more
      </a>
      </center>
 
-    <span id=item227 class="hide_extra">
+    <span id=item240 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::role</code></span>  When the <a href="../core_components/client.html#role">role</a> value changes.</li>
@@ -2892,13 +2908,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button228>
-     <a class="show_more_button" onclick="show_extra('228')">
+     <center id=button241>
+     <a class="show_more_button" onclick="show_extra('241')">
       Click to display more
      </a>
      </center>
 
-    <span id=item228 class="hide_extra">
+    <span id=item241 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::machine</code></span>  When the <a href="../core_components/client.html#machine">machine</a> value changes.</li>
@@ -2926,13 +2942,13 @@ c:connect_signal(<span class="string">"property::name"</span>, <span class="keyw
 
 
      <br />
-     <center id=button229>
-     <a class="show_more_button" onclick="show_extra('229')">
+     <center id=button242>
+     <a class="show_more_button" onclick="show_extra('242')">
       Click to display more
      </a>
      </center>
 
-    <span id=item229 class="hide_extra">
+    <span id=item242 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::icon_name</code></span>  When the <a href="../core_components/client.html#icon_name">icon_name</a> value changes.</li>
@@ -2991,13 +3007,13 @@ cr:paint()
     </ul>
 
      <br />
-     <center id=button230>
-     <a class="show_more_button" onclick="show_extra('230')">
+     <center id=button243>
+     <a class="show_more_button" onclick="show_extra('243')">
       Click to display more
      </a>
      </center>
 
-    <span id=item230 class="hide_extra">
+    <span id=item243 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::icon</code></span>  When the <a href="../core_components/client.html#icon">icon</a> value changes.</li>
@@ -3031,13 +3047,13 @@ cr:paint()
 
 
      <br />
-     <center id=button231>
-     <a class="show_more_button" onclick="show_extra('231')">
+     <center id=button244>
+     <a class="show_more_button" onclick="show_extra('244')">
       Click to display more
      </a>
      </center>
 
-    <span id=item231 class="hide_extra">
+    <span id=item244 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::icon_sizes</code></span>  When the <a href="../core_components/client.html#icon_sizes">icon_sizes</a> value changes.</li>
@@ -3077,13 +3093,13 @@ cr:paint()
 
 
      <br />
-     <center id=button232>
-     <a class="show_more_button" onclick="show_extra('232')">
+     <center id=button245>
+     <a class="show_more_button" onclick="show_extra('245')">
       Click to display more
      </a>
      </center>
 
-    <span id=item232 class="hide_extra">
+    <span id=item245 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::screen</code></span>  When the <a href="../core_components/screen.html#">screen</a> value changes.</li>
@@ -3116,13 +3132,13 @@ cr:paint()
 
 
      <br />
-     <center id=button233>
-     <a class="show_more_button" onclick="show_extra('233')">
+     <center id=button246>
+     <a class="show_more_button" onclick="show_extra('246')">
       Click to display more
      </a>
      </center>
 
-    <span id=item233 class="hide_extra">
+    <span id=item246 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::hidden</code></span>  When the <a href="../core_components/client.html#hidden">hidden</a> value changes.</li>
@@ -3155,13 +3171,13 @@ cr:paint()
 
 
      <br />
-     <center id=button234>
-     <a class="show_more_button" onclick="show_extra('234')">
+     <center id=button247>
+     <a class="show_more_button" onclick="show_extra('247')">
       Click to display more
      </a>
      </center>
 
-    <span id=item234 class="hide_extra">
+    <span id=item247 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::minimized</code></span>  When the <a href="../core_components/client.html#minimized">minimized</a> value changes.</li>
@@ -3199,13 +3215,13 @@ cr:paint()
 
 
      <br />
-     <center id=button235>
-     <a class="show_more_button" onclick="show_extra('235')">
+     <center id=button248>
+     <a class="show_more_button" onclick="show_extra('248')">
       Click to display more
      </a>
      </center>
 
-    <span id=item235 class="hide_extra">
+    <span id=item248 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::size_hints_honor</code></span>  When the <a href="../core_components/client.html#size_hints_honor">size_hints_honor</a> value changes.</li>
@@ -3237,13 +3253,13 @@ cr:paint()
 
 
      <br />
-     <center id=button236>
-     <a class="show_more_button" onclick="show_extra('236')">
+     <center id=button249>
+     <a class="show_more_button" onclick="show_extra('249')">
       Click to display more
      </a>
      </center>
 
-    <span id=item236 class="hide_extra">
+    <span id=item249 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../core_components/client.html#border_width">border_width</a> value changes.</li>
@@ -3284,13 +3300,13 @@ cr:paint()
 
 
      <br />
-     <center id=button237>
-     <a class="show_more_button" onclick="show_extra('237')">
+     <center id=button250>
+     <a class="show_more_button" onclick="show_extra('250')">
       Click to display more
      </a>
      </center>
 
-    <span id=item237 class="hide_extra">
+    <span id=item250 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../core_components/client.html#border_color">border_color</a> value changes.</li>
@@ -3322,13 +3338,13 @@ cr:paint()
 
 
      <br />
-     <center id=button238>
-     <a class="show_more_button" onclick="show_extra('238')">
+     <center id=button251>
+     <a class="show_more_button" onclick="show_extra('251')">
       Click to display more
      </a>
      </center>
 
-    <span id=item238 class="hide_extra">
+    <span id=item251 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::urgent</code></span>  When the <a href="../core_components/client.html#urgent">urgent</a> value changes.</li>
@@ -3382,7 +3398,7 @@ cr:paint()
 
 
 
-    <span id=item239 class="hide_extra">
+    <span id=item252 class="hide_extra">
     </span>
 
 </dd>
@@ -3414,13 +3430,13 @@ cr:paint()
 
 
      <br />
-     <center id=button240>
-     <a class="show_more_button" onclick="show_extra('240')">
+     <center id=button253>
+     <a class="show_more_button" onclick="show_extra('253')">
       Click to display more
      </a>
      </center>
 
-    <span id=item240 class="hide_extra">
+    <span id=item253 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::opacity</code></span>  When the <a href="../core_components/client.html#opacity">opacity</a> value changes.</li>
@@ -3453,13 +3469,13 @@ cr:paint()
 
 
      <br />
-     <center id=button241>
-     <a class="show_more_button" onclick="show_extra('241')">
+     <center id=button254>
+     <a class="show_more_button" onclick="show_extra('254')">
       Click to display more
      </a>
      </center>
 
-    <span id=item241 class="hide_extra">
+    <span id=item254 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::ontop</code></span>  When the <a href="../core_components/client.html#ontop">ontop</a> value changes.</li>
@@ -3492,13 +3508,13 @@ cr:paint()
 
 
      <br />
-     <center id=button242>
-     <a class="show_more_button" onclick="show_extra('242')">
+     <center id=button255>
+     <a class="show_more_button" onclick="show_extra('255')">
       Click to display more
      </a>
      </center>
 
-    <span id=item242 class="hide_extra">
+    <span id=item255 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::above</code></span>  When the <a href="../core_components/client.html#above">above</a> value changes.</li>
@@ -3531,13 +3547,13 @@ cr:paint()
 
 
      <br />
-     <center id=button243>
-     <a class="show_more_button" onclick="show_extra('243')">
+     <center id=button256>
+     <a class="show_more_button" onclick="show_extra('256')">
       Click to display more
      </a>
      </center>
 
-    <span id=item243 class="hide_extra">
+    <span id=item256 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::below</code></span>  When the <a href="../core_components/client.html#below">below</a> value changes.</li>
@@ -3580,13 +3596,13 @@ cr:paint()
 
 
      <br />
-     <center id=button244>
-     <a class="show_more_button" onclick="show_extra('244')">
+     <center id=button257>
+     <a class="show_more_button" onclick="show_extra('257')">
       Click to display more
      </a>
      </center>
 
-    <span id=item244 class="hide_extra">
+    <span id=item257 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fullscreen</code></span>  When the <a href="../core_components/client.html#fullscreen">fullscreen</a> value changes.</li>
@@ -3644,13 +3660,13 @@ cr:paint()
 
 
      <br />
-     <center id=button245>
-     <a class="show_more_button" onclick="show_extra('245')">
+     <center id=button258>
+     <a class="show_more_button" onclick="show_extra('258')">
       Click to display more
      </a>
      </center>
 
-    <span id=item245 class="hide_extra">
+    <span id=item258 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximized</code></span>  When the <a href="../core_components/client.html#maximized">maximized</a> value changes.</li>
@@ -3704,13 +3720,13 @@ cr:paint()
 
 
      <br />
-     <center id=button246>
-     <a class="show_more_button" onclick="show_extra('246')">
+     <center id=button259>
+     <a class="show_more_button" onclick="show_extra('259')">
       Click to display more
      </a>
      </center>
 
-    <span id=item246 class="hide_extra">
+    <span id=item259 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximized_horizontal</code></span>  When the <a href="../core_components/client.html#maximized_horizontal">maximized_horizontal</a> value changes.</li>
@@ -3764,13 +3780,13 @@ cr:paint()
 
 
      <br />
-     <center id=button247>
-     <a class="show_more_button" onclick="show_extra('247')">
+     <center id=button260>
+     <a class="show_more_button" onclick="show_extra('260')">
       Click to display more
      </a>
      </center>
 
-    <span id=item247 class="hide_extra">
+    <span id=item260 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximized_vertical</code></span>  When the <a href="../core_components/client.html#maximized_vertical">maximized_vertical</a> value changes.</li>
@@ -3827,13 +3843,13 @@ cr:paint()
 
 
      <br />
-     <center id=button248>
-     <a class="show_more_button" onclick="show_extra('248')">
+     <center id=button261>
+     <a class="show_more_button" onclick="show_extra('261')">
       Click to display more
      </a>
      </center>
 
-    <span id=item248 class="hide_extra">
+    <span id=item261 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::transient_for</code></span>  When the <a href="../core_components/client.html#transient_for">transient_for</a> value changes.</li>
@@ -3869,13 +3885,13 @@ cr:paint()
 
 
      <br />
-     <center id=button249>
-     <a class="show_more_button" onclick="show_extra('249')">
+     <center id=button262>
+     <a class="show_more_button" onclick="show_extra('262')">
       Click to display more
      </a>
      </center>
 
-    <span id=item249 class="hide_extra">
+    <span id=item262 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::group_window</code></span>  When the <a href="../core_components/client.html#group_window">group_window</a> value changes.</li>
@@ -3911,13 +3927,13 @@ cr:paint()
 
 
      <br />
-     <center id=button250>
-     <a class="show_more_button" onclick="show_extra('250')">
+     <center id=button263>
+     <a class="show_more_button" onclick="show_extra('263')">
       Click to display more
      </a>
      </center>
 
-    <span id=item250 class="hide_extra">
+    <span id=item263 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::leader_window</code></span>  When the <a href="../core_components/client.html#leader_window">leader_window</a> value changes.</li>
@@ -3953,21 +3969,21 @@ cr:paint()
         <li><span class="parameter">hints</span> The hints.
         <ul>
         <li><span class="parameter">user_position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          A table with <a href="../core_components/client.html#x">x</a> and <a href="../core_components/client.html#y">y</a> keys. It
   contains the preferred position of the client. This is set when the
   position has been modified by the user. See <code>program_position</code>.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">program_position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          A table with <a href="../core_components/client.html#x">x</a> and <a href="../core_components/client.html#y">y</a> keys. It
   contains the preferred position of the client. This is set when the
   application itself requests a specific position. See <code>user_position</code>.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">user_size</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          A table with <a href="../core_components/client.html#width">width</a> and <a href="../core_components/client.html#height">height</a>. This
   contains the client preferred size when it has previously been set by
   the user. See <code>program_size</code> for the equivalent when the applications
@@ -3975,7 +3991,7 @@ cr:paint()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">program_size</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          A table with <a href="../core_components/client.html#width">width</a> and <a href="../core_components/client.html#height">height</a>. This
   contains the client preferred size as specified by the application.
          (<em>optional</em>)
@@ -4015,7 +4031,7 @@ cr:paint()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">win_gravity</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">nil</span></span>
          The client <code>gravity</code> defines the corder
    from which the size is computed. For most clients, it is <code>north_west</code>, which
    corresponds to the top-left of the window. This will affect how the client
@@ -4077,13 +4093,13 @@ cr:paint()
 
 
      <br />
-     <center id=button251>
-     <a class="show_more_button" onclick="show_extra('251')">
+     <center id=button264>
+     <a class="show_more_button" onclick="show_extra('264')">
       Click to display more
      </a>
      </center>
 
-    <span id=item251 class="hide_extra">
+    <span id=item264 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::size_hints</code></span>  When the <a href="../core_components/client.html#size_hints">size_hints</a> value changes.</li>
@@ -4209,7 +4225,7 @@ cr:paint()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">input_mode</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          This is either <code>modeless</code>,
   <code>primary_application_modal</code>, <code>system_modal</code>,
   <code>full_application_modal</code> or <code>unknown</code>.
@@ -4230,13 +4246,13 @@ cr:paint()
 
 
      <br />
-     <center id=button252>
-     <a class="show_more_button" onclick="show_extra('252')">
+     <center id=button265>
+     <a class="show_more_button" onclick="show_extra('265')">
       Click to display more
      </a>
      </center>
 
-    <span id=item252 class="hide_extra">
+    <span id=item265 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::motif_wm_hints</code></span>  When the <a href="../core_components/client.html#motif_wm_hints">motif_wm_hints</a> value changes.</li>
@@ -4272,13 +4288,13 @@ cr:paint()
 
 
      <br />
-     <center id=button253>
-     <a class="show_more_button" onclick="show_extra('253')">
+     <center id=button266>
+     <a class="show_more_button" onclick="show_extra('266')">
       Click to display more
      </a>
      </center>
 
-    <span id=item253 class="hide_extra">
+    <span id=item266 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::sticky</code></span>  When the <a href="../core_components/client.html#sticky">sticky</a> value changes.</li>
@@ -4322,13 +4338,13 @@ cr:paint()
 
 
      <br />
-     <center id=button254>
-     <a class="show_more_button" onclick="show_extra('254')">
+     <center id=button267>
+     <a class="show_more_button" onclick="show_extra('267')">
       Click to display more
      </a>
      </center>
 
-    <span id=item254 class="hide_extra">
+    <span id=item267 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::modal</code></span>  When the <a href="../core_components/client.html#modal">modal</a> value changes.</li>
@@ -4366,13 +4382,13 @@ cr:paint()
 
 
      <br />
-     <center id=button255>
-     <a class="show_more_button" onclick="show_extra('255')">
+     <center id=button268>
+     <a class="show_more_button" onclick="show_extra('268')">
       Click to display more
      </a>
      </center>
 
-    <span id=item255 class="hide_extra">
+    <span id=item268 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::focusable</code></span>  When the <a href="../core_components/client.html#focusable">focusable</a> value changes.</li>
@@ -4419,13 +4435,13 @@ cr:paint()
 
 
      <br />
-     <center id=button256>
-     <a class="show_more_button" onclick="show_extra('256')">
+     <center id=button269>
+     <a class="show_more_button" onclick="show_extra('269')">
       Click to display more
      </a>
      </center>
 
-    <span id=item256 class="hide_extra">
+    <span id=item269 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_bounding</code></span>  When the <a href="../core_components/client.html#shape_bounding">shape_bounding</a> value changes.</li>
@@ -4467,13 +4483,13 @@ cr:paint()
 
 
      <br />
-     <center id=button257>
-     <a class="show_more_button" onclick="show_extra('257')">
+     <center id=button270>
+     <a class="show_more_button" onclick="show_extra('270')">
       Click to display more
      </a>
      </center>
 
-    <span id=item257 class="hide_extra">
+    <span id=item270 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_clip</code></span>  When the <a href="../core_components/client.html#shape_clip">shape_clip</a> value changes.</li>
@@ -4515,13 +4531,13 @@ cr:paint()
 
 
      <br />
-     <center id=button258>
-     <a class="show_more_button" onclick="show_extra('258')">
+     <center id=button271>
+     <a class="show_more_button" onclick="show_extra('271')">
       Click to display more
      </a>
      </center>
 
-    <span id=item258 class="hide_extra">
+    <span id=item271 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_input</code></span>  When the <a href="../core_components/client.html#shape_input">shape_input</a> value changes.</li>
@@ -4560,13 +4576,13 @@ cr:paint()
 
 
      <br />
-     <center id=button259>
-     <a class="show_more_button" onclick="show_extra('259')">
+     <center id=button272>
+     <a class="show_more_button" onclick="show_extra('272')">
       Click to display more
      </a>
      </center>
 
-    <span id=item259 class="hide_extra">
+    <span id=item272 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::client_shape_bounding</code></span>  When the <a href="../core_components/client.html#client_shape_bounding">client_shape_bounding</a> value changes.</li>
@@ -4605,13 +4621,13 @@ cr:paint()
 
 
      <br />
-     <center id=button260>
-     <a class="show_more_button" onclick="show_extra('260')">
+     <center id=button273>
+     <a class="show_more_button" onclick="show_extra('273')">
       Click to display more
      </a>
      </center>
 
-    <span id=item260 class="hide_extra">
+    <span id=item273 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::client_shape_clip</code></span>  When the <a href="../core_components/client.html#client_shape_clip">client_shape_clip</a> value changes.</li>
@@ -4698,13 +4714,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button261>
-     <a class="show_more_button" onclick="show_extra('261')">
+     <center id=button274>
+     <a class="show_more_button" onclick="show_extra('274')">
       Click to display more
      </a>
      </center>
 
-    <span id=item261 class="hide_extra">
+    <span id=item274 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::startup_id</code></span>  When the <a href="../core_components/client.html#startup_id">startup_id</a> value changes.</li>
@@ -4744,13 +4760,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button262>
-     <a class="show_more_button" onclick="show_extra('262')">
+     <center id=button275>
+     <a class="show_more_button" onclick="show_extra('275')">
       Click to display more
      </a>
      </center>
 
-    <span id=item262 class="hide_extra">
+    <span id=item275 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::valid</code></span>  When the <a href="../core_components/client.html#valid">valid</a> value changes.</li>
@@ -4786,13 +4802,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button263>
-     <a class="show_more_button" onclick="show_extra('263')">
+     <center id=button276>
+     <a class="show_more_button" onclick="show_extra('276')">
       Click to display more
      </a>
      </center>
 
-    <span id=item263 class="hide_extra">
+    <span id=item276 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::first_tag</code></span>  When the <a href="../core_components/client.html#first_tag">first_tag</a> value changes.</li>
@@ -4824,13 +4840,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button264>
-     <a class="show_more_button" onclick="show_extra('264')">
+     <center id=button277>
+     <a class="show_more_button" onclick="show_extra('277')">
       Click to display more
      </a>
      </center>
 
-    <span id=item264 class="hide_extra">
+    <span id=item277 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::buttons</code></span>  When the <a href="../core_components/client.html#buttons">buttons</a> value changes.</li>
@@ -4862,13 +4878,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button265>
-     <a class="show_more_button" onclick="show_extra('265')">
+     <center id=button278>
+     <a class="show_more_button" onclick="show_extra('278')">
       Click to display more
      </a>
      </center>
 
-    <span id=item265 class="hide_extra">
+    <span id=item278 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::keys</code></span>  When the <a href="../core_components/client.html#keys">keys</a> value changes.</li>
@@ -4896,13 +4912,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button266>
-     <a class="show_more_button" onclick="show_extra('266')">
+     <center id=button279>
+     <a class="show_more_button" onclick="show_extra('279')">
       Click to display more
      </a>
      </center>
 
-    <span id=item266 class="hide_extra">
+    <span id=item279 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/client.html#marked">marked</a></span>  (for legacy reasons, use <code>property::marked</code>)</li>
@@ -4944,13 +4960,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button267>
-     <a class="show_more_button" onclick="show_extra('267')">
+     <center id=button280>
+     <a class="show_more_button" onclick="show_extra('280')">
       Click to display more
      </a>
      </center>
 
-    <span id=item267 class="hide_extra">
+    <span id=item280 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::is_fixed</code></span>  When the <a href="../core_components/client.html#is_fixed">is_fixed</a> value changes.</li>
@@ -4996,7 +5012,7 @@ ruled.client.add_rule_source(
 
 
 
-    <span id=item268 class="hide_extra">
+    <span id=item281 class="hide_extra">
     </span>
 
 </dd>
@@ -5035,7 +5051,7 @@ ruled.client.add_rule_source(
 
 
 
-    <span id=item269 class="hide_extra">
+    <span id=item282 class="hide_extra">
     </span>
 
 </dd>
@@ -5070,13 +5086,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button270>
-     <a class="show_more_button" onclick="show_extra('270')">
+     <center id=button283>
+     <a class="show_more_button" onclick="show_extra('283')">
       Click to display more
      </a>
      </center>
 
-    <span id=item270 class="hide_extra">
+    <span id=item283 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::floating</code></span>  When the <a href="../core_components/client.html#floating">floating</a> value changes.</li>
@@ -5117,18 +5133,18 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button271>
-     <a class="show_more_button" onclick="show_extra('271')">
+     <center id=button284>
+     <a class="show_more_button" onclick="show_extra('284')">
       Click to display more
      </a>
      </center>
 
-    <span id=item271 class="hide_extra">
+    <span id=item284 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  </li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
            </ul>
           <li><span class="parameter"><code>property::x</code></span>  </li>
           <li><span class="parameter"><code>property::position</code></span>  </li>
@@ -5153,18 +5169,18 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button272>
-     <a class="show_more_button" onclick="show_extra('272')">
+     <center id=button285>
+     <a class="show_more_button" onclick="show_extra('285')">
       Click to display more
      </a>
      </center>
 
-    <span id=item272 class="hide_extra">
+    <span id=item285 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  </li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
            </ul>
           <li><span class="parameter"><code>property::y</code></span>  </li>
           <li><span class="parameter"><code>property::position</code></span>  </li>
@@ -5189,18 +5205,18 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button273>
-     <a class="show_more_button" onclick="show_extra('273')">
+     <center id=button286>
+     <a class="show_more_button" onclick="show_extra('286')">
       Click to display more
      </a>
      </center>
 
-    <span id=item273 class="hide_extra">
+    <span id=item286 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  </li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
            </ul>
           <li><span class="parameter"><code>property::width</code></span>  </li>
           <li><span class="parameter"><code>property::size</code></span>  </li>
@@ -5225,18 +5241,18 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button274>
-     <a class="show_more_button" onclick="show_extra('274')">
+     <center id=button287>
+     <a class="show_more_button" onclick="show_extra('287')">
       Click to display more
      </a>
      </center>
 
-    <span id=item274 class="hide_extra">
+    <span id=item287 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  </li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry (with <a href="../core_components/client.html#x">x</a>, <a href="../core_components/client.html#y">y</a>, <a href="../core_components/client.html#width">width</a>, <a href="../core_components/client.html#height">height</a>).</li>
            </ul>
           <li><span class="parameter"><code>property::height</code></span>  </li>
           <li><span class="parameter"><code>property::size</code></span>  </li>
@@ -5274,13 +5290,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button275>
-     <a class="show_more_button" onclick="show_extra('275')">
+     <center id=button288>
+     <a class="show_more_button" onclick="show_extra('288')">
       Click to display more
      </a>
      </center>
 
-    <span id=item275 class="hide_extra">
+    <span id=item288 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::dockable</code></span>  When the <a href="../core_components/client.html#dockable">dockable</a> value changes.</li>
@@ -5320,13 +5336,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button276>
-     <a class="show_more_button" onclick="show_extra('276')">
+     <center id=button289>
+     <a class="show_more_button" onclick="show_extra('289')">
       Click to display more
      </a>
      </center>
 
-    <span id=item276 class="hide_extra">
+    <span id=item289 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::requests_no_titlebar</code></span>  When the <a href="../core_components/client.html#requests_no_titlebar">requests_no_titlebar</a> value changes.</li>
@@ -5365,13 +5381,13 @@ ruled.client.add_rule_source(
 
 
      <br />
-     <center id=button277>
-     <a class="show_more_button" onclick="show_extra('277')">
+     <center id=button290>
+     <a class="show_more_button" onclick="show_extra('290')">
       Click to display more
      </a>
      </center>
 
-    <span id=item277 class="hide_extra">
+    <span id=item290 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape</code></span>  When the <a href="../core_components/client.html#shape">shape</a> value changes.</li>
@@ -5458,13 +5474,13 @@ end)
 
 
      <br />
-     <center id=button278>
-     <a class="show_more_button" onclick="show_extra('278')">
+     <center id=button291>
+     <a class="show_more_button" onclick="show_extra('291')">
       Click to display more
      </a>
      </center>
 
-    <span id=item278 class="hide_extra">
+    <span id=item291 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -5503,7 +5519,7 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">struts</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with new strut values, or none.
         </li>
     </ul>
@@ -5511,7 +5527,7 @@ end)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with strut values.
     </ol>
 
@@ -5524,7 +5540,7 @@ end)
 
 
 
-    <span id=item279 class="hide_extra">
+    <span id=item292 class="hide_extra">
     </span>
 
 </dd>
@@ -5550,7 +5566,7 @@ end)
 
 
 
-    <span id=item280 class="hide_extra">
+    <span id=item293 class="hide_extra">
     </span>
 
 </dd>
@@ -5578,7 +5594,7 @@ end)
 
 
 
-    <span id=item281 class="hide_extra">
+    <span id=item294 class="hide_extra">
     </span>
 
 </dd>
@@ -5614,13 +5630,13 @@ end)
 
 
      <br />
-     <center id=button282>
-     <a class="show_more_button" onclick="show_extra('282')">
+     <center id=button295>
+     <a class="show_more_button" onclick="show_extra('295')">
       Click to display more
      </a>
      </center>
 
-    <span id=item282 class="hide_extra">
+    <span id=item295 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/client.html#swapped">swapped</a></span>  </li>
@@ -5649,7 +5665,7 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">tags_table</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with tags to set, or <code>nil</code> to get the
    current tags.
         </li>
@@ -5658,7 +5674,7 @@ end)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with all tags.
     </ol>
 
@@ -5671,13 +5687,13 @@ end)
 
 
      <br />
-     <center id=button283>
-     <a class="show_more_button" onclick="show_extra('283')">
+     <center id=button296>
+     <a class="show_more_button" onclick="show_extra('296')">
       Click to display more
      </a>
      </center>
 
-    <span id=item283 class="hide_extra">
+    <span id=item296 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::tags</code></span>  </li>
@@ -5709,13 +5725,13 @@ end)
 
 
      <br />
-     <center id=button284>
-     <a class="show_more_button" onclick="show_extra('284')">
+     <center id=button297>
+     <a class="show_more_button" onclick="show_extra('297')">
       Click to display more
      </a>
      </center>
 
-    <span id=item284 class="hide_extra">
+    <span id=item297 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/client.html#raised">raised</a></span>  </li>
@@ -5747,13 +5763,13 @@ end)
 
 
      <br />
-     <center id=button285>
-     <a class="show_more_button" onclick="show_extra('285')">
+     <center id=button298>
+     <a class="show_more_button" onclick="show_extra('298')">
       Click to display more
      </a>
      </center>
 
-    <span id=item285 class="hide_extra">
+    <span id=item298 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/client.html#lowered">lowered</a></span>  </li>
@@ -5777,7 +5793,7 @@ end)
 
 
 
-    <span id=item286 class="hide_extra">
+    <span id=item299 class="hide_extra">
     </span>
 
 </dd>
@@ -5805,9 +5821,9 @@ end)
         </li>
         <li><span class="parameter">width</span>
             <span class="types"><span class="type">integer</span></span>
-         The height.
+         The width.
         </li>
-        <li><span class="parameter">width</span>
+        <li><span class="parameter">height</span>
             <span class="types"><span class="type">integer</span></span>
          The height.
         </li>
@@ -5817,7 +5833,7 @@ end)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with client geometry and coordinates.
     </ol>
 
@@ -5833,7 +5849,7 @@ end)
 
 
 
-    <span id=item287 class="hide_extra">
+    <span id=item300 class="hide_extra">
     </span>
 
 </dd>
@@ -5884,7 +5900,7 @@ end)
 
 
 
-    <span id=item288 class="hide_extra">
+    <span id=item301 class="hide_extra">
     </span>
 
 </dd>
@@ -5918,7 +5934,7 @@ end)
 
 
 
-    <span id=item289 class="hide_extra">
+    <span id=item302 class="hide_extra">
     </span>
 
 </dd>
@@ -5955,13 +5971,13 @@ end)
 
 
      <br />
-     <center id=button290>
-     <a class="show_more_button" onclick="show_extra('290')">
+     <center id=button303>
+     <a class="show_more_button" onclick="show_extra('303')">
       Click to display more
      </a>
      </center>
 
-    <span id=item290 class="hide_extra">
+    <span id=item303 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -6005,7 +6021,7 @@ end)
 
 
 
-    <span id=item291 class="hide_extra">
+    <span id=item304 class="hide_extra">
     </span>
 
 </dd>
@@ -6032,7 +6048,7 @@ end)
 
 
 
-    <span id=item292 class="hide_extra">
+    <span id=item305 class="hide_extra">
     </span>
 
 </dd>
@@ -6059,7 +6075,7 @@ end)
 
 
 
-    <span id=item293 class="hide_extra">
+    <span id=item306 class="hide_extra">
     </span>
 
 </dd>
@@ -6086,7 +6102,7 @@ end)
 
 
 
-    <span id=item294 class="hide_extra">
+    <span id=item307 class="hide_extra">
     </span>
 
 </dd>
@@ -6133,7 +6149,7 @@ end)
 
 
 
-    <span id=item295 class="hide_extra">
+    <span id=item308 class="hide_extra">
     </span>
 
 </dd>
@@ -6165,13 +6181,13 @@ end)
 
 
      <br />
-     <center id=button296>
-     <a class="show_more_button" onclick="show_extra('296')">
+     <center id=button309>
+     <a class="show_more_button" onclick="show_extra('309')">
       Click to display more
      </a>
      </center>
 
-    <span id=item296 class="hide_extra">
+    <span id=item309 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -6213,7 +6229,7 @@ end)
 
 
 
-    <span id=item297 class="hide_extra">
+    <span id=item310 class="hide_extra">
     </span>
 
 </dd>
@@ -6247,13 +6263,13 @@ end)
 
 
      <br />
-     <center id=button298>
-     <a class="show_more_button" onclick="show_extra('298')">
+     <center id=button311>
+     <a class="show_more_button" onclick="show_extra('311')">
       Click to display more
      </a>
      </center>
 
-    <span id=item298 class="hide_extra">
+    <span id=item311 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -6288,7 +6304,7 @@ end)
 
 
 
-    <span id=item299 class="hide_extra">
+    <span id=item312 class="hide_extra">
     </span>
 
 </dd>
@@ -6328,7 +6344,7 @@ end)
 
 
 
-    <span id=item300 class="hide_extra">
+    <span id=item313 class="hide_extra">
     </span>
 
 </dd>
@@ -6374,7 +6390,7 @@ end)
 
 
 
-    <span id=item301 class="hide_extra">
+    <span id=item314 class="hide_extra">
     </span>
 
 </dd>
@@ -6416,7 +6432,7 @@ end)
 
         <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Why was this activate called?
          (<em>default</em> other)
         </li>
@@ -6471,7 +6487,7 @@ end)
 
 
 
-    <span id=item302 class="hide_extra">
+    <span id=item315 class="hide_extra">
     </span>
 
 </dd>
@@ -6488,11 +6504,11 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">permission</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The permission name (just the name, no <code>request::</code>).
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The reason why this permission is requested.
         </li>
     </ul>
@@ -6506,7 +6522,7 @@ end)
 
 
 
-    <span id=item303 class="hide_extra">
+    <span id=item316 class="hide_extra">
     </span>
 
 </dd>
@@ -6523,11 +6539,11 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">permission</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The permission name (just the name, no <code>request::</code>).
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The reason why this permission is requested.
         </li>
     </ul>
@@ -6541,7 +6557,7 @@ end)
 
 
 
-    <span id=item304 class="hide_extra">
+    <span id=item317 class="hide_extra">
     </span>
 
 </dd>
@@ -6559,7 +6575,7 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -6574,7 +6590,7 @@ end)
 
 
 
-    <span id=item305 class="hide_extra">
+    <span id=item318 class="hide_extra">
     </span>
 
 </dd>
@@ -6592,7 +6608,7 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -6606,7 +6622,7 @@ end)
 
 
 
-    <span id=item306 class="hide_extra">
+    <span id=item319 class="hide_extra">
     </span>
 
 </dd>
@@ -6631,7 +6647,7 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -6645,7 +6661,7 @@ end)
 
 
 
-    <span id=item307 class="hide_extra">
+    <span id=item320 class="hide_extra">
     </span>
 
 </dd>
@@ -6672,7 +6688,7 @@ end)
 
 
 
-    <span id=item308 class="hide_extra">
+    <span id=item321 class="hide_extra">
     </span>
 
 </dd>
@@ -6694,7 +6710,7 @@ end)
 
 
 
-    <span id=item309 class="hide_extra">
+    <span id=item322 class="hide_extra">
     </span>
 
 </dd>
@@ -6714,7 +6730,7 @@ end)
 
 
 
-    <span id=item310 class="hide_extra">
+    <span id=item323 class="hide_extra">
     </span>
 
 </dd>
@@ -6734,7 +6750,7 @@ end)
 
 
 
-    <span id=item311 class="hide_extra">
+    <span id=item324 class="hide_extra">
     </span>
 
 </dd>
@@ -6764,7 +6780,7 @@ end)
 
 
 
-    <span id=item312 class="hide_extra">
+    <span id=item325 class="hide_extra">
     </span>
 
 </dd>
@@ -6792,12 +6808,12 @@ end)
          The client.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          What created the client. It is currently either "new"
   or "startup".
         </li>
         <li><span class="parameter">hints</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          More metadata (currently empty, it exists for compliance
   with the other <code>request::</code> signals).
         </li>
@@ -6808,13 +6824,13 @@ end)
 
 
      <br />
-     <center id=button313>
-     <a class="show_more_button" onclick="show_extra('313')">
+     <center id=button326>
+     <a class="show_more_button" onclick="show_extra('326')">
       Click to display more
      </a>
      </center>
 
-    <span id=item313 class="hide_extra">
+    <span id=item326 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -6861,11 +6877,11 @@ end)
          The client.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Why was the client unmanaged.
         </li>
         <li><span class="parameter">hints</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          More metadata (currently empty, it exists for compliance
   with the other <code>request::</code> signals).
         </li>
@@ -6876,7 +6892,7 @@ end)
 
 
 
-    <span id=item314 class="hide_extra">
+    <span id=item327 class="hide_extra">
     </span>
 
 </dd>
@@ -6895,7 +6911,7 @@ end)
 
 
 
-    <span id=item315 class="hide_extra">
+    <span id=item328 class="hide_extra">
     </span>
 
 </dd>
@@ -6914,7 +6930,7 @@ end)
 
 
 
-    <span id=item316 class="hide_extra">
+    <span id=item329 class="hide_extra">
     </span>
 
 </dd>
@@ -6933,7 +6949,7 @@ end)
 
 
 
-    <span id=item317 class="hide_extra">
+    <span id=item330 class="hide_extra">
     </span>
 
 </dd>
@@ -6952,7 +6968,7 @@ end)
 
 
 
-    <span id=item318 class="hide_extra">
+    <span id=item331 class="hide_extra">
     </span>
 
 </dd>
@@ -6971,7 +6987,7 @@ end)
 
 
 
-    <span id=item319 class="hide_extra">
+    <span id=item332 class="hide_extra">
     </span>
 
 </dd>
@@ -7019,7 +7035,7 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The context where this signal was used.
         </li>
         <li><span class="parameter">hints</span> A table with additional hints:
@@ -7037,13 +7053,13 @@ end)
 
 
      <br />
-     <center id=button320>
-     <a class="show_more_button" onclick="show_extra('320')">
+     <center id=button333>
+     <a class="show_more_button" onclick="show_extra('333')">
       Click to display more
      </a>
      </center>
 
-    <span id=item320 class="hide_extra">
+    <span id=item333 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -7082,7 +7098,7 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The context where this signal was used.
         </li>
         <li><span class="parameter">hints</span> A table with additional hints:
@@ -7100,7 +7116,7 @@ end)
 
 
 
-    <span id=item321 class="hide_extra">
+    <span id=item334 class="hide_extra">
     </span>
 
 </dd>
@@ -7122,12 +7138,12 @@ end)
          The client
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Why and what to resize. This is used for the
    handlers to know if they are capable of applying the new geometry.
         </li>
         <li><span class="parameter">Additional</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          arguments. Each context handler may
    interpret this differently.
          (<em>default</em> {})
@@ -7139,13 +7155,13 @@ end)
 
 
      <br />
-     <center id=button322>
-     <a class="show_more_button" onclick="show_extra('322')">
+     <center id=button335>
+     <a class="show_more_button" onclick="show_extra('335')">
       Click to display more
      </a>
      </center>
 
-    <span id=item322 class="hide_extra">
+    <span id=item335 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -7177,7 +7193,7 @@ end)
 
 
 
-    <span id=item323 class="hide_extra">
+    <span id=item336 class="hide_extra">
     </span>
 
 </dd>
@@ -7197,7 +7213,7 @@ end)
 
 
 
-    <span id=item324 class="hide_extra">
+    <span id=item337 class="hide_extra">
     </span>
 
 </dd>
@@ -7218,7 +7234,7 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The reason why the signal was sent (currently always
   <code>startup</code>).
         </li>
@@ -7229,7 +7245,7 @@ end)
 
 
 
-    <span id=item325 class="hide_extra">
+    <span id=item338 class="hide_extra">
     </span>
 
 </dd>
@@ -7250,7 +7266,7 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The reason why the signal was sent (currently always
   <code>startup</code>).
         </li>
@@ -7261,7 +7277,7 @@ end)
 
 
 
-    <span id=item326 class="hide_extra">
+    <span id=item339 class="hide_extra">
     </span>
 
 </dd>
@@ -7284,7 +7300,7 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The context (currently always "startup").
         </li>
     </ul>
@@ -7294,13 +7310,13 @@ end)
 
 
      <br />
-     <center id=button327>
-     <a class="show_more_button" onclick="show_extra('327')">
+     <center id=button340>
+     <a class="show_more_button" onclick="show_extra('340')">
       Click to display more
      </a>
      </center>
 
-    <span id=item327 class="hide_extra">
+    <span id=item340 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -7337,7 +7353,7 @@ end)
 
 
 
-    <span id=item328 class="hide_extra">
+    <span id=item341 class="hide_extra">
     </span>
 
 </dd>
@@ -7356,7 +7372,7 @@ end)
 
 
 
-    <span id=item329 class="hide_extra">
+    <span id=item342 class="hide_extra">
     </span>
 
 </dd>
@@ -7382,7 +7398,7 @@ end)
 
 
 
-    <span id=item330 class="hide_extra">
+    <span id=item343 class="hide_extra">
     </span>
 
 </dd>
@@ -7410,7 +7426,7 @@ end)
 
 
 
-    <span id=item331 class="hide_extra">
+    <span id=item344 class="hide_extra">
     </span>
 
 </dd>
@@ -7438,7 +7454,7 @@ end)
 
 
 
-    <span id=item332 class="hide_extra">
+    <span id=item345 class="hide_extra">
     </span>
 
 </dd>
@@ -7457,7 +7473,7 @@ end)
 
 
 
-    <span id=item333 class="hide_extra">
+    <span id=item346 class="hide_extra">
     </span>
 
 </dd>
@@ -7474,12 +7490,12 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">content</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The context (like "rules")
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">hints</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Some hints.
          (<em>default</em> nil)
         </li>
@@ -7490,7 +7506,7 @@ end)
 
 
 
-    <span id=item334 class="hide_extra">
+    <span id=item347 class="hide_extra">
     </span>
 
 </dd>
@@ -7522,11 +7538,11 @@ end)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The context.
         </li>
         <li><span class="parameter">hints</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The hints.
         </li>
     </ul>
@@ -7540,7 +7556,7 @@ end)
 
 
 
-    <span id=item335 class="hide_extra">
+    <span id=item348 class="hide_extra">
     </span>
 
 </dd>
@@ -7563,7 +7579,7 @@ end)
 
 
 
-    <span id=item336 class="hide_extra">
+    <span id=item349 class="hide_extra">
     </span>
 
 </dd>
@@ -7582,7 +7598,7 @@ end)
 
 
 
-    <span id=item337 class="hide_extra">
+    <span id=item350 class="hide_extra">
     </span>
 
 </dd>
@@ -7601,7 +7617,7 @@ end)
 
 
 
-    <span id=item338 class="hide_extra">
+    <span id=item351 class="hide_extra">
     </span>
 
 </dd>
@@ -7620,7 +7636,7 @@ end)
 
 
 
-    <span id=item339 class="hide_extra">
+    <span id=item352 class="hide_extra">
     </span>
 
 </dd>
@@ -7650,7 +7666,7 @@ end)
 
 
 
-    <span id=item340 class="hide_extra">
+    <span id=item353 class="hide_extra">
     </span>
 
 </dd>
@@ -7678,7 +7694,7 @@ end)
 
 
 
-    <span id=item341 class="hide_extra">
+    <span id=item354 class="hide_extra">
     </span>
 
 </dd>
@@ -7706,7 +7722,7 @@ end)
 
 
 
-    <span id=item342 class="hide_extra">
+    <span id=item355 class="hide_extra">
     </span>
 
 </dd>
@@ -7734,7 +7750,7 @@ end)
 
 
 
-    <span id=item343 class="hide_extra">
+    <span id=item356 class="hide_extra">
     </span>
 
 </dd>
@@ -7758,7 +7774,7 @@ end)
 
 
 
-    <span id=item344 class="hide_extra">
+    <span id=item357 class="hide_extra">
     </span>
 
 </dd>
@@ -7782,7 +7798,7 @@ end)
 
 
 
-    <span id=item345 class="hide_extra">
+    <span id=item358 class="hide_extra">
     </span>
 
 </dd>
@@ -7806,7 +7822,7 @@ end)
 
 
 
-    <span id=item346 class="hide_extra">
+    <span id=item359 class="hide_extra">
     </span>
 
 </dd>
@@ -7830,7 +7846,7 @@ end)
 
 
 
-    <span id=item347 class="hide_extra">
+    <span id=item360 class="hide_extra">
     </span>
 
 </dd>
@@ -7854,7 +7870,7 @@ end)
 
 
 
-    <span id=item348 class="hide_extra">
+    <span id=item361 class="hide_extra">
     </span>
 
 </dd>
@@ -7878,7 +7894,7 @@ end)
 
 
 
-    <span id=item349 class="hide_extra">
+    <span id=item362 class="hide_extra">
     </span>
 
 </dd>
@@ -7902,7 +7918,7 @@ end)
 
 
 
-    <span id=item350 class="hide_extra">
+    <span id=item363 class="hide_extra">
     </span>
 
 </dd>
@@ -7926,7 +7942,7 @@ end)
 
 
 
-    <span id=item351 class="hide_extra">
+    <span id=item364 class="hide_extra">
     </span>
 
 </dd>
@@ -7950,7 +7966,7 @@ end)
 
 
 
-    <span id=item352 class="hide_extra">
+    <span id=item365 class="hide_extra">
     </span>
 
 </dd>
@@ -7974,7 +7990,7 @@ end)
 
 
 
-    <span id=item353 class="hide_extra">
+    <span id=item366 class="hide_extra">
     </span>
 
 </dd>
@@ -7998,7 +8014,7 @@ end)
 
 
 
-    <span id=item354 class="hide_extra">
+    <span id=item367 class="hide_extra">
     </span>
 
 </dd>
@@ -8022,7 +8038,7 @@ end)
 
 
 
-    <span id=item355 class="hide_extra">
+    <span id=item368 class="hide_extra">
     </span>
 
 </dd>
@@ -8046,7 +8062,7 @@ end)
 
 
 
-    <span id=item356 class="hide_extra">
+    <span id=item369 class="hide_extra">
     </span>
 
 </dd>
@@ -8070,7 +8086,7 @@ end)
 
 
 
-    <span id=item357 class="hide_extra">
+    <span id=item370 class="hide_extra">
     </span>
 
 </dd>
@@ -8094,7 +8110,7 @@ end)
 
 
 
-    <span id=item358 class="hide_extra">
+    <span id=item371 class="hide_extra">
     </span>
 
 </dd>
@@ -8118,7 +8134,7 @@ end)
 
 
 
-    <span id=item359 class="hide_extra">
+    <span id=item372 class="hide_extra">
     </span>
 
 </dd>
@@ -8152,7 +8168,7 @@ end)
 
 
 
-    <span id=item360 class="hide_extra">
+    <span id=item373 class="hide_extra">
     </span>
 
 </dd>
@@ -8180,7 +8196,7 @@ end)
 
 
 
-    <span id=item361 class="hide_extra">
+    <span id=item374 class="hide_extra">
     </span>
 
 </dd>
@@ -8208,7 +8224,7 @@ end)
 
 
 
-    <span id=item362 class="hide_extra">
+    <span id=item375 class="hide_extra">
     </span>
 
 </dd>
@@ -8232,7 +8248,7 @@ end)
 
 
 
-    <span id=item363 class="hide_extra">
+    <span id=item376 class="hide_extra">
     </span>
 
 </dd>
@@ -8256,7 +8272,7 @@ end)
 
 
 
-    <span id=item364 class="hide_extra">
+    <span id=item377 class="hide_extra">
     </span>
 
 </dd>
@@ -8280,7 +8296,7 @@ end)
 
 
 
-    <span id=item365 class="hide_extra">
+    <span id=item378 class="hide_extra">
     </span>
 
 </dd>
@@ -8304,7 +8320,7 @@ end)
 
 
 
-    <span id=item366 class="hide_extra">
+    <span id=item379 class="hide_extra">
     </span>
 
 </dd>
@@ -8328,7 +8344,7 @@ end)
 
 
 
-    <span id=item367 class="hide_extra">
+    <span id=item380 class="hide_extra">
     </span>
 
 </dd>
@@ -8352,7 +8368,7 @@ end)
 
 
 
-    <span id=item368 class="hide_extra">
+    <span id=item381 class="hide_extra">
     </span>
 
 </dd>
@@ -8376,7 +8392,7 @@ end)
 
 
 
-    <span id=item369 class="hide_extra">
+    <span id=item382 class="hide_extra">
     </span>
 
 </dd>
@@ -8400,7 +8416,7 @@ end)
 
 
 
-    <span id=item370 class="hide_extra">
+    <span id=item383 class="hide_extra">
     </span>
 
 </dd>
@@ -8424,7 +8440,7 @@ end)
 
 
 
-    <span id=item371 class="hide_extra">
+    <span id=item384 class="hide_extra">
     </span>
 
 </dd>
@@ -8448,7 +8464,7 @@ end)
 
 
 
-    <span id=item372 class="hide_extra">
+    <span id=item385 class="hide_extra">
     </span>
 
 </dd>
@@ -8472,7 +8488,7 @@ end)
 
 
 
-    <span id=item373 class="hide_extra">
+    <span id=item386 class="hide_extra">
     </span>
 
 </dd>
@@ -8496,7 +8512,7 @@ end)
 
 
 
-    <span id=item374 class="hide_extra">
+    <span id=item387 class="hide_extra">
     </span>
 
 </dd>
@@ -8520,7 +8536,7 @@ end)
 
 
 
-    <span id=item375 class="hide_extra">
+    <span id=item388 class="hide_extra">
     </span>
 
 </dd>
@@ -8544,7 +8560,7 @@ end)
 
 
 
-    <span id=item376 class="hide_extra">
+    <span id=item389 class="hide_extra">
     </span>
 
 </dd>
@@ -8568,7 +8584,7 @@ end)
 
 
 
-    <span id=item377 class="hide_extra">
+    <span id=item390 class="hide_extra">
     </span>
 
 </dd>
@@ -8592,7 +8608,7 @@ end)
 
 
 
-    <span id=item378 class="hide_extra">
+    <span id=item391 class="hide_extra">
     </span>
 
 </dd>
@@ -8618,7 +8634,7 @@ end)
 
 
 
-    <span id=item379 class="hide_extra">
+    <span id=item392 class="hide_extra">
     </span>
 
 </dd>
@@ -8644,7 +8660,7 @@ end)
 
 
 
-    <span id=item380 class="hide_extra">
+    <span id=item393 class="hide_extra">
     </span>
 
 </dd>
@@ -8670,7 +8686,7 @@ end)
 
 
 
-    <span id=item381 class="hide_extra">
+    <span id=item394 class="hide_extra">
     </span>
 
 </dd>
@@ -8696,7 +8712,7 @@ end)
 
 
 
-    <span id=item382 class="hide_extra">
+    <span id=item395 class="hide_extra">
     </span>
 
 </dd>
@@ -8722,7 +8738,7 @@ end)
 
 
 
-    <span id=item383 class="hide_extra">
+    <span id=item396 class="hide_extra">
     </span>
 
 </dd>
@@ -8748,7 +8764,7 @@ end)
 
 
 
-    <span id=item384 class="hide_extra">
+    <span id=item397 class="hide_extra">
     </span>
 
 </dd>
@@ -8774,7 +8790,7 @@ end)
 
 
 
-    <span id=item385 class="hide_extra">
+    <span id=item398 class="hide_extra">
     </span>
 
 </dd>
@@ -8800,7 +8816,7 @@ end)
 
 
 
-    <span id=item386 class="hide_extra">
+    <span id=item399 class="hide_extra">
     </span>
 
 </dd>
@@ -8826,7 +8842,7 @@ end)
 
 
 
-    <span id=item387 class="hide_extra">
+    <span id=item400 class="hide_extra">
     </span>
 
 </dd>
@@ -8852,7 +8868,7 @@ end)
 
 
 
-    <span id=item388 class="hide_extra">
+    <span id=item401 class="hide_extra">
     </span>
 
 </dd>
@@ -8878,7 +8894,7 @@ end)
 
 
 
-    <span id=item389 class="hide_extra">
+    <span id=item402 class="hide_extra">
     </span>
 
 </dd>
@@ -8904,7 +8920,7 @@ end)
 
 
 
-    <span id=item390 class="hide_extra">
+    <span id=item403 class="hide_extra">
     </span>
 
 </dd>
@@ -8930,7 +8946,7 @@ end)
 
 
 
-    <span id=item391 class="hide_extra">
+    <span id=item404 class="hide_extra">
     </span>
 
 </dd>
@@ -8956,7 +8972,7 @@ end)
 
 
 
-    <span id=item392 class="hide_extra">
+    <span id=item405 class="hide_extra">
     </span>
 
 </dd>
@@ -8982,7 +8998,7 @@ end)
 
 
 
-    <span id=item393 class="hide_extra">
+    <span id=item406 class="hide_extra">
     </span>
 
 </dd>
@@ -9008,7 +9024,7 @@ end)
 
 
 
-    <span id=item394 class="hide_extra">
+    <span id=item407 class="hide_extra">
     </span>
 
 </dd>
@@ -9050,7 +9066,7 @@ end)
 
 
 
-    <span id=item395 class="hide_extra">
+    <span id=item408 class="hide_extra">
     </span>
 
 </dd>
@@ -9080,7 +9096,7 @@ end)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with all visible clients.
     </ol>
 
@@ -9092,7 +9108,7 @@ end)
 
 
 
-    <span id=item396 class="hide_extra">
+    <span id=item409 class="hide_extra">
     </span>
 
 </dd>
@@ -9121,7 +9137,7 @@ end)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with all visible and tiled clients.
     </ol>
 
@@ -9133,7 +9149,7 @@ end)
 
 
 
-    <span id=item397 class="hide_extra">
+    <span id=item410 class="hide_extra">
     </span>
 
 </dd>
@@ -9180,7 +9196,7 @@ end)
 
 
 
-    <span id=item398 class="hide_extra">
+    <span id=item411 class="hide_extra">
     </span>
 
 </dd>
@@ -9215,7 +9231,7 @@ end)
 
 
 
-    <span id=item399 class="hide_extra">
+    <span id=item412 class="hide_extra">
     </span>
 
 </dd>
@@ -9251,7 +9267,7 @@ end)
 
 
 
-    <span id=item400 class="hide_extra">
+    <span id=item413 class="hide_extra">
     </span>
 
 </dd>
@@ -9286,7 +9302,7 @@ end)
 
 
 
-    <span id=item401 class="hide_extra">
+    <span id=item414 class="hide_extra">
     </span>
 
 </dd>
@@ -9312,7 +9328,7 @@ end)
 
 
 
-    <span id=item402 class="hide_extra">
+    <span id=item415 class="hide_extra">
     </span>
 
 </dd>
@@ -9338,7 +9354,7 @@ end)
 
 
 
-    <span id=item403 class="hide_extra">
+    <span id=item416 class="hide_extra">
     </span>
 
 </dd>
@@ -9364,7 +9380,7 @@ end)
 
 
 
-    <span id=item404 class="hide_extra">
+    <span id=item417 class="hide_extra">
     </span>
 
 </dd>
@@ -9390,7 +9406,7 @@ end)
 
 
 
-    <span id=item405 class="hide_extra">
+    <span id=item418 class="hide_extra">
     </span>
 
 </dd>
@@ -9407,7 +9423,7 @@ end)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with all marked clients.
     </ol>
 
@@ -9415,7 +9431,7 @@ end)
 
 
 
-    <span id=item406 class="hide_extra">
+    <span id=item419 class="hide_extra">
     </span>
 
 </dd>
@@ -9446,7 +9462,7 @@ end)
 
 
 
-    <span id=item407 class="hide_extra">
+    <span id=item420 class="hide_extra">
     </span>
 
 </dd>
@@ -9478,7 +9494,7 @@ end)
 
 
 
-    <span id=item408 class="hide_extra">
+    <span id=item421 class="hide_extra">
     </span>
 
 </dd>
@@ -9516,7 +9532,7 @@ end)
 
 
 
-    <span id=item409 class="hide_extra">
+    <span id=item422 class="hide_extra">
     </span>
 
 </dd>
@@ -9547,7 +9563,7 @@ end)
 
 
 
-    <span id=item410 class="hide_extra">
+    <span id=item423 class="hide_extra">
     </span>
 
 </dd>
@@ -9581,7 +9597,7 @@ end)
 
 
 
-    <span id=item411 class="hide_extra">
+    <span id=item424 class="hide_extra">
     </span>
 
 </dd>
@@ -9614,7 +9630,7 @@ end)
 
 
 
-    <span id=item412 class="hide_extra">
+    <span id=item425 class="hide_extra">
     </span>
 
 </dd>
@@ -9636,7 +9652,7 @@ end)
          The client.
         </li>
         <li><span class="parameter">prop</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The property name.
         </li>
     </ul>
@@ -9651,7 +9667,7 @@ end)
 
 
 
-    <span id=item413 class="hide_extra">
+    <span id=item426 class="hide_extra">
     </span>
 
 </dd>
@@ -9674,7 +9690,7 @@ end)
          The client.
         </li>
         <li><span class="parameter">prop</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The property name.
         </li>
         <li><span class="parameter">value</span>
@@ -9687,7 +9703,7 @@ end)
 
 
 
-    <span id=item414 class="hide_extra">
+    <span id=item427 class="hide_extra">
     </span>
 
 </dd>
@@ -9705,7 +9721,7 @@ end)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cmd</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          the command to execute
         </li>
         <li><span class="parameter">matcher</span>
@@ -9741,7 +9757,7 @@ end)
     </ul>
 
 
-    <span id=item415 class="hide_extra">
+    <span id=item428 class="hide_extra">
     </span>
 
 </dd>
@@ -9782,7 +9798,7 @@ end)
 
 
 
-    <span id=item416 class="hide_extra">
+    <span id=item429 class="hide_extra">
     </span>
 
 </dd>
@@ -9822,7 +9838,7 @@ end)
 
 
 
-    <span id=item417 class="hide_extra">
+    <span id=item430 class="hide_extra">
     </span>
 
 </dd>
@@ -9853,7 +9869,7 @@ end)
 
 
 
-    <span id=item418 class="hide_extra">
+    <span id=item431 class="hide_extra">
     </span>
 
 </dd>
@@ -9879,7 +9895,7 @@ end)
 
 
 
-    <span id=item419 class="hide_extra">
+    <span id=item432 class="hide_extra">
     </span>
 
 </dd>
@@ -9905,7 +9921,7 @@ end)
 
 
 
-    <span id=item420 class="hide_extra">
+    <span id=item433 class="hide_extra">
     </span>
 
 </dd>
@@ -9932,7 +9948,7 @@ end)
 
 
 
-    <span id=item421 class="hide_extra">
+    <span id=item434 class="hide_extra">
     </span>
 
 </dd>
@@ -9963,13 +9979,13 @@ end)
 
 
      <br />
-     <center id=button422>
-     <a class="show_more_button" onclick="show_extra('422')">
+     <center id=button435>
+     <a class="show_more_button" onclick="show_extra('435')">
       Click to display more
      </a>
      </center>
 
-    <span id=item422 class="hide_extra">
+    <span id=item435 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::windowfact</code></span>  </li>
@@ -10006,13 +10022,13 @@ end)
 
 
      <br />
-     <center id=button423>
-     <a class="show_more_button" onclick="show_extra('423')">
+     <center id=button436>
+     <a class="show_more_button" onclick="show_extra('436')">
       Click to display more
      </a>
      </center>
 
-    <span id=item423 class="hide_extra">
+    <span id=item436 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::windowfact</code></span>  </li>
@@ -10071,7 +10087,7 @@ awful.spawn('mplayer')
 
 
 
-    <span id=item424 class="hide_extra">
+    <span id=item437 class="hide_extra">
     </span>
 
 </dd>
@@ -10095,7 +10111,7 @@ awful.spawn('mplayer')
 
 
 
-    <span id=item425 class="hide_extra">
+    <span id=item438 class="hide_extra">
     </span>
 
 </dd>
@@ -10121,7 +10137,7 @@ awful.spawn('mplayer')
 
 
 
-    <span id=item426 class="hide_extra">
+    <span id=item439 class="hide_extra">
     </span>
 
 </dd>
@@ -10181,7 +10197,7 @@ awful.spawn('thunderbird')
 
 
 
-    <span id=item427 class="hide_extra">
+    <span id=item440 class="hide_extra">
     </span>
 
 </dd>
@@ -10211,7 +10227,7 @@ awful.spawn('thunderbird')
 
 
 
-    <span id=item428 class="hide_extra">
+    <span id=item441 class="hide_extra">
     </span>
 
 </dd>
@@ -10288,7 +10304,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item429 class="hide_extra">
+    <span id=item442 class="hide_extra">
     </span>
 
 </dd>
@@ -10334,7 +10350,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item430 class="hide_extra">
+    <span id=item443 class="hide_extra">
     </span>
 
 </dd>
@@ -10356,7 +10372,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item431 class="hide_extra">
+    <span id=item444 class="hide_extra">
     </span>
 
 </dd>
@@ -10380,7 +10396,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item432 class="hide_extra">
+    <span id=item445 class="hide_extra">
     </span>
 
 </dd>
@@ -10406,7 +10422,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item433 class="hide_extra">
+    <span id=item446 class="hide_extra">
     </span>
 
 </dd>
@@ -10451,7 +10467,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item434 class="hide_extra">
+    <span id=item447 class="hide_extra">
     </span>
 
 </dd>
@@ -10509,7 +10525,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item435 class="hide_extra">
+    <span id=item448 class="hide_extra">
     </span>
 
 </dd>
@@ -10539,7 +10555,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item436 class="hide_extra">
+    <span id=item449 class="hide_extra">
     </span>
 
 </dd>
@@ -10570,13 +10586,13 @@ awful.spawn('xterm')
 
 
      <br />
-     <center id=button437>
-     <a class="show_more_button" onclick="show_extra('437')">
+     <center id=button450>
+     <a class="show_more_button" onclick="show_extra('450')">
       Click to display more
      </a>
      </center>
 
-    <span id=item437 class="hide_extra">
+    <span id=item450 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -10620,7 +10636,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item438 class="hide_extra">
+    <span id=item451 class="hide_extra">
     </span>
 
 </dd>
@@ -10646,7 +10662,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item439 class="hide_extra">
+    <span id=item452 class="hide_extra">
     </span>
 
 </dd>
@@ -10689,7 +10705,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item440 class="hide_extra">
+    <span id=item453 class="hide_extra">
     </span>
 
 </dd>
@@ -10709,13 +10725,13 @@ awful.spawn('xterm')
 
 
      <br />
-     <center id=button441>
-     <a class="show_more_button" onclick="show_extra('441')">
+     <center id=button454>
+     <a class="show_more_button" onclick="show_extra('454')">
       Click to display more
      </a>
      </center>
 
-    <span id=item441 class="hide_extra">
+    <span id=item454 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -10743,7 +10759,7 @@ awful.spawn('xterm')
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">dir</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The direction, can be either
    <code>&quot;up&quot;</code>, <code>&quot;down&quot;</code>, <code>&quot;left&quot;</code> or <code>&quot;right&quot;</code>.
         </li>
@@ -10764,13 +10780,13 @@ awful.spawn('xterm')
 
 
      <br />
-     <center id=button442>
-     <a class="show_more_button" onclick="show_extra('442')">
+     <center id=button455>
+     <a class="show_more_button" onclick="show_extra('455')">
       Click to display more
      </a>
      </center>
 
-    <span id=item442 class="hide_extra">
+    <span id=item455 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -10817,13 +10833,13 @@ awful.spawn('xterm')
 
 
      <br />
-     <center id=button443>
-     <a class="show_more_button" onclick="show_extra('443')">
+     <center id=button456>
+     <a class="show_more_button" onclick="show_extra('456')">
       Click to display more
      </a>
      </center>
 
-    <span id=item443 class="hide_extra">
+    <span id=item456 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -10858,7 +10874,7 @@ awful.spawn('xterm')
          The client whose shape should be retrieved
         </li>
         <li><span class="parameter">shape_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either "bounding" or "clip"
         </li>
     </ul>
@@ -10868,7 +10884,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item444 class="hide_extra">
+    <span id=item457 class="hide_extra">
     </span>
 
 </dd>
@@ -10894,7 +10910,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item445 class="hide_extra">
+    <span id=item458 class="hide_extra">
     </span>
 
 </dd>
@@ -10920,7 +10936,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item446 class="hide_extra">
+    <span id=item459 class="hide_extra">
     </span>
 
 </dd>
@@ -10946,7 +10962,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item447 class="hide_extra">
+    <span id=item460 class="hide_extra">
     </span>
 
 </dd>
@@ -10975,7 +10991,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item448 class="hide_extra">
+    <span id=item461 class="hide_extra">
     </span>
 
 </dd>
@@ -11003,7 +11019,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item449 class="hide_extra">
+    <span id=item462 class="hide_extra">
     </span>
 
 </dd>
@@ -11033,13 +11049,13 @@ awful.spawn('xterm')
 
 
      <br />
-     <center id=button450>
-     <a class="show_more_button" onclick="show_extra('450')">
+     <center id=button463>
+     <a class="show_more_button" onclick="show_extra('463')">
       Click to display more
      </a>
      </center>
 
-    <span id=item450 class="hide_extra">
+    <span id=item463 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -11078,7 +11094,7 @@ awful.spawn('xterm')
 
 
 
-    <span id=item451 class="hide_extra">
+    <span id=item464 class="hide_extra">
     </span>
 
 </dd>
@@ -11089,7 +11105,7 @@ awful.spawn('xterm')
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

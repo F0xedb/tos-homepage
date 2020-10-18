@@ -105,6 +105,11 @@
   <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
   <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -176,10 +181,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -486,7 +502,7 @@ wb:setup {
          The screen number that the layout will be represented for.
         </li>
         <li><span class="parameter">buttons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The <a href="../input_handling/awful.button.html#">awful.button</a>s for this layoutbox.
         </li>
         </li></ul>
@@ -502,7 +518,7 @@ wb:setup {
 
 
 
-    <span id=item936 class="hide_extra">
+    <span id=item951 class="hide_extra">
     </span>
 
 </dd>
@@ -524,7 +540,7 @@ wb:setup {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -534,7 +550,7 @@ wb:setup {
 
 
 
-    <span id=item937 class="hide_extra">
+    <span id=item952 class="hide_extra">
     </span>
 
 </dd>
@@ -555,7 +571,7 @@ wb:setup {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -565,7 +581,7 @@ wb:setup {
 
 
 
-    <span id=item938 class="hide_extra">
+    <span id=item953 class="hide_extra">
     </span>
 
 </dd>
@@ -593,7 +609,7 @@ wb:setup {
 
 
 
-    <span id=item939 class="hide_extra">
+    <span id=item954 class="hide_extra">
     </span>
 
 </dd>
@@ -621,7 +637,7 @@ wb:setup {
 
 
 
-    <span id=item940 class="hide_extra">
+    <span id=item955 class="hide_extra">
     </span>
 
 </dd>
@@ -650,7 +666,7 @@ wb:setup {
 
 
 
-    <span id=item941 class="hide_extra">
+    <span id=item956 class="hide_extra">
     </span>
 
 </dd>
@@ -671,7 +687,7 @@ wb:setup {
 
 
 
-    <span id=item942 class="hide_extra">
+    <span id=item957 class="hide_extra">
     </span>
 
 </dd>
@@ -698,7 +714,7 @@ wb:setup {
 
 
 
-    <span id=item943 class="hide_extra">
+    <span id=item958 class="hide_extra">
     </span>
 
 </dd>
@@ -730,7 +746,7 @@ wb:setup {
 
 
 
-    <span id=item944 class="hide_extra">
+    <span id=item959 class="hide_extra">
     </span>
 
 </dd>
@@ -758,7 +774,7 @@ wb:setup {
 
 
 
-    <span id=item945 class="hide_extra">
+    <span id=item960 class="hide_extra">
     </span>
 
 </dd>
@@ -778,7 +794,7 @@ wb:setup {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -793,7 +809,7 @@ wb:setup {
 
 
 
-    <span id=item946 class="hide_extra">
+    <span id=item961 class="hide_extra">
     </span>
 
 </dd>
@@ -811,7 +827,7 @@ wb:setup {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -826,7 +842,7 @@ wb:setup {
 
 
 
-    <span id=item947 class="hide_extra">
+    <span id=item962 class="hide_extra">
     </span>
 
 </dd>
@@ -844,7 +860,7 @@ wb:setup {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -858,7 +874,7 @@ wb:setup {
 
 
 
-    <span id=item948 class="hide_extra">
+    <span id=item963 class="hide_extra">
     </span>
 
 </dd>
@@ -883,7 +899,7 @@ wb:setup {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -897,7 +913,7 @@ wb:setup {
 
 
 
-    <span id=item949 class="hide_extra">
+    <span id=item964 class="hide_extra">
     </span>
 
 </dd>
@@ -928,7 +944,7 @@ wb:setup {
 
 
 
-    <span id=item950 class="hide_extra">
+    <span id=item965 class="hide_extra">
     </span>
 
 </dd>
@@ -955,7 +971,7 @@ wb:setup {
 
 
 
-    <span id=item951 class="hide_extra">
+    <span id=item966 class="hide_extra">
     </span>
 
 </dd>
@@ -972,7 +988,7 @@ wb:setup {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -990,7 +1006,7 @@ wb:setup {
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1052,7 +1068,7 @@ wb:setup {
 
 
 
-    <span id=item952 class="hide_extra">
+    <span id=item967 class="hide_extra">
     </span>
 
 </dd>
@@ -1069,7 +1085,7 @@ wb:setup {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1087,7 +1103,7 @@ wb:setup {
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1149,7 +1165,7 @@ wb:setup {
 
 
 
-    <span id=item953 class="hide_extra">
+    <span id=item968 class="hide_extra">
     </span>
 
 </dd>
@@ -1166,7 +1182,7 @@ wb:setup {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1228,7 +1244,7 @@ wb:setup {
 
 
 
-    <span id=item954 class="hide_extra">
+    <span id=item969 class="hide_extra">
     </span>
 
 </dd>
@@ -1245,7 +1261,7 @@ wb:setup {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1307,7 +1323,7 @@ wb:setup {
 
 
 
-    <span id=item955 class="hide_extra">
+    <span id=item970 class="hide_extra">
     </span>
 
 </dd>
@@ -1318,7 +1334,7 @@ wb:setup {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

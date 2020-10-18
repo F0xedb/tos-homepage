@@ -64,10 +64,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><strong>gears.matcher</strong></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Core components</h2>
@@ -124,6 +135,11 @@
   <li><a href="../widgets/wibox.widget.systray.html">wibox.widget.systray</a></li>
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+</ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
 </ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
@@ -675,7 +691,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2925 class="hide_extra">
+    <span id=item2948 class="hide_extra">
     </span>
 
 </dd>
@@ -699,7 +715,7 @@ matcher:apply(candidate6)
          The object.
         </li>
         <li><span class="parameter">entry</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Rule entry (with keys <a href="../libraries/gears.matcher.html#rule">rule</a>, <a href="../libraries/gears.matcher.html#rule_any">rule_any</a>, <a href="../libraries/gears.matcher.html#except">except</a> and/or
    <a href="../libraries/gears.matcher.html#except_any">except_any</a>).
         </li>
@@ -716,7 +732,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2926 class="hide_extra">
+    <span id=item2949 class="hide_extra">
     </span>
 
 </dd>
@@ -739,7 +755,7 @@ matcher:apply(candidate6)
          The object.
         </li>
         <li><span class="parameter">rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rules to check. List with "rule", "rule<em>any",
   "except" and "except</em>any" keys. If no rules are provided, all rules
   registered with a source will be matched.
@@ -752,7 +768,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2927 class="hide_extra">
+    <span id=item2950 class="hide_extra">
     </span>
 
 </dd>
@@ -772,7 +788,7 @@ matcher:apply(candidate6)
          The object.
         </li>
         <li><span class="parameter">rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rules to check. List of tables with <a href="../libraries/gears.matcher.html#rule">rule</a>,
   <a href="../libraries/gears.matcher.html#rule_any">rule_any</a>, <a href="../libraries/gears.matcher.html#except">except</a> and <a href="../libraries/gears.matcher.html#except_any">except_any</a> keys.
         </li>
@@ -789,7 +805,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2928 class="hide_extra">
+    <span id=item2951 class="hide_extra">
     </span>
 
 </dd>
@@ -825,7 +841,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The property name.
         </li>
         <li><span class="parameter">f</span>
@@ -850,7 +866,7 @@ matcher:apply(candidate6)
     </ul>
 
 
-    <span id=item2929 class="hide_extra">
+    <span id=item2952 class="hide_extra">
     </span>
 
 </dd>
@@ -870,7 +886,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The property name.
         </li>
         <li><span class="parameter">f</span>
@@ -884,7 +900,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2930 class="hide_extra">
+    <span id=item2953 class="hide_extra">
     </span>
 
 </dd>
@@ -901,22 +917,22 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The provider name. It must be unique.
         </li>
         <li><span class="parameter">rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A set of rules (see how they work at the top of this
   page).
         </li>
         <li><span class="parameter">depends_on</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source
   depends on (sources that must be executed <em>before</em> <code>name</code>).
          (<em>default</em> {})
         </li>
         <li><span class="parameter">precede</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source has a
   priority over.
          (<em>default</em> {})
@@ -934,7 +950,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2931 class="hide_extra">
+    <span id=item2954 class="hide_extra">
     </span>
 
 </dd>
@@ -951,7 +967,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The provider name. It must be unique.
         </li>
         <li><span class="parameter">callback</span> The callback that is called to produce properties.
@@ -964,24 +980,24 @@ matcher:apply(candidate6)
          The object.
         </li>
         <li><span class="parameter">properties</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current properties. The callback should
   add to and overwrite properties in this table.
         </li>
         <li><span class="parameter">callbacks</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of all callbacks scheduled to be
   executed after the main properties are applied.
         </li>
         </li></ul>
         <li><span class="parameter">depends_on</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source depends on
   (sources that must be executed <em>before</em> <code>name</code>).
          (<em>default</em> {})
         </li>
         <li><span class="parameter">precede</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of names of sources this source has a
   priority over.
          (<em>default</em> {})
@@ -999,7 +1015,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2932 class="hide_extra">
+    <span id=item2955 class="hide_extra">
     </span>
 
 </dd>
@@ -1019,7 +1035,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The source name.
         </li>
     </ul>
@@ -1035,7 +1051,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2933 class="hide_extra">
+    <span id=item2956 class="hide_extra">
     </span>
 
 </dd>
@@ -1064,7 +1080,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2934 class="hide_extra">
+    <span id=item2957 class="hide_extra">
     </span>
 
 </dd>
@@ -1081,11 +1097,11 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">source</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The source name.
         </li>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A valid rule.
         </li>
     </ul>
@@ -1095,7 +1111,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2935 class="hide_extra">
+    <span id=item2958 class="hide_extra">
     </span>
 
 </dd>
@@ -1112,11 +1128,11 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">source</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The source name.
         </li>
         <li><span class="parameter">rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with rules.
         </li>
     </ul>
@@ -1126,7 +1142,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2936 class="hide_extra">
+    <span id=item2959 class="hide_extra">
     </span>
 
 </dd>
@@ -1143,11 +1159,11 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">source</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The source name.
         </li>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          An existing rule or its <a href="../libraries/gears.matcher.html#id">id</a>.
         </li>
     </ul>
@@ -1163,7 +1179,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2937 class="hide_extra">
+    <span id=item2960 class="hide_extra">
     </span>
 
 </dd>
@@ -1181,7 +1197,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -1196,7 +1212,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2938 class="hide_extra">
+    <span id=item2961 class="hide_extra">
     </span>
 
 </dd>
@@ -1214,7 +1230,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1228,7 +1244,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2939 class="hide_extra">
+    <span id=item2962 class="hide_extra">
     </span>
 
 </dd>
@@ -1253,7 +1269,7 @@ matcher:apply(candidate6)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1267,7 +1283,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2940 class="hide_extra">
+    <span id=item2963 class="hide_extra">
     </span>
 
 </dd>
@@ -1287,15 +1303,15 @@ matcher:apply(candidate6)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rule.
         </li>
         <li><span class="parameter">source</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The matching rules source name.
         </li>
         <li><span class="parameter">content</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The matching rules source content.
         </li>
     </ul>
@@ -1310,7 +1326,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2941 class="hide_extra">
+    <span id=item2964 class="hide_extra">
     </span>
 
 </dd>
@@ -1326,15 +1342,15 @@ matcher:apply(candidate6)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">rule</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The rule.
         </li>
         <li><span class="parameter">source</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The matching rules source name.
         </li>
         <li><span class="parameter">content</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The matching rules source content.
         </li>
     </ul>
@@ -1348,7 +1364,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2942 class="hide_extra">
+    <span id=item2965 class="hide_extra">
     </span>
 
 </dd>
@@ -1378,7 +1394,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2943 class="hide_extra">
+    <span id=item2966 class="hide_extra">
     </span>
 
 </dd>
@@ -1408,7 +1424,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2944 class="hide_extra">
+    <span id=item2967 class="hide_extra">
     </span>
 
 </dd>
@@ -1431,7 +1447,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2945 class="hide_extra">
+    <span id=item2968 class="hide_extra">
     </span>
 
 </dd>
@@ -1459,7 +1475,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2946 class="hide_extra">
+    <span id=item2969 class="hide_extra">
     </span>
 
 </dd>
@@ -1483,7 +1499,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2947 class="hide_extra">
+    <span id=item2970 class="hide_extra">
     </span>
 
 </dd>
@@ -1508,7 +1524,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2948 class="hide_extra">
+    <span id=item2971 class="hide_extra">
     </span>
 
 </dd>
@@ -1533,7 +1549,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2949 class="hide_extra">
+    <span id=item2972 class="hide_extra">
     </span>
 
 </dd>
@@ -1558,7 +1574,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2950 class="hide_extra">
+    <span id=item2973 class="hide_extra">
     </span>
 
 </dd>
@@ -1583,7 +1599,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2951 class="hide_extra">
+    <span id=item2974 class="hide_extra">
     </span>
 
 </dd>
@@ -1608,7 +1624,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2952 class="hide_extra">
+    <span id=item2975 class="hide_extra">
     </span>
 
 </dd>
@@ -1635,7 +1651,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2953 class="hide_extra">
+    <span id=item2976 class="hide_extra">
     </span>
 
 </dd>
@@ -1662,7 +1678,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2954 class="hide_extra">
+    <span id=item2977 class="hide_extra">
     </span>
 
 </dd>
@@ -1689,7 +1705,7 @@ matcher:apply(candidate6)
 
 
 
-    <span id=item2955 class="hide_extra">
+    <span id=item2978 class="hide_extra">
     </span>
 
 </dd>
@@ -1700,7 +1716,7 @@ matcher:apply(candidate6)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

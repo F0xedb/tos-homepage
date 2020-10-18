@@ -105,6 +105,11 @@
   <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
   <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -176,10 +181,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -553,7 +569,7 @@
 
 
 
-    <span id=item1410 class="hide_extra">
+    <span id=item1425 class="hide_extra">
     </span>
 
 </dd>
@@ -576,7 +592,7 @@
 <p> It can can be any of the following:</p>
 
 <ul>
-    <li>A <a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> : Interpreted as the path to an image file,</li>
+    <li>A <a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> : Interpreted as the path to an image file,</li>
     <li>A cairo image surface : Directly used as is,</li>
     <li>An rsvg handle object : Directly used as is,</li>
     <li><code>nil</code> : Unset the image.</li>
@@ -601,13 +617,13 @@
 
 
      <br />
-     <center id=button1411>
-     <a class="show_more_button" onclick="show_extra('1411')">
+     <center id=button1426>
+     <a class="show_more_button" onclick="show_extra('1426')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1411 class="hide_extra">
+    <span id=item1426 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::image</code></span>  When the <a href="../widgets/wibox.widget.imagebox.html#image">image</a> value changes.</li>
@@ -649,13 +665,13 @@
 
 
      <br />
-     <center id=button1412>
-     <a class="show_more_button" onclick="show_extra('1412')">
+     <center id=button1427>
+     <a class="show_more_button" onclick="show_extra('1427')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1412 class="hide_extra">
+    <span id=item1427 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::clip_shape</code></span>  When the <a href="../widgets/wibox.widget.imagebox.html#clip_shape">clip_shape</a> value changes.</li>
@@ -687,13 +703,13 @@
 
 
      <br />
-     <center id=button1413>
-     <a class="show_more_button" onclick="show_extra('1413')">
+     <center id=button1428>
+     <a class="show_more_button" onclick="show_extra('1428')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1413 class="hide_extra">
+    <span id=item1428 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::resize</code></span>  When the <a href="../widgets/wibox.widget.imagebox.html#resize">resize</a> value changes.</li>
@@ -719,7 +735,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -729,7 +745,7 @@
 
 
 
-    <span id=item1414 class="hide_extra">
+    <span id=item1429 class="hide_extra">
     </span>
 
 </dd>
@@ -750,7 +766,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -760,7 +776,7 @@
 
 
 
-    <span id=item1415 class="hide_extra">
+    <span id=item1430 class="hide_extra">
     </span>
 
 </dd>
@@ -788,7 +804,7 @@
 
 
 
-    <span id=item1416 class="hide_extra">
+    <span id=item1431 class="hide_extra">
     </span>
 
 </dd>
@@ -816,7 +832,7 @@
 
 
 
-    <span id=item1417 class="hide_extra">
+    <span id=item1432 class="hide_extra">
     </span>
 
 </dd>
@@ -845,7 +861,7 @@
 
 
 
-    <span id=item1418 class="hide_extra">
+    <span id=item1433 class="hide_extra">
     </span>
 
 </dd>
@@ -866,7 +882,7 @@
 
 
 
-    <span id=item1419 class="hide_extra">
+    <span id=item1434 class="hide_extra">
     </span>
 
 </dd>
@@ -893,7 +909,7 @@
 
 
 
-    <span id=item1420 class="hide_extra">
+    <span id=item1435 class="hide_extra">
     </span>
 
 </dd>
@@ -942,7 +958,7 @@
     </ul>
 
 
-    <span id=item1421 class="hide_extra">
+    <span id=item1436 class="hide_extra">
     </span>
 
 </dd>
@@ -978,7 +994,7 @@
 
 
 
-    <span id=item1422 class="hide_extra">
+    <span id=item1437 class="hide_extra">
     </span>
 
 </dd>
@@ -1006,7 +1022,7 @@
 
 
 
-    <span id=item1423 class="hide_extra">
+    <span id=item1438 class="hide_extra">
     </span>
 
 </dd>
@@ -1034,7 +1050,7 @@
 
 
 
-    <span id=item1424 class="hide_extra">
+    <span id=item1439 class="hide_extra">
     </span>
 
 </dd>
@@ -1062,7 +1078,7 @@
 
 
 
-    <span id=item1425 class="hide_extra">
+    <span id=item1440 class="hide_extra">
     </span>
 
 </dd>
@@ -1082,7 +1098,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -1097,7 +1113,7 @@
 
 
 
-    <span id=item1426 class="hide_extra">
+    <span id=item1441 class="hide_extra">
     </span>
 
 </dd>
@@ -1115,7 +1131,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -1130,7 +1146,7 @@
 
 
 
-    <span id=item1427 class="hide_extra">
+    <span id=item1442 class="hide_extra">
     </span>
 
 </dd>
@@ -1148,7 +1164,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1162,7 +1178,7 @@
 
 
 
-    <span id=item1428 class="hide_extra">
+    <span id=item1443 class="hide_extra">
     </span>
 
 </dd>
@@ -1187,7 +1203,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1201,7 +1217,7 @@
 
 
 
-    <span id=item1429 class="hide_extra">
+    <span id=item1444 class="hide_extra">
     </span>
 
 </dd>
@@ -1232,7 +1248,7 @@
 
 
 
-    <span id=item1430 class="hide_extra">
+    <span id=item1445 class="hide_extra">
     </span>
 
 </dd>
@@ -1259,7 +1275,7 @@
 
 
 
-    <span id=item1431 class="hide_extra">
+    <span id=item1446 class="hide_extra">
     </span>
 
 </dd>
@@ -1276,7 +1292,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1294,7 +1310,7 @@
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1356,7 +1372,7 @@
 
 
 
-    <span id=item1432 class="hide_extra">
+    <span id=item1447 class="hide_extra">
     </span>
 
 </dd>
@@ -1373,7 +1389,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1391,7 +1407,7 @@
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1453,7 +1469,7 @@
 
 
 
-    <span id=item1433 class="hide_extra">
+    <span id=item1448 class="hide_extra">
     </span>
 
 </dd>
@@ -1470,7 +1486,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1532,7 +1548,7 @@
 
 
 
-    <span id=item1434 class="hide_extra">
+    <span id=item1449 class="hide_extra">
     </span>
 
 </dd>
@@ -1549,7 +1565,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1611,7 +1627,7 @@
 
 
 
-    <span id=item1435 class="hide_extra">
+    <span id=item1450 class="hide_extra">
     </span>
 
 </dd>
@@ -1622,7 +1638,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

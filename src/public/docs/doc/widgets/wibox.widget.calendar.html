@@ -104,6 +104,11 @@
   <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
   <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -175,10 +180,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -234,8 +250,8 @@
 
 <p> Cell and container styles can be overridden using the <a href="../widgets/wibox.widget.calendar.html#fn_embed">fn_embed</a> callback function
  which is called before adding the widgets to the layouts. The <a href="../widgets/wibox.widget.calendar.html#fn_embed">fn_embed</a> function
- takes three arguments, the original widget, the flag (<a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> used to identified the widget)
- and the date (<a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a>).
+ takes three arguments, the original widget, the flag (<a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> used to identified the widget)
+ and the date (<a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>).
  It returns another widget, embedding (and modifying) the original widget.</p>
 
 
@@ -376,7 +392,7 @@
         </li>
         </li></ul>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Font of the calendar
          (<em>default</em> "Monospace 10")
         </li>
@@ -393,7 +409,7 @@
 
 
 
-    <span id=item1317 class="hide_extra">
+    <span id=item1332 class="hide_extra">
     </span>
 
 </dd>
@@ -430,7 +446,7 @@
         </li>
         </li></ul>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Font of the calendar
          (<em>default</em> "Monospace 10")
         </li>
@@ -458,7 +474,7 @@
     </ul>
 
 
-    <span id=item1318 class="hide_extra">
+    <span id=item1333 class="hide_extra">
     </span>
 
 </dd>
@@ -493,7 +509,7 @@
 
 
 
-    <span id=item1319 class="hide_extra">
+    <span id=item1334 class="hide_extra">
     </span>
 
 </dd>
@@ -530,7 +546,7 @@
     </ul>
 
 
-    <span id=item1320 class="hide_extra">
+    <span id=item1335 class="hide_extra">
     </span>
 
 </dd>
@@ -560,7 +576,7 @@
 
 
 
-    <span id=item1321 class="hide_extra">
+    <span id=item1336 class="hide_extra">
     </span>
 
 </dd>
@@ -600,7 +616,7 @@
     </ul>
 
 
-    <span id=item1322 class="hide_extra">
+    <span id=item1337 class="hide_extra">
     </span>
 
 </dd>
@@ -640,7 +656,7 @@
     </ul>
 
 
-    <span id=item1323 class="hide_extra">
+    <span id=item1338 class="hide_extra">
     </span>
 
 </dd>
@@ -678,7 +694,7 @@
     </ul>
 
 
-    <span id=item1324 class="hide_extra">
+    <span id=item1339 class="hide_extra">
     </span>
 
 </dd>
@@ -692,7 +708,7 @@
     <dd>
     The widget encapsulating function. </p>
 
-<p> Function that takes a widget, flag (<a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a>) and date (<a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a>) as argument
+<p> Function that takes a widget, flag (<a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>) and date (<a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>) as argument
  and returns a widget encapsulating the input widget.</p>
 
 <p> Default value: function (widget, flag, date) return widget end</p>
@@ -782,7 +798,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
     </ul>
 
 
-    <span id=item1325 class="hide_extra">
+    <span id=item1340 class="hide_extra">
     </span>
 
 </dd>
@@ -803,7 +819,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Font of the calendar
         </li>
     </ul>
@@ -813,7 +829,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
 
 
 
-    <span id=item1326 class="hide_extra">
+    <span id=item1341 class="hide_extra">
     </span>
 
 </dd>
@@ -840,7 +856,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
 
 
 
-    <span id=item1327 class="hide_extra">
+    <span id=item1342 class="hide_extra">
     </span>
 
 </dd>
@@ -866,7 +882,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
 
 
 
-    <span id=item1328 class="hide_extra">
+    <span id=item1343 class="hide_extra">
     </span>
 
 </dd>
@@ -892,7 +908,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
 
 
 
-    <span id=item1329 class="hide_extra">
+    <span id=item1344 class="hide_extra">
     </span>
 
 </dd>
@@ -918,7 +934,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
 
 
 
-    <span id=item1330 class="hide_extra">
+    <span id=item1345 class="hide_extra">
     </span>
 
 </dd>
@@ -929,7 +945,7 @@ styles.weekday = { fg_color = <span class="string">'#7788af'</span>,
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

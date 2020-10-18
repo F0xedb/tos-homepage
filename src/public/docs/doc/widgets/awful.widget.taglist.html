@@ -108,6 +108,11 @@
   <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
   <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
 </ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+</ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
   <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
@@ -179,10 +184,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -777,7 +793,7 @@ s.mytaglist = awful.widget.taglist {
          Filter function to define what clients will be listed.
         </li>
         <li><span class="parameter">buttons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with buttons binding to set.
         </li>
         <li><span class="parameter">update_function</span>
@@ -799,90 +815,90 @@ s.mytaglist = awful.widget.taglist {
          (<em>default</em> awful.widget.taglist.source.for_screen)
         </li>
         <li><span class="parameter">widget_template</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A custom widget to be used for each tag
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The style overrides default theme.
          (<em>default</em> {})
         </li>
         <li><span class="parameter">style.fg_focus</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The foreground color for focused client.
         </li>
         <li><span class="parameter">style.bg_focus</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The background color for focused client.
         </li>
         <li><span class="parameter">style.fg_urgent</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The foreground color for urgent clients.
         </li>
         <li><span class="parameter">style.bg_urgent</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The background color for urgent clients.
         </li>
         <li><span class="parameter">style.bg_occupied</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.fg_occupied</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.bg_empty</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.fg_empty</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.bg_volatile</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.fg_volatile</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.squares_sel</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for selected squares.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.squares_unsel</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for unselected squares.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.squares_sel_empty</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for selected squares for empty tags.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.squares_unsel_empty</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for unselected squares for empty tags.
          (<em>optional</em>)
         </li>
@@ -892,14 +908,14 @@ s.mytaglist = awful.widget.taglist {
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.disable_icon</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The font.
         </li>
         <li><span class="parameter">style.spacing</span>
@@ -908,22 +924,22 @@ s.mytaglist = awful.widget.taglist {
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">style.squares_sel</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for selected squares.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.squares_unsel</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for unselected squares.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.squares_sel_empty</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for selected squares for empty tags.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.squares_unsel_empty</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A user provided image for unselected squares for empty tags.
          (<em>optional</em>)
         </li>
@@ -933,23 +949,23 @@ s.mytaglist = awful.widget.taglist {
          (<em>optional</em>)
         </li>
         <li><span class="parameter">style.bg_focus</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The background color for focused client.
         </li>
         <li><span class="parameter">style.fg_focus</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The foreground color for focused client.
         </li>
         <li><span class="parameter">style.bg_urgent</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The background color for urgent clients.
         </li>
         <li><span class="parameter">style.fg_urgent</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">pattern</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">pattern</span></span>
          The foreground color for urgent clients.
         </li>
         <li><span class="parameter">style.font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The font.
         </li>
         </li></ul>
@@ -975,7 +991,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1026 class="hide_extra">
+    <span id=item1041 class="hide_extra">
     </span>
 
 </dd>
@@ -997,7 +1013,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1007,7 +1023,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1027 class="hide_extra">
+    <span id=item1042 class="hide_extra">
     </span>
 
 </dd>
@@ -1028,7 +1044,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1038,7 +1054,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1028 class="hide_extra">
+    <span id=item1043 class="hide_extra">
     </span>
 
 </dd>
@@ -1066,7 +1082,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1029 class="hide_extra">
+    <span id=item1044 class="hide_extra">
     </span>
 
 </dd>
@@ -1094,7 +1110,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1030 class="hide_extra">
+    <span id=item1045 class="hide_extra">
     </span>
 
 </dd>
@@ -1123,7 +1139,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1031 class="hide_extra">
+    <span id=item1046 class="hide_extra">
     </span>
 
 </dd>
@@ -1144,7 +1160,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1032 class="hide_extra">
+    <span id=item1047 class="hide_extra">
     </span>
 
 </dd>
@@ -1171,7 +1187,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1033 class="hide_extra">
+    <span id=item1048 class="hide_extra">
     </span>
 
 </dd>
@@ -1203,7 +1219,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1034 class="hide_extra">
+    <span id=item1049 class="hide_extra">
     </span>
 
 </dd>
@@ -1231,7 +1247,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1035 class="hide_extra">
+    <span id=item1050 class="hide_extra">
     </span>
 
 </dd>
@@ -1251,7 +1267,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -1266,7 +1282,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1036 class="hide_extra">
+    <span id=item1051 class="hide_extra">
     </span>
 
 </dd>
@@ -1284,7 +1300,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -1299,7 +1315,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1037 class="hide_extra">
+    <span id=item1052 class="hide_extra">
     </span>
 
 </dd>
@@ -1317,7 +1333,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1331,7 +1347,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1038 class="hide_extra">
+    <span id=item1053 class="hide_extra">
     </span>
 
 </dd>
@@ -1356,7 +1372,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1370,7 +1386,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1039 class="hide_extra">
+    <span id=item1054 class="hide_extra">
     </span>
 
 </dd>
@@ -1401,7 +1417,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1040 class="hide_extra">
+    <span id=item1055 class="hide_extra">
     </span>
 
 </dd>
@@ -1428,7 +1444,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1041 class="hide_extra">
+    <span id=item1056 class="hide_extra">
     </span>
 
 </dd>
@@ -1445,7 +1461,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1463,7 +1479,7 @@ s.mytaglist = awful.widget.taglist {
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1525,7 +1541,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1042 class="hide_extra">
+    <span id=item1057 class="hide_extra">
     </span>
 
 </dd>
@@ -1542,7 +1558,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1560,7 +1576,7 @@ s.mytaglist = awful.widget.taglist {
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1622,7 +1638,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1043 class="hide_extra">
+    <span id=item1058 class="hide_extra">
     </span>
 
 </dd>
@@ -1639,7 +1655,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1701,7 +1717,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1044 class="hide_extra">
+    <span id=item1059 class="hide_extra">
     </span>
 
 </dd>
@@ -1718,7 +1734,7 @@ s.mytaglist = awful.widget.taglist {
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1780,7 +1796,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1045 class="hide_extra">
+    <span id=item1060 class="hide_extra">
     </span>
 
 </dd>
@@ -1808,7 +1824,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1046 class="hide_extra">
+    <span id=item1061 class="hide_extra">
     </span>
 
 </dd>
@@ -1832,7 +1848,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1047 class="hide_extra">
+    <span id=item1062 class="hide_extra">
     </span>
 
 </dd>
@@ -1856,7 +1872,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1048 class="hide_extra">
+    <span id=item1063 class="hide_extra">
     </span>
 
 </dd>
@@ -1880,7 +1896,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1049 class="hide_extra">
+    <span id=item1064 class="hide_extra">
     </span>
 
 </dd>
@@ -1904,7 +1920,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1050 class="hide_extra">
+    <span id=item1065 class="hide_extra">
     </span>
 
 </dd>
@@ -1928,7 +1944,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1051 class="hide_extra">
+    <span id=item1066 class="hide_extra">
     </span>
 
 </dd>
@@ -1952,7 +1968,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1052 class="hide_extra">
+    <span id=item1067 class="hide_extra">
     </span>
 
 </dd>
@@ -1976,7 +1992,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1053 class="hide_extra">
+    <span id=item1068 class="hide_extra">
     </span>
 
 </dd>
@@ -2000,7 +2016,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1054 class="hide_extra">
+    <span id=item1069 class="hide_extra">
     </span>
 
 </dd>
@@ -2024,7 +2040,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1055 class="hide_extra">
+    <span id=item1070 class="hide_extra">
     </span>
 
 </dd>
@@ -2048,7 +2064,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1056 class="hide_extra">
+    <span id=item1071 class="hide_extra">
     </span>
 
 </dd>
@@ -2072,7 +2088,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1057 class="hide_extra">
+    <span id=item1072 class="hide_extra">
     </span>
 
 </dd>
@@ -2096,7 +2112,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1058 class="hide_extra">
+    <span id=item1073 class="hide_extra">
     </span>
 
 </dd>
@@ -2120,7 +2136,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1059 class="hide_extra">
+    <span id=item1074 class="hide_extra">
     </span>
 
 </dd>
@@ -2140,7 +2156,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1060 class="hide_extra">
+    <span id=item1075 class="hide_extra">
     </span>
 
 </dd>
@@ -2160,7 +2176,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1061 class="hide_extra">
+    <span id=item1076 class="hide_extra">
     </span>
 
 </dd>
@@ -2180,7 +2196,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1062 class="hide_extra">
+    <span id=item1077 class="hide_extra">
     </span>
 
 </dd>
@@ -2208,7 +2224,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1063 class="hide_extra">
+    <span id=item1078 class="hide_extra">
     </span>
 
 </dd>
@@ -2238,7 +2254,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1064 class="hide_extra">
+    <span id=item1079 class="hide_extra">
     </span>
 
 </dd>
@@ -2262,7 +2278,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1065 class="hide_extra">
+    <span id=item1080 class="hide_extra">
     </span>
 
 </dd>
@@ -2286,7 +2302,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1066 class="hide_extra">
+    <span id=item1081 class="hide_extra">
     </span>
 
 </dd>
@@ -2310,7 +2326,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1067 class="hide_extra">
+    <span id=item1082 class="hide_extra">
     </span>
 
 </dd>
@@ -2334,7 +2350,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1068 class="hide_extra">
+    <span id=item1083 class="hide_extra">
     </span>
 
 </dd>
@@ -2358,7 +2374,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1069 class="hide_extra">
+    <span id=item1084 class="hide_extra">
     </span>
 
 </dd>
@@ -2382,7 +2398,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1070 class="hide_extra">
+    <span id=item1085 class="hide_extra">
     </span>
 
 </dd>
@@ -2406,7 +2422,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1071 class="hide_extra">
+    <span id=item1086 class="hide_extra">
     </span>
 
 </dd>
@@ -2430,7 +2446,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1072 class="hide_extra">
+    <span id=item1087 class="hide_extra">
     </span>
 
 </dd>
@@ -2454,7 +2470,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1073 class="hide_extra">
+    <span id=item1088 class="hide_extra">
     </span>
 
 </dd>
@@ -2478,7 +2494,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1074 class="hide_extra">
+    <span id=item1089 class="hide_extra">
     </span>
 
 </dd>
@@ -2502,7 +2518,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1075 class="hide_extra">
+    <span id=item1090 class="hide_extra">
     </span>
 
 </dd>
@@ -2526,7 +2542,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1076 class="hide_extra">
+    <span id=item1091 class="hide_extra">
     </span>
 
 </dd>
@@ -2550,7 +2566,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1077 class="hide_extra">
+    <span id=item1092 class="hide_extra">
     </span>
 
 </dd>
@@ -2574,7 +2590,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1078 class="hide_extra">
+    <span id=item1093 class="hide_extra">
     </span>
 
 </dd>
@@ -2603,7 +2619,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1079 class="hide_extra">
+    <span id=item1094 class="hide_extra">
     </span>
 
 </dd>
@@ -2631,7 +2647,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1080 class="hide_extra">
+    <span id=item1095 class="hide_extra">
     </span>
 
 </dd>
@@ -2655,7 +2671,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1081 class="hide_extra">
+    <span id=item1096 class="hide_extra">
     </span>
 
 </dd>
@@ -2674,7 +2690,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1082 class="hide_extra">
+    <span id=item1097 class="hide_extra">
     </span>
 
 </dd>
@@ -2685,7 +2701,7 @@ s.mytaglist = awful.widget.taglist {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

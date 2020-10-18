@@ -65,10 +65,21 @@
   <li><a href="../libraries/dbus.html">dbus</a></li>
   <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
   <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
   <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Core components</h2>
@@ -125,6 +136,11 @@
   <li><a href="../widgets/wibox.widget.systray.html">wibox.widget.systray</a></li>
   <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
   <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+</ul>
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
 </ul>
 <h2>Widget containers</h2>
 <ul class="nowrap">
@@ -402,6 +418,16 @@
       <td class="summarytype" nowrap><span class='summary_type'>surface</span></td>
       <td colspan="2" class="summary">The tile left layout layoutbox icon.</td>
     </tr>
+    <tr>
+      <td class="shortname" ><a href="#beautiful.layout_max">beautiful.layout_max</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>surface</span></td>
+      <td colspan="2" class="summary">The max layout layoutbox icon.</td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#beautiful.layout_fullscreen">beautiful.layout_fullscreen</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>surface</span></td>
+      <td colspan="2" class="summary">The fullscreen layout layoutbox icon.</td>
+    </tr>
 </table>
 <h2><a href="#Client_layouts">Client layouts</a></h2>
 <table class="function_list">
@@ -501,6 +527,12 @@
       </td>
       <td colspan="2" class="summary">The main tile algo, on the top.</td>
     </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.layout.suit.max.name"><span class='function_modname'>awful.layout.</span>suit.max.name</a>
+      </td>
+      <td colspan="2" class="summary">Maximized layout.</td>
+    </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
 <table class="function_list">
@@ -560,7 +592,7 @@
 
 
 
-    <span id=item2767 class="hide_extra">
+    <span id=item2787 class="hide_extra">
     </span>
 
 </dd>
@@ -591,7 +623,7 @@
 
 
 
-    <span id=item2768 class="hide_extra">
+    <span id=item2788 class="hide_extra">
     </span>
 
 </dd>
@@ -624,7 +656,7 @@
 
 
 
-    <span id=item2769 class="hide_extra">
+    <span id=item2789 class="hide_extra">
     </span>
 
 </dd>
@@ -655,7 +687,7 @@
 
 
 
-    <span id=item2770 class="hide_extra">
+    <span id=item2790 class="hide_extra">
     </span>
 
 </dd>
@@ -691,7 +723,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table with the workarea (x, y, width, height), the screen
    geometry (x, y, width, height), the clients, the screen and sometime, a
    "geometries" table with client as keys and geometry as value
@@ -701,7 +733,7 @@
 
 
 
-    <span id=item2771 class="hide_extra">
+    <span id=item2791 class="hide_extra">
     </span>
 
 </dd>
@@ -727,7 +759,7 @@
 
 
 
-    <span id=item2772 class="hide_extra">
+    <span id=item2792 class="hide_extra">
     </span>
 
 </dd>
@@ -758,7 +790,7 @@
 
 
 
-    <span id=item2773 class="hide_extra">
+    <span id=item2793 class="hide_extra">
     </span>
 
 </dd>
@@ -828,7 +860,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
     </ul>
 
 
-    <span id=item2774 class="hide_extra">
+    <span id=item2794 class="hide_extra">
     </span>
 
 </dd>
@@ -845,7 +877,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">layouts</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of valid tag layout.
         </li>
     </ul>
@@ -859,7 +891,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2775 class="hide_extra">
+    <span id=item2795 class="hide_extra">
     </span>
 
 </dd>
@@ -890,7 +922,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2776 class="hide_extra">
+    <span id=item2796 class="hide_extra">
     </span>
 
 </dd>
@@ -915,11 +947,11 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
          The client
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The context
         </li>
         <li><span class="parameter">hints</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Additional hints
         </li>
     </ul>
@@ -929,7 +961,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2777 class="hide_extra">
+    <span id=item2797 class="hide_extra">
     </span>
 
 </dd>
@@ -957,7 +989,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2778 class="hide_extra">
+    <span id=item2798 class="hide_extra">
     </span>
 
 </dd>
@@ -981,7 +1013,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2779 class="hide_extra">
+    <span id=item2799 class="hide_extra">
     </span>
 
 </dd>
@@ -1005,7 +1037,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2780 class="hide_extra">
+    <span id=item2800 class="hide_extra">
     </span>
 
 </dd>
@@ -1029,7 +1061,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2781 class="hide_extra">
+    <span id=item2801 class="hide_extra">
     </span>
 
 </dd>
@@ -1053,7 +1085,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2782 class="hide_extra">
+    <span id=item2802 class="hide_extra">
     </span>
 
 </dd>
@@ -1077,7 +1109,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2783 class="hide_extra">
+    <span id=item2803 class="hide_extra">
     </span>
 
 </dd>
@@ -1101,7 +1133,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2784 class="hide_extra">
+    <span id=item2804 class="hide_extra">
     </span>
 
 </dd>
@@ -1125,7 +1157,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2785 class="hide_extra">
+    <span id=item2805 class="hide_extra">
     </span>
 
 </dd>
@@ -1149,7 +1181,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2786 class="hide_extra">
+    <span id=item2806 class="hide_extra">
     </span>
 
 </dd>
@@ -1173,7 +1205,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2787 class="hide_extra">
+    <span id=item2807 class="hide_extra">
     </span>
 
 </dd>
@@ -1197,7 +1229,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2788 class="hide_extra">
+    <span id=item2808 class="hide_extra">
     </span>
 
 </dd>
@@ -1221,7 +1253,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2789 class="hide_extra">
+    <span id=item2809 class="hide_extra">
     </span>
 
 </dd>
@@ -1245,7 +1277,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2790 class="hide_extra">
+    <span id=item2810 class="hide_extra">
     </span>
 
 </dd>
@@ -1269,7 +1301,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2791 class="hide_extra">
+    <span id=item2811 class="hide_extra">
     </span>
 
 </dd>
@@ -1293,7 +1325,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2792 class="hide_extra">
+    <span id=item2812 class="hide_extra">
     </span>
 
 </dd>
@@ -1317,7 +1349,55 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2793 class="hide_extra">
+    <span id=item2813 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "beautiful.layout_max"></a>
+    <strong>beautiful.layout_max</strong>
+    <span class="proptype"><span class='summary_type'>surface</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    The max layout layoutbox icon.
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+
+    <span id=item2814 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "beautiful.layout_fullscreen"></a>
+    <strong>beautiful.layout_fullscreen</strong>
+    <span class="proptype"><span class='summary_type'>surface</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    The fullscreen layout layoutbox icon.
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../libraries/gears.surface.html#">gears.surface</a>
+    </ul>
+
+
+
+    <span id=item2815 class="hide_extra">
     </span>
 
 </dd>
@@ -1342,7 +1422,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2794 class="hide_extra">
+    <span id=item2816 class="hide_extra">
     </span>
 
 </dd>
@@ -1363,7 +1443,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2795 class="hide_extra">
+    <span id=item2817 class="hide_extra">
     </span>
 
 </dd>
@@ -1384,7 +1464,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2796 class="hide_extra">
+    <span id=item2818 class="hide_extra">
     </span>
 
 </dd>
@@ -1405,7 +1485,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2797 class="hide_extra">
+    <span id=item2819 class="hide_extra">
     </span>
 
 </dd>
@@ -1425,7 +1505,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2798 class="hide_extra">
+    <span id=item2820 class="hide_extra">
     </span>
 
 </dd>
@@ -1445,7 +1525,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2799 class="hide_extra">
+    <span id=item2821 class="hide_extra">
     </span>
 
 </dd>
@@ -1464,7 +1544,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2800 class="hide_extra">
+    <span id=item2822 class="hide_extra">
     </span>
 
 </dd>
@@ -1483,7 +1563,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2801 class="hide_extra">
+    <span id=item2823 class="hide_extra">
     </span>
 
 </dd>
@@ -1502,7 +1582,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2802 class="hide_extra">
+    <span id=item2824 class="hide_extra">
     </span>
 
 </dd>
@@ -1521,7 +1601,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2803 class="hide_extra">
+    <span id=item2825 class="hide_extra">
     </span>
 
 </dd>
@@ -1540,7 +1620,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2804 class="hide_extra">
+    <span id=item2826 class="hide_extra">
     </span>
 
 </dd>
@@ -1559,7 +1639,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2805 class="hide_extra">
+    <span id=item2827 class="hide_extra">
     </span>
 
 </dd>
@@ -1584,7 +1664,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2806 class="hide_extra">
+    <span id=item2828 class="hide_extra">
     </span>
 
 </dd>
@@ -1609,7 +1689,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2807 class="hide_extra">
+    <span id=item2829 class="hide_extra">
     </span>
 
 </dd>
@@ -1634,7 +1714,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2808 class="hide_extra">
+    <span id=item2830 class="hide_extra">
     </span>
 
 </dd>
@@ -1659,7 +1739,26 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item2809 class="hide_extra">
+    <span id=item2831 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.layout.suit.max.name"></a>
+    <strong><span class='function_modname'>awful.layout.</span>suit.max.name</strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Maximized layout.
+
+
+
+
+
+
+
+    <span id=item2832 class="hide_extra">
     </span>
 
 </dd>
@@ -1706,7 +1805,7 @@ awful.layout.suit.corner.se,
 
 
 
-    <span id=item2810 class="hide_extra">
+    <span id=item2833 class="hide_extra">
     </span>
 
 </dd>
@@ -1726,7 +1825,7 @@ awful.layout.suit.corner.se,
 
 
 
-    <span id=item2811 class="hide_extra">
+    <span id=item2834 class="hide_extra">
     </span>
 
 </dd>
@@ -1746,7 +1845,7 @@ awful.layout.suit.corner.se,
 
 
 
-    <span id=item2812 class="hide_extra">
+    <span id=item2835 class="hide_extra">
     </span>
 
 </dd>
@@ -1757,7 +1856,7 @@ awful.layout.suit.corner.se,
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-07-05 12:39:09 </i>
+<i style="float:right;">Last updated 2020-10-18 14:15:57 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
