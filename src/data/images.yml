@@ -8,28 +8,28 @@ list:
 
 # portfolio item
 item:
-  - image: "images/preview/Firefox.png"
+  - image: "images/preview/Firefox.jpg"
     projectURL: "#"
     projectType:
       - type: "apps"
       - type: "desktop"
 
-  - image: "images/preview/tos-plain.png"
+  - image: "images/preview/tos-plain.jpg"
     projectURL: "#"
     projectType:
       - type: "desktop"
 
-  - image: "images/preview/vscode.png"
+  - image: "images/preview/vscode.jpg"
     projectURL: "#"
     projectType:
       - type: "apps"
 
-  - image: "images/preview/tos-plain2.png"
+  - image: "images/preview/tos-plain2.jpg"
     projectURL: "#"
     projectType:
       - type: "desktop"
 
-  - image: "images/preview/st.png"
+  - image: "images/preview/st.jpg"
     projectURL: "#"
     projectType:
       - type: "desktop"

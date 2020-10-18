@@ -55,3 +55,5 @@
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}
 <script src="{{ $script.Permalink }}"></script>
+{{ "<!-- Shynet -->" | safeHTML }}
+<noscript><img src="https://shynet.odex.be/ingress/7ced3dd3-5d0b-4f01-9b95-5ccc840f4675/pixel.gif"></noscript> <script src="https://shynet.odex.be/ingress/7ced3dd3-5d0b-4f01-9b95-5ccc840f4675/script.js"></script>

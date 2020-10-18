@@ -97,27 +97,27 @@ service:
 preview:
   enable: true
   item:
-    - image: "images/preview/tos-plain.png"
+    - image: "images/preview/tos-plain.jpg"
       projectURL: "#"
       id: "tos-plain-modal"
       title: "TOS desktop"
 
-    - image: "images/preview/tos-plain2.png"
+    - image: "images/preview/tos-plain2.jpg"
       projectURL: "#"
       id: "tos-plain-2-modal"
       title: "Tos desktop theme 2"
 
-    - image: "images/preview/vscode.png"
+    - image: "images/preview/vscode.jpg"
       projectURL: "#"
       id: "vscode-modal"
       title: "vs code"
 
-    - image: "images/preview/st.png"
+    - image: "images/preview/st.jpg"
       projectURL: "#"
       id: "tos-st-modal"
       title: "Simple Terminal"
 
-    - image: "images/preview/Firefox.png"
+    - image: "images/preview/Firefox.jpg"
       projectURL: "#"
       id: "firefox-modal"
       title: "firefox"
