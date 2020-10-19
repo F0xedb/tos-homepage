@@ -45,11 +45,16 @@ pygmentsCodeFencesGuessSyntax = true
   name = "Download"
   URL = "download/index.html"
   weight = 4
+
+  [[menu.main]]
+  name = "API"
+  URL = "api/index.html"
+  weight = 5
   
   [[menu.main]]
   name = "Contact"
   URL = "contact/index.html"
-  weight = 5
+  weight = 6
 
 
 [params]
