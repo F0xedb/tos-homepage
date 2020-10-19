@@ -48,7 +48,7 @@ pygmentsCodeFencesGuessSyntax = true
 
   [[menu.main]]
   name = "API"
-  URL = "api/index.html"
+  URL = "docs/index.html"
   weight = 5
   
   [[menu.main]]
