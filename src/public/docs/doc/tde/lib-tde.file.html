@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Utillib gears.protected_call - TDE API documentation</title>
+    <title>Tdemod lib-tde.file - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
      function show_extra(id) {
@@ -47,18 +47,15 @@
 </ul>
 
 
-<h2>Utility libraries</h2>
+<h2>TDE</h2>
 <ul class="nowrap">
-  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
-  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
-  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
-  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
-  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
-  <li><strong>gears.protected_call</strong></li>
-  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
-  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
-  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
-  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
+  <li><strong>lib-tde.file</strong></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -73,16 +70,6 @@
   <li><a href="../core_components/root.html">root</a></li>
   <li><a href="../core_components/screen.html">screen<span class='listplusign'> and awful.screen</span></a></li>
   <li><a href="../core_components/tag.html">tag<span class='listplusign'> and awful.tag</span></a></li>
-</ul>
-<h2>TDE</h2>
-<ul class="nowrap">
-  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
-  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
-  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
-  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
-  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
-  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -163,6 +150,19 @@
   <li><a href="../popups_and_bars/naughty.layout.legacy.html">naughty.layout.legacy</a></li>
   <li><a href="../popups_and_bars/wibox.html">wibox</a></li>
 </ul>
+<h2>Utility libraries</h2>
+<ul class="nowrap">
+  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
+  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+</ul>
 <h2>Theme related libraries</h2>
 <ul class="nowrap">
   <li><a href="../theme_related_libraries/beautiful.html">beautiful</a></li>
@@ -239,17 +239,68 @@
 
 <div id="content">
 
-<h1>Module: <code>gears.protected_call</code></h1>
+<h1>Module: <code>lib-tde.file</code></h1>
 <p>
+<p>General functions to manipulate your file and filesystems</p>
+
+<p> This module exposes an API to communicate with the filesystem</p>
+
+<p> Often you need to check what the environment is where you are running in
+ This often involves checking what files exist for example in <code>/proc</code> or <code>/sys</code>`</p>
+
+<p> Checking files is as easy as</p>
+
+
+<pre>
+lib-tde.file.exists(<span class="string">"/etc/passwd"</span>) <span class="comment">-- returns true on TOS
+</span>lib-tde.file.exists(<span class="string">"/this/does/not/exist"</span>) <span class="comment">-- returns false</span>
+</pre>
+
+<p> You can also do the same for directories</p>
+
+
+<pre>
+lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) ..
+</pre>
 
 </p>
 <p>
+<p> "/.config") -- returns true on systems with default XDG<em>CONFIG</em>DIR support</p>
+
+<pre>
+lib-tde.file.dir_exists(<span class="string">"/this/does/not/exist/"</span>) <span class="comment">-- returns false</span>
+</pre>
+
+<p> You can also readout the data that is inside the a file (into a string)
+ Imagine we have a file in the home directory called file.txt with the content abcdefg</p>
+
+
+<pre>
+lib-tde.file.<span class="global">string</span>(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/file.txt"</span>) <span class="comment">-- returns abcdefg</span>
+</pre>
+
+<p> Lastly we provide a function to read the file in as a table of lines
+ Imagine we have a file in the home directory called file.txt with the following content</p>
+
+
+<pre>
+line one
+line two
+line three
+</pre>
+
+<p> Then we can execute the following function to put it into a table of lines</p>
+
+
+<pre>
+lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/file.txt"</span>) <span class="comment">-- returns {1: "line one", 2: "line two", 3: "line three"}</span>
+</pre>
 
 </p>
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2016 Uli Schlachter</li>
-        <li><strong>Author</strong>: Uli Schlachter</li>
+        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+        <li><strong>Author</strong>: Tom Meyers</li>
     </ul>
 
 
@@ -257,10 +308,31 @@
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#gears.protected_call">gears.protected_call <span class='function_args'> <b>(</b>func, ...<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#exists"><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Call a function in protected mode and handle error-reporting.</td>
+      <td colspan="2" class="summary">Check if a file exists</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#dir_exists"><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check if a directory exists</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#lines"><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+      </td>
+      <td colspan="2" class="summary">Get all lines from a file, returns an empty table if it doesn't exist</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#string"><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
+      </td>
+      <td colspan="2" class="summary">Put the content of a file into a string</td>
     </tr>
 </table>
 
@@ -272,39 +344,176 @@
 
     <dl class="function">
     <dt>
-    <a name = "gears.protected_call"></a>
-    <strong>gears.protected_call <span class='function_args'> <b>(</b>func, ...<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <a name = "exists"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Call a function in protected mode and handle error-reporting.
- If the function call succeeds, all results of the function are returned.
- Otherwise, an error message is printed and nothing is returned.
+    Check if a file exists
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">func</span>
-            <span class="types"><span class="type">function</span></span>
-         The function to call
-        </li>
-        <li><span class="parameter">...</span>
-         Arguments to the function
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">file</span></span>
+         The path to the file, can be both absolute or relative.
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        The result of the given function, or nothing if an error occurred.
+           <span class="types"><span class="type">bool</span></span>
+        True if a file exists false otherwise
     </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.exists(<span class="string">"/etc/passwd"</span>)</pre>
+    </ul>
 
 
-    <span id=item2708 class="hide_extra">
+    <span id=item749 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "dir_exists"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check if a directory exists
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">dir</span></span>
+         The path to the directory, can be both absolute or relative.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if the directory exists false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.dir_exists(<span class="string">"/etc"</span>)</pre>
+    </ul>
+
+
+    <span id=item750 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "lines"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Get all lines from a file, returns an empty table if it doesn't exist
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">number</span>
+            <span class="types"><span class="type">head</span></span>
+         Acts like the head unix tool, it returns the first <head> lines in a file
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The lines in a file
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This gives the first 100 lines of /etc/hosts and filters it by only showing lines that start with ipv4 addresses
+</span> lib-tde.file.lines_from(<span class="string">"/etc/hosts"</span>, <span class="string">"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*"</span>, <span class="number">100</span>) -&gt; is of <span class="global">type</span> <span class="global">table</span></pre>
+    </ul>
+
+
+    <span id=item751 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "string"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Put the content of a file into a string
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">number</span>
+            <span class="types"><span class="type">head</span></span>
+         Acts like the head unix tool, it returns the first <head> lines in a file
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+        The filtered out content of a file
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This gives the first 100 lines of /etc/hosts and filters it by only showing lines that start with ipv4 addresses
+</span> lib-tde.file.<span class="global">string</span>(<span class="string">"/etc/hosts"</span>, <span class="string">"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*"</span>, <span class="number">100</span>) -&gt; is of <span class="global">type</span> <span class="global">string</span></pre>
+    </ul>
+
+
+    <span id=item752 class="hide_extra">
     </span>
 
 </dd>

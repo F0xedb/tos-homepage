@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Utillib gears.protected_call - TDE API documentation</title>
+    <title>Tdemod lib-tde.hardware-check - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
      function show_extra(id) {
@@ -47,18 +47,15 @@
 </ul>
 
 
-<h2>Utility libraries</h2>
+<h2>TDE</h2>
 <ul class="nowrap">
-  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
-  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
-  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
-  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
-  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
-  <li><strong>gears.protected_call</strong></li>
-  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
-  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
-  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
-  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
+  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><strong>lib-tde.hardware-check</strong></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -73,16 +70,6 @@
   <li><a href="../core_components/root.html">root</a></li>
   <li><a href="../core_components/screen.html">screen<span class='listplusign'> and awful.screen</span></a></li>
   <li><a href="../core_components/tag.html">tag<span class='listplusign'> and awful.tag</span></a></li>
-</ul>
-<h2>TDE</h2>
-<ul class="nowrap">
-  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
-  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
-  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
-  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
-  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
-  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -163,6 +150,19 @@
   <li><a href="../popups_and_bars/naughty.layout.legacy.html">naughty.layout.legacy</a></li>
   <li><a href="../popups_and_bars/wibox.html">wibox</a></li>
 </ul>
+<h2>Utility libraries</h2>
+<ul class="nowrap">
+  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
+  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+</ul>
 <h2>Theme related libraries</h2>
 <ul class="nowrap">
   <li><a href="../theme_related_libraries/beautiful.html">beautiful</a></li>
@@ -239,17 +239,45 @@
 
 <div id="content">
 
-<h1>Module: <code>gears.protected_call</code></h1>
-<p>
+<h1>Module: <code>lib-tde.hardware-check</code></h1>
+<p>Perform queries on the hardware to validate certain components from existing</p>
+<p> Each piece of hardware is different and supports different components
+ For example a laptop vs desktop, usually a laptop has a battery whilst a desktop doesn't
+ You can query this api to discover certain components that should exist</p>
 
-</p>
-<p>
 
-</p>
+<pre>
+lib-tde.hardware-check.battery() <span class="comment">-- returns True if a battery exists
+</span>lib-tde.hardware-check.wifi() <span class="comment">-- returns True if wifi is supported
+</span>lib-tde.hardware-check.bluetooth() <span class="comment">-- returns True if bluetooth is supported
+</span>lib-tde.hardware-check.sound() <span class="comment">-- returns True if sound is working</span>
+</pre>
+
+<p> You can also use this module to verify if the environment is configured correctly
+ For example you can have hard dependencies on some software to get a plugin working
+ An example is the build in screen recorder that depends on ffmpeg beeing installed</p>
+
+
+<pre>
+lib-tde.hardware-check.has_package_installed(<span class="string">"ffmpeg"</span>) <span class="comment">-- returns True if ffmpeg is installed</span>
+</pre>
+
+<p> Warning never try to use <a href="../tde/lib-tde.hardware-check.html#execute">lib-tde.hardware-check.execute</a> unless you known what you are doing
+ execute runs on the main thread and can cause input from not beeing handled
+ Which introduces lag to the system
+ Here is an example that locks the desktop for 2 seconds (where you can't do anything)</p>
+
+
+<pre>
+lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span class="comment">-- block the main thread for 2 seconds</span>
+</pre>
+
+<p> This module is constantly updated to support new queries and new possible dependencies
+ PR's are always welcome :)</p>
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2016 Uli Schlachter</li>
-        <li><strong>Author</strong>: Uli Schlachter</li>
+        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+        <li><strong>Author</strong>: Tom Meyers</li>
     </ul>
 
 
@@ -257,10 +285,52 @@
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#gears.protected_call">gears.protected_call <span class='function_args'> <b>(</b>func, ...<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#execute"><span class='function_modname'>lib-tde.hardware-check.</span>execute <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;tuple<string,</span></span>
       </td>
-      <td colspan="2" class="summary">Call a function in protected mode and handle error-reporting.</td>
+      <td colspan="2" class="summary">Executes a shell command on the main thread, This is dangerous and should be avoided as it blocks input!!</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#battery"><span class='function_modname'>lib-tde.hardware-check.</span>battery <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check to see if a battery exists on the hardware</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#wifi"><span class='function_modname'>lib-tde.hardware-check.</span>wifi <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check to see the hardware has a network card</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#bluetooth"><span class='function_modname'>lib-tde.hardware-check.</span>bluetooth <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check to see the hardware has a network card with bluetooth support</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#has_package_installed"><span class='function_modname'>lib-tde.hardware-check.</span>has_package_installed <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check if a certain piece of software is installed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#ffmpeg"><span class='function_modname'>lib-tde.hardware-check.</span>ffmpeg <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check to see if ffmpeg is installed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#sound"><span class='function_modname'>lib-tde.hardware-check.</span>sound <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check to see the hardware has a sound card installed</td>
     </tr>
 </table>
 
@@ -272,39 +342,233 @@
 
     <dl class="function">
     <dt>
-    <a name = "gears.protected_call"></a>
-    <strong>gears.protected_call <span class='function_args'> <b>(</b>func, ...<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <a name = "execute"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>execute <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;tuple<string,</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Call a function in protected mode and handle error-reporting.
- If the function call succeeds, all results of the function are returned.
- Otherwise, an error message is printed and nothing is returned.
+    Executes a shell command on the main thread, This is dangerous and should be avoided as it blocks input!!
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">func</span>
-            <span class="types"><span class="type">function</span></span>
-         The function to call
-        </li>
-        <li><span class="parameter">...</span>
-         Arguments to the function
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">cmd</span></span>
+         The command to execute
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        The result of the given function, or nothing if an error occurred.
+           <span class="types"><span class="type">tuple<string,</span></span>
+        number> The first element is the standard output of the command (string), the second element is the exit code (number)
     </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This returns Tuple&lt;"hello", 0&gt;
+</span> lib-tde.hardware-check.execute(<span class="string">"echo hello"</span>)</pre>
+    </ul>
 
 
-    <span id=item2708 class="hide_extra">
+    <span id=item763 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "battery"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>battery <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see if a battery exists on the hardware
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a battery exists, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if it is a laptop
+</span> lib-tde.hardware-check.battery()</pre>
+    </ul>
+
+
+    <span id=item764 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "wifi"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>wifi <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see the hardware has a network card
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a network card exists, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if a network card exists
+</span> lib-tde.hardware-check.wifi()</pre>
+    </ul>
+
+
+    <span id=item765 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "bluetooth"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>bluetooth <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see the hardware has a network card with bluetooth support
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a network card exists with bluetooth support, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if a network card exists with bluetooth support
+</span> lib-tde.hardware-check.bluetooth()</pre>
+    </ul>
+
+
+    <span id=item766 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "has_package_installed"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>has_package_installed <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check if a certain piece of software is installed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">name</span></span>
+         The name of the software package
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True that piece of software is installed, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True for TOS based systems
+</span> lib-tde.hardware-check.has_package_installed(<span class="string">"linux-tos"</span>)</pre>
+    </ul>
+
+
+    <span id=item767 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "ffmpeg"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>ffmpeg <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see if ffmpeg is installed
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if ffmpeg is installed, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if ffmpeg is installed (a video processor)
+</span> lib-tde.hardware-check.ffmpeg()</pre>
+    </ul>
+
+
+    <span id=item768 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "sound"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>sound <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see the hardware has a sound card installed
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a sound card exists, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if a sound card exists
+</span> lib-tde.hardware-check.sound()</pre>
+    </ul>
+
+
+    <span id=item769 class="hide_extra">
     </span>
 
 </dd>
