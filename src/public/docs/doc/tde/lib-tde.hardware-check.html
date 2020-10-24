@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Utillib gears.debug - TDE API documentation</title>
+    <title>Tdemod lib-tde.hardware-check - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
      function show_extra(id) {
@@ -47,18 +47,16 @@
 </ul>
 
 
-<h2>Utility libraries</h2>
+<h2>TDE</h2>
 <ul class="nowrap">
-  <li><strong>gears.debug</strong></li>
-  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
-  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
-  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
-  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
-  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
-  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
-  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
-  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
-  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
+  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><strong>lib-tde.hardware-check</strong></li>
+  <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -73,17 +71,6 @@
   <li><a href="../core_components/root.html">root</a></li>
   <li><a href="../core_components/screen.html">screen<span class='listplusign'> and awful.screen</span></a></li>
   <li><a href="../core_components/tag.html">tag<span class='listplusign'> and awful.tag</span></a></li>
-</ul>
-<h2>TDE</h2>
-<ul class="nowrap">
-  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
-  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
-  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
-  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
-  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
-  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
-  <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -165,6 +152,19 @@
   <li><a href="../popups_and_bars/naughty.layout.legacy.html">naughty.layout.legacy</a></li>
   <li><a href="../popups_and_bars/wibox.html">wibox</a></li>
 </ul>
+<h2>Utility libraries</h2>
+<ul class="nowrap">
+  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
+  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+</ul>
 <h2>Theme related libraries</h2>
 <ul class="nowrap">
   <li><a href="../theme_related_libraries/beautiful.html">beautiful</a></li>
@@ -241,17 +241,45 @@
 
 <div id="content">
 
-<h1>Module: <code>gears.debug</code></h1>
-<p>
+<h1>Module: <code>lib-tde.hardware-check</code></h1>
+<p>Perform queries on the hardware to validate certain components from existing</p>
+<p> Each piece of hardware is different and supports different components
+ For example a laptop vs desktop, usually a laptop has a battery whilst a desktop doesn't
+ You can query this api to discover certain components that should exist</p>
 
-</p>
-<p>
 
-</p>
+<pre>
+lib-tde.hardware-check.battery() <span class="comment">-- returns True if a battery exists
+</span>lib-tde.hardware-check.wifi() <span class="comment">-- returns True if wifi is supported
+</span>lib-tde.hardware-check.bluetooth() <span class="comment">-- returns True if bluetooth is supported
+</span>lib-tde.hardware-check.sound() <span class="comment">-- returns True if sound is working</span>
+</pre>
+
+<p> You can also use this module to verify if the environment is configured correctly
+ For example you can have hard dependencies on some software to get a plugin working
+ An example is the build in screen recorder that depends on ffmpeg beeing installed</p>
+
+
+<pre>
+lib-tde.hardware-check.has_package_installed(<span class="string">"ffmpeg"</span>) <span class="comment">-- returns True if ffmpeg is installed</span>
+</pre>
+
+<p> Warning never try to use <a href="../tde/lib-tde.hardware-check.html#execute">lib-tde.hardware-check.execute</a> unless you known what you are doing
+ execute runs on the main thread and can cause input from not beeing handled
+ Which introduces lag to the system
+ Here is an example that locks the desktop for 2 seconds (where you can't do anything)</p>
+
+
+<pre>
+lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span class="comment">-- block the main thread for 2 seconds</span>
+</pre>
+
+<p> This module is constantly updated to support new queries and new possible dependencies
+ PR's are always welcome :)</p>
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
-        <li><strong>Author</strong>: Uli Schlachter</li>
+        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+        <li><strong>Author</strong>: Tom Meyers</li>
     </ul>
 
 
@@ -259,45 +287,52 @@
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#dump_return"><span class='function_modname'>gears.debug.</span>dump_return <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#execute"><span class='function_modname'>lib-tde.hardware-check.</span>execute <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;tuple<string,</span></span>
       </td>
-      <td colspan="2" class="summary">Inspect the value in data.</td>
+      <td colspan="2" class="summary">Executes a shell command on the main thread, This is dangerous and should be avoided as it blocks input!!</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#dump"><span class='function_modname'>gears.debug.</span>dump <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <a href="#battery"><span class='function_modname'>lib-tde.hardware-check.</span>battery <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Print the table (or any other value) to the console.</td>
+      <td colspan="2" class="summary">Check to see if a battery exists on the hardware</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#print_warning"><span class='function_modname'>gears.debug.</span>print_warning <span class='function_args'> <b>(</b>message<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <a href="#wifi"><span class='function_modname'>lib-tde.hardware-check.</span>wifi <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Print an warning message</td>
+      <td colspan="2" class="summary">Check to see the hardware has a network card</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#print_error"><span class='function_modname'>gears.debug.</span>print_error <span class='function_args'> <b>(</b>message<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <a href="#bluetooth"><span class='function_modname'>lib-tde.hardware-check.</span>bluetooth <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Print an error message</td>
+      <td colspan="2" class="summary">Check to see the hardware has a network card with bluetooth support</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#deprecate"><span class='function_modname'>gears.debug.</span>deprecate <span class='function_args'> <b>(</b>[see], args<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <a href="#has_package_installed"><span class='function_modname'>lib-tde.hardware-check.</span>has_package_installed <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Display a deprecation notice, but only once per traceback.</td>
+      <td colspan="2" class="summary">Check if a certain piece of software is installed</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#deprecate_class"><span class='function_modname'>gears.debug.</span>deprecate_class <span class='function_args'> <b>(</b>fallback, old_name, new_name[, The={}]<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+        <a href="#ffmpeg"><span class='function_modname'>lib-tde.hardware-check.</span>ffmpeg <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Create a class proxy with deprecation messages.</td>
+      <td colspan="2" class="summary">Check to see if ffmpeg is installed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#sound"><span class='function_modname'>lib-tde.hardware-check.</span>sound <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Check to see the hardware has a sound card installed</td>
     </tr>
 </table>
 
@@ -309,239 +344,233 @@
 
     <dl class="function">
     <dt>
-    <a name = "dump_return"></a>
-    <strong><span class='function_modname'>gears.debug.</span>dump_return <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <a name = "execute"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>execute <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;tuple<string,</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Inspect the value in data.
+    Executes a shell command on the main thread, This is dangerous and should be avoided as it blocks input!!
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">data</span>
-         Value to inspect.
-        </li>
-        <li><span class="parameter">tag</span>
-         The name of the value.
-        </li>
-        <li><span class="parameter">depth</span>
-            <span class="types"><span class="type">int</span></span>
-         Depth of recursion.
-         (<em>optional</em>)
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">cmd</span></span>
+         The command to execute
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        string A string that contains the expanded value of data.
+           <span class="types"><span class="type">tuple<string,</span></span>
+        number> The first element is the standard output of the command (string), the second element is the exit code (number)
     </ol>
 
 
 
-
-
-    <span id=item2704 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "dump"></a>
-    <strong><span class='function_modname'>gears.debug.</span>dump <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Print the table (or any other value) to the console.
-
-    <h3>Parameters:</h3>
+    <h3>Usage:</h3>
     <ul>
-        <li><span class="parameter">data</span>
-         Table to print.
-        </li>
-        <li><span class="parameter">tag</span>
-         The name of the table.
-        </li>
-        <li><span class="parameter">depth</span>
-            <span class="types"><span class="type">int</span></span>
-         Depth of recursion.
-         (<em>optional</em>)
-        </li>
+        <pre class="example"><span class="comment">-- This returns Tuple&lt;"hello", 0&gt;
+</span> lib-tde.hardware-check.execute(<span class="string">"echo hello"</span>)</pre>
     </ul>
 
 
-
-
-
-
-    <span id=item2705 class="hide_extra">
+    <span id=item769 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "print_warning"></a>
-    <strong><span class='function_modname'>gears.debug.</span>print_warning <span class='function_args'> <b>(</b>message<b>)</b></span></strong>
-    <span class="proptype"></span>
+    <a name = "battery"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>battery <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Print an warning message
+    Check to see if a battery exists on the hardware
 
-    <h3>Parameters:</h3>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a battery exists, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
     <ul>
-        <li><span class="parameter">message</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The warning message to print.
-        </li>
+        <pre class="example"><span class="comment">-- This True if it is a laptop
+</span> lib-tde.hardware-check.battery()</pre>
     </ul>
 
 
-
-
-
-
-    <span id=item2706 class="hide_extra">
+    <span id=item770 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "print_error"></a>
-    <strong><span class='function_modname'>gears.debug.</span>print_error <span class='function_args'> <b>(</b>message<b>)</b></span></strong>
-    <span class="proptype"></span>
+    <a name = "wifi"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>wifi <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Print an error message
+    Check to see the hardware has a network card
 
-    <h3>Parameters:</h3>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a network card exists, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
     <ul>
-        <li><span class="parameter">message</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The error message to print.
-        </li>
+        <pre class="example"><span class="comment">-- This True if a network card exists
+</span> lib-tde.hardware-check.wifi()</pre>
     </ul>
 
 
-
-
-
-
-    <span id=item2707 class="hide_extra">
+    <span id=item771 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "deprecate"></a>
-    <strong><span class='function_modname'>gears.debug.</span>deprecate <span class='function_args'> <b>(</b>[see], args<b>)</b></span></strong>
-    <span class="proptype"></span>
+    <a name = "bluetooth"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>bluetooth <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
-         &middot 2 signals
     </span>
     </dt>
     <dd>
-    Display a deprecation notice, but only once per traceback. </p>
+    Check to see the hardware has a network card with bluetooth support
 
-<p> This function also emits the <code>debug::deprecation</code> signal on the <a href="../core_components/awesome.html#">awesome</a>
- global object. If the deprecated API has been deprecated for more than one
- API level, it will also send a non-fatal error.
 
-    <h3>Parameters:</h3>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a network card exists with bluetooth support, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
     <ul>
-        <li><span class="parameter">see</span>
-         The message to a new method / function to use.
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">args</span> Extra arguments
-        <ul>
-        <li><span class="parameter">raw</span>
-            <span class="types"><span class="type">boolean</span></span>
-         Print the message as-is without the automatic context
-        </li>
-        <li><span class="parameter">deprecated_in</span>
-            <span class="types"><span class="type">integer</span></span>
-         Print the message only when Awesome's
-   version is equal to or greater than deprecated_in.
-        </li>
-        </li></ul>
+        <pre class="example"><span class="comment">-- This True if a network card exists with bluetooth support
+</span> lib-tde.hardware-check.bluetooth()</pre>
     </ul>
 
 
-
-
-
-     <br />
-     <center id=button2708>
-     <a class="show_more_button" onclick="show_extra('2708')">
-      Click to display more
-     </a>
-     </center>
-
-    <span id=item2708 class="hide_extra">
-     <h3>Emit signals:</h3>
-     <ul>
-          <li><span class="parameter"><code>debug::deprecation</code></span>  This is usually routed to stdout when the API is newly deprecated.</li>
-           <ul>
-             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The full formatted message.</li>
-             <li><span class="parameter"><code>see</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> A message provided by the caller.</li>
-             <li><span class="parameter"><code>args</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> Some extra context.</li>
-           </ul>
-          <li><span class="parameter"><code>debug::error</code></span>  When the API has been deprecated for more than one API level.</li>
-           <ul>
-             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The full formatted message.</li>
-           </ul>
-     </ul>
+    <span id=item772 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "deprecate_class"></a>
-    <strong><span class='function_modname'>gears.debug.</span>deprecate_class <span class='function_args'> <b>(</b>fallback, old_name, new_name[, The={}]<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+    <a name = "has_package_installed"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>has_package_installed <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Create a class proxy with deprecation messages.
- This is useful when a class has moved somewhere else.
+    Check if a certain piece of software is installed
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         The new class.
-        </li>
-        <li><span class="parameter">old_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The old class name.
-        </li>
-        <li><span class="parameter">new_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The new class name.
-        </li>
-        <li><span class="parameter">The</span>
-            <span class="types"><span class="type">args</span></span>
-         name.
-         (<em>default</em> {})
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">name</span></span>
+         The name of the software package
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        A proxy class.
+           <span class="types"><span class="type">bool</span></span>
+        True that piece of software is installed, false otherwise
     </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True for TOS based systems
+</span> lib-tde.hardware-check.has_package_installed(<span class="string">"linux-tos"</span>)</pre>
+    </ul>
 
 
-    <span id=item2709 class="hide_extra">
+    <span id=item773 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "ffmpeg"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>ffmpeg <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see if ffmpeg is installed
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if ffmpeg is installed, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if ffmpeg is installed (a video processor)
+</span> lib-tde.hardware-check.ffmpeg()</pre>
+    </ul>
+
+
+    <span id=item774 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "sound"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>sound <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check to see the hardware has a sound card installed
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if a sound card exists, false otherwise
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This True if a sound card exists
+</span> lib-tde.hardware-check.sound()</pre>
+    </ul>
+
+
+    <span id=item775 class="hide_extra">
     </span>
 
 </dd>

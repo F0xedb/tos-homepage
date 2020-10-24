@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Utillib gears.debug - TDE API documentation</title>
+    <title>Tdemod lib-tde.file - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
      function show_extra(id) {
@@ -47,18 +47,16 @@
 </ul>
 
 
-<h2>Utility libraries</h2>
+<h2>TDE</h2>
 <ul class="nowrap">
-  <li><strong>gears.debug</strong></li>
-  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
-  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
-  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
-  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
-  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
-  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
-  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
-  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
-  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
+  <li><strong>lib-tde.file</strong></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -73,17 +71,6 @@
   <li><a href="../core_components/root.html">root</a></li>
   <li><a href="../core_components/screen.html">screen<span class='listplusign'> and awful.screen</span></a></li>
   <li><a href="../core_components/tag.html">tag<span class='listplusign'> and awful.tag</span></a></li>
-</ul>
-<h2>TDE</h2>
-<ul class="nowrap">
-  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
-  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
-  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
-  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
-  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
-  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
-  <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -165,6 +152,19 @@
   <li><a href="../popups_and_bars/naughty.layout.legacy.html">naughty.layout.legacy</a></li>
   <li><a href="../popups_and_bars/wibox.html">wibox</a></li>
 </ul>
+<h2>Utility libraries</h2>
+<ul class="nowrap">
+  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
+  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+</ul>
 <h2>Theme related libraries</h2>
 <ul class="nowrap">
   <li><a href="../theme_related_libraries/beautiful.html">beautiful</a></li>
@@ -241,17 +241,68 @@
 
 <div id="content">
 
-<h1>Module: <code>gears.debug</code></h1>
+<h1>Module: <code>lib-tde.file</code></h1>
 <p>
+<p>General functions to manipulate your file and filesystems</p>
+
+<p> This module exposes an API to communicate with the filesystem</p>
+
+<p> Often you need to check what the environment is where you are running in
+ This often involves checking what files exist for example in <code>/proc</code> or <code>/sys</code>`</p>
+
+<p> Checking files is as easy as</p>
+
+
+<pre>
+lib-tde.file.exists(<span class="string">"/etc/passwd"</span>) <span class="comment">-- returns true on TOS
+</span>lib-tde.file.exists(<span class="string">"/this/does/not/exist"</span>) <span class="comment">-- returns false</span>
+</pre>
+
+<p> You can also do the same for directories</p>
+
+
+<pre>
+lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) ..
+</pre>
 
 </p>
 <p>
+<p> "/.config") -- returns true on systems with default XDG<em>CONFIG</em>DIR support</p>
+
+<pre>
+lib-tde.file.dir_exists(<span class="string">"/this/does/not/exist/"</span>) <span class="comment">-- returns false</span>
+</pre>
+
+<p> You can also readout the data that is inside the a file (into a string)
+ Imagine we have a file in the home directory called file.txt with the content abcdefg</p>
+
+
+<pre>
+lib-tde.file.<span class="global">string</span>(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/file.txt"</span>) <span class="comment">-- returns abcdefg</span>
+</pre>
+
+<p> Lastly we provide a function to read the file in as a table of lines
+ Imagine we have a file in the home directory called file.txt with the following content</p>
+
+
+<pre>
+line one
+line two
+line three
+</pre>
+
+<p> Then we can execute the following function to put it into a table of lines</p>
+
+
+<pre>
+lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/file.txt"</span>) <span class="comment">-- returns {1: "line one", 2: "line two", 3: "line three"}</span>
+</pre>
 
 </p>
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
-        <li><strong>Author</strong>: Uli Schlachter</li>
+        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+        <li><strong>Author</strong>: Tom Meyers</li>
     </ul>
 
 
@@ -259,45 +310,45 @@
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#dump_return"><span class='function_modname'>gears.debug.</span>dump_return <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#exists"><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Inspect the value in data.</td>
+      <td colspan="2" class="summary">Check if a file exists</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#dump"><span class='function_modname'>gears.debug.</span>dump <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <a href="#dir_exists"><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Print the table (or any other value) to the console.</td>
+      <td colspan="2" class="summary">Check if a directory exists</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#print_warning"><span class='function_modname'>gears.debug.</span>print_warning <span class='function_args'> <b>(</b>message<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Print an warning message</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#print_error"><span class='function_modname'>gears.debug.</span>print_error <span class='function_args'> <b>(</b>message<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Print an error message</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#deprecate"><span class='function_modname'>gears.debug.</span>deprecate <span class='function_args'> <b>(</b>[see], args<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Display a deprecation notice, but only once per traceback.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#deprecate_class"><span class='function_modname'>gears.debug.</span>deprecate_class <span class='function_args'> <b>(</b>fallback, old_name, new_name[, The={}]<b>)</b></span></a>
+        <a href="#lines"><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Create a class proxy with deprecation messages.</td>
+      <td colspan="2" class="summary">Get all lines from a file, returns an empty table if it doesn't exist</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#string"><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
+      </td>
+      <td colspan="2" class="summary">Put the content of a file into a string</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#list_dir"><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+      </td>
+      <td colspan="2" class="summary">Return a table of filename found in a directory</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#list_dir"><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+      </td>
+      <td colspan="2" class="summary">Return a table of filename found in a directory and all child directories (be carefull for big directories)</td>
     </tr>
 </table>
 
@@ -309,224 +360,107 @@
 
     <dl class="function">
     <dt>
-    <a name = "dump_return"></a>
-    <strong><span class='function_modname'>gears.debug.</span>dump_return <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <a name = "exists"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Inspect the value in data.
+    Check if a file exists
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">data</span>
-         Value to inspect.
-        </li>
-        <li><span class="parameter">tag</span>
-         The name of the value.
-        </li>
-        <li><span class="parameter">depth</span>
-            <span class="types"><span class="type">int</span></span>
-         Depth of recursion.
-         (<em>optional</em>)
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">file</span></span>
+         The path to the file, can be both absolute or relative.
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        string A string that contains the expanded value of data.
+           <span class="types"><span class="type">bool</span></span>
+        True if a file exists false otherwise
     </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.exists(<span class="string">"/etc/passwd"</span>)</pre>
+    </ul>
 
 
-    <span id=item2704 class="hide_extra">
+    <span id=item751 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "dump"></a>
-    <strong><span class='function_modname'>gears.debug.</span>dump <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></strong>
-    <span class="proptype"></span>
+    <a name = "dir_exists"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Print the table (or any other value) to the console.
+    Check if a directory exists
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">data</span>
-         Table to print.
-        </li>
-        <li><span class="parameter">tag</span>
-         The name of the table.
-        </li>
-        <li><span class="parameter">depth</span>
-            <span class="types"><span class="type">int</span></span>
-         Depth of recursion.
-         (<em>optional</em>)
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">dir</span></span>
+         The path to the directory, can be both absolute or relative.
         </li>
     </ul>
 
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        True if the directory exists false otherwise
+    </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.dir_exists(<span class="string">"/etc"</span>)</pre>
+    </ul>
 
 
-    <span id=item2705 class="hide_extra">
+    <span id=item752 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "print_warning"></a>
-    <strong><span class='function_modname'>gears.debug.</span>print_warning <span class='function_args'> <b>(</b>message<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Print an warning message
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">message</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The warning message to print.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2706 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "print_error"></a>
-    <strong><span class='function_modname'>gears.debug.</span>print_error <span class='function_args'> <b>(</b>message<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Print an error message
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">message</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The error message to print.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2707 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "deprecate"></a>
-    <strong><span class='function_modname'>gears.debug.</span>deprecate <span class='function_args'> <b>(</b>[see], args<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-         &middot 2 signals
-    </span>
-    </dt>
-    <dd>
-    Display a deprecation notice, but only once per traceback. </p>
-
-<p> This function also emits the <code>debug::deprecation</code> signal on the <a href="../core_components/awesome.html#">awesome</a>
- global object. If the deprecated API has been deprecated for more than one
- API level, it will also send a non-fatal error.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">see</span>
-         The message to a new method / function to use.
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">args</span> Extra arguments
-        <ul>
-        <li><span class="parameter">raw</span>
-            <span class="types"><span class="type">boolean</span></span>
-         Print the message as-is without the automatic context
-        </li>
-        <li><span class="parameter">deprecated_in</span>
-            <span class="types"><span class="type">integer</span></span>
-         Print the message only when Awesome's
-   version is equal to or greater than deprecated_in.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-
-
-     <br />
-     <center id=button2708>
-     <a class="show_more_button" onclick="show_extra('2708')">
-      Click to display more
-     </a>
-     </center>
-
-    <span id=item2708 class="hide_extra">
-     <h3>Emit signals:</h3>
-     <ul>
-          <li><span class="parameter"><code>debug::deprecation</code></span>  This is usually routed to stdout when the API is newly deprecated.</li>
-           <ul>
-             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The full formatted message.</li>
-             <li><span class="parameter"><code>see</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> A message provided by the caller.</li>
-             <li><span class="parameter"><code>args</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> Some extra context.</li>
-           </ul>
-          <li><span class="parameter"><code>debug::error</code></span>  When the API has been deprecated for more than one API level.</li>
-           <ul>
-             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The full formatted message.</li>
-           </ul>
-     </ul>
-    </span>
-
-</dd>
-    <dt>
-    <a name = "deprecate_class"></a>
-    <strong><span class='function_modname'>gears.debug.</span>deprecate_class <span class='function_args'> <b>(</b>fallback, old_name, new_name[, The={}]<b>)</b></span></strong>
+    <a name = "lines"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Create a class proxy with deprecation messages.
- This is useful when a class has moved somewhere else.
+    Get all lines from a file, returns an empty table if it doesn't exist
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         The new class.
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
         </li>
-        <li><span class="parameter">old_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The old class name.
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
         </li>
-        <li><span class="parameter">new_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The new class name.
-        </li>
-        <li><span class="parameter">The</span>
-            <span class="types"><span class="type">args</span></span>
-         name.
-         (<em>default</em> {})
+        <li><span class="parameter">number</span>
+            <span class="types"><span class="type">head</span></span>
+         Acts like the head unix tool, it returns the first <head> lines in a file
+         (<em>optional</em>)
         </li>
     </ul>
 
@@ -534,14 +468,144 @@
     <ol>
 
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        A proxy class.
+        The lines in a file
     </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This gives the first 100 lines of /etc/hosts and filters it by only showing lines that start with ipv4 addresses
+</span> lib-tde.file.lines_from(<span class="string">"/etc/hosts"</span>, <span class="string">"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*"</span>, <span class="number">100</span>) -&gt; is of <span class="global">type</span> <span class="global">table</span></pre>
+    </ul>
 
 
-    <span id=item2709 class="hide_extra">
+    <span id=item753 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "string"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Put the content of a file into a string
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">match</span></span>
+         A regular expression to filter out lines that should be ignored by default = ^.*$
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">number</span>
+            <span class="types"><span class="type">head</span></span>
+         Acts like the head unix tool, it returns the first <head> lines in a file
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+        The filtered out content of a file
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This gives the first 100 lines of /etc/hosts and filters it by only showing lines that start with ipv4 addresses
+</span> lib-tde.file.<span class="global">string</span>(<span class="string">"/etc/hosts"</span>, <span class="string">"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*"</span>, <span class="number">100</span>) -&gt; is of <span class="global">type</span> <span class="global">string</span></pre>
+    </ul>
+
+
+    <span id=item754 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "list_dir"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Return a table of filename found in a directory
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">dir</span></span>
+         The path to the directory, can be both absolute or relative.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        an iterable table containg all files in the directory
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This returns a table
+</span> lib-tde.file.dir_exists(<span class="string">"/etc"</span>) -&gt; {<span class="number">1</span>:<span class="string">"/etc/passwd"</span>, <span class="number">2</span>:<span class="string">"/etc/shadow"</span>, <span class="number">3</span>:<span class="string">"/etc/hosts"</span>, ...}</pre>
+    </ul>
+
+
+    <span id=item755 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "list_dir"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Return a table of filename found in a directory and all child directories (be carefull for big directories)
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">dir</span></span>
+         The path to the directory, can be both absolute or relative.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        an iterable table containg all files in the directory
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This returns a table
+</span> lib-tde.file.dir_exists(<span class="string">"/etc"</span>) -&gt; {<span class="number">1</span>:<span class="string">"/etc/passwd"</span>, <span class="number">2</span>:<span class="string">"/etc/ssh/sshd_config"</span>, <span class="number">3</span>:<span class="string">"/etc/pacman/pacman.conf"</span>, ...}</pre>
+    </ul>
+
+
+    <span id=item756 class="hide_extra">
     </span>
 
 </dd>

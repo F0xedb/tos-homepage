@@ -1,0 +1,1675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Tdemod lib-tde.signals - TDE API documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+   <script>
+     function show_extra(id) {
+        var cur = document.getElementById("item"+id).className
+
+        if (cur == "hide_extra") {
+            document.getElementById("item"+id).className = "show_more"
+            document.getElementById("button"+id).className = "hide_extra"
+        }
+     }
+   </script>
+
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+    <div id="product_logo"></div>
+    <div id="product_name"><big><b></b></big></div>
+    <div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TDE</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Static_module_functions">Static module functions</a></li>
+</ul>
+
+
+<h2>TDE</h2>
+<ul class="nowrap">
+  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
+  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><strong>lib-tde.signals</strong></li>
+</ul>
+<h2>Core components</h2>
+<ul class="nowrap">
+  <li><a href="../core_components/awesome.html">awesome</a></li>
+  <li><a href="../core_components/awful.keygrabber.html">awful.keygrabber</a></li>
+  <li><a href="../core_components/client.html">client<span class='listplusign'> and awful.client</span></a></li>
+  <li><a href="../core_components/drawable.html">drawable</a></li>
+  <li><a href="../core_components/gears.timer.html">gears.timer</a></li>
+  <li><a href="../core_components/mousegrabber.html">mousegrabber</a></li>
+  <li><a href="../core_components/naughty.action.html">naughty.action</a></li>
+  <li><a href="../core_components/naughty.notification.html">naughty.notification</a></li>
+  <li><a href="../core_components/root.html">root</a></li>
+  <li><a href="../core_components/screen.html">screen<span class='listplusign'> and awful.screen</span></a></li>
+  <li><a href="../core_components/tag.html">tag<span class='listplusign'> and awful.tag</span></a></li>
+</ul>
+<h2>Input handling</h2>
+<ul class="nowrap">
+  <li><a href="../input_handling/awful.button.html">awful.button</a></li>
+  <li><a href="../input_handling/awful.key.html">awful.key</a></li>
+  <li><a href="../input_handling/awful.keyboard.html">awful.keyboard</a></li>
+  <li><a href="../input_handling/mouse.html">mouse</a></li>
+</ul>
+<h2>Declarative rules</h2>
+<ul class="nowrap">
+  <li><a href="../declarative_rules/ruled.client.html">ruled.client</a></li>
+  <li><a href="../declarative_rules/ruled.notifications.html">ruled.notifications</a></li>
+</ul>
+<h2>Widgets</h2>
+<ul class="nowrap">
+  <li><a href="../widgets/awful.widget.button.html">awful.widget.button</a></li>
+  <li><a href="../widgets/awful.widget.clienticon.html">awful.widget.clienticon</a></li>
+  <li><a href="../widgets/awful.widget.keyboardlayout.html">awful.widget.keyboardlayout</a></li>
+  <li><a href="../widgets/awful.widget.launcher.html">awful.widget.launcher</a></li>
+  <li><a href="../widgets/awful.widget.layoutbox.html">awful.widget.layoutbox</a></li>
+  <li><a href="../widgets/awful.widget.layoutlist.html">awful.widget.layoutlist</a></li>
+  <li><a href="../widgets/awful.widget.prompt.html">awful.widget.prompt</a></li>
+  <li><a href="../widgets/awful.widget.taglist.html">awful.widget.taglist</a></li>
+  <li><a href="../widgets/awful.widget.tasklist.html">awful.widget.tasklist</a></li>
+  <li><a href="../widgets/awful.widget.watch.html">awful.widget.watch</a></li>
+  <li><a href="../widgets/naughty.list.actions.html">naughty.list.actions</a></li>
+  <li><a href="../widgets/naughty.list.notifications.html">naughty.list.notifications</a></li>
+  <li><a href="../widgets/naughty.widget.appname.html">naughty.widget.appname</a></li>
+  <li><a href="../widgets/naughty.widget.icon.html">naughty.widget.icon</a></li>
+  <li><a href="../widgets/naughty.widget.message.html">naughty.widget.message</a></li>
+  <li><a href="../widgets/naughty.widget.title.html">naughty.widget.title</a></li>
+  <li><a href="../widgets/wibox.widget.calendar.html">wibox.widget.calendar</a></li>
+  <li><a href="../widgets/wibox.widget.checkbox.html">wibox.widget.checkbox</a></li>
+  <li><a href="../widgets/wibox.widget.graph.html">wibox.widget.graph</a></li>
+  <li><a href="../widgets/wibox.widget.imagebox.html">wibox.widget.imagebox</a></li>
+  <li><a href="../widgets/wibox.widget.piechart.html">wibox.widget.piechart</a></li>
+  <li><a href="../widgets/wibox.widget.progressbar.html">wibox.widget.progressbar</a></li>
+  <li><a href="../widgets/wibox.widget.separator.html">wibox.widget.separator</a></li>
+  <li><a href="../widgets/wibox.widget.slider.html">wibox.widget.slider</a></li>
+  <li><a href="../widgets/wibox.widget.systray.html">wibox.widget.systray</a></li>
+  <li><a href="../widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></li>
+  <li><a href="../widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></li>
+</ul>
+<h2>Widget containers</h2>
+<ul class="nowrap">
+  <li><a href="../widget_containers/awful.widget.only_on_screen.html">awful.widget.only_on_screen</a></li>
+  <li><a href="../widget_containers/naughty.widget.background.html">naughty.widget.background</a></li>
+  <li><a href="../widget_containers/wibox.container.arcchart.html">wibox.container.arcchart</a></li>
+  <li><a href="../widget_containers/wibox.container.background.html">wibox.container.background</a></li>
+  <li><a href="../widget_containers/wibox.container.constraint.html">wibox.container.constraint</a></li>
+  <li><a href="../widget_containers/wibox.container.margin.html">wibox.container.margin</a></li>
+  <li><a href="../widget_containers/wibox.container.mirror.html">wibox.container.mirror</a></li>
+  <li><a href="../widget_containers/wibox.container.place.html">wibox.container.place</a></li>
+  <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
+  <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
+  <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+</ul>
+<h2>Widget layouts</h2>
+<ul class="nowrap">
+  <li><a href="../widget_layouts/wibox.layout.align.html">wibox.layout.align</a></li>
+  <li><a href="../widget_layouts/wibox.layout.fixed.html">wibox.layout.fixed</a></li>
+  <li><a href="../widget_layouts/wibox.layout.flex.html">wibox.layout.flex</a></li>
+  <li><a href="../widget_layouts/wibox.layout.grid.html">wibox.layout.grid</a></li>
+  <li><a href="../widget_layouts/wibox.layout.manual.html">wibox.layout.manual</a></li>
+  <li><a href="../widget_layouts/wibox.layout.ratio.html">wibox.layout.ratio</a></li>
+  <li><a href="../widget_layouts/wibox.layout.stack.html">wibox.layout.stack</a></li>
+</ul>
+<h2>Popups and bars</h2>
+<ul class="nowrap">
+  <li><a href="../popups_and_bars/awful.hotkeys_popup.widget.html">awful.hotkeys_popup.widget</a></li>
+  <li><a href="../popups_and_bars/awful.menu.html">awful.menu</a></li>
+  <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
+  <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
+  <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
+  <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
+  <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
+  <li><a href="../popups_and_bars/naughty.layout.box.html">naughty.layout.box</a></li>
+  <li><a href="../popups_and_bars/naughty.layout.legacy.html">naughty.layout.legacy</a></li>
+  <li><a href="../popups_and_bars/wibox.html">wibox</a></li>
+</ul>
+<h2>Utility libraries</h2>
+<ul class="nowrap">
+  <li><a href="../utility_libraries/gears.debug.html">gears.debug</a></li>
+  <li><a href="../utility_libraries/gears.filesystem.html">gears.filesystem</a></li>
+  <li><a href="../utility_libraries/gears.geometry.html">gears.geometry</a></li>
+  <li><a href="../utility_libraries/gears.math.html">gears.math</a></li>
+  <li><a href="../utility_libraries/gears.object.html">gears.object</a></li>
+  <li><a href="../utility_libraries/gears.protected_call.html">gears.protected_call</a></li>
+  <li><a href="../utility_libraries/gears.sort.html">gears.sort</a></li>
+  <li><a href="../utility_libraries/gears.string.html">gears.string</a></li>
+  <li><a href="../utility_libraries/gears.table.html">gears.table</a></li>
+  <li><a href="../utility_libraries/gears.wallpaper.html">gears.wallpaper</a></li>
+</ul>
+<h2>Theme related libraries</h2>
+<ul class="nowrap">
+  <li><a href="../theme_related_libraries/beautiful.html">beautiful</a></li>
+  <li><a href="../theme_related_libraries/gears.color.html">gears.color</a></li>
+  <li><a href="../theme_related_libraries/gears.shape.html">gears.shape</a></li>
+</ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.permissions.html">awful.permissions</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
+</ul>
+<h2>Sample files</h2>
+<ul class="nowrap">
+  <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
+  <li><a href="../sample files/theme.lua.html">theme.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/awful.widget.common.html">awful.widget.common</a></li>
+  <li><a href="../classes/gears.cache.html">gears.cache</a></li>
+  <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
+  <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
+  <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
+  <li><a href="../classes/signals.html">signals</a></li>
+  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
+  <li><a href="../classes/wibox.hierarchy.html">wibox.hierarchy</a></li>
+  <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
+  <li><a href="../classes/xproperties.html">xproperties</a></li>
+</ul>
+<h2>Documentation</h2>
+<ul class="nowrap">
+  <li><a href="../documentation/00-authors.md.html">Authors</a></li>
+  <li><a href="../documentation/01-readme.md.html">Readme</a></li>
+  <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
+  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
+  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
+  <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
+  <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module: <code>lib-tde.signals</code></h1>
+<p>
+<p>Internal signal delegator, this module manages signals from and to different components of TDE</p>
+
+<p> This package contains a lot of signals
+ most are in the form</p>
+
+
+<pre>
+emit_property_ram(<span class="string">"123450"</span>)
+connect_property_ram(
+ <span class="keyword">function</span>(value)
+   <span class="global">print</span>(<span class="string">"Received: "</span> ..
+</pre>
+
+</p>
+<p> value)</p>
+
+<pre>
+<span class="keyword">end</span>)
+</pre>
+
+<p> This module tries to improve reusage of know variables throughout the tde infrastructure</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+        <li><strong>Author</strong>: Tom Meyers</li>
+    </ul>
+
+
+<h2><a href="#Static_module_functions">Static module functions</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="name" >
+        <a href="#emit_module_exit_screen_hide"><span class='function_modname'>lib-tde.signals.</span>emit_module_exit_screen_hide <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the exit_screen should be hidden</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_module_exit_screen_hide"><span class='function_modname'>lib-tde.signals.</span>connect_module_exit_screen_hide <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the exit screen goes hidden</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_module_exit_screen_show"><span class='function_modname'>lib-tde.signals.</span>emit_module_exit_screen_show <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the battery has updated its value</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_module_exit_screen_show"><span class='function_modname'>lib-tde.signals.</span>connect_module_exit_screen_show <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the exit screen is beeing show</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_module_battery"><span class='function_modname'>lib-tde.signals.</span>emit_module_battery <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the battery has updated its value</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_battery"><span class='function_modname'>lib-tde.signals.</span>connect_battery <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the battery is updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_module_battery_charging"><span class='function_modname'>lib-tde.signals.</span>emit_module_battery_charging <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the battery charging has changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_battery_charging"><span class='function_modname'>lib-tde.signals.</span>connect_battery_charging <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the battery charging changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_brightness"><span class='function_modname'>lib-tde.signals.</span>emit_brightness <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the screen brightness has changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_brightness"><span class='function_modname'>lib-tde.signals.</span>connect_brightness <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the brightness changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_volume"><span class='function_modname'>lib-tde.signals.</span>emit_volume <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the screen volume has changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_volume"><span class='function_modname'>lib-tde.signals.</span>connect_volume <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the volume changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_weather"><span class='function_modname'>lib-tde.signals.</span>emit_weather <span class='function_args'> <b>(</b>string, string, string<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the weather updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_weather"><span class='function_modname'>lib-tde.signals.</span>connect_weather <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the weather info changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_username"><span class='function_modname'>lib-tde.signals.</span>emit_username <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the username changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_username"><span class='function_modname'>lib-tde.signals.</span>connect_username <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the user changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_distro"><span class='function_modname'>lib-tde.signals.</span>emit_distro <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the distro name changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_distro"><span class='function_modname'>lib-tde.signals.</span>connect_distro <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the distro changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_uptime"><span class='function_modname'>lib-tde.signals.</span>emit_uptime <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components that the uptime changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_uptime"><span class='function_modname'>lib-tde.signals.</span>connect_uptime <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the uptime changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_kernel"><span class='function_modname'>lib-tde.signals.</span>emit_kernel <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components what the current kernel version is</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_kernel"><span class='function_modname'>lib-tde.signals.</span>connect_kernel <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the kernel changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_packages_to_update"><span class='function_modname'>lib-tde.signals.</span>emit_packages_to_update <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components howmany packages should be updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_packages_to_update"><span class='function_modname'>lib-tde.signals.</span>connect_packages_to_update <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when packages to update changed</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_cpu_usage"><span class='function_modname'>lib-tde.signals.</span>emit_cpu_usage <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the current cpu usage</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_cpu_usage"><span class='function_modname'>lib-tde.signals.</span>connect_cpu_usage <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the cpu usage has been updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_disk_usage"><span class='function_modname'>lib-tde.signals.</span>emit_disk_usage <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the current disk usage</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_disk_usage"><span class='function_modname'>lib-tde.signals.</span>connect_disk_usage <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the disk usage has been updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_disk_space"><span class='function_modname'>lib-tde.signals.</span>emit_disk_space <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the total disk space</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_disk_space"><span class='function_modname'>lib-tde.signals.</span>connect_disk_space <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the disk space has been updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_ram_usage"><span class='function_modname'>lib-tde.signals.</span>emit_ram_usage <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the current ram usage</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_ram_usage"><span class='function_modname'>lib-tde.signals.</span>connect_ram_usage <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function when the ram usage has been updated</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_ram_total"><span class='function_modname'>lib-tde.signals.</span>emit_ram_total <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the total ram</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_ram_total"><span class='function_modname'>lib-tde.signals.</span>connect_ram_total <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function for the total ram amount</td>
+    </tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Static_module_functions"></a>Static module functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "emit_module_exit_screen_hide"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_module_exit_screen_hide <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the exit_screen should be hidden
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components
+</span> lib-tde.signals.emit_module_exit_screen_hide()</pre>
+    </ul>
+
+
+    <span id=item776 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_module_exit_screen_hide"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_module_exit_screen_hide <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the exit screen goes hidden
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components
+</span>lib-tde.signals.connect_module_exit_screen_hide(
+   <span class="keyword">function</span> ()
+     <span class="global">print</span>(<span class="string">"exit screen hidden"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item777 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_module_exit_screen_show"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_module_exit_screen_show <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the battery has updated its value
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components
+</span> lib-tde.signals.emit_module_exit_screen_show()</pre>
+    </ul>
+
+
+    <span id=item778 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_module_exit_screen_show"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_module_exit_screen_show <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the exit screen is beeing show
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components
+</span>lib-tde.signals.connect_module_exit_screen_show(
+   <span class="keyword">function</span> ()
+     <span class="global">print</span>(<span class="string">"exit screen shown"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item779 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_module_battery"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_module_battery <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the battery has updated its value
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">number</span></span>
+         The current percentage of the battery
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the battery is updated
+</span> lib-tde.signals.emit_battery()</pre>
+    </ul>
+
+
+    <span id=item780 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_battery"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_battery <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the battery is updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the battery updates
+</span>lib-tde.signals.connect_battery(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Battery is: "</span> .. <span class="global">tostring</span>(value))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item781 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_module_battery_charging"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_module_battery_charging <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the battery charging has changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">bool</span></span>
+         if it is charging
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the battery charging changed
+</span> lib-tde.signals.emit_battery_charging()</pre>
+    </ul>
+
+
+    <span id=item782 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_battery_charging"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_battery_charging <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the battery charging changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the battery charging updates
+</span>lib-tde.signals.connect_battery(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Battery charging state: "</span> .. <span class="global">tostring</span>(value))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item783 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_brightness"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_brightness <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the screen brightness has changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">number</span></span>
+         The brightness between 0 and 100
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the brightness changed
+</span> lib-tde.signals.emit_brightness(<span class="number">100</span>)</pre>
+    </ul>
+
+
+    <span id=item784 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_brightness"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_brightness <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the brightness changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the brightness changed
+</span>lib-tde.signals.connect_brightness(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Current brightness: "</span> .. <span class="global">tostring</span>(value))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item785 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_volume"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_volume <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the screen volume has changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">number</span></span>
+         The volume between 0 and 100
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the volume changed
+</span> lib-tde.signals.emit_volume(<span class="number">100</span>)</pre>
+    </ul>
+
+
+    <span id=item786 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_volume"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_volume <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the volume changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the volume changed
+</span>lib-tde.signals.connect_volume(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Current volume: "</span> .. <span class="global">tostring</span>(value))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item787 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_weather"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_weather <span class='function_args'> <b>(</b>string, string, string<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the weather updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">icon</span></span>
+         An icon code use to differentiate the weather
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">icon</span></span>
+         An icon code use to differentiate the weather
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">icon</span></span>
+         An icon code use to differentiate the weather
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the weather is updated
+</span> lib-tde.signals.emit_weather(<span class="string">"14°C"</span>, <span class="string">"Cloudy with a change of meatballs"</span>, <span class="string">"99"</span>)</pre>
+    </ul>
+
+
+    <span id=item788 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_weather"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_weather <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the weather info changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the weahter is updated
+</span>lib-tde.signals.connect_weather(
+   <span class="keyword">function</span> (temp, desc, icon)
+     <span class="global">print</span>(<span class="string">"Current temperature: "</span> .. <span class="global">tostring</span>(temp))
+     <span class="global">print</span>(<span class="string">"Current description: "</span> .. <span class="global">tostring</span>(desc))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item789 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_username"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_username <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the username changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The username
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the user changed
+</span> lib-tde.signals.emit_user(<span class="string">"user_1"</span>)</pre>
+    </ul>
+
+
+    <span id=item790 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_username"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_username <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the user changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the user changed
+</span>lib-tde.signals.connect_username(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Current user: "</span> .. value)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item791 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_distro"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_distro <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the distro name changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The distribution name
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the distro changed
+</span> lib-tde.signals.emit_distro(<span class="string">"TOS Linux"</span>)</pre>
+    </ul>
+
+
+    <span id=item792 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_distro"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_distro <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the distro changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the distro changed
+</span>lib-tde.signals.connect_distro(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Current distro: "</span> .. value)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item793 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_uptime"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_uptime <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components that the uptime changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The uptime
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the uptime changed
+</span> lib-tde.signals.emit_uptime(<span class="string">"10 seconds"</span>)</pre>
+    </ul>
+
+
+    <span id=item794 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_uptime"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_uptime <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the uptime changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the uptime changed
+</span>lib-tde.signals.connect_uptime(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Current uptime: "</span> .. value)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item795 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_kernel"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_kernel <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components what the current kernel version is
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The kernel version
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components what the current kernel is
+</span> lib-tde.signals.emit_kernel(<span class="string">"v5.0.0-tos1"</span>)</pre>
+    </ul>
+
+
+    <span id=item796 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_kernel"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_kernel <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the kernel changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when the kernel changed
+</span>lib-tde.signals.connect_kernel(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Current kernel: "</span> .. value)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item797 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_packages_to_update"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_packages_to_update <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components howmany packages should be updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The amount of updates
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components how much packages need to be updated
+</span> lib-tde.signals.emit_kernel(<span class="string">"7"</span>)</pre>
+    </ul>
+
+
+    <span id=item798 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_packages_to_update"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_packages_to_update <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when packages to update changed
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when system packages need updates
+</span>lib-tde.signals.connect_packages_to_update(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Packages to update: "</span> .. value)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item799 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_cpu_usage"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_cpu_usage <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the current cpu usage
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">number</span></span>
+         The current cpu usage in percentage
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components of the current cpu usage
+</span> lib-tde.signals.emit_cpu_usage(<span class="string">"32"</span>)</pre>
+    </ul>
+
+
+    <span id=item800 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_cpu_usage"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_cpu_usage <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the cpu usage has been updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when cpu usage changed
+</span>lib-tde.signals.connect_cpu_usage(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"CPU usage: "</span> .. <span class="global">tostring</span>(value) .. <span class="string">"%"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item801 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_disk_usage"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_disk_usage <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the current disk usage
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">number</span></span>
+         The current disk usage in percentage
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components of the current disk usage
+</span> lib-tde.signals.emit_disk_usage(<span class="string">"32"</span>)</pre>
+    </ul>
+
+
+    <span id=item802 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_disk_usage"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_disk_usage <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the disk usage has been updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when disk usage changed
+</span>lib-tde.signals.connect_disk_usage(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"DISK usage: "</span> .. <span class="global">tostring</span>(value) .. <span class="string">"%"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item803 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_disk_space"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_disk_space <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the total disk space
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The current total disk space in percentage
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components of the total disk space
+</span> lib-tde.signals.emit_disk_space(<span class="string">"467G"</span>)</pre>
+    </ul>
+
+
+    <span id=item804 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_disk_space"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_disk_space <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the disk space has been updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when disk space changed
+</span>lib-tde.signals.connect_disk_space(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"DISK space: "</span> .. <span class="global">tostring</span>(value) .. <span class="string">"%"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item805 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_ram_usage"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_ram_usage <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the current ram usage
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">number</span></span>
+         The current ram usage in percentage
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components of the current ram usage
+</span> lib-tde.signals.emit_ram_usage(<span class="string">"32"</span>)</pre>
+    </ul>
+
+
+    <span id=item806 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_ram_usage"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_ram_usage <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function when the ram usage has been updated
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when ram usage changed
+</span>lib-tde.signals.connect_ram_usage(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"RAM usage: "</span> .. <span class="global">tostring</span>(value) .. <span class="string">"%"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item807 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_ram_total"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_ram_total <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the total ram
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The total ram available on the system in kilobytes
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components of the total ram in kilobytes
+</span> lib-tde.signals.emit_ram_total(<span class="string">"14000000"</span>)</pre>
+    </ul>
+
+
+    <span id=item808 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_ram_total"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_ram_total <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function for the total ram amount
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the event happens
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when total ram changed
+</span>lib-tde.signals.connect_ram_total(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"RAM total: "</span> .. <span class="global">tostring</span>(value) .. <span class="string">"%"</span>)
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item809 class="hide_extra">
+    </span>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-10-24 14:08:26 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
