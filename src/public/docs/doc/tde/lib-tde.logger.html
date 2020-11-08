@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Module tde.widget.tag-list - TDE API documentation</title>
+    <title>Tdemod lib-tde.logger - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
      function show_extra(id) {
@@ -41,38 +41,28 @@
   <li><a href="../index.html">Index</a></li>
 </ul>
 
+<h2>Contents</h2>
+<ul>
+<li><a href="#Static_module_functions">Static module functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
+</ul>
 
 
-<h2>Libraries</h2>
+<h2>TDE</h2>
 <ul class="nowrap">
-  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
-  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
-  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
-  <li><a href="../libraries/awful.permissions.html">awful.permissions</a></li>
-  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
-  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
-  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
-  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
-  <li><a href="../libraries/awful.util.html">awful.util</a></li>
-  <li><a href="../libraries/dbus.html">dbus</a></li>
-  <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
-  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
-  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
-  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
-  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
-  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
-  <li><a href="../libraries/naughty.html">naughty</a></li>
-  <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><strong>tde.widget.tag-list</strong></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
-  <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
+  <li><a href="../tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
+  <li><a href="../tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
+  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
+  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
+  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
+  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
+  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><strong>lib-tde.logger</strong></li>
+  <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -87,22 +77,6 @@
   <li><a href="../core_components/root.html">root</a></li>
   <li><a href="../core_components/screen.html">screen<span class='listplusign'> and awful.screen</span></a></li>
   <li><a href="../core_components/tag.html">tag<span class='listplusign'> and awful.tag</span></a></li>
-</ul>
-<h2>TDE</h2>
-<ul class="nowrap">
-  <li><a href="../tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
-  <li><a href="../tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
-  <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
-  <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
-  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
-  <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
-  <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
-  <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
-  <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
-  <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
-  <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -203,6 +177,37 @@
   <li><a href="../theme_related_libraries/gears.color.html">gears.color</a></li>
   <li><a href="../theme_related_libraries/gears.shape.html">gears.shape</a></li>
 </ul>
+<h2>Libraries</h2>
+<ul class="nowrap">
+  <li><a href="../libraries/awful.completion.html">awful.completion</a></li>
+  <li><a href="../libraries/awful.hotkeys_popup.html">awful.hotkeys_popup</a></li>
+  <li><a href="../libraries/awful.layout.html">awful.layout</a></li>
+  <li><a href="../libraries/awful.permissions.html">awful.permissions</a></li>
+  <li><a href="../libraries/awful.placement.html">awful.placement</a></li>
+  <li><a href="../libraries/awful.prompt.html">awful.prompt</a></li>
+  <li><a href="../libraries/awful.rules.html">awful.rules</a></li>
+  <li><a href="../libraries/awful.spawn.html">awful.spawn</a></li>
+  <li><a href="../libraries/awful.util.html">awful.util</a></li>
+  <li><a href="../libraries/dbus.html">dbus</a></li>
+  <li><a href="../libraries/gears.matcher.html">gears.matcher</a></li>
+  <li><a href="../libraries/gears.surface.html">gears.surface</a></li>
+  <li><a href="../libraries/lib-tde.html">lib-tde</a></li>
+  <li><a href="../libraries/lib-tde.function.html">lib-tde.function</a></li>
+  <li><a href="../libraries/menubar.menu_gen.html">menubar.menu_gen</a></li>
+  <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
+  <li><a href="../libraries/naughty.html">naughty</a></li>
+  <li><a href="../libraries/selection.html">selection</a></li>
+  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
+  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
+  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
+  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
+  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
+  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
+  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
+</ul>
 <h2>Sample files</h2>
 <ul class="nowrap">
   <li><a href="../sample files/rc.lua.html">rc.lua</a></li>
@@ -242,19 +247,204 @@
 
 <div id="content">
 
-<h1>Module: <code>tde.widget.tag-list</code></h1>
-<p>Common method to create buttons.</p>
+<h1>Module: <code>lib-tde.logger</code></h1>
+<p>This module overrides the existing print function
+ The new print function also logs everything to $HOME/.cache/tde/stdout.log
+ This module describes the new api of the print function</p>
 <p>
+<p> Assume you want to print something</p>
+
+
+<pre>
+<span class="global">print</span>(<span class="string">"This is a print message"</span>)
+</pre>
+
+<p> This gets printed out to stdout and written to $HOME/.cache/tde/stdout.log</p>
+
+<p> You can give the user one of four logtypes: error, warning, debug and info
+ The default logtype is info</p>
+
+<p> To get the logtype you must do the following</p>
+
+
+<pre>
+<span class="keyword">local</span> logger = <span class="global">require</span>(<span class="string">"lib-tde.logger"</span>)
+<span class="global">print</span>(<span class="string">"This is an error"</span>       , logger.<span class="global">error</span>)
+<span class="global">print</span>(<span class="string">"This is a warning"</span>      , logger.warn)
+<span class="global">print</span>(<span class="string">"This is a debug message"</span>, logger.<span class="global">debug</span>)
+<span class="global">print</span>(<span class="string">"This is an info message"</span>, logger.info) <span class="comment">-- by default you can omit logger.info</span>
+</pre>
 
 </p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+        <li><strong>Author</strong>: Tom Meyers</li>
+    </ul>
 
 
+<h2><a href="#Static_module_functions">Static module functions</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="name" >
+        <a href="#print"><span class='function_modname'>lib-tde.logger.</span>print <span class='function_args'> <b>(</b>arg[, log_type]<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">The default lua print message is overriden</td>
+    </tr>
+</table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="shortname" ><a href="#error">error</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="2" class="summary">Indicate that this print message is an error</td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#warn">warn</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="2" class="summary">Indicate that this print message is a warning</td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#debug">debug</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="2" class="summary">Indicate that this print message is a debug message</td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#info">info</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="2" class="summary">Indicate that this print message is an info message</td>
+    </tr>
 </table>
 
 <br/>
 <br/>
 
 
+    <h2 class="section-header "><a name="Static_module_functions"></a>Static module functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "print"></a>
+    <strong><span class='function_modname'>lib-tde.logger.</span>print <span class='function_args'> <b>(</b>arg[, log_type]<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    The default lua print message is overriden
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">arg</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The string to print
+        </li>
+        <li><span class="parameter">log_type</span>
+            <span class="types"><span class="type">enum</span></span>
+         The type of logmessage
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Print the error message "hello"
+</span> <span class="global">print</span>(<span class="string">"hello"</span>, logger.<span class="global">error</span>)</pre>
+    </ul>
+
+
+    <span id=item791 class="hide_extra">
+    </span>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "error"></a>
+    <strong>error</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Indicate that this print message is an error
+
+
+
+
+
+
+
+    <span id=item792 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "warn"></a>
+    <strong>warn</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Indicate that this print message is a warning
+
+
+
+
+
+
+
+    <span id=item793 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "debug"></a>
+    <strong>debug</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Indicate that this print message is a debug message
+
+
+
+
+
+
+
+    <span id=item794 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "info"></a>
+    <strong>info</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Indicate that this print message is an info message
+
+
+
+
+
+
+
+    <span id=item795 class="hide_extra">
+    </span>
+
+</dd>
 </dl>
 
 

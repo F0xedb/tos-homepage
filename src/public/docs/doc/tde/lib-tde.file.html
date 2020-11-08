@@ -43,20 +43,26 @@
 
 <h2>Contents</h2>
 <ul>
+<li><a href="#Functions">Functions</a></li>
 <li><a href="#Static_module_functions">Static module functions</a></li>
 </ul>
 
 
 <h2>TDE</h2>
 <ul class="nowrap">
+  <li><a href="../tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
+  <li><a href="../tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><strong>lib-tde.file</strong></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
   <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -306,6 +312,21 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="name" >
+        <a href="#basename"><span class='function_modname'>lib-tde.file.</span>basename (str)</a>
+      </td>
+      <td colspan="2" class="summary">Function equivalent to basename in POSIX systems</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#rm"><span class='function_modname'>lib-tde.file.</span>rm (filename)</a>
+      </td>
+      <td colspan="2" class="summary">Function to remove a file for the filesystem</td>
+    </tr>
+</table>
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
 <table class="function_list">
     <tr>
@@ -317,10 +338,31 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </tr>
     <tr>
       <td class="name" >
+        <a href="#write"><span class='function_modname'>lib-tde.file.</span>write <span class='function_args'> <b>(</b>string, string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Write data to a new file</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#overwrite"><span class='function_modname'>lib-tde.file.</span>overwrite <span class='function_args'> <b>(</b>string, string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Override the entire file</td>
+    </tr>
+    <tr>
+      <td class="name" >
         <a href="#dir_exists"><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check if a directory exists</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#is_empty"><span class='function_modname'>lib-tde.file.</span>is_empty <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
+      </td>
+      <td colspan="2" class="summary">Check is a file is empty, if the file doesn't exist an exception will be thrown</td>
     </tr>
     <tr>
       <td class="name" >
@@ -356,6 +398,60 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 <br/>
 
 
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "basename"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>basename (str)</strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Function equivalent to basename in POSIX systems
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+         the path string
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item761 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "rm"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>rm (filename)</strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Function to remove a file for the filesystem
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">filename</span>
+         string the path to the file
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item762 class="hide_extra">
+    </span>
+
+</dd>
+</dl>
     <h2 class="section-header "><a name="Static_module_functions"></a>Static module functions</h2>
 
     <dl class="function">
@@ -393,7 +489,91 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item751 class="hide_extra">
+    <span id=item763 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "write"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>write <span class='function_args'> <b>(</b>string, string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Write data to a new file
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">data</span></span>
+         The data to put into the file
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">data</span></span>
+         The data to put into the file
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        if the write was succesfull
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.write(<span class="string">"hallo.txt"</span>, <span class="string">"this is content in the file"</span>)</pre>
+    </ul>
+
+
+    <span id=item764 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "overwrite"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>overwrite <span class='function_args'> <b>(</b>string, string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Override the entire file
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">data</span></span>
+         The data to put into the file
+        </li>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">data</span></span>
+         The data to put into the file
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        if the write was succesfull
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.overwrite(<span class="string">"hallo.txt"</span>, <span class="string">"this is content in the file"</span>)</pre>
+    </ul>
+
+
+    <span id=item765 class="hide_extra">
     </span>
 
 </dd>
@@ -431,7 +611,45 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item752 class="hide_extra">
+    <span id=item766 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "is_empty"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>is_empty <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Check is a file is empty, if the file doesn't exist an exception will be thrown
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">filename</span></span>
+         The path to the file, can be both absolute or relative.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        if the file is empty or not
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">--
+</span> lib-tde.file.is_empty(<span class="string">"/etc/hosts"</span>) -&gt; <span class="keyword">false</span></pre>
+    </ul>
+
+
+    <span id=item767 class="hide_extra">
     </span>
 
 </dd>
@@ -480,7 +698,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item753 class="hide_extra">
+    <span id=item768 class="hide_extra">
     </span>
 
 </dd>
@@ -529,7 +747,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item754 class="hide_extra">
+    <span id=item769 class="hide_extra">
     </span>
 
 </dd>
@@ -563,11 +781,11 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This returns a table
-</span> lib-tde.file.dir_exists(<span class="string">"/etc"</span>) -&gt; {<span class="number">1</span>:<span class="string">"/etc/passwd"</span>, <span class="number">2</span>:<span class="string">"/etc/shadow"</span>, <span class="number">3</span>:<span class="string">"/etc/hosts"</span>, ...}</pre>
+</span> lib-tde.file.list_dir(<span class="string">"/etc"</span>) -&gt; {<span class="number">1</span>:<span class="string">"/etc/passwd"</span>, <span class="number">2</span>:<span class="string">"/etc/shadow"</span>, <span class="number">3</span>:<span class="string">"/etc/hosts"</span>, ...}</pre>
     </ul>
 
 
-    <span id=item755 class="hide_extra">
+    <span id=item770 class="hide_extra">
     </span>
 
 </dd>
@@ -601,11 +819,11 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This returns a table
-</span> lib-tde.file.dir_exists(<span class="string">"/etc"</span>) -&gt; {<span class="number">1</span>:<span class="string">"/etc/passwd"</span>, <span class="number">2</span>:<span class="string">"/etc/ssh/sshd_config"</span>, <span class="number">3</span>:<span class="string">"/etc/pacman/pacman.conf"</span>, ...}</pre>
+</span> lib-tde.file.list_dir_full(<span class="string">"/etc"</span>) -&gt; {<span class="number">1</span>:<span class="string">"/etc/passwd"</span>, <span class="number">2</span>:<span class="string">"/etc/ssh/sshd_config"</span>, <span class="number">3</span>:<span class="string">"/etc/pacman/pacman.conf"</span>, ...}</pre>
     </ul>
 
 
-    <span id=item756 class="hide_extra">
+    <span id=item771 class="hide_extra">
     </span>
 
 </dd>
@@ -616,7 +834,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-10-24 14:08:26 </i>
+<i style="float:right;">Last updated 2020-11-08 11:56:48 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -44,20 +44,24 @@
 <h2>Contents</h2>
 <ul>
 <li><a href="#Static_module_functions">Static module functions</a></li>
-<li><a href="#Object_properties">Object properties</a></li>
 </ul>
 
 
 <h2>TDE</h2>
 <ul class="nowrap">
+  <li><a href="../tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
+  <li><a href="../tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><strong>lib-tde.function.battery</strong></li>
   <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -278,30 +282,24 @@ awful.spawn.easy_async_with_shell(lib-tde.<span class="keyword">function</span>.
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#getBatteryInformationFromUpower"><span class='function_modname'>lib-tde.function.battery.</span>getBatteryInformationFromUpower <span class='function_args'> <b>(</b>stdout<b>)</b></span></a>
+        <a href="#getBatteryPath"><span class='function_modname'>lib-tde.function.battery.</span>getBatteryPath <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Return how much percentage a battery currently is, if no battery exists return nil</td>
+      <td colspan="2" class="summary">Check if a battery exists</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#isBatteryCharging"><span class='function_modname'>lib-tde.function.battery.</span>isBatteryCharging <span class='function_args'> <b>(</b>stdout<b>)</b></span></a>
+        <a href="#isBatteryCharging"><span class='function_modname'>lib-tde.function.battery.</span>isBatteryCharging <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
       <td colspan="2" class="summary">Return true if the battery is charging</td>
     </tr>
-</table>
-<h2><a href="#Object_properties">Object properties</a></h2>
-<table class="function_list">
     <tr>
-      <td class="shortname" ><a href="#upowerBatteryScript">upowerBatteryScript</a></td>
-      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">A shell script to check what the current percentage of a battery is</td>
-    </tr>
-    <tr>
-      <td class="shortname" ><a href="#chargedScript">chargedScript</a></td>
-      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">A shell script to check if a battery is beeing charged</td>
+      <td class="name" >
+        <a href="#getBatteryPercentage"><span class='function_modname'>lib-tde.function.battery.</span>getBatteryPercentage <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+      </td>
+      <td colspan="2" class="summary">Return the percentage of the battery or nil (if no battery exists)</td>
     </tr>
 </table>
 
@@ -313,50 +311,38 @@ awful.spawn.easy_async_with_shell(lib-tde.<span class="keyword">function</span>.
 
     <dl class="function">
     <dt>
-    <a name = "getBatteryInformationFromUpower"></a>
-    <strong><span class='function_modname'>lib-tde.function.battery.</span>getBatteryInformationFromUpower <span class='function_args'> <b>(</b>stdout<b>)</b></span></strong>
+    <a name = "getBatteryPath"></a>
+    <strong><span class='function_modname'>lib-tde.function.battery.</span>getBatteryPath <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Return how much percentage a battery currently is, if no battery exists return nil
+    Check if a battery exists
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">stdout</span>
-         string The output of <a href="../tde/lib-tde.function.battery.html#upowerBatteryScript">upowerBatteryScript</a>
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        number a number between 0 and 100 indicating the battery percentage
+        string The percentage of the battery
     </ol>
 
 
-    <h3>See also:</h3>
-    <ul>
-         <a href="../tde/lib-tde.function.battery.html#upowerBatteryScript">upowerBatteryScript</a>
-    </ul>
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- This will return a number like 87
-</span>awful.spawn.easy_async_with_shell(lib-tde.<span class="keyword">function</span>.battery.upowerBatteryScript, <span class="keyword">function</span>(stdout)
-     lib-tde.<span class="keyword">function</span>.battery.getBatteryInformationFromUpower(stdout)
-nd)</pre>
+        <pre class="example"><span class="comment">-- This will /sys/class/power_supply/BAT0 if it exists
+</span> lib-tde.<span class="keyword">function</span>.battery.getBatteryPath() <span class="comment">-- return location of the battery state</span></pre>
     </ul>
 
 
-    <span id=item758 class="hide_extra">
+    <span id=item774 class="hide_extra">
     </span>
 
 </dd>
     <dt>
     <a name = "isBatteryCharging"></a>
-    <strong><span class='function_modname'>lib-tde.function.battery.</span>isBatteryCharging <span class='function_args'> <b>(</b>stdout<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-tde.function.battery.</span>isBatteryCharging <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
     </span>
@@ -364,79 +350,53 @@ nd)</pre>
     <dd>
     Return true if the battery is charging
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">stdout</span>
-         string The output of <a href="../tde/lib-tde.function.battery.html#chargedScript">chargedScript</a>
-        </li>
-    </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        boolean a number between 0 and 100 indicating the battery percentage
+        boolean True if it is charging
     </ol>
 
 
-    <h3>See also:</h3>
-    <ul>
-         <a href="../tde/lib-tde.function.battery.html#chargedScript">chargedScript</a>
-    </ul>
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- This will return True
-</span>awful.spawn.easy_async_with_shell(lib-tde.<span class="keyword">function</span>.battery.chargedScript, <span class="keyword">function</span>(stdout)
-     lib-tde.<span class="keyword">function</span>.battery.isBatteryCharging(stdout)
-<span class="keyword">end</span>)</pre>
+        <pre class="example"><span class="comment">-- This will return True if charging
+</span>  lib-tde.<span class="keyword">function</span>.battery.isBatteryCharging() <span class="comment">-- True</span></pre>
     </ul>
 
 
-    <span id=item759 class="hide_extra">
-    </span>
-
-</dd>
-</dl>
-    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "upowerBatteryScript"></a>
-    <strong>upowerBatteryScript</strong>
-    <span class="proptype"><span class='summary_type'>string</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    A shell script to check what the current percentage of a battery is
-
-
-
-
-
-
-
-    <span id=item760 class="hide_extra">
+    <span id=item775 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "chargedScript"></a>
-    <strong>chargedScript</strong>
-    <span class="proptype"><span class='summary_type'>string</span></span>
+    <a name = "getBatteryPercentage"></a>
+    <strong><span class='function_modname'>lib-tde.function.battery.</span>getBatteryPercentage <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    A shell script to check if a battery is beeing charged
+    Return the percentage of the battery or nil (if no battery exists)
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        number The percentage of the battery
+    </ol>
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This will 100 if fully charged
+</span> lib-tde.<span class="keyword">function</span>.battery.getBatteryPercentage() <span class="comment">-- return percentage of battery</span></pre>
+    </ul>
 
 
-
-
-    <span id=item761 class="hide_extra">
+    <span id=item776 class="hide_extra">
     </span>
 
 </dd>
@@ -447,7 +407,7 @@ nd)</pre>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-10-24 14:08:26 </i>
+<i style="float:right;">Last updated 2020-11-08 11:56:48 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

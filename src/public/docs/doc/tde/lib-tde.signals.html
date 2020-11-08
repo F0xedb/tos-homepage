@@ -49,14 +49,19 @@
 
 <h2>TDE</h2>
 <ul class="nowrap">
+  <li><a href="../tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
+  <li><a href="../tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
+  <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
   <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><strong>lib-tde.signals</strong></li>
+  <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -511,6 +516,34 @@ connect_property_ram(
       </td>
       <td colspan="2" class="summary">Trigger a callback function for the total ram amount</td>
     </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_bluetooth_status"><span class='function_modname'>lib-tde.signals.</span>emit_bluetooth_status <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the current bluetooth status</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_bluetooth_status"><span class='function_modname'>lib-tde.signals.</span>connect_bluetooth_status <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function for the the current bluetooth status</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#emit_wifi_status"><span class='function_modname'>lib-tde.signals.</span>emit_wifi_status <span class='function_args'> <b>(</b>value<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Notify other TDE components about the current wifi status</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#connect_wifi_status"><span class='function_modname'>lib-tde.signals.</span>connect_wifi_status <span class='function_args'> <b>(</b>func<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Trigger a callback function for the the current wifi status</td>
+    </tr>
 </table>
 
 <br/>
@@ -548,7 +581,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item776 class="hide_extra">
+    <span id=item796 class="hide_extra">
     </span>
 
 </dd>
@@ -583,7 +616,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item777 class="hide_extra">
+    <span id=item797 class="hide_extra">
     </span>
 
 </dd>
@@ -608,7 +641,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item778 class="hide_extra">
+    <span id=item798 class="hide_extra">
     </span>
 
 </dd>
@@ -643,7 +676,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item779 class="hide_extra">
+    <span id=item799 class="hide_extra">
     </span>
 
 </dd>
@@ -675,7 +708,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item780 class="hide_extra">
+    <span id=item800 class="hide_extra">
     </span>
 
 </dd>
@@ -710,7 +743,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item781 class="hide_extra">
+    <span id=item801 class="hide_extra">
     </span>
 
 </dd>
@@ -742,7 +775,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item782 class="hide_extra">
+    <span id=item802 class="hide_extra">
     </span>
 
 </dd>
@@ -777,7 +810,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item783 class="hide_extra">
+    <span id=item803 class="hide_extra">
     </span>
 
 </dd>
@@ -809,7 +842,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item784 class="hide_extra">
+    <span id=item804 class="hide_extra">
     </span>
 
 </dd>
@@ -844,7 +877,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item785 class="hide_extra">
+    <span id=item805 class="hide_extra">
     </span>
 
 </dd>
@@ -876,7 +909,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item786 class="hide_extra">
+    <span id=item806 class="hide_extra">
     </span>
 
 </dd>
@@ -911,7 +944,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item787 class="hide_extra">
+    <span id=item807 class="hide_extra">
     </span>
 
 </dd>
@@ -951,7 +984,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item788 class="hide_extra">
+    <span id=item808 class="hide_extra">
     </span>
 
 </dd>
@@ -987,7 +1020,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item789 class="hide_extra">
+    <span id=item809 class="hide_extra">
     </span>
 
 </dd>
@@ -1019,7 +1052,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item790 class="hide_extra">
+    <span id=item810 class="hide_extra">
     </span>
 
 </dd>
@@ -1054,7 +1087,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item791 class="hide_extra">
+    <span id=item811 class="hide_extra">
     </span>
 
 </dd>
@@ -1086,7 +1119,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item792 class="hide_extra">
+    <span id=item812 class="hide_extra">
     </span>
 
 </dd>
@@ -1121,7 +1154,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item793 class="hide_extra">
+    <span id=item813 class="hide_extra">
     </span>
 
 </dd>
@@ -1153,7 +1186,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item794 class="hide_extra">
+    <span id=item814 class="hide_extra">
     </span>
 
 </dd>
@@ -1188,7 +1221,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item795 class="hide_extra">
+    <span id=item815 class="hide_extra">
     </span>
 
 </dd>
@@ -1220,7 +1253,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item796 class="hide_extra">
+    <span id=item816 class="hide_extra">
     </span>
 
 </dd>
@@ -1255,7 +1288,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item797 class="hide_extra">
+    <span id=item817 class="hide_extra">
     </span>
 
 </dd>
@@ -1287,7 +1320,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item798 class="hide_extra">
+    <span id=item818 class="hide_extra">
     </span>
 
 </dd>
@@ -1322,7 +1355,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item799 class="hide_extra">
+    <span id=item819 class="hide_extra">
     </span>
 
 </dd>
@@ -1354,7 +1387,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item800 class="hide_extra">
+    <span id=item820 class="hide_extra">
     </span>
 
 </dd>
@@ -1389,7 +1422,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item801 class="hide_extra">
+    <span id=item821 class="hide_extra">
     </span>
 
 </dd>
@@ -1421,7 +1454,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item802 class="hide_extra">
+    <span id=item822 class="hide_extra">
     </span>
 
 </dd>
@@ -1456,7 +1489,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item803 class="hide_extra">
+    <span id=item823 class="hide_extra">
     </span>
 
 </dd>
@@ -1488,7 +1521,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item804 class="hide_extra">
+    <span id=item824 class="hide_extra">
     </span>
 
 </dd>
@@ -1523,7 +1556,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item805 class="hide_extra">
+    <span id=item825 class="hide_extra">
     </span>
 
 </dd>
@@ -1555,7 +1588,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item806 class="hide_extra">
+    <span id=item826 class="hide_extra">
     </span>
 
 </dd>
@@ -1590,7 +1623,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item807 class="hide_extra">
+    <span id=item827 class="hide_extra">
     </span>
 
 </dd>
@@ -1622,7 +1655,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item808 class="hide_extra">
+    <span id=item828 class="hide_extra">
     </span>
 
 </dd>
@@ -1657,7 +1690,141 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item809 class="hide_extra">
+    <span id=item829 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_bluetooth_status"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_bluetooth_status <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the current bluetooth status
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If bluetooth is on or off
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Notify other TDE components about the current bluetooth status
+</span> lib-tde.signals.emit_bluetooth_status(<span class="keyword">true</span>)</pre>
+    </ul>
+
+
+    <span id=item830 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_bluetooth_status"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_bluetooth_status <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function for the the current bluetooth status
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the bluetooth status changes
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when bluetooth status changes
+</span>lib-tde.signals.connect_bluetooth_status(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Bluetooth active?: "</span> .. <span class="global">tostring</span>(value))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item831 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "emit_wifi_status"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>emit_wifi_status <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Notify other TDE components about the current wifi status
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">boolean</span></span>
+         If wifi is on or off
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Notify other TDE components about the current wifi status
+</span> lib-tde.signals.emit_wifi_status(<span class="keyword">true</span>)</pre>
+    </ul>
+
+
+    <span id=item832 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "connect_wifi_status"></a>
+    <strong><span class='function_modname'>lib-tde.signals.</span>connect_wifi_status <span class='function_args'> <b>(</b>func<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Trigger a callback function for the the current wifi status
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">function</span></span>
+         The callback function that will be called when the bluetooth status changes
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- notify other components when wifi status changes
+</span>lib-tde.signals.connect_wifi_status(
+   <span class="keyword">function</span> (value)
+     <span class="global">print</span>(<span class="string">"Wifi active?: "</span> .. <span class="global">tostring</span>(value))
+   <span class="keyword">end</span>)</pre>
+    </ul>
+
+
+    <span id=item833 class="hide_extra">
     </span>
 
 </dd>
@@ -1668,7 +1835,7 @@ connect_property_ram(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-10-24 14:08:26 </i>
+<i style="float:right;">Last updated 2020-11-08 11:56:48 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
