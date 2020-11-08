@@ -28,6 +28,7 @@ pipeline {
         }
         stage('copy over pandoc') {
             steps {
+                sh 'mkdir -p /output/docs/'
                 sh 'cd src && cp -r public/docs/doc/* /output/docs/'
             }
         }
