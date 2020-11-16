@@ -57,7 +57,6 @@
 <h2>TDE</h2>
 <ul class="nowrap">
   <li><a href="tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
-  <li><a href="tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><a href="tde/lib-tde.file.html">lib-tde.file</a></li>
   <li><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
@@ -66,9 +65,17 @@
   <li><a href="tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
   <li><a href="tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><a href="tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
+</ul>
+<h2>Datastructures</h2>
+<ul class="nowrap">
+  <li><a href="datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
+  <li><a href="datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
+  <li><a href="datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -302,13 +309,6 @@ overview of the individual parts which links to the full documentation.</p>
  Such as in the settings app</td>
   </tr>
   <tr>
-    <td class="name"  ><a href="tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></td>
-    <td class="summary">Crude implementation of a hashmap
- Lua by default already ships a hasmap (called a table)
- This file is a wrapper for lua's hashmap, intended for people who come from object oriented languages
- This api provides easy to use functions with which most people are familiar</td>
-  </tr>
-  <tr>
     <td class="name"  ><a href="tde/lib-tde.extractcover.html">lib-tde.extractcover</a></td>
     <td class="summary">Extract album cover from song</p>
 
@@ -343,10 +343,6 @@ lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="strin
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></td>
-    <td class="summary">This module run a timer periodically, but has an initial delay before running</td>
-  </tr>
-  <tr>
-    <td class="name"  ><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></td>
     <td class="summary">
 <p>This module helps with running applications as defined in autostart</p>
 
@@ -363,6 +359,10 @@ lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="strin
 </td>
   </tr>
   <tr>
+    <td class="name"  ><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></td>
+    <td class="summary">This module run a timer periodically, but has an initial delay before running</td>
+  </tr>
+  <tr>
     <td class="name"  ><a href="tde/lib-tde.function.battery.html">lib-tde.function.battery</a></td>
     <td class="summary">This module contains usefull helper functions when working with batteries.</td>
   </tr>
@@ -377,6 +377,12 @@ lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="strin
   <tr>
     <td class="name"  ><a href="tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></td>
     <td class="summary">Perform queries on the hardware to validate certain components from existing</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde/lib-tde.i18n.html">lib-tde.i18n</a></td>
+    <td class="summary">This module handles translation inside of TDE
+ You can use the default translations of TDE inside of our plugin
+ Alternativly you can add more translations into tde, which is useful if your translations don't exist yet</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.logger.html">lib-tde.logger</a></td>
@@ -405,6 +411,34 @@ connect_property_ram(
   <tr>
     <td class="name"  ><a href="tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></td>
     <td class="summary">functions to help with rounding widgets</td>
+  </tr>
+</table>
+<h2>Datastructures</h2>
+<table class="module_list">
+  <tr>
+    <td class="name"  ><a href="datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></td>
+    <td class="summary">Crude implementation of a hashmap
+ Lua by default already ships a hasmap (called a table)
+ This file is a wrapper for lua's hashmap, intended for people who come from object oriented languages
+ This api provides easy to use functions with which most people are familiar</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></td>
+    <td class="summary">Lua Implementation of a double linked list
+ This module describes the api usage of the double linked list
+ You can traverse the list in both directions, add items, remove items etc</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></td>
+    <td class="summary">Lua Implementation of a queue
+ This module describes the api usage of a queue (FIFO)
+ You can push items on the queue and pop them of the queue</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></td>
+    <td class="summary">Lua Implementation of a stack
+ This module describes the api usage of a stack (FIFO)
+ You can push items on the stack and pop them of the stack</td>
   </tr>
 </table>
 <h2>Input_handling</h2>
@@ -999,7 +1033,7 @@ connect_property_ram(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-08 11:56:48 </i>
+<i style="float:right;">Last updated 2020-11-16 14:40:50 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

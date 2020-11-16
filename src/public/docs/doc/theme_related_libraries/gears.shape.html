@@ -70,7 +70,6 @@
 <h2>TDE</h2>
 <ul class="nowrap">
   <li><a href="../tde/lib-tde.config-writer.html">lib-tde.config-writer</a></li>
-  <li><a href="../tde/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
   <li><a href="../tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
@@ -79,9 +78,17 @@
   <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
+  <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
+</ul>
+<h2>Datastructures</h2>
+<ul class="nowrap">
+  <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -530,7 +537,7 @@ shape.partial_squircle(cr, <span class="number">70</span>, <span class="number">
     </ul>
 
 
-    <span id=item2849 class="hide_extra">
+    <span id=item2882 class="hide_extra">
     </span>
 
 </dd>
@@ -583,7 +590,7 @@ shape.squircle(cr, <span class="number">70</span>, <span class="number">70</span
     </ul>
 
 
-    <span id=item2850 class="hide_extra">
+    <span id=item2883 class="hide_extra">
     </span>
 
 </dd>
@@ -634,7 +641,7 @@ shape.transform(shape.star) : translate(<span class="number">70</span>/<span cla
     </ul>
 
 
-    <span id=item2851 class="hide_extra">
+    <span id=item2884 class="hide_extra">
     </span>
 
 </dd>
@@ -683,7 +690,7 @@ shape.transform(shape.rounded_rect) : translate(<span class="number">0</span>,<s
     </ul>
 
 
-    <span id=item2852 class="hide_extra">
+    <span id=item2885 class="hide_extra">
     </span>
 
 </dd>
@@ -725,7 +732,7 @@ shape.rounded_bar(cr, <span class="number">70</span>, <span class="number">20</s
     </ul>
 
 
-    <span id=item2853 class="hide_extra">
+    <span id=item2886 class="hide_extra">
     </span>
 
 </dd>
@@ -789,7 +796,7 @@ shape.partially_rounded_rect(cr, <span class="number">70</span>, <span class="nu
     </ul>
 
 
-    <span id=item2854 class="hide_extra">
+    <span id=item2887 class="hide_extra">
     </span>
 
 </dd>
@@ -850,7 +857,7 @@ shape.transform(shape.infobubble)
     </ul>
 
 
-    <span id=item2855 class="hide_extra">
+    <span id=item2888 class="hide_extra">
     </span>
 
 </dd>
@@ -899,7 +906,7 @@ shape.transform(shape.rectangular_tag) : translate(<span class="number">0</span>
     </ul>
 
 
-    <span id=item2856 class="hide_extra">
+    <span id=item2889 class="hide_extra">
     </span>
 
 </dd>
@@ -958,7 +965,7 @@ shape.transform(shape.arrow) : rotate_at(<span class="number">35</span>,<span cl
     </ul>
 
 
-    <span id=item2857 class="hide_extra">
+    <span id=item2890 class="hide_extra">
     </span>
 
 </dd>
@@ -1002,7 +1009,7 @@ shape.transform(shape.hexagon) : rotate_at(<span class="number">35</span>,<span 
     </ul>
 
 
-    <span id=item2858 class="hide_extra">
+    <span id=item2891 class="hide_extra">
     </span>
 
 </dd>
@@ -1051,7 +1058,7 @@ shape.transform(shape.powerline) : translate(<span class="number">0</span>, <spa
     </ul>
 
 
-    <span id=item2859 class="hide_extra">
+    <span id=item2892 class="hide_extra">
     </span>
 
 </dd>
@@ -1095,7 +1102,7 @@ shape.transform(shape.isosceles_triangle) : rotate_at(<span class="number">35</s
     </ul>
 
 
-    <span id=item2860 class="hide_extra">
+    <span id=item2893 class="hide_extra">
     </span>
 
 </dd>
@@ -1144,7 +1151,7 @@ shape.transform(shape.cross) : scale(<span class="number">0.5</span>, <span clas
     </ul>
 
 
-    <span id=item2861 class="hide_extra">
+    <span id=item2894 class="hide_extra">
     </span>
 
 </dd>
@@ -1194,7 +1201,7 @@ shape.transform(shape.octogon) : translate(<span class="number">0</span>, <span 
     </ul>
 
 
-    <span id=item2862 class="hide_extra">
+    <span id=item2895 class="hide_extra">
     </span>
 
 </dd>
@@ -1243,7 +1250,7 @@ shape.transform(shape.circle) : scale(<span class="number">0.5</span>, <span cla
     </ul>
 
 
-    <span id=item2863 class="hide_extra">
+    <span id=item2896 class="hide_extra">
     </span>
 
 </dd>
@@ -1287,7 +1294,7 @@ shape.transform(shape.rectangle) : scale(<span class="number">0.5</span>, <span 
     </ul>
 
 
-    <span id=item2864 class="hide_extra">
+    <span id=item2897 class="hide_extra">
     </span>
 
 </dd>
@@ -1337,7 +1344,7 @@ shape.transform(shape.parallelogram) : scale(<span class="number">0.5</span>, <s
     </ul>
 
 
-    <span id=item2865 class="hide_extra">
+    <span id=item2898 class="hide_extra">
     </span>
 
 </dd>
@@ -1381,7 +1388,7 @@ shape.transform(shape.losange) : scale(<span class="number">0.5</span>, <span cl
     </ul>
 
 
-    <span id=item2866 class="hide_extra">
+    <span id=item2899 class="hide_extra">
     </span>
 
 </dd>
@@ -1442,7 +1449,7 @@ shape.pie(cr,<span class="number">70</span>,<span class="number">70</span>, <spa
     </ul>
 
 
-    <span id=item2867 class="hide_extra">
+    <span id=item2900 class="hide_extra">
     </span>
 
 </dd>
@@ -1513,7 +1520,7 @@ shape.arc(cr,<span class="number">70</span>,<span class="number">70</span>, <spa
     </ul>
 
 
-    <span id=item2868 class="hide_extra">
+    <span id=item2901 class="hide_extra">
     </span>
 
 </dd>
@@ -1569,7 +1576,7 @@ shape.radial_progress(cr, <span class="number">70</span>, <span class="number">2
     </ul>
 
 
-    <span id=item2869 class="hide_extra">
+    <span id=item2902 class="hide_extra">
     </span>
 
 </dd>
@@ -1606,7 +1613,7 @@ shape.radial_progress(cr, <span class="number">70</span>, <span class="number">2
     </ul>
 
 
-    <span id=item2870 class="hide_extra">
+    <span id=item2903 class="hide_extra">
     </span>
 
 </dd>
@@ -1617,7 +1624,7 @@ shape.radial_progress(cr, <span class="number">70</span>, <span class="number">2
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-08 11:56:48 </i>
+<i style="float:right;">Last updated 2020-11-16 14:40:50 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
