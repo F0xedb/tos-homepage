@@ -60,10 +60,10 @@
   <li><a href="tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><a href="tde/lib-tde.file.html">lib-tde.file</a></li>
   <li><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
-  <li><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></li>
   <li><a href="tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
   <li><a href="tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><a href="tde/lib-tde.function.delayed-timer.html">lib-tde.function.delayed-timer</a></li>
   <li><a href="tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="tde/lib-tde.logger.html">lib-tde.logger</a></li>
@@ -304,9 +304,7 @@ overview of the individual parts which links to the full documentation.</p>
 <table class="module_list">
   <tr>
     <td class="name"  ><a href="tde/lib-tde.config-writer.html">lib-tde.config-writer</a></td>
-    <td class="summary">Write/override a configuration file to contain new settings
- Usefull when you want to override user settings
- Such as in the settings app</td>
+    <td class="summary">Write/override a configuration file to contain new settings.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.extractcover.html">lib-tde.extractcover</a></td>
@@ -316,51 +314,11 @@ overview of the individual parts which links to the full documentation.</p>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.file.html">lib-tde.file</a></td>
-    <td class="summary">
-<p>General functions to manipulate your file and filesystems</p>
-
-<p> This module exposes an API to communicate with the filesystem</p>
-
-<p> Often you need to check what the environment is where you are running in
- This often involves checking what files exist for example in <code>/proc</code> or <code>/sys</code>`</p>
-
-<p> Checking files is as easy as</p>
-
-
-<pre>
-lib-tde.file.exists(<span class="string">"/etc/passwd"</span>) <span class="comment">-- returns true on TOS
-</span>lib-tde.file.exists(<span class="string">"/this/does/not/exist"</span>) <span class="comment">-- returns false</span>
-</pre>
-
-<p> You can also do the same for directories</p>
-
-
-<pre>
-lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) ..
-</pre>
-
-</td>
+    <td class="summary">General functions to manipulate your file and filesystems.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></td>
-    <td class="summary">
-<p>This module helps with running applications as defined in autostart</p>
-
-<p> Running software that guaranteed running only once can be troublesome
- For example you have written a shell script that launches a webserver
- We would only want to start the webserver once</p>
-
-
-<pre>
-<span class="comment">-- this will run the script
-</span>lib-tde.<span class="keyword">function</span>.application_runner.run_once(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) ..
-</pre>
-
-</td>
-  </tr>
-  <tr>
-    <td class="name"  ><a href="tde/lib-tde.function.application_runner.html">lib-tde.function.application_runner</a></td>
-    <td class="summary">This module run a timer periodically, but has an initial delay before running</td>
+    <td class="summary">This module helps with running applications as defined in autostart.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.function.battery.html">lib-tde.function.battery</a></td>
@@ -375,70 +333,51 @@ lib-tde.file.dir_exists(<span class="global">os</span>.getenv(<span class="strin
     <td class="summary">This contains functions that help with manipulating time.</td>
   </tr>
   <tr>
+    <td class="name"  ><a href="tde/lib-tde.function.delayed-timer.html">lib-tde.function.delayed-timer</a></td>
+    <td class="summary">This module run a timer periodically, but has an initial delay before running.</td>
+  </tr>
+  <tr>
     <td class="name"  ><a href="tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></td>
-    <td class="summary">Perform queries on the hardware to validate certain components from existing</td>
+    <td class="summary">Perform queries on the hardware to validate certain components from existing.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.i18n.html">lib-tde.i18n</a></td>
-    <td class="summary">This module handles translation inside of TDE
- You can use the default translations of TDE inside of our plugin
- Alternativly you can add more translations into tde, which is useful if your translations don't exist yet</td>
+    <td class="summary">This module handles translation inside of TDE</p>
+
+<p> You can use the default translations of TDE inside of our plugin.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.logger.html">lib-tde.logger</a></td>
-    <td class="summary">This module overrides the existing print function
- The new print function also logs everything to $HOME/.cache/tde/stdout.log
- This module describes the new api of the print function</td>
+    <td class="summary">This module overrides the existing print function.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.signals.html">lib-tde.signals</a></td>
-    <td class="summary">
-<p>Internal signal delegator, this module manages signals from and to different components of TDE</p>
+    <td class="summary">Internal signal delegator, this module manages signals from and to different components of TDE</p>
 
-<p> This package contains a lot of signals
- most are in the form</p>
-
-
-<pre>
-emit_property_ram(<span class="string">"123450"</span>)
-connect_property_ram(
- <span class="keyword">function</span>(value)
-   <span class="global">print</span>(<span class="string">"Received: "</span> ..
-</pre>
-
-</td>
+<p> This package contains a lot of signals.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></td>
-    <td class="summary">functions to help with rounding widgets</td>
+    <td class="summary">functions to help with rounding widgets.</td>
   </tr>
 </table>
 <h2>Datastructures</h2>
 <table class="module_list">
   <tr>
     <td class="name"  ><a href="datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></td>
-    <td class="summary">Crude implementation of a hashmap
- Lua by default already ships a hasmap (called a table)
- This file is a wrapper for lua's hashmap, intended for people who come from object oriented languages
- This api provides easy to use functions with which most people are familiar</td>
+    <td class="summary">Crude implementation of a hashmap</td>
   </tr>
   <tr>
     <td class="name"  ><a href="datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></td>
-    <td class="summary">Lua Implementation of a double linked list
- This module describes the api usage of the double linked list
- You can traverse the list in both directions, add items, remove items etc</td>
+    <td class="summary">Lua Implementation of a double linked list</td>
   </tr>
   <tr>
     <td class="name"  ><a href="datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></td>
-    <td class="summary">Lua Implementation of a queue
- This module describes the api usage of a queue (FIFO)
- You can push items on the queue and pop them of the queue</td>
+    <td class="summary">Lua Implementation of a queue</td>
   </tr>
   <tr>
     <td class="name"  ><a href="datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></td>
-    <td class="summary">Lua Implementation of a stack
- This module describes the api usage of a stack (LIFO)
- You can push items on the stack and pop them of the stack</td>
+    <td class="summary">Lua Implementation of a stack</td>
   </tr>
 </table>
 <h2>Input_handling</h2>
@@ -1033,7 +972,7 @@ connect_property_ram(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-16 15:07:16 </i>
+<i style="float:right;">Last updated 2020-11-16 15:22:45 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

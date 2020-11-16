@@ -53,10 +53,10 @@
   <li><a href="../tde/lib-tde.extractcover.html">lib-tde.extractcover</a></li>
   <li><a href="../tde/lib-tde.file.html">lib-tde.file</a></li>
   <li><strong>lib-tde.function.application_runner</strong></li>
-  <li><strong>lib-tde.function.application_runner</strong></li>
   <li><a href="../tde/lib-tde.function.battery.html">lib-tde.function.battery</a></li>
   <li><a href="../tde/lib-tde.function.common.html">lib-tde.function.common</a></li>
   <li><a href="../tde/lib-tde.function.datetime.html">lib-tde.function.datetime</a></li>
+  <li><a href="../tde/lib-tde.function.delayed-timer.html">lib-tde.function.delayed-timer</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
@@ -254,26 +254,21 @@
 <div id="content">
 
 <h1>Module: <code>lib-tde.function.application_runner</code></h1>
-<p>This module run a timer periodically, but has an initial delay before running</p>
+<p>This module helps with running applications as defined in autostart.</p>
 <p>
-<p> Usually people use <a href="../core_components/gears.timer.html#">gears.timer</a> however when starting the desktop environment every timer gets triggered at the same time
- This can result in peaks of cpu usage followed by times with no cpu usage
- This is fine for small programs, but if a program uses considerable cpu time this can cause "lag"
- Delayed timer is used to "spread" the execution of async repeating code (for example polling)
- This is how you use the api</p>
+
+
+<p> Running software that guaranteed running only once can be troublesome.
+ For example you have written a shell script that launches a webserver.
+ We would only want to start the webserver once.</p>
 
 
 <pre>
-<span class="comment">-- this will print hello every 5 seconds, after an initial delay of 10 seconds
-</span><span class="comment">-- It however by default calls the callback function on startup once
-</span>lib-tde.<span class="keyword">function</span>.delayed-timer(<span class="number">5</span>, <span class="keyword">function</span>()
-    <span class="global">print</span>(<span class="string">"hello"</span>)
-<span class="keyword">end</span>, <span class="number">10</span>)
-
-<span class="comment">-- If you want to do the same as above but without the call when creating the time
-</span>lib-tde.<span class="keyword">function</span>.delayed-timer(<span class="number">5</span>, <span class="keyword">function</span>()
-    <span class="global">print</span>(<span class="string">"hello"</span>)
-<span class="keyword">end</span>, <span class="number">10</span>, <span class="keyword">true</span>)
+<span class="comment">-- this will run the script
+</span>lib-tde.<span class="keyword">function</span>.application_runner.run_once(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/launch-webserver.sh"</span>) <span class="comment">-- returns true
+</span>
+<span class="comment">-- this won't run the script
+</span>lib-tde.<span class="keyword">function</span>.application_runner.run_once(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/launch-webserver.sh"</span>) <span class="comment">-- returns false</span>
 </pre>
 
 </p>
@@ -288,10 +283,10 @@
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#delayed-timer"><span class='function_modname'>lib-tde.function.application_runner.</span>delayed-timer <span class='function_args'> <b>(</b>timeout, callback, delay[, only_delay]<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <a href="#run_once"><span class='function_modname'>lib-tde.function.application_runner.</span>run_once <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
-      <td colspan="2" class="summary">Async callback trigger, that starts after x seconds</td>
+      <td colspan="2" class="summary">run a shell command asynchronously and run it only the first time</td>
     </tr>
 </table>
 
@@ -303,48 +298,40 @@
 
     <dl class="function">
     <dt>
-    <a name = "delayed-timer"></a>
-    <strong><span class='function_modname'>lib-tde.function.application_runner.</span>delayed-timer <span class='function_args'> <b>(</b>timeout, callback, delay[, only_delay]<b>)</b></span></strong>
-    <span class="proptype"></span>
+    <a name = "run_once"></a>
+    <strong><span class='function_modname'>lib-tde.function.application_runner.</span>run_once <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Async callback trigger, that starts after x seconds
+    run a shell command asynchronously and run it only the first time
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">timeout</span>
-            <span class="types"><span class="type">number</span></span>
-         Howlong to wait until we call the callback again
-        </li>
-        <li><span class="parameter">callback</span>
-            <span class="types"><span class="type">function</span></span>
-         The callback function to call when the timeout happend
-        </li>
-        <li><span class="parameter">delay</span>
-            <span class="types"><span class="type">number</span></span>
-         Howlong to wait until we start the async timer
-        </li>
-        <li><span class="parameter">only_delay</span>
-            <span class="types"><span class="type">bool</span></span>
-         By default we call the callback on creation, when true we don't call the callback
-         (<em>optional</em>)
+        <li><span class="parameter">string</span>
+            <span class="types"><span class="type">cmd</span></span>
+         The shell command to run
         </li>
     </ul>
 
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        Returns true if the command ran
+    </ol>
 
 
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- lib-tde.function.delayed-timer(1, function()
-</span>     <span class="global">print</span>(<span class="string">"Callback"</span>)
-<span class="keyword">end</span>, <span class="number">10</span>, <span class="keyword">true</span>)</pre>
+        <pre class="example"><span class="comment">-- This will return true
+</span> lib-tde.<span class="keyword">function</span>.application_runner.run_once(<span class="string">"echo 'hello'"</span>)</pre>
     </ul>
 
 
-    <span id=item773 class="hide_extra">
+    <span id=item772 class="hide_extra">
     </span>
 
 </dd>
@@ -355,7 +342,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-16 15:07:16 </i>
+<i style="float:right;">Last updated 2020-11-16 15:22:45 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
