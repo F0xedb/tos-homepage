@@ -96,6 +96,7 @@
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -227,15 +228,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -265,6 +266,7 @@
 <h1>NEWS</h1>
 
 <p><a name="v44"></a></p>
+
 <h1>DRAFT Awesome window manager framework version 4.4 changes DRAFT</h1>
 
 <p><center> <img src="../images/AUTOGEN_wibox_logo_logo_and_name.svg" /> </center></p>
@@ -281,74 +283,134 @@ notice that it is not yet here before we release...</p>
 <h2>New features</h2>
 
 <ul>
-    <li><code>awful.screen</code> now has a <code>request::wallpaper</code> and a
-    <code>request::desktop_decoration</code> signal. They make some workflow implementation
-    cleaner.</li>
-    <li>Lua code can interact with the selection contents via the new
-    <code>selection.acquire</code>, <code>selection.getter</code>, and <code>selection.watcher</code> objects</li>
-    <li>Pending delayed calls (<a href="../core_components/gears.timer.html#delayed_call">gears.timer.delayed_call</a>) can be dispatched via
-    <code>gears.timer.run_delayed_calls_now()</code></li>
-    <li><a href="../libraries/naughty.html#">naughty</a> was rewritten TODO TODO say more about this TODO TODO</li>
-    <li>The <code>rules</code> argument in <a href="../libraries/awful.spawn.html#awful.spawn.once">awful.spawn.once</a> and <code>.single_instance</code> is now
-    optional</li>
-    <li>The <a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> now has a <code>border_strategy</code> property to
-    define how the content is resized when a border is present.</li>
-    <li>The <a href="../widget_containers/wibox.container.margin.html#">wibox.container.margin</a> now allows tables in the <code>margins</code> property.</li>
-    <li>The declarative widget syntax now allows to directly use functions instead of
-    <code>{widget = myfunction}</code>.</li>
-    <li>The <a href="../widgets/awful.widget.tasklist.html#">awful.widget.tasklist</a> now resizes the client icons properly.</li>
-    <li>The <a href="../widgets/awful.widget.tasklist.html#">awful.widget.tasklist</a> and <a href="../widgets/awful.widget.taglist.html#">awful.widget.taglist</a> will now set the
-    <a href="../core_components/client.html#">client</a> and <a href="../core_components/tag.html#">tag</a> properly respectively on each widget of the template
-    automatically. This reduces the amount of boilerplate code.</li>
-</ul>
+    <li><p><code>awful.screen</code> now has a <code>request::wallpaper</code> and a</p>
+
+<pre>
+<span class="backtick"><code>request::desktop_decoration</code></span> signal. They make some workflow implementation
+cleaner.
+</pre>
+</li>
+    <li><p>Lua code can interact with the selection contents via the new</p>
+
+<pre>
+<span class="backtick"><code>selection.acquire</code></span>, <span class="backtick"><code>selection.getter</code></span>, <span class="keyword">and</span> <span class="backtick"><code>selection.watcher</code></span> objects
+</pre>
+</li>
+    <li><p>Pending delayed calls (<a href="../core_components/gears.timer.html#delayed_call">gears.timer.delayed_call</a>) can be dispatched via</p>
+
+<pre>
+<span class="backtick"><code>gears.timer.run_delayed_calls_now()</code></span>
+</pre>
+</li>
+    <li><p><a href="../libraries/naughty.html#">naughty</a> was rewritten TODO TODO say more about this TODO TODO</p></li>
+    <li><p>The <code>rules</code> argument in <a href="../libraries/awful.spawn.html#awful.spawn.once">awful.spawn.once</a> and <code>.single_instance</code> is now</p>
+
+<pre>
+optional
+</pre>
+</li>
+    <li><p>The <a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> now has a <code>border_strategy</code> property to</p>
+
+<pre>
+define how the content is resized when a border is present.
+</pre>
+</li>
+    <li><p>The <a href="../widget_containers/wibox.container.margin.html#">wibox.container.margin</a> now allows tables in the <code>margins</code> property.</p></li>
+    <li><p>The declarative widget syntax now allows to directly use functions instead of</p>
+
+<pre>
+<span class="backtick"><code>{widget = myfunction}</code></span>.
+</pre>
+</li>
+    <li><p>The <a href="../widgets/awful.widget.tasklist.html#">awful.widget.tasklist</a> now resizes the client icons properly.</p></li>
+    <li><p>The <a href="../widgets/awful.widget.tasklist.html#">awful.widget.tasklist</a> and <a href="../widgets/awful.widget.taglist.html#">awful.widget.taglist</a> will now set the</p>
+
+<pre>
+<span class="backtick"><a href="../core_components/client.html#">client</a></span> <span class="keyword">and</span> <span class="backtick"><a href="../core_components/tag.html#">tag</a></span> properly respectively on each widget of the template
+automatically. This reduces the amount of boilerplate code.
+</pre>
 
 <p><a name="Noteworthy_fixes"></a></p>
-<h2>Noteworthy fixes</h2>
+<h2>Noteworthy fixes</h2></li>
+    <li><p><code>$SOURCE_DATE_EPOCH</code> is honored in more places when generating the</p>
 
-<ul>
-    <li><code>$SOURCE_DATE_EPOCH</code> is honored in more places when generating the
-    documentation</li>
-    <li>Fix setting shapes via <a href="../libraries/awful.rules.html#">awful.rules</a></li>
-    <li>Set <code>_NET_WM_DESKTOP</code> for sticky windows correctly</li>
-    <li>Under complicated circumstances, AwesomeWM could have run Lua code while
-    having the X11 server grabbed. This had the potential to cause deadlocks with
-    Lua code using <a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a>. Usage of <a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a> is still strongly discouraged.</li>
-    <li><code>wibox{ input_passthrough = true }</code> now works correctly. Previously, the
-    property could only be set on already-constructed wiboxes.</li>
-</ul>
+<pre>
+documentation
+</pre>
+</li>
+    <li><p>Fix setting shapes via <a href="../libraries/awful.rules.html#">awful.rules</a></p></li>
+    <li><p>Set <code>_NET_WM_DESKTOP</code> for sticky windows correctly</p></li>
+    <li><p>Under complicated circumstances, AwesomeWM could have run Lua code while</p>
+
+<pre>
+having the X11 server grabbed. This had the potential to cause deadlocks with
+Lua code using <span class="backtick"><a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a></span>. Usage of <span class="backtick"><a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a></span> is still strongly discouraged.
+</pre>
+</li>
+    <li><p><code>wibox{ input_passthrough = true }</code> now works correctly. Previously, the</p>
+
+<pre>
+property could only be set on already-constructed wiboxes.
+</pre>
 
 <p><a name="Behavior_changes"></a></p>
-<h2>Behavior changes</h2>
+<h2>Behavior changes</h2></li>
+    <li><p><a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> applies shapes differently. The new approach</p>
 
-<ul>
-    <li><a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> applies shapes differently. The new approach
-    should be more consistent with a border.</li>
-    <li>The <code>shape_clip</code> option of <a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> was removed. The code
-    now always behaves as if this option is set to <code>true</code>. The old behaviour can
-    be simulated with <a href="../widget_layouts/wibox.layout.stack.html#">wibox.layout.stack</a>.</li>
-    <li>Awesome now initialises Lua's random number generator from a good source</li>
-    <li><code>naughty.dbus</code> now uses Gio for talking to DBus. This is a first step in the
-    deprecation of Awesome's own DBus bindings and could lead to behaviour changes
-    on DBus.</li>
-    <li>The client <code>keys</code> and <code>buttons</code> property now return <a href="../input_handling/awful.key.html#">awful.key</a>
-    and <code>awful.buttons</code> objects rather than the lower level <code>key</code> and <code>button</code>
-    objects. If you used these low level APIs to add keys and buttons dynamically,
-    please migrate your code to the corresponding <code>:append_</code> and <code>:remove_</code>
-    client methods.</li>
-    <li><a href="../theme_related_libraries/beautiful.html#border_width">beautiful.border_width</a> and <a href="../theme_related_libraries/beautiful.html#border_color">beautiful.border_color</a> are now honored even
-    when the part related to borders is removed from <a href="../sample files/rc.lua.html#">rc.lua</a>. Set them
-    appropriately in your theme or disconnect the default <code>request::border</code>
-    handler.</li>
-    <li>The order by which the client rules compute the geometry have changed
-    slightly. The border is now applied before the titlebar offset. This should
-    not affect most users unless you had mitigated the bug it fixes by adding
-    the titlebar offset in your rules.</li>
-    <li>Setting <code>awful.rules.rules</code> now append the rules to the existing set.
-    Clearing the rules was never officially supported. If you <em>really</em> want the
-    old behavior, use <code>awful.rules.rules = {}; awful.rules.rules = my_new_rules</code>.</li>
+<pre>
+should be more consistent with a border.
+</pre>
+</li>
+    <li><p>The <code>shape_clip</code> option of <a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> was removed. The code</p>
+
+<pre>
+now always behaves as <span class="keyword">if</span> this option is set to <span class="backtick"><code>true</code></span>. The old behaviour can
+be simulated with <span class="backtick"><a href="../widget_layouts/wibox.layout.stack.html#">wibox.layout.stack</a></span>.
+</pre>
+</li>
+    <li><p>Awesome now initialises Lua's random number generator from a good source</p></li>
+    <li><p><code>naughty.dbus</code> now uses Gio for talking to DBus. This is a first step in the</p>
+
+<pre>
+deprecation of Awesome's own DBus bindings <span class="keyword">and</span> could lead to behaviour changes
+on DBus.
+</pre>
+</li>
+    <li><p>The client <code>keys</code> and <code>buttons</code> property now return <a href="../input_handling/awful.key.html#">awful.key</a></p>
+
+<pre>
+<span class="keyword">and</span> <span class="backtick"><code>awful.buttons</code></span> objects rather than the lower level <span class="backtick"><code>key</code></span> <span class="keyword">and</span> <span class="backtick"><code>button</code></span>
+objects. If you used these low level APIs to add keys <span class="keyword">and</span> buttons dynamically,
+please migrate your code to the corresponding <span class="backtick"><code>:append_</code></span> <span class="keyword">and</span> <span class="backtick"><code>:remove_</code></span>
+client methods.
+</pre>
+</li>
+    <li><p><a href="../theme_related_libraries/beautiful.html#border_width">beautiful.border_width</a> and <a href="../theme_related_libraries/beautiful.html#border_color">beautiful.border_color</a> are now honored even</p>
+
+<pre>
+when the part related to borders is removed from <span class="backtick"><a href="../sample files/rc.lua.html#">rc.lua</a></span>. Set them
+appropriately <span class="keyword">in</span> your theme <span class="keyword">or</span> disconnect the default <span class="backtick"><code>request::border</code></span>
+handler.
+</pre>
+</li>
+    <li><p>The order by which the client rules compute the geometry have changed</p>
+
+<pre>
+slightly. The border is now applied before the titlebar offset. This should
+<span class="keyword">not</span> affect most users unless you had mitigated the bug it fixes by adding
+the titlebar offset <span class="keyword">in</span> your rules.
+</pre>
+</li>
+    <li><p>Setting <code>awful.rules.rules</code> now append the rules to the existing set.</p>
+
+<pre>
+Clearing the rules was never officially supported. If you _really_ want the
+old behavior, use <span class="backtick"><code>awful.rules.rules = {}; awful.rules.rules = my_new_rules</code></span>.
+</pre>
+
+<p><a name="v43"></a></p></li>
 </ul>
 
-<p><a name="v43"></a></p>
 <h1>Awesome window manager framework version 4.3 changes</h1>
 
 <p>Awesome v4.3 is the third release of the 4.x API. It comes after one and a half
@@ -364,49 +426,109 @@ with existing user configurations.</p>
     <li><a href="../utility_libraries/gears.string.html#">gears.string</a> now has a <code>endswith</code> and <code>startswith</code> functions</li>
     <li><code>luarocks</code> modules are now automatically available in Awesome</li>
     <li>A generic way to create or use widgets has been added
-    (<a href="../classes/wibox.widget.base.html#wibox.widget.base.make_widget_from_value">wibox.widget.base.make_widget_from_value</a>)</li>
+
+<pre>
+(<span class="backtick"><a href="../classes/wibox.widget.base.html#wibox.widget.base.make_widget_from_value">wibox.widget.base.make_widget_from_value</a></span>)
+</pre>
+</li>
     <li>It is now possible to connect to signals from all instances of a widget at once</li>
     <li>The calendar widget now supports margins</li>
     <li>The documentation has a new theme</li>
     <li>Wiboxes now have <code>to_widget()</code> and <code>save_to_svg()</code> methods.</li>
     <li>The client objects now have a <code>immobilized_horizontal</code> and
-    <code>immobilized_vertical</code> property to know if they can currently be moved or
-    resized (for example, it is set to false when maximized)</li>
+
+<pre>
+<span class="backtick"><code>immobilized_vertical</code></span> property to know <span class="keyword">if</span> they can currently be moved <span class="keyword">or</span>
+resized (<span class="keyword">for</span> example, it is set to <span class="keyword">false</span> when maximized)
+</pre>
+</li>
     <li><a href="../core_components/gears.timer.html#">gears.timer</a> objects now have a <code>call_now</code> method.</li>
     <li>The hotkey popup now supports <code>termite</code> keybindings</li>
     <li>The menubar loads faster</li>
     <li>Wiboxes have an <code>input_passthrough</code> property to send mouse clicks
-    to the object below.</li>
+
+<pre>
+to the object below.
+</pre>
+</li>
     <li>The <code>taglist</code> and <code>tasklist</code> now support the declarative constructor syntax</li>
     <li>There is now an <a href="../core_components/awesome.html#pixbuf_to_surface">awesome.pixbuf_to_surface</a> to convert a <code>GdkPixbuf</code> to
-    a cairo surface.</li>
+
+<pre>
+a cairo surface.
+</pre>
+</li>
     <li>The notifications icon can now be resized and limited with
-    <code>notification\_icon_\size</code></li>
+
+<pre>
+<span class="backtick"><code>notification\_icon_\size</code></span>
+</pre>
+</li>
     <li>A <a href="../utility_libraries/gears.sort.html#">gears.sort</a> module has been added with graph resolution</li>
-    <li><code>awesome-client</code> now runs code in a protected context</li>
+    <li><code>tde-client</code> now runs code in a protected context</li>
     <li>The <a href="./03-declarative-layout.md.html">widget documentation</a> has
-    been extended to be more friendly to new users.</li>
+
+<pre>
+been extended to be more friendly to new users.
+</pre>
+</li>
     <li>There is a new <code>beautiful.maximized_hide_border</code> theme option to hide the
-    border for maximized clients.</li>
+
+<pre>
+border <span class="keyword">for</span> maximized clients.
+</pre>
+</li>
     <li>The <a href="../core_components/client.html#">client</a> <code>startup_id</code> field is now writable. This is useful when the
-    client native implementation is not present or too buggy to be used.</li>
+
+<pre>
+client native implementation is <span class="keyword">not</span> present <span class="keyword">or</span> too buggy to be used.
+</pre>
+</li>
     <li>The <a href="../widgets/awful.widget.prompt.html#">awful.widget.prompt</a> now has a <code>with_shell</code> option to allow Bash/ZSH
-    aliases, function and environment variables to be used in commands.</li>
+
+<pre>
+aliases, <span class="keyword">function</span> <span class="keyword">and</span> environment variables to be used <span class="keyword">in</span> commands.
+</pre>
+</li>
     <li>The <a href="../popups_and_bars/awful.titlebar.html#">awful.titlebar</a>s now have a <code>fallback_name</code> when a client has no <code>name</code>
-    property.</li>
+
+<pre>
+property.
+</pre>
+</li>
     <li>Clients now have a <code>motif_wm_hints</code> property to reflect some hints using the
-    Motif X11 property extension. This is used by some modern toolkits including
-    GTK.</li>
+
+<pre>
+Motif X11 property extension. This is used by some modern toolkits including
+GTK.
+</pre>
+</li>
     <li>Clients now have a <code>requests_no_titlebar</code> property to expose when a client
-    has client side titlebars (also known as decorations and CSD)</li>
+
+<pre>
+has client side titlebars (also known as decorations <span class="keyword">and</span> CSD)
+</pre>
+</li>
     <li>The hotkey popup now has a <code>show_awesome_keys</code> option.</li>
     <li>The <a href="../widgets/awful.widget.prompt.html#">awful.widget.prompt</a> now has more of the <a href="../libraries/awful.prompt.html#">awful.prompt</a> constructor
-    arguments.</li>
+
+<pre>
+arguments.
+</pre>
+</li>
     <li>It is now possible to set a list of layouts per tag instead of a single
-    global one.</li>
+
+<pre>
+global one.
+</pre>
+</li>
     <li>There is now a <code>awful.layout.get_tag_layout_index()</code> function to get the
-    index of the current layout in the global layout list
-    (<a href="../libraries/awful.layout.html#awful.layout.layouts">awful.layout.layouts</a>)</li>
+
+<pre>
+index of the current layout <span class="keyword">in</span> the global layout list
+(<span class="backtick"><a href="../libraries/awful.layout.html#awful.layout.layouts">awful.layout.layouts</a></span>)
+</pre>
+</li>
     <li>The <a href="../widget_layouts/wibox.layout.manual.html#">wibox.layout.manual</a> layout now has an <code>:insert()</code> method.</li>
 </ul>
 
@@ -501,28 +623,42 @@ display widgets on the screen:</p>
 
 <p><a href="../classes/awful.popup.html"><img src="../images/AUTOGEN_awful_popup_wiboxtypes.svg" alt="The ratio strategies"/></a></p>
 
-
 <p>The <a href="../widgets/awful.widget.layoutlist.html#">awful.widget.layoutlist</a> allows to easily display and select the client
 layout from a widget:</p>
 
 <p><a href="../classes/awful.widget.layoutlist.html"><img src="../images/AUTOGEN_awful_widget_layoutlist_bar.svg" alt="The layoutbox"/></a></p>
-
 
 <p><a name="Noteworthy_fixes"></a></p>
 <h2>Noteworthy fixes</h2>
 
 <ul>
     <li>There is no longer an error when a tag defined by name in <a href="../libraries/awful.rules.html#">awful.rules</a> is
-    not found.</li>
+
+<pre>
+<span class="keyword">not</span> found.
+</pre>
+</li>
     <li>The menubar is now generally more robust thanks to a variety of improvements</li>
     <li>Many dead links in the documentation have been fixed</li>
     <li>The <code>textclock</code> is now generally more robust with formatting issues,
-    timezones and declarative constructors.</li>
+
+<pre>
+timezones <span class="keyword">and</span> declarative constructors.
+</pre>
+</li>
     <li>The last screen is never removed. Previously, some laptops removed all screens
-    during suspend, causing all clients to go to the first tag or getting lost
-    completely.</li>
+
+<pre>
+during suspend, causing all clients to go to the first tag <span class="keyword">or</span> getting lost
+completely.
+</pre>
+</li>
     <li>The new default <a href="../sample files/rc.lua.html#">rc.lua</a> uses <code>request::activate</code> to set the focus. This
-    fixes many corner case such as unfocusable clients getting the focus.</li>
+
+<pre>
+fixes many corner case such as unfocusable clients getting the focus.
+</pre>
+</li>
     <li>Calling <a href="../libraries/awful.spawn.html#">awful.spawn</a> with a set of properties is now more reliable.</li>
     <li><a href="../input_handling/awful.key.html#execute">awful.key.execute</a> is now much more reliable.</li>
 </ul>
@@ -532,15 +668,23 @@ layout from a widget:</p>
 
 <ul>
     <li>Previously, when accessing a screen by RandR output name caused a Lua error
-    when no output with the given name exists. This was changed to now return
-    <code>nil</code> instead. This could break code that uses <a href="https://www.lua.org/manual/5.1/manual.html#pdf-pcall">pcall</a> to check if a screen
-    exists. This code now needs to be changed to check for a <code>nil</code> return instead.
-    In practice it is unlikely anyone will notice the difference.</li>
+
+<pre>
+when no output with the given name exists. This was changed to now <span class="keyword">return</span>
+<span class="backtick"><code>nil</code></span> instead. This could <span class="keyword">break</span> code that uses <span class="backtick"><a href="https://www.lua.org/manual/5.1/manual.html#pdf-pcall">pcall</a></span> to check <span class="keyword">if</span> a screen
+exists. This code now needs to be changed to check <span class="keyword">for</span> a <span class="backtick"><code>nil</code></span> <span class="keyword">return</span> instead.
+In practice it is unlikely anyone will notice the difference.
+</pre>
+</li>
     <li>In the previous release, unfocusable clients might also not be raised.
-    It was decided that this is a bug and the default behavior was changed.</li>
+
+<pre>
+It was decided that this is a bug <span class="keyword">and</span> the default behavior was changed.
+</pre>
+
+<a name="v42"></a></li>
 </ul>
 
-<p><a name="v42"></a></p>
 <h1>Awesome window manager framework version 4.2 changes</h1>
 
 <p>Awesome v4.2 is the second release of the 4.x API. It mostly fixes the bugs
@@ -570,16 +714,28 @@ have been resolved or decided to be obsolete.</p>
     <li>The hotkey popup has been extended to support Firefox, Qutebrowser and TMUX</li>
     <li>Naughty (the notification system) has a new <code>ignore_suspend</code> flag</li>
     <li>The <code>textclock</code> widget now supports timezones</li>
-    <li>New utility functions have been added:</li>
-    <li><a href="../utility_libraries/gears.string.html#split">gears.string.split</a></li>
-    <li><a href="../utility_libraries/gears.table.html#map">gears.table.map</a></li>
-    <li><a href="../utility_libraries/gears.filesystem.html#make_parent_directories">gears.filesystem.make_parent_directories</a></li>
-    <li>New widget functions (moved out of the <code>gears</code> module):</li>
-    <li><a href="../libraries/wibox.widget.html#wibox.widget.draw_to_cairo_context">wibox.widget.draw_to_cairo_context</a></li>
-    <li><a href="../libraries/wibox.widget.html#wibox.widget.draw_to_svg_file">wibox.widget.draw_to_svg_file</a></li>
-    <li><a href="../libraries/wibox.widget.html#wibox.widget.draw_to_image_surface">wibox.widget.draw_to_image_surface</a></li>
+    <li>New utility functions have been added:
+
+<pre>
+-   <span class="backtick"><a href="../utility_libraries/gears.string.html#split">gears.string.split</a></span>
+-   <span class="backtick"><a href="../utility_libraries/gears.table.html#map">gears.table.map</a></span>
+-   <span class="backtick"><a href="../utility_libraries/gears.filesystem.html#make_parent_directories">gears.filesystem.make_parent_directories</a></span>
+</pre>
+</li>
+    <li>New widget functions (moved out of the <code>gears</code> module):
+
+<pre>
+-   <span class="backtick"><a href="../libraries/wibox.widget.html#wibox.widget.draw_to_cairo_context">wibox.widget.draw_to_cairo_context</a></span>
+-   <span class="backtick"><a href="../libraries/wibox.widget.html#wibox.widget.draw_to_svg_file">wibox.widget.draw_to_svg_file</a></span>
+-   <span class="backtick"><a href="../libraries/wibox.widget.html#wibox.widget.draw_to_image_surface">wibox.widget.draw_to_image_surface</a></span>
+</pre>
+</li>
     <li>Maximization requests from clients can now be intercepted using a
-    <code>request::geometry</code> signal handler.</li>
+
+<pre>
+<span class="backtick"><code>request::geometry</code></span> signal handler.
+</pre>
+</li>
     <li>A new <a href="../widget_layouts/wibox.layout.manual.html#">wibox.layout.manual</a> layout has been added (see below)</li>
     <li>Two new <code>calendar</code> widgets have been added, a widget and a popup (see below)</li>
     <li>The <code>ratio</code> layout now supports various strategies to redistribute space</li>
@@ -606,23 +762,30 @@ placed manually. It has multiple modes including an <a href="../libraries/awful.
 <p><a href="../classes/wibox.widget.calendar.html"><img src="../images/AUTOGEN_wibox_widget_calendar_fn_embed_cell.svg" alt="The calendar widget"/></a>
 <a href="../classes/wibox.widget.calendar.html"><img src="../images/AUTOGEN_wibox_widget_calendar_font.svg" alt="The calendar widget"/></a></p>
 
-
 <p><a name="Behavior_changes"></a></p>
 <h2>Behavior changes</h2>
 
 <ul>
     <li>The client <code>property::floating</code> is now also emitted when the floating
-    state changes implicitly, e.g. because the client gets maximized or
-    fullscreened.</li>
+
+<pre>
+state changes implicitly, e.g. because the client gets maximized <span class="keyword">or</span>
+fullscreened.
+</pre>
+</li>
     <li>Building Awesome from its root source directory is no longer supported and
-    will print an error.</li>
-</ul>
+
+<pre>
+will <span class="global">print</span> an <span class="global">error</span>.
+</pre>
 
 
 <hr />
-
+</li>
+</ul>
 
 <p><a name="v41"></a></p>
+
 <h1>Awesome window manager framework version 4.1 changes</h1>
 
 <p>Awesome v4.1 is the first stable release for the Awesome 4.0 API. It adds
@@ -793,26 +956,45 @@ various bugfixes induced minor, not noticeable, changes:</p>
 
 <ul>
     <li>HiDPI support fix changed the default theme "taglist square". This is only
-    true if the original theme file is used (not a copy).</li>
-    <li>Maximization now honor the screen padding. There is an option to restore the
-    previous behavior.</li>
-    <li>Un-maximized clients are now restored to their current screen instead of the
-    screen where they were maximized.</li>
-    <li>Hotkey popup no longer enable the Vim module by default due to user
-    complaints</li>
-</ul>
 
-<p><a href="../libraries/awful.util.html#">awful.util</a> has been split into multiple modules in the <code>gears</code> library to
+<pre>
+<span class="keyword">true</span> <span class="keyword">if</span> the original theme file is used (<span class="keyword">not</span> a copy).
+</pre>
+</li>
+    <li>Maximization now honor the screen padding. There is an option to restore the
+
+<pre>
+previous behavior.
+</pre>
+</li>
+    <li>Un-maximized clients are now restored to their current screen instead of the
+
+<pre>
+screen where they were maximized.
+</pre>
+</li>
+    <li>Hotkey popup no longer enable the Vim module by default due to user
+
+<pre>
+complaints
+</pre>
+
+<a href="../libraries/awful.util.html#">awful.util</a> has been split into multiple modules in the <code>gears</code> library to
 reduce the dependency graph. This allows for better unit testing. <a href="../libraries/awful.util.html#">awful.util</a>
 will be deprecated in Awesome v5. For now, it is still safe to use it. However,
-new code should use the functions from <code>gears</code> instead of <a href="../libraries/awful.util.html#">awful.util</a>.</p>
+new code should use the functions from <code>gears</code> instead of <a href="../libraries/awful.util.html#">awful.util</a>.</li>
+</ul>
 
 <p><a name="Other"></a></p>
 <h2>Other</h2>
 
 <ul>
     <li>The minimal LGI version is now 0.8.0. It was found that Awesome 4.0 also had
-    an issue in the menubar module when used with 0.7.3.</li>
+
+<pre>
+an issue <span class="keyword">in</span> the menubar <span class="global">module</span> when used with <span class="number">0.7</span>.<span class="number">3.</span>
+</pre>
+</li>
     <li>GTK+3 is now required to run the integration tests.</li>
 </ul>
 
@@ -821,8 +1003,8 @@ new code should use the functions from <code>gears</code> instead of <a href="..
 
 
 <p><a name="v4"></a></p>
-<h1>Awesome window manager framework version 4.0 changes</h1>
 
+<h1>Awesome window manager framework version 4.0 changes</h1>
 
 <p>Awesome 4.0 is the first release of the v4 API level, breaking the proven
 v3.5 API level after 4 years. This requires to port the existing user
@@ -839,7 +1021,7 @@ existing users.</p>
 <h4>Mouse move and resize handlers</h4>
 
 <p>The code used to resize and move clients has been refactored to allow plugins
-to be attached.  This includes:</p>
+to be attached. This includes:</p>
 
 <ul>
     <li>display the client geometry in the wibar</li>
@@ -886,7 +1068,6 @@ awful.mouse.snap.client_enabled = <span class="keyword">false</span>
 
 <p>It is now possible to display the list of active keyboard shortcuts by pressing
 <code>mod4 + s</code> (<code>hotkeys_popup.show_help</code>).</p>
-
 
 <p><strong>See:</strong></p>
 
@@ -949,12 +1130,24 @@ horizontal row of slave clients.</p>
 
 <ul>
     <li><a href="../core_components/client.html#focusable">client.focusable</a> is now read/write (compared to read only in the previous
-    versions)</li>
+
+<pre>
+versions)
+</pre>
+</li>
     <li><a href="../core_components/client.html#valid">client.valid</a> tells if the client still really exist or if the object is waiting to
-    be deleted</li>
+
+<pre>
+be deleted
+</pre>
+</li>
     <li><a href="../core_components/client.html#floating">client.floating</a> is now a client property</li>
     <li><a href="../core_components/client.html#x">client.x</a> / <a href="../core_components/client.html#y">client.y</a> / <a href="../core_components/client.html#width">client.width</a> / <a href="../core_components/client.html#height">client.height</a> are
-    <a href="../core_components/client.html#geometry">client.geometry</a> aliases</li>
+
+<pre>
+<span class="backtick"><a href="../core_components/client.html#geometry">client.geometry</a></span> aliases
+</pre>
+</li>
     <li><a href="../core_components/client.html#first_tag">client.first_tag</a> is a convenience wrapper for <code>c:tags()[1]</code></li>
 </ul>
 
@@ -972,21 +1165,40 @@ following ones have been added:</p>
 
 <ul>
     <li><code>placement</code>: use the <a href="../libraries/awful.placement.html#">awful.placement</a> method (or combinations) to place the
-    client. While older version of Awesome allowed to use callbacks here, it
-    didn't support all corner cases such as titlebar offsets and border_width.</li>
+
+<pre>
+client. While older version of Awesome allowed to use callbacks here, it
+didn't support all corner cases such as titlebar offsets <span class="keyword">and</span> border_width.
+</pre>
+</li>
     <li><code>titlebars_enabled</code>: older versions of Awesome had a global variable to
-    enable or disable titlebars. This is now delegated to the rules.</li>
+
+<pre>
+enable <span class="keyword">or</span> disable titlebars. This is now delegated to the rules.
+</pre>
+</li>
     <li><code>new_tag</code>: allows to create a tag for the client instead of using an existing
-    one.</li>
+
+<pre>
+one.
+</pre>
+</li>
     <li>The <a href="../core_components/tag.html#">tag</a> property has been expanded to also find tags from their name.</li>
     <li>The <code>tags</code> property now tries to merge the current tags into the array to fix
-    some other properties.</li>
+
+<pre>
+some other properties.
+</pre>
+</li>
     <li>All geometry properties are now executed at once to avoid side effects.</li>
     <li>The <code>focus</code> is now going through the focus filters instead of being applied
-    as-is (see the focus filter section).</li>
-</ul>
 
-<h4>User rules</h4>
+<pre>
+as-is (see the focus filter section).
+</pre>
+
+<h4>User rules</h4></li>
+</ul>
 
 <p>It is now possible to register new rules by adding them to some <a href="../libraries/awful.rules.html#">awful.rules</a>
 arrays. This can be used by modules to add extra functionalities or to avoid
@@ -1246,7 +1458,6 @@ of view this API allows for rich floating window management using
 
 <p>This new API allows nicer visuals and more complex themes.</p>
 
-
 <p>Also note that the client shape functionality was broken in 3.5 and has been
 fixed.
 <strong>See:</strong></p>
@@ -1293,14 +1504,12 @@ startup notifications protocol. For example, to open a new <code>urxvt</code> in
 from the command line, use:</p>
 
 
-
 <pre>
-awesome-client  <span class="string">"require('awful.spawn')('urxvt', {new_tag=true})"</span>
+tde-client  <span class="string">"require('awful.spawn')('urxvt', {new_tag=true})"</span>
 </pre>
 
 <p>As another example, to launch a centered floating terminal in the currently
 selected tag of screen number 2:</p>
-
 
 
 <pre>
@@ -1386,11 +1595,23 @@ includes a widget to view the current layout.</p>
 
 <ul>
     <li><a href="../core_components/awesome.html#composite_manager_running">awesome.composite_manager_running</a> allows to detect if a compositor is
-    running</li>
+
+<pre>
+running
+</pre>
+</li>
     <li>a new <code>--replace</code> command line option is available (similar to other window
-    managers)</li>
+
+<pre>
+managers)
+</pre>
+</li>
     <li>clients now have an unified <code>maximized</code> property additionally to only
-    _horizontal and _vertical</li>
+
+<pre>
+\_horizontal <span class="keyword">and</span> \_vertical
+</pre>
+</li>
     <li><a href="../libraries/awful.layout.html#awful.layout.layouts">awful.layout.layouts</a> is now where the client layout array is stored</li>
     <li>the <code>systray</code> elements order can be reversed and spacing can be added</li>
     <li>it is now possible to get the layout of unselected tags (use with caution)</li>
@@ -1401,20 +1622,35 @@ includes a widget to view the current layout.</p>
     <li>RandR 1.5 MONITOR support</li>
     <li>access to the X resource management database</li>
     <li>titlebars are now controlled using <a href="../libraries/awful.rules.html#">awful.rules</a> and enabled by default</li>
-    <li><code>awesome-client</code> now supports Lua code as its first argument (instead of
-    reading from stdin)</li>
+    <li><code>tde-client</code> now supports Lua code as its first argument (instead of
+
+<pre>
+reading from stdin)
+</pre>
+</li>
     <li>preferred client icon size can now be configured (see
-    <a href="../core_components/awesome.html#set_preferred_icon_size">awesome.set_preferred_icon_size</a>)</li>
+
+<pre>
+<span class="backtick"><a href="../core_components/awesome.html#set_preferred_icon_size">awesome.set_preferred_icon_size</a></span>)
+</pre>
+</li>
     <li>there is now an <a href="../core_components/awesome.html#startup_errors">awesome.startup_errors</a> string with the startup error (if
-    any)</li>
+
+<pre>
+any)
+</pre>
+</li>
     <li>Initial support for HiDPI monitors / different DPI per screen</li>
     <li>early support for stateful client layouts</li>
     <li>the <code>--version</code> command line option now provides more details and system
-    information</li>
-</ul>
 
-<p><a name="Breaking_changes"></a></p>
-<h2>Breaking changes</h2>
+<pre>
+information
+</pre>
+
+<a name="Breaking_changes"></a>
+<h2>Breaking changes</h2></li>
+</ul>
 
 <p>Awesome 4.0 is a major release.
 As with all other major release, the API was broken to accommodate for new
@@ -1428,12 +1664,11 @@ configuration</a>.</p>
 
 <h3>There can be off-screen clients unless rc.lua is adapted</h3>
 
-
 <p><strong>To fix from bash/zsh without a config change:</strong></p>
 
 
 <pre>
-echo <span class="string">'for _,c in ipairs(client.get()) do require("awful.placement").no_offscreen(c) end'</span> | awesome-client
+echo <span class="string">'for _,c in ipairs(client.get()) do require("awful.placement").no_offscreen(c) end'</span> | tde-client
 </pre>
 
 <p>And add the following to the global rc.lua <code>awful.rule</code> section:</p>
@@ -1505,7 +1740,6 @@ screen.connect_signal(<span class="string">"list"</span>, awesome.restart)
     <li><a href="../core_components/screen.html#list">screen.list</a></li>
 </ul>
 
-
 <h3>Widgets' <code>:fit()</code> and <code>:draw()</code> methods signature changed and <code>:layout()</code> is mandatory for layouts and containers</h3>
 
 <p>All custom widgets need to change their function signature.</p>
@@ -1528,18 +1762,17 @@ is no exception. The private API of all widgets has been broken.</p>
 <h3>Spawn changes</h3>
 
 <ul>
-    <li>It has been moved into its own module (<a href="../libraries/awful.spawn.html#">awful.spawn</a>).</li>
-    <li>Some methods have been deprecated. It is not recommended to use blocking
-    methods in Awesome. We made sure to make your life harder if you wish to
-    ignore this warning.
-    Really, using blocking calls in rc.lua has very nasty side effects.</li>
-</ul>
+    <li><p>It has been moved into its own module (<a href="../libraries/awful.spawn.html#">awful.spawn</a>).</p></li>
+    <li><p>Some methods have been deprecated. It is not recommended to use blocking</p>
 
+<pre>
+methods <span class="keyword">in</span> Awesome. We made sure to make your life harder <span class="keyword">if</span> you wish to
+ignore this warning.
+Really, using blocking calls <span class="keyword">in</span> rc.lua has very nasty side effects.
+</pre>
 
-<p><strong>See:</strong></p>
-
-<ul>
-    <li><a href="../libraries/awful.spawn.html#">awful.spawn</a></li>
+<p><strong>See:</strong></p></li>
+    <li><p><a href="../libraries/awful.spawn.html#">awful.spawn</a></p></li>
 </ul>
 
 <h3>Prompt changes</h3>
@@ -1547,7 +1780,6 @@ is no exception. The private API of all widgets has been broken.</p>
 <p>Most arguments have been deprecated, they are now taken from the <code>args</code>
 argument-by-name table. This was done because the number of optional arguments
 was getting out of control.</p>
-
 
 <p><strong>See:</strong></p>
 
@@ -1717,7 +1949,11 @@ previously missing elements such as:</p>
 <ul>
     <li>a hundred images (from zero)</li>
     <li>more than a hundred new code examples, most of them unit tested (from very,
-    very few)</li>
+
+<pre>
+very few)
+</pre>
+</li>
     <li>all signals (previously partially documented in the wiki)</li>
     <li>all theme variables</li>
     <li>the object properties</li>
@@ -1757,7 +1993,11 @@ visibility count and reduced our infrastructure maintenance cost.</p>
     <li>Linting (checks the code quality and consistency)</li>
     <li>Unit testing</li>
     <li>Documentation examples, documentation images and user interface appearance
-    tests</li>
+
+<pre>
+tests
+</pre>
+</li>
     <li>Integration tests</li>
 </ul>
 
@@ -1780,7 +2020,7 @@ visibility count and reduced our infrastructure maintenance cost.</p>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

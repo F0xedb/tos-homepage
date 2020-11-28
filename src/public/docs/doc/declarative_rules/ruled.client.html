@@ -83,6 +83,7 @@
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -209,15 +210,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -261,9 +262,6 @@
 
 <h1>Module: <code>ruled.client</code></h1>
 <p>Rules for clients.</p>
-<p>
-
-
 <p> This module applies <a href="../declarative_rules/ruled.client.html#awful.rules">rules</a> to clients during startup (via <a href="../core_components/client.html#manage">client.manage</a>,
  but its functions can be used for client matching in general.</p>
 
@@ -492,85 +490,6 @@ awful.spawn(<span class="string">'xterm'</span>)
  some extra properties that are specific to the rules. Note that any property
  can be set in the rules and interpreted by user provided code. This table
  only represent those offered by default.</p>
-
-
-<table class='widget_list' border=1>
- <tr>
-  <th align='center'>Name</th>
-  <th align='center'>Description</th>
- </tr>
-   <tr><td><a href='../core_components/client.html#placement'>placement</a></td><td>The client default placement on the screen</td></tr>
-   <tr><td><a href='../core_components/client.html#honor_padding'>honor\_padding</a></td><td>When applying the placement, honor the screen padding</td></tr>
-   <tr><td><a href='../core_components/client.html#honor_workarea'>honor\_workarea</a></td><td>When applying the placement, honor the screen work area</td></tr>
-   <tr><td><a href='../core_components/client.html#tag'>tag</a></td><td>The client default tag</td></tr>
-   <tr><td><a href='../core_components/client.html#tags'>tags</a></td><td>The client default tags</td></tr>
-   <tr><td><a href='../core_components/client.html#new_tag'>new\_tag</a></td><td>Create a new tag for this client</td></tr>
-   <tr><td><a href='../core_components/client.html#switch_to_tags'>switch\_to\_tags</a></td><td>Unselect the current tags and select this client tags</td></tr>
-   <tr><td><a href='../core_components/client.html#focus'>focus</a></td><td>Define if the client should grab focus by default</td></tr>
-   <tr><td><a href='../core_components/client.html#titlebars_enabled'>titlebars\_enabled</a></td><td>Should this client have a titlebar by default</td></tr>
-   <tr><td><a href='../core_components/client.html#callback'>callback</a></td><td>A function to call when this client is ready</td></tr>
-   <tr><td><a href='../core_components/client.html#marked'>marked</a></td><td>If a client is marked or not</td></tr>
-   <tr><td><a href='../core_components/client.html#is_fixed'>is\_fixed</a></td><td>Return if a client has a fixed size or not</td></tr>
-   <tr><td><a href='../core_components/client.html#immobilized_horizontal'>immobilized\_horizontal</a></td><td>Is the client immobilized horizontally?</td></tr>
-   <tr><td><a href='../core_components/client.html#immobilized_vertical'>immobilized\_vertical</a></td><td>Is the client immobilized vertically?</td></tr>
-   <tr><td><a href='../core_components/client.html#floating'>floating</a></td><td>The client floating state</td></tr>
-   <tr><td><a href='../core_components/client.html#x'>x</a></td><td>The x coordinates</td></tr>
-   <tr><td><a href='../core_components/client.html#y'>y</a></td><td>The y coordinates</td></tr>
-   <tr><td><a href='../core_components/client.html#width'>width</a></td><td>The width of the client</td></tr>
-   <tr><td><a href='../core_components/client.html#height'>height</a></td><td>The height of the client</td></tr>
-   <tr><td><a href='../core_components/client.html#dockable'>dockable</a></td><td>If the client is dockable</td></tr>
-   <tr><td><a href='../core_components/client.html#requests_no_titlebar'>requests\_no\_titlebar</a></td><td>If the client requests not to be decorated with a titlebar</td></tr>
-   <tr><td><a href='../core_components/client.html#shape'>shape</a></td><td>Set the client shape</td></tr>
-   <tr><td><a href='../core_components/client.html#active'>active</a></td><td>Return true if the client is active (has focus)</td></tr>
-   <tr><td><a href='../core_components/client.html#window'>window</a></td><td>The X window id</td></tr>
-   <tr><td><a href='../core_components/client.html#name'>name</a></td><td>The client title</td></tr>
-   <tr><td><a href='../core_components/client.html#skip_taskbar'>skip\_taskbar</a></td><td>True if the client does not want to be in taskbar</td></tr>
-   <tr><td><a href='../core_components/client.html#type'>type</a></td><td>The window type</td></tr>
-   <tr><td><a href='../core_components/client.html#class'>class</a></td><td>The client class</td></tr>
-   <tr><td><a href='../core_components/client.html#instance'>instance</a></td><td>The client instance</td></tr>
-   <tr><td><a href='../core_components/client.html#pid'>pid</a></td><td>The client PID, if available</td></tr>
-   <tr><td><a href='../core_components/client.html#role'>role</a></td><td>The window role, if available</td></tr>
-   <tr><td><a href='../core_components/client.html#machine'>machine</a></td><td>The machine client is running on</td></tr>
-   <tr><td><a href='../core_components/client.html#icon_name'>icon\_name</a></td><td>The client name when iconified</td></tr>
-   <tr><td><a href='../core_components/client.html#icon'>icon</a></td><td>The client icon as a surface</td></tr>
-   <tr><td><a href='../core_components/client.html#icon_sizes'>icon\_sizes</a></td><td>The available sizes of client icons</td></tr>
-   <tr><td><a href='../core_components/client.html#screen'>screen</a></td><td>Client screen</td></tr>
-   <tr><td><a href='../core_components/client.html#hidden'>hidden</a></td><td>Define if the client must be hidden, i</td></tr>
-   <tr><td><a href='../core_components/client.html#minimized'>minimized</a></td><td>Define it the client must be iconify, i</td></tr>
-   <tr><td><a href='../core_components/client.html#size_hints_honor'>size\_hints\_honor</a></td><td>Honor size hints, e</td></tr>
-   <tr><td><a href='../core_components/client.html#border_width'>border\_width</a></td><td>The client border width</td></tr>
-   <tr><td><a href='../core_components/client.html#border_color'>border\_color</a></td><td>The client border color</td></tr>
-   <tr><td><a href='../core_components/client.html#urgent'>urgent</a></td><td>The client urgent state</td></tr>
-   <tr><td><a href='../core_components/client.html#content'>content</a></td><td>A cairo surface for the client window content</td></tr>
-   <tr><td><a href='../core_components/client.html#opacity'>opacity</a></td><td>The client opacity</td></tr>
-   <tr><td><a href='../core_components/client.html#ontop'>ontop</a></td><td>The client is on top of every other windows</td></tr>
-   <tr><td><a href='../core_components/client.html#above'>above</a></td><td>The client is above normal windows</td></tr>
-   <tr><td><a href='../core_components/client.html#below'>below</a></td><td>The client is below normal windows</td></tr>
-   <tr><td><a href='../core_components/client.html#fullscreen'>fullscreen</a></td><td>The client is fullscreen or not</td></tr>
-   <tr><td><a href='../core_components/client.html#maximized'>maximized</a></td><td>The client is maximized (horizontally and vertically) or not</td></tr>
-   <tr><td><a href='../core_components/client.html#maximized_horizontal'>maximized\_horizontal</a></td><td>The client is maximized horizontally or not</td></tr>
-   <tr><td><a href='../core_components/client.html#maximized_vertical'>maximized\_vertical</a></td><td>The client is maximized vertically or not</td></tr>
-   <tr><td><a href='../core_components/client.html#transient_for'>transient\_for</a></td><td>The client the window is transient for</td></tr>
-   <tr><td><a href='../core_components/client.html#group_window'>group\_window</a></td><td>Window identification unique to a group of windows</td></tr>
-   <tr><td><a href='../core_components/client.html#leader_window'>leader\_window</a></td><td>Identification unique to windows spawned by the same command</td></tr>
-   <tr><td><a href='../core_components/client.html#size_hints'>size\_hints</a></td><td>A table with size hints of the client</td></tr>
-   <tr><td><a href='../core_components/client.html#motif_wm_hints'>motif\_wm\_hints</a></td><td>The motif WM hints of the client</td></tr>
-   <tr><td><a href='../core_components/client.html#sticky'>sticky</a></td><td>Set the client sticky, i</td></tr>
-   <tr><td><a href='../core_components/client.html#modal'>modal</a></td><td>Indicate if the client is modal</td></tr>
-   <tr><td><a href='../core_components/client.html#focusable'>focusable</a></td><td>True if the client can receive the input focus</td></tr>
-   <tr><td><a href='../core_components/client.html#shape_bounding'>shape\_bounding</a></td><td>The client's bounding shape as set by awesome as a (native) cairo surface</td></tr>
-   <tr><td><a href='../core_components/client.html#shape_clip'>shape\_clip</a></td><td>The client's clip shape as set by awesome as a (native) cairo surface</td></tr>
-   <tr><td><a href='../core_components/client.html#shape_input'>shape\_input</a></td><td>The client's input shape as set by awesome as a (native) cairo surface</td></tr>
-   <tr><td><a href='../core_components/client.html#client_shape_bounding'>client\_shape\_bounding</a></td><td>The client's bounding shape as set by the program as a (native) cairo surface</td></tr>
-   <tr><td><a href='../core_components/client.html#client_shape_clip'>client\_shape\_clip</a></td><td>The client's clip shape as set by the program as a (native) cairo surface</td></tr>
-   <tr><td><a href='../core_components/client.html#startup_id'>startup\_id</a></td><td>The FreeDesktop StartId</td></tr>
-   <tr><td><a href='../core_components/client.html#valid'>valid</a></td><td>If the client that this object refers to is still managed by awesome</td></tr>
-   <tr><td><a href='../core_components/client.html#first_tag'>first\_tag</a></td><td>The first tag of the client</td></tr>
-   <tr><td><a href='../core_components/client.html#buttons'>buttons</a></td><td>Get or set mouse buttons bindings for a client</td></tr>
-   <tr><td><a href='../core_components/client.html#keys'>keys</a></td><td>Get or set keys bindings for a client</td></tr>
- </table>
-
-</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>Copyright</strong>: 2009 Julien Danjou</li>
@@ -766,7 +685,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
-
+    Methods
     <dl class="function">
     <dt>
     <a name = "module.append_rule"></a>
@@ -790,7 +709,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item950 class="hide_extra">
+    <span id=item957 class="hide_extra">
     </span>
 
 </dd>
@@ -816,7 +735,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item951 class="hide_extra">
+    <span id=item958 class="hide_extra">
     </span>
 
 </dd>
@@ -843,7 +762,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item952 class="hide_extra">
+    <span id=item959 class="hide_extra">
     </span>
 
 </dd>
@@ -884,7 +803,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item953 class="hide_extra">
+    <span id=item960 class="hide_extra">
     </span>
 
 </dd>
@@ -921,7 +840,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item954 class="hide_extra">
+    <span id=item961 class="hide_extra">
     </span>
 
 </dd>
@@ -961,7 +880,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item955 class="hide_extra">
+    <span id=item962 class="hide_extra">
     </span>
 
 </dd>
@@ -999,7 +918,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item956 class="hide_extra">
+    <span id=item963 class="hide_extra">
     </span>
 
 </dd>
@@ -1037,7 +956,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item957 class="hide_extra">
+    <span id=item964 class="hide_extra">
     </span>
 
 </dd>
@@ -1070,7 +989,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item958 class="hide_extra">
+    <span id=item965 class="hide_extra">
     </span>
 
 </dd>
@@ -1097,7 +1016,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item959 class="hide_extra">
+    <span id=item966 class="hide_extra">
     </span>
 
 </dd>
@@ -1186,7 +1105,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item960 class="hide_extra">
+    <span id=item967 class="hide_extra">
     </span>
 
 </dd>
@@ -1223,13 +1142,13 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
      <br />
-     <center id=button961>
-     <a class="show_more_button" onclick="show_extra('961')">
+     <center id=button968>
+     <a class="show_more_button" onclick="show_extra('968')">
       Click to display more
      </a>
      </center>
 
-    <span id=item961 class="hide_extra">
+    <span id=item968 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1269,7 +1188,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item962 class="hide_extra">
+    <span id=item969 class="hide_extra">
     </span>
 
 </dd>
@@ -1297,7 +1216,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item963 class="hide_extra">
+    <span id=item970 class="hide_extra">
     </span>
 
 </dd>
@@ -1331,7 +1250,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item964 class="hide_extra">
+    <span id=item971 class="hide_extra">
     </span>
 
 </dd>
@@ -1359,7 +1278,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item965 class="hide_extra">
+    <span id=item972 class="hide_extra">
     </span>
 
 </dd>
@@ -1383,7 +1302,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item966 class="hide_extra">
+    <span id=item973 class="hide_extra">
     </span>
 
 </dd>
@@ -1408,7 +1327,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item967 class="hide_extra">
+    <span id=item974 class="hide_extra">
     </span>
 
 </dd>
@@ -1433,7 +1352,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item968 class="hide_extra">
+    <span id=item975 class="hide_extra">
     </span>
 
 </dd>
@@ -1458,7 +1377,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item969 class="hide_extra">
+    <span id=item976 class="hide_extra">
     </span>
 
 </dd>
@@ -1483,7 +1402,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item970 class="hide_extra">
+    <span id=item977 class="hide_extra">
     </span>
 
 </dd>
@@ -1508,7 +1427,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item971 class="hide_extra">
+    <span id=item978 class="hide_extra">
     </span>
 
 </dd>
@@ -1535,7 +1454,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item972 class="hide_extra">
+    <span id=item979 class="hide_extra">
     </span>
 
 </dd>
@@ -1562,7 +1481,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item973 class="hide_extra">
+    <span id=item980 class="hide_extra">
     </span>
 
 </dd>
@@ -1589,7 +1508,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item974 class="hide_extra">
+    <span id=item981 class="hide_extra">
     </span>
 
 </dd>
@@ -1632,7 +1551,7 @@ end
 
 
 
-    <span id=item975 class="hide_extra">
+    <span id=item982 class="hide_extra">
     </span>
 
 </dd>
@@ -1672,7 +1591,7 @@ end
 
 
 
-    <span id=item976 class="hide_extra">
+    <span id=item983 class="hide_extra">
     </span>
 
 </dd>
@@ -1692,7 +1611,7 @@ end
 
 
 
-    <span id=item977 class="hide_extra">
+    <span id=item984 class="hide_extra">
     </span>
 
 </dd>
@@ -1703,7 +1622,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

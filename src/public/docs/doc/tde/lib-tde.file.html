@@ -43,7 +43,6 @@
 
 <h2>Contents</h2>
 <ul>
-<li><a href="#Functions">Functions</a></li>
 <li><a href="#Static_module_functions">Static module functions</a></li>
 </ul>
 
@@ -61,6 +60,7 @@
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -206,15 +206,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -315,21 +315,6 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-<h2><a href="#Functions">Functions</a></h2>
-<table class="function_list">
-    <tr>
-      <td class="name" >
-        <a href="#basename"><span class='function_modname'>lib-tde.file.</span>basename (str)</a>
-      </td>
-      <td colspan="2" class="summary">Function equivalent to basename in POSIX systems</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#rm"><span class='function_modname'>lib-tde.file.</span>rm (filename)</a>
-      </td>
-      <td colspan="2" class="summary">Function to remove a file for the filesystem</td>
-    </tr>
-</table>
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
 <table class="function_list">
     <tr>
@@ -359,13 +344,6 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check if a directory exists</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#is_empty"><span class='function_modname'>lib-tde.file.</span>is_empty <span class='function_args'> <b>(</b>string<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
-      </td>
-      <td colspan="2" class="summary">Check is a file is empty, if the file doesn't exist an exception will be thrown</td>
     </tr>
     <tr>
       <td class="name" >
@@ -401,60 +379,6 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "basename"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>basename (str)</strong>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Function equivalent to basename in POSIX systems
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">str</span>
-         the path string
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item763 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "rm"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>rm (filename)</strong>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Function to remove a file for the filesystem
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">filename</span>
-         string the path to the file
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item764 class="hide_extra">
-    </span>
-
-</dd>
-</dl>
     <h2 class="section-header "><a name="Static_module_functions"></a>Static module functions</h2>
 
     <dl class="function">
@@ -492,7 +416,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item765 class="hide_extra">
+    <span id=item764 class="hide_extra">
     </span>
 
 </dd>
@@ -534,7 +458,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item766 class="hide_extra">
+    <span id=item765 class="hide_extra">
     </span>
 
 </dd>
@@ -576,7 +500,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item767 class="hide_extra">
+    <span id=item766 class="hide_extra">
     </span>
 
 </dd>
@@ -614,45 +538,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item768 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "is_empty"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>is_empty <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Check is a file is empty, if the file doesn't exist an exception will be thrown
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">filename</span></span>
-         The path to the file, can be both absolute or relative.
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">boolean</span></span>
-        if the file is empty or not
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="comment">--
-</span> lib-tde.file.is_empty(<span class="string">"/etc/hosts"</span>) -&gt; <span class="keyword">false</span></pre>
-    </ul>
-
-
-    <span id=item769 class="hide_extra">
+    <span id=item767 class="hide_extra">
     </span>
 
 </dd>
@@ -697,11 +583,11 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This gives the first 100 lines of /etc/hosts and filters it by only showing lines that start with ipv4 addresses
-</span> lib-tde.file.lines_from(<span class="string">"/etc/hosts"</span>, <span class="string">"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*"</span>, <span class="number">100</span>) -&gt; is of <span class="global">type</span> <span class="global">table</span></pre>
+</span> lib-tde.file.lines(<span class="string">"/etc/hosts"</span>, <span class="string">"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*"</span>, <span class="number">100</span>) -&gt; is of <span class="global">type</span> <span class="global">table</span></pre>
     </ul>
 
 
-    <span id=item770 class="hide_extra">
+    <span id=item768 class="hide_extra">
     </span>
 
 </dd>
@@ -750,7 +636,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item771 class="hide_extra">
+    <span id=item769 class="hide_extra">
     </span>
 
 </dd>
@@ -788,7 +674,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item772 class="hide_extra">
+    <span id=item770 class="hide_extra">
     </span>
 
 </dd>
@@ -826,7 +712,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item773 class="hide_extra">
+    <span id=item771 class="hide_extra">
     </span>
 
 </dd>
@@ -837,7 +723,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

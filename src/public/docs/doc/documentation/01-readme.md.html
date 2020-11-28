@@ -100,6 +100,7 @@
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -231,15 +232,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -333,7 +334,6 @@ CMAKE_ARGS=<span class="string">"-DCMAKE_INSTALL_PREFIX=/opt/awesome"</span> mak
 </code></pre>
 
 
-
 <h3>Build dependencies</h3>
 
 <p>Awesome has the following dependencies (besides a more-or-less standard POSIX
@@ -345,7 +345,11 @@ environment):</p>
     <li><a href="https://github.com/pavouk/lgi">LGI >= 0.8.0</a></li>
     <li><a href="https://www.x.org/archive//individual/proto/">xproto >= 7.0.15</a></li>
     <li><a href="https://xcb.freedesktop.org/">libxcb >= 1.6</a> with support for the RandR, XTest, Xinerama, SHAPE and
-    XKB extensions</li>
+
+<pre>
+XKB extensions
+</pre>
+</li>
     <li><a href="https://xcb.freedesktop.org/">libxcb-cursor</a></li>
     <li><a href="https://xcb.freedesktop.org/">libxcb-util >= 0.3.8</a></li>
     <li><a href="https://xcb.freedesktop.org/">libxcb-keysyms >= 0.3.4</a></li>
@@ -353,16 +357,36 @@ environment):</p>
     <li><a href="https://xcb.freedesktop.org/">libxcb-xfixes</a></li>
     <li><a href="https://github.com/Airblader/xcb-util-xrm">xcb-util-xrm >= 1.0</a></li>
     <li><a href="http://xkbcommon.org/">libxkbcommon</a> with X11 support enabled</li>
-    <li><a href="https://www.freedesktop.org/wiki/Software/startup-notification/">libstartup-notification >=
-    0.10</a></li>
+    <li>[libstartup-notification >=
+
+<pre>
+<span class="number">0.10</span>](https://www.freedesktop.org/wiki/Software/startup-notification/)
+</pre>
+</li>
     <li><a href="https://www.cairographics.org/">cairo</a> with support for XCB and GObject
-    introspection</li>
+
+<pre>
+introspection
+</pre>
+</li>
     <li><a href="http://www.pango.org/">Pango</a> with support for Cairo and GObject
-    introspection</li>
+
+<pre>
+introspection
+</pre>
+</li>
     <li><a href="https://wiki.gnome.org/Projects/GLib">GLib >= 2.40</a> with support for GObject
-    introspection</li>
+
+<pre>
+introspection
+</pre>
+</li>
     <li><a href="https://developer.gnome.org/gio/stable/">GIO</a> with support for GObject
-    introspection</li>
+
+<pre>
+introspection
+</pre>
+</li>
     <li><a href="https://wiki.gnome.org/Projects/GdkPixbuf">GdkPixbuf</a></li>
     <li>libX11 with xcb support</li>
     <li><a href="http://www.imagemagick.org/script/index.php">Imagemagick's convert utility</a></li>
@@ -373,25 +397,53 @@ environment):</p>
 
 <ul>
     <li><a href="https://www.freedesktop.org/wiki/Software/dbus/">DBus</a> for DBus integration
-    and the <code>awesome-client</code> utility</li>
+
+<pre>
+<span class="keyword">and</span> the <span class="backtick"><code>tde-client</code></span> utility
+</pre>
+</li>
     <li><a href="https://asciidoctor.org/">asciidoctor</a> for generating man pages</li>
     <li><a href="http://www.gzip.org/">gzip</a> for compressing man pages</li>
     <li><a href="https://stevedonovan.github.io/ldoc/">ldoc >= 1.4.5</a> for generating the
-    documentation</li>
+
+<pre>
+documentation
+</pre>
+</li>
     <li><a href="https://olivinelabs.com/busted/">busted</a> for running unit tests</li>
     <li><a href="https://github.com/mpeterv/luacheck">luacheck</a> for static code analysis</li>
     <li><a href="https://keplerproject.github.io/luacov/">LuaCov</a> for collecting code coverage
-    information</li>
+
+<pre>
+information
+</pre>
+</li>
     <li>libexecinfo on systems where libc does not provide <code>backtrace_symbols()</code> to
-    generate slightly better backtraces on crashes</li>
+
+<pre>
+generate slightly better backtraces on crashes
+</pre>
+</li>
     <li><code>Xephyr</code> or <code>Xvfb</code> for running integration tests</li>
     <li><a href="https://www.gtk.org/">GTK+ >= 3.10</a> for <code>./themes/gtk/</code></li>
     <li><a href="https://gitlab.freedesktop.org/xorg/lib/libxcb-errors">xcb-errors</a> for
-    pretty-printing of X11 errors</li>
+
+<pre>
+pretty-printing of X11 errors
+</pre>
+</li>
     <li><a href="https://wiki.gnome.org/action/show/Projects/LibRsvg">libRSVG</a> for displaying
-    SVG files without scaling artifacts</li>
+
+<pre>
+SVG files without scaling artifacts
+</pre>
+</li>
     <li><a href="http://tripie.sweb.cz/utils/wmctrl">wmctrl</a> for testing WM interactions
-    with external actions</li>
+
+<pre>
+with external actions
+</pre>
+</li>
     <li><a href="https://invisible-island.net/xterm/">xterm</a> for various test cases</li>
 </ul>
 
@@ -462,9 +514,11 @@ DISPLAY=:<span class="number">2</span> gdb awesome
 <p><a href="https://webchat.oftc.net/?channels=awesome">IRC Webchat</a></p>
 
 <h4>Stack Overflow</h4>
+
 <p>You can ask questions on <a href="http://stackoverflow.com/questions/tagged/awesome-wm">Stack Overflow</a>.</p>
 
 <h4>Reddit</h4>
+
 <p>We also have a <a href="https://www.reddit.com/r/awesomewm/">awesome subreddit</a> where you can share your work and ask questions.</p>
 
 <p><a name="Reporting_issues"></a></p>
@@ -480,6 +534,7 @@ Please read the <a href="https://github.com/awesomeWM/awesome/blob/master/docs/0
 
 <p><a name="Status"></a></p>
 <h2>Status</h2>
+
 <p><a href="https://travis-ci.com/awesomeWM/awesome"><img src="https://travis-ci.com/awesomeWM/awesome.svg?branch=master" alt="Build Status"/></a></p>
 
 <p><a name="Documentation"></a></p>
@@ -499,7 +554,7 @@ or <a href="http://www.gnu.org/licenses/gpl.html">v3</a>).</p>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -94,6 +94,7 @@
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -225,15 +226,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -565,7 +566,7 @@ effect. The default keybinding for restarting Awesome is "Mod4 + Control + r".</
 <p>You can use the <code>xprop</code> utility, you are interested in <code>WM_CLASS</code> and <code>WM_NAME</code>
 from its output:</p>
 
-<p>  $ xprop WM<em>CLASS WM</em>NAME</p>
+<p>$ xprop WM<em>CLASS WM</em>NAME</p>
 
 <p>When the cursor changes to "+" click on the client of interest. From the
 terminal output you can use the following to match clients in Awesome:</p>
@@ -684,25 +685,25 @@ the upper right corner of the screen.</p>
 
 <p>You can use the keybinding "Mod4+Ctrl+r" or by selecting restart in the menu.
 You could call <a href="../core_components/awesome.html#restart">awesome.restart</a> either from the Lua prompt widget, or via
-<code>awesome-client</code>:</p>
+<code>tde-client</code>:</p>
 
 
 <pre>
-$ awesome-client <span class="string">'awesome.restart()'</span>
+$ tde-client <span class="string">'awesome.restart()'</span>
 </pre>
 
 <p>You can also send the <code>SIGHUP</code> signal to the Awesome process. Find the PID using
 <code>ps</code>, <code>pgrep</code> or use <code>pkill</code>:</p>
 
-<p>  $ pkill -HUP awesome</p>
+<p>$ pkill -HUP awesome</p>
 
 <p>You can quit Awesome by using "Mod4+Shift+q" keybinding or by selecting quit in
 the menu. You could call <a href="../core_components/awesome.html#quit">awesome.quit</a> either from the Lua prompt widget,
-or by passing it to <code>awesome-client</code>.</p>
+or by passing it to <code>tde-client</code>.</p>
 
 
 <pre>
-$ echo <span class="string">'awesome.quit()'</span> | awesome-client
+$ echo <span class="string">'awesome.quit()'</span> | tde-client
 </pre>
 
 <p>You can also send the <code>SIGINT</code> signal to the Awesome process. Find the PID using <code>ps</code>, <code>pgrep</code> or use <code>pkill</code>:</p>
@@ -725,8 +726,7 @@ sets of tags. See the next entry on how to find out where the problem lurks.</p>
 <h3>Where are logs, error messages or something?</h3>
 
 <p>When hacking your own configuration, something inevitably would go wrong.
-Awesome prints error messages to its <code>stderr</code> stream. When run with usual `$
-startx`, it'd be printed right in tty. If you use something more complicated
+Awesome prints error messages to its <code>stderr</code> stream. When run with usual <code>$ startx</code>, it'd be printed right in tty. If you use something more complicated
 (some kind of DM, like kdm or gdm), stderr is usually redirected somewhere else.
 To see where, run the following command:</p>
 
@@ -825,7 +825,7 @@ for any coding, documentation or patch guidelines.</p>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

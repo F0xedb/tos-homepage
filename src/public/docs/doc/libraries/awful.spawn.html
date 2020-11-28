@@ -67,15 +67,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Core components</h2>
@@ -105,6 +105,7 @@
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -281,7 +282,7 @@
  <code>bash</code>, <code>zsh</code>, <code>busybox sh</code> or <code>Debian ash</code>.</p>
 
 <p> If you wish to open a process in a terminal window, check that your terminal
- emulator supports the common <a href="../libraries/awful.spawn.html#awful.spawn.once">-e</a> option. If it does, then something like
+ emulator supports the common <a href="../libraries/awful.spawn.html#awful.spawn.single_instance">-e</a> option. If it does, then something like
  this should work:</p>
 
 
@@ -487,7 +488,7 @@ awful.spawn(<span class="string">"urxvt -e maxima -name CALCULATOR"</span>, {
 
 
 <pre>
-awesome-client <span class="string">'awful=require("awful");
+tde-client <span class="string">'awful=require("awful");
   awful.spawn("urxvt -e maxima -name CALCULATOR", {
     floating  = true,
     tag       = mouse.screen.selected_tag,
@@ -712,7 +713,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3023 class="hide_extra">
+    <span id=item3030 class="hide_extra">
     </span>
 
 </dd>
@@ -740,7 +741,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3024 class="hide_extra">
+    <span id=item3031 class="hide_extra">
     </span>
 
 </dd>
@@ -812,7 +813,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3025 class="hide_extra">
+    <span id=item3032 class="hide_extra">
     </span>
 
 </dd>
@@ -879,7 +880,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3026 class="hide_extra">
+    <span id=item3033 class="hide_extra">
     </span>
 
 </dd>
@@ -946,7 +947,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3027 class="hide_extra">
+    <span id=item3034 class="hide_extra">
     </span>
 
 </dd>
@@ -989,7 +990,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3028 class="hide_extra">
+    <span id=item3035 class="hide_extra">
     </span>
 
 </dd>
@@ -1055,7 +1056,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3029 class="hide_extra">
+    <span id=item3036 class="hide_extra">
     </span>
 
 </dd>
@@ -1120,7 +1121,7 @@ awesome-client <span class="string">'awful=require("awful");
 
 
 
-    <span id=item3030 class="hide_extra">
+    <span id=item3037 class="hide_extra">
     </span>
 
 </dd>
@@ -1183,13 +1184,13 @@ awesome-client <span class="string">'awful=require("awful");
 
 
      <br />
-     <center id=button3031>
-     <a class="show_more_button" onclick="show_extra('3031')">
+     <center id=button3038>
+     <a class="show_more_button" onclick="show_extra('3038')">
       Click to display more
      </a>
      </center>
 
-    <span id=item3031 class="hide_extra">
+    <span id=item3038 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1211,7 +1212,7 @@ awesome-client <span class="string">'awful=require("awful");
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -60,6 +60,7 @@
   <li><strong>lib-tde.hardware-check</strong></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
+  <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -205,15 +206,15 @@
   <li><a href="../libraries/menubar.utils.html">menubar.utils</a></li>
   <li><a href="../libraries/naughty.html">naughty</a></li>
   <li><a href="../libraries/selection.html">selection</a></li>
-  <li><a href="../libraries/tde.collision.util.html">tde.collision.util</a></li>
-  <li><a href="../libraries/tde.lib-tde.xrandr.html">tde.lib-tde.xrandr</a></li>
-  <li><a href="../libraries/tde.widget.bluetooth.html">tde.widget.bluetooth</a></li>
-  <li><a href="../libraries/tde.widget.calculator.html">tde.widget.calculator</a></li>
-  <li><a href="../libraries/tde.widget.dpi.html">tde.widget.dpi</a></li>
-  <li><a href="../libraries/tde.widget.package-updater.html">tde.widget.package-updater</a></li>
-  <li><a href="../libraries/tde.widget.search.html">tde.widget.search</a></li>
-  <li><a href="../libraries/tde.widget.tag-list.html">tde.widget.tag-list</a></li>
-  <li><a href="../libraries/tde.widget.task-list.html">tde.widget.task-list</a></li>
+  <li><a href="../libraries/tde-src.collision.util.html">tde-src.collision.util</a></li>
+  <li><a href="../libraries/tde-src.lib-tde.xrandr.html">tde-src.lib-tde.xrandr</a></li>
+  <li><a href="../libraries/tde-src.widget.bluetooth.html">tde-src.widget.bluetooth</a></li>
+  <li><a href="../libraries/tde-src.widget.calculator.html">tde-src.widget.calculator</a></li>
+  <li><a href="../libraries/tde-src.widget.dpi.html">tde-src.widget.dpi</a></li>
+  <li><a href="../libraries/tde-src.widget.package-updater.html">tde-src.widget.package-updater</a></li>
+  <li><a href="../libraries/tde-src.widget.search.html">tde-src.widget.search</a></li>
+  <li><a href="../libraries/tde-src.widget.tag-list.html">tde-src.widget.tag-list</a></li>
+  <li><a href="../libraries/tde-src.widget.task-list.html">tde-src.widget.task-list</a></li>
   <li><a href="../libraries/wibox.widget.html">wibox.widget</a></li>
 </ul>
 <h2>Sample files</h2>
@@ -348,6 +349,13 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
       </td>
       <td colspan="2" class="summary">Check to see the hardware has a sound card installed</td>
     </tr>
+    <tr>
+      <td class="name" >
+        <a href="#getDefaultIP"><span class='function_modname'>lib-tde.hardware-check.</span>getDefaultIP <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+      </td>
+      <td colspan="2" class="summary">Returns the ip address of the default route</td>
+    </tr>
 </table>
 
 <br/>
@@ -391,7 +399,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item786 class="hide_extra">
+    <span id=item784 class="hide_extra">
     </span>
 
 </dd>
@@ -422,7 +430,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item787 class="hide_extra">
+    <span id=item785 class="hide_extra">
     </span>
 
 </dd>
@@ -453,7 +461,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item788 class="hide_extra">
+    <span id=item786 class="hide_extra">
     </span>
 
 </dd>
@@ -484,7 +492,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item789 class="hide_extra">
+    <span id=item787 class="hide_extra">
     </span>
 
 </dd>
@@ -522,7 +530,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item790 class="hide_extra">
+    <span id=item788 class="hide_extra">
     </span>
 
 </dd>
@@ -553,7 +561,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item791 class="hide_extra">
+    <span id=item789 class="hide_extra">
     </span>
 
 </dd>
@@ -584,7 +592,37 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item792 class="hide_extra">
+    <span id=item790 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "getDefaultIP"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>getDefaultIP <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Returns the ip address of the default route
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string ipv4 address as a string
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- For example returns 192.168.1.12
+</span> lib-tde.hardware-check.getDefaultIP()</pre>
+    </ul>
+
+
+    <span id=item791 class="hide_extra">
     </span>
 
 </dd>
@@ -595,7 +633,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-22 17:29:08 </i>
+<i style="float:right;">Last updated 2020-11-28 22:27:16 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
