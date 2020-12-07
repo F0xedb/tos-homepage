@@ -47,13 +47,13 @@ pygmentsCodeFencesGuessSyntax = true
   weight = 4
 
   [[menu.main]]
+  name = "Forum"
+  URL = "https://forum.odex.be"
+  weight = 5
+
+  [[menu.main]]
   name = "API"
   URL = "docs/index.html"
-  weight = 5
-  
-  [[menu.main]]
-  name = "Contact"
-  URL = "contact/index.html"
   weight = 6
 
 
