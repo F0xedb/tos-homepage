@@ -92,8 +92,10 @@
   <li><a href="../tde/lib-tde.function.delayed-timer.html">lib-tde.function.delayed-timer</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
+  <li><a href="../tde/lib-tde.imagemagic.html">lib-tde.imagemagic</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
+  <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -254,17 +256,17 @@
 
 <h1>Startup options</h1>
 
-<p>This document explains how to control how AwesomeWM behaves before <a href="../sample files/rc.lua.html#">rc.lua</a> is
+<p>This document explains how to control how TDE behaves before <a href="../sample files/rc.lua.html#">rc.lua</a> is
 executed.</p>
 
 <p><a name="Command_line"></a></p>
 <h2>Command line</h2>
 
-<p>AwesomeWM has the following command line options:</p>
+<p>TDE has the following command line options:</p>
 
 
 <pre>
-Usage: awesome [OPTION]
+Usage: tde [OPTION]
   -h, <span class="comment">--help             show help
 </span>  -v, <span class="comment">--version          show version
 </span>  -c, <span class="comment">--config FILE      configuration file to use
@@ -280,7 +282,7 @@ Usage: awesome [OPTION]
 <p><a name="Modelines"></a></p>
 <h2>Modelines</h2>
 
-<p>Usually, AwesomeWM is started using a session manager rather than directly using
+<p>Usually, TDE is started using a session manager rather than directly using
 the command line. On top of that, to make <a href="../sample files/rc.lua.html#">rc.lua</a> more portable, it is possible
 to set many of those options directly in your config file. They will be
 interpreted before the Lua virtual machine is started. The keys are:</p>
@@ -294,7 +296,7 @@ interpreted before the Lua virtual machine is started. The keys are:</p>
   <th align='center'>Type</th>
   <th align='center'>Description</th>
  </tr>
- <tr><td>search</td><td>Yes</td><td>Yes</td><td>string</td><td>Path where the AwesomeWM core libraries are located</td></tr>
+ <tr><td>search</td><td>Yes</td><td>Yes</td><td>string</td><td>Path where the TDE core libraries are located</td></tr>
  <tr><td>no-argb</td><td>No</td><td>No</td><td>N/A</td><td>Disable built-in (real) transparency.</td></tr>
  <tr><td>api-level</td><td>Yes</td><td>No</td><td>integer</td><td>The config API level.</td></tr>
  <tr><td>screen</td><td>Yes</td><td>No</td><td>string</td><td>Create the screen before executing <a href="../sample files/rc.lua.html#">rc.lua</a> (<code>on</code> or <code>off</code>)</td></tr>
@@ -302,38 +304,38 @@ interpreted before the Lua virtual machine is started. The keys are:</p>
 </table>
 
 
-<p>A <code>modeline</code> must be near the top of <a href="../sample files/rc.lua.html#">rc.lua</a> and start with <code>-- awesome_mode:</code>.
+<p>A <code>modeline</code> must be near the top of <a href="../sample files/rc.lua.html#">rc.lua</a> and start with <code>-- tde_mode:</code>.
 The options are separated by <code>:</code>. If an option has a value, it is separated by
 <code>=</code>. The default modeline is:</p>
 
 
 <pre>
-<span class="comment">-- awesome_mode: api-level=4:screen=on</span>
+<span class="comment">-- tde_mode: api-level=4:screen=on</span>
 </pre>
 
 <p>To display more deprecation errors, you can increase the API level by 2:</p>
 
 
 <pre>
-<span class="comment">-- awesome_mode: api-level=6:screen=on</span>
+<span class="comment">-- tde_mode: api-level=6:screen=on</span>
 </pre>
 
 <p><a name="____shebang__support_"></a></p>
 <h2>#! (shebang) support.</h2>
 
 <p>It is possible to make some <code>.lua</code> file executable and use the POSIX magic
-prefix (<code>#!</code>, often referred as the shebang operator). AwesomeWM will attempt
+prefix (<code>#!</code>, often referred as the shebang operator). TDE will attempt
 to parse the header. Note that for now UTF-8 paths are not supported. A tipical
 file header will look like:</p>
 
 
 <pre>
-#! /usr/bin/env awesome <span class="comment">--replace
+#! /usr/bin/env tde <span class="comment">--replace
 </span><span class="comment">-- If LuaRocks is installed, make sure that packages installed through it
 </span><span class="comment">-- are found (e.g. lgi). If LuaRocks is not installed, do nothing.
 </span><span class="global">pcall</span>(<span class="global">require</span>, <span class="string">"luarocks.loader"</span>)
 
-<span class="comment">-- Standard awesome library
+<span class="comment">-- Standard tde library
 </span><span class="keyword">local</span> gears = <span class="global">require</span>(<span class="string">"gears"</span>)
 [... more <span class="backtick"><a href="../sample files/rc.lua.html#">rc.lua</a></span> content ...]
 </pre>
@@ -363,7 +365,7 @@ file header will look like:</p>
 
 
 <pre>
-awesome v4.<span class="number">3</span> (Too long)
+tde v4.<span class="number">3</span> (testing)
   • Compiled against Lua <span class="number">5.1</span>.<span class="number">5</span> (running with Lua <span class="number">5.1</span>)
   • API level: <span class="number">4</span>
   • D-Bus support: yes
@@ -394,7 +396,7 @@ awesome v4.<span class="number">3</span> (Too long)
 
 
 <p>This option allows to pass an arbitrary Lua file to be used as a config rather
-than <code>~/.config/awesome/rc.lua</code> or <code>/etc/xdg/awesome/rc.lua</code>. It makes zero
+than <code>~/.config/tde/rc.lua</code> or <code>/etc/xdg/tde/rc.lua</code>. It makes zero
 sense in the shebang since you invoke a script directly. It doesn't make sense
 in the modeline either since at that point the file is already being read.</p>
 
@@ -441,7 +443,7 @@ deprecation warnings.</p>
 to set an alternate version of the core libraries such as <code>awful</code> to make
 upstream patches development easier. It can also be used to point to custom
 modules. It is usually recommended to place custom modules in
-<code>~/.config/awesome/</code> or <code>/usr/share/awesome/lib</code>. Again, this option is mostly
+<code>~/.config/tde/</code> or <code>/usr/share/tde/lib</code>. Again, this option is mostly
 useful for development.</p>
 
 <h3>check (-k): Check the config <strong>SYNTAX</strong>.</h3>
@@ -507,15 +509,15 @@ does, please notify them. The bug is on their side.</p>
 
 
 <p>If you invested a lot of effort into a configuration and a new major version
-is AwesomeWM is released, you might want to postpone having to update everything
+is TDE is released, you might want to postpone having to update everything
 until you are ready to begin using the new features. If the API level is set,
-AwesomeWM will try to honor the behavior and content of the previous APIs.</p>
+TDE will try to honor the behavior and content of the previous APIs.</p>
 
 <p>You can also set this value forward to get notified faster of your usage of
 newly deprecated API and enjoy cutting edge experimental features.</p>
 
-<p>The default API level matches the first component of the AwesomeWM version.
-For example, AwesomeWM v4.3 API level is "4". This only goes back to AwesomeWM
+<p>The default API level matches the first component of the TDE version.
+For example, TDE v4.3 API level is "4". This only goes back to TDE
 4.0. The older 3.x APIs have been removed.</p>
 
 <h3>screen (-m): Set the screen creation behavior.</h3>
@@ -535,7 +537,7 @@ For example, AwesomeWM v4.3 API level is "4". This only goes back to AwesomeWM
 </table>
 
 
-<p>This option changes <em>when</em> screen objects are created. In AwesomeWM 4.x, by
+<p>This option changes <em>when</em> screen objects are created. In TDE 4.x, by
 default, they are created before <a href="../sample files/rc.lua.html#">rc.lua</a> is parsed. This is very convenient
 for setup where the number of screen never changes. By creating them before
 <a href="../sample files/rc.lua.html#">rc.lua</a>, it is possible to make many assumptions such as <a href="../input_handling/mouse.html#screen">mouse.screen</a> and
@@ -551,7 +553,7 @@ the future, the default will be <code>off</code> to allow HiDPI support to be en
 default.
 controllable by Lua code.</p>
 
-<h3>replace (-r): Replace the current window manager with AwesomeWM.</h3>
+<h3>replace (-r): Replace the current window manager with TDE.</h3>
 
 
 <table class='widget_list' border=1>
@@ -568,15 +570,15 @@ controllable by Lua code.</p>
 </table>
 
 
-<p>If this option is set, AwesomeWM will kill the current window manager (even
-if it is another <a href="../core_components/awesome.html#">awesome</a> instance and replace it. This is disabled by default.</p>
+<p>If this option is set, TDE will kill the current window manager (even
+if it is another <code>tde</code> instance and replace it. This is disabled by default.</p>
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-28 22:35:26 </i>
+<i style="float:right;">Last updated 2020-12-27 18:21:54 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

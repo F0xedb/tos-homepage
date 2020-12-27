@@ -59,8 +59,10 @@
   <li><a href="../tde/lib-tde.function.delayed-timer.html">lib-tde.function.delayed-timer</a></li>
   <li><strong>lib-tde.hardware-check</strong></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
+  <li><a href="../tde/lib-tde.imagemagic.html">lib-tde.imagemagic</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
+  <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -348,6 +350,34 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
       </td>
       <td colspan="2" class="summary">Returns the ip address of the default route</td>
     </tr>
+    <tr>
+      <td class="name" >
+        <a href="#getRamInfo"><span class='function_modname'>lib-tde.hardware-check.</span>getRamInfo <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number,</span></span>
+      </td>
+      <td colspan="2" class="summary">Returns general information about system ram</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#getCpuInfo"><span class='function_modname'>lib-tde.hardware-check.</span>getCpuInfo <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number,</span></span>
+      </td>
+      <td colspan="2" class="summary">Returns general information about the cpu</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#isWeakHardware"><span class='function_modname'>lib-tde.hardware-check.</span>isWeakHardware <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+      </td>
+      <td colspan="2" class="summary">Returns if the hardware is to weak, eg little amount of ram, cpu etc</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#getDisplayFrequency"><span class='function_modname'>lib-tde.hardware-check.</span>getDisplayFrequency <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+      </td>
+      <td colspan="2" class="summary">Returns The frequency of the display panel in Herts, for example 60 Hz</td>
+    </tr>
 </table>
 
 <br/>
@@ -391,7 +421,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item776 class="hide_extra">
+    <span id=item781 class="hide_extra">
     </span>
 
 </dd>
@@ -422,7 +452,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item777 class="hide_extra">
+    <span id=item782 class="hide_extra">
     </span>
 
 </dd>
@@ -453,7 +483,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item778 class="hide_extra">
+    <span id=item783 class="hide_extra">
     </span>
 
 </dd>
@@ -484,7 +514,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item779 class="hide_extra">
+    <span id=item784 class="hide_extra">
     </span>
 
 </dd>
@@ -522,7 +552,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item780 class="hide_extra">
+    <span id=item785 class="hide_extra">
     </span>
 
 </dd>
@@ -553,7 +583,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item781 class="hide_extra">
+    <span id=item786 class="hide_extra">
     </span>
 
 </dd>
@@ -584,7 +614,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item782 class="hide_extra">
+    <span id=item787 class="hide_extra">
     </span>
 
 </dd>
@@ -614,7 +644,129 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item783 class="hide_extra">
+    <span id=item788 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "getRamInfo"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>getRamInfo <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;number,</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Returns general information about system ram
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number,</span></span>
+        number The ram usage and ram total in KiloBytes
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- For example, 50(%), 10000000(kB)
+</span> lib-tde.hardware-check.getRamInfo()</pre>
+    </ul>
+
+
+    <span id=item789 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "getCpuInfo"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>getCpuInfo <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;number,</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Returns general information about the cpu
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number,</span></span>
+        number, string, number The cpu core count, thread count, canonical name and frequency in MHz
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- For example, 8 (cores), 16 (threads), "AMD Ryzen 7 PRO 5800X", 3000(MHz)
+</span> lib-tde.hardware-check.getCpuInfo()</pre>
+    </ul>
+
+
+    <span id=item790 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "isWeakHardware"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>isWeakHardware <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Returns if the hardware is to weak, eg little amount of ram, cpu etc
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        bool true if the hardware is below a certain treshold
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- If ram is below 4G
+</span> lib-tde.hardware-check.isWeakHardware()</pre>
+    </ul>
+
+
+    <span id=item791 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "getDisplayFrequency"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>getDisplayFrequency <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Returns The frequency of the display panel in Herts, for example 60 Hz
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        number The frequency of the display in Hertz
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Returns The frequency of the display panel in Herts, for example 60 Hz
+</span> lib-tde.hardware-check.getDisplayFrequency()</pre>
+    </ul>
+
+
+    <span id=item792 class="hide_extra">
     </span>
 
 </dd>
@@ -625,7 +777,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-28 22:35:26 </i>
+<i style="float:right;">Last updated 2020-12-27 18:21:54 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

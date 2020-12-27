@@ -59,8 +59,10 @@
   <li><a href="../tde/lib-tde.function.delayed-timer.html">lib-tde.function.delayed-timer</a></li>
   <li><a href="../tde/lib-tde.hardware-check.html">lib-tde.hardware-check</a></li>
   <li><a href="../tde/lib-tde.i18n.html">lib-tde.i18n</a></li>
+  <li><a href="../tde/lib-tde.imagemagic.html">lib-tde.imagemagic</a></li>
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
+  <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
@@ -311,56 +313,77 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#exists"><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <a href="#exists"><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check if a file exists</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#write"><span class='function_modname'>lib-tde.file.</span>write <span class='function_args'> <b>(</b>string, string<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+        <a href="#basename"><span class='function_modname'>lib-tde.file.</span>basename <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Write data to a new file</td>
+      <td colspan="2" class="summary">Function equivalent to basename in POSIX systems</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#overwrite"><span class='function_modname'>lib-tde.file.</span>overwrite <span class='function_args'> <b>(</b>string, string<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+        <a href="#dirname"><span class='function_modname'>lib-tde.file.</span>dirname <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Override the entire file</td>
+      <td colspan="2" class="summary">Function equivalent to dirname in POSIX systems</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#dir_exists"><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <a href="#dir_exists"><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>dir<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check if a directory exists</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lines"><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></a>
+        <a href="#dir_create"><span class='function_modname'>lib-tde.file.</span>dir_create <span class='function_args'> <b>(</b>path<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Recursivly create a directory</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#overwrite"><span class='function_modname'>lib-tde.file.</span>overwrite <span class='function_args'> <b>(</b>file, data<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Override the entire file</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#write"><span class='function_modname'>lib-tde.file.</span>write <span class='function_args'> <b>(</b>file, data<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+      </td>
+      <td colspan="2" class="summary">Write data to a new file</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#lines"><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>file[, match[, head]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
       <td colspan="2" class="summary">Get all lines from a file, returns an empty table if it doesn't exist</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#string"><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></a>
+        <a href="#string"><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>file[, match[, head]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
       </td>
       <td colspan="2" class="summary">Put the content of a file into a string</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#list_dir"><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <a href="#list_dir"><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>dir<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
       <td colspan="2" class="summary">Return a table of filename found in a directory</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#list_dir"><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></a>
+        <a href="#list_dir_full"><span class='function_modname'>lib-tde.file.</span>list_dir_full <span class='function_args'> <b>(</b>dir<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
       <td colspan="2" class="summary">Return a table of filename found in a directory and all child directories (be carefull for big directories)</td>
@@ -376,7 +399,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <dl class="function">
     <dt>
     <a name = "exists"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-tde.file.</span>exists <span class='function_args'> <b>(</b>file<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -386,8 +409,8 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">file</span></span>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          The path to the file, can be both absolute or relative.
         </li>
     </ul>
@@ -408,97 +431,75 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item756 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "write"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>write <span class='function_args'> <b>(</b>string, string<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Write data to a new file
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">data</span></span>
-         The data to put into the file
-        </li>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">data</span></span>
-         The data to put into the file
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">bool</span></span>
-        if the write was succesfull
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="comment">-- This true
-</span> lib-tde.file.write(<span class="string">"hallo.txt"</span>, <span class="string">"this is content in the file"</span>)</pre>
-    </ul>
-
-
-    <span id=item757 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "overwrite"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>overwrite <span class='function_args'> <b>(</b>string, string<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Override the entire file
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">data</span></span>
-         The data to put into the file
-        </li>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">data</span></span>
-         The data to put into the file
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">bool</span></span>
-        if the write was succesfull
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="comment">-- This true
-</span> lib-tde.file.overwrite(<span class="string">"hallo.txt"</span>, <span class="string">"this is content in the file"</span>)</pre>
-    </ul>
-
-
     <span id=item758 class="hide_extra">
     </span>
 
 </dd>
     <dt>
+    <a name = "basename"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>basename <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Function equivalent to basename in POSIX systems
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+         str the path as a string
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This returns file.txt
+</span> lib-tde.file.basename(<span class="string">"/sys/class/power_supply/BAT0/file.txt"</span>)</pre>
+    </ul>
+
+
+    <span id=item759 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "dirname"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>dirname <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Function equivalent to dirname in POSIX systems
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+         str the path as a string
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This returns /sys/class/power_supply/BAT0
+</span> lib-tde.file.dirname(<span class="string">"/sys/class/power_supply/BAT0/file.txt"</span>)</pre>
+    </ul>
+
+
+    <span id=item760 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
     <a name = "dir_exists"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-tde.file.</span>dir_exists <span class='function_args'> <b>(</b>dir<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -508,8 +509,8 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">dir</span></span>
+        <li><span class="parameter">dir</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          The path to the directory, can be both absolute or relative.
         </li>
     </ul>
@@ -530,13 +531,128 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item759 class="hide_extra">
+    <span id=item761 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "dir_create"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>dir_create <span class='function_args'> <b>(</b>path<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Recursivly create a directory
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The path to create
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">lib-tde.file.dir_create(<span class="global">os</span>.getenv(<span class="string">"HOME"</span>) .. <span class="string">"/.cache/tde/some_dir"</span>)</pre>
+    </ul>
+
+
+    <span id=item762 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "overwrite"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>overwrite <span class='function_args'> <b>(</b>file, data<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Override the entire file
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The path to the file, can be both absolute or relative.
+        </li>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The data to put into the file
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        if the write was succesfull
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.overwrite(<span class="string">"hallo.txt"</span>, <span class="string">"this is content in the file"</span>)</pre>
+    </ul>
+
+
+    <span id=item763 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "write"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>write <span class='function_args'> <b>(</b>file, data<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Write data to a new file
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The path to the file, can be both absolute or relative.
+        </li>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The data to put into the file
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        if the write was succesfull
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- This true
+</span> lib-tde.file.write(<span class="string">"hallo.txt"</span>, <span class="string">"this is content in the file"</span>)</pre>
+    </ul>
+
+
+    <span id=item764 class="hide_extra">
     </span>
 
 </dd>
     <dt>
     <a name = "lines"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-tde.file.</span>lines <span class='function_args'> <b>(</b>file[, match[, head]]<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
@@ -546,18 +662,17 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">match</span></span>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The path to the file, can be both absolute or relative.
+        </li>
+        <li><span class="parameter">match</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          A regular expression to filter out lines that should be ignored by default = ^.*$
          (<em>optional</em>)
         </li>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">match</span></span>
-         A regular expression to filter out lines that should be ignored by default = ^.*$
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">number</span>
-            <span class="types"><span class="type">head</span></span>
+        <li><span class="parameter">head</span>
+            <span class="types"><span class="type">number</span></span>
          Acts like the head unix tool, it returns the first <head> lines in a file
          (<em>optional</em>)
         </li>
@@ -579,13 +694,13 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item760 class="hide_extra">
+    <span id=item765 class="hide_extra">
     </span>
 
 </dd>
     <dt>
     <a name = "string"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>string[, string[, number]]<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-tde.file.</span>string <span class='function_args'> <b>(</b>file[, match[, head]]<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
     <span class="baseclass" >
     </span>
@@ -595,18 +710,17 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">match</span></span>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
+         The path to the file, can be both absolute or relative.
+        </li>
+        <li><span class="parameter">match</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          A regular expression to filter out lines that should be ignored by default = ^.*$
          (<em>optional</em>)
         </li>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">match</span></span>
-         A regular expression to filter out lines that should be ignored by default = ^.*$
-         (<em>optional</em>)
-        </li>
-        <li><span class="parameter">number</span>
-            <span class="types"><span class="type">head</span></span>
+        <li><span class="parameter">head</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          Acts like the head unix tool, it returns the first <head> lines in a file
          (<em>optional</em>)
         </li>
@@ -628,13 +742,13 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item761 class="hide_extra">
+    <span id=item766 class="hide_extra">
     </span>
 
 </dd>
     <dt>
     <a name = "list_dir"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>dir<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
@@ -644,8 +758,8 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">dir</span></span>
+        <li><span class="parameter">dir</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          The path to the directory, can be both absolute or relative.
         </li>
     </ul>
@@ -666,13 +780,13 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item762 class="hide_extra">
+    <span id=item767 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "list_dir"></a>
-    <strong><span class='function_modname'>lib-tde.file.</span>list_dir <span class='function_args'> <b>(</b>string<b>)</b></span></strong>
+    <a name = "list_dir_full"></a>
+    <strong><span class='function_modname'>lib-tde.file.</span>list_dir_full <span class='function_args'> <b>(</b>dir<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
@@ -682,8 +796,8 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">string</span>
-            <span class="types"><span class="type">dir</span></span>
+        <li><span class="parameter">dir</span>
+            <span class="types"><a class="type" href="../tde/lib-tde.file.html#string">string</a></span>
          The path to the directory, can be both absolute or relative.
         </li>
     </ul>
@@ -704,7 +818,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item763 class="hide_extra">
+    <span id=item768 class="hide_extra">
     </span>
 
 </dd>
@@ -715,7 +829,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-28 22:35:26 </i>
+<i style="float:right;">Last updated 2020-12-27 18:21:54 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
