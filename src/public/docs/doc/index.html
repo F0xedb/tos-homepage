@@ -85,6 +85,21 @@
   <li><a href="datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
+<h2>TDE Widget</h2>
+<ul class="nowrap">
+  <li><a href="tde widget/lib-widget.button.html">lib-widget.button</a></li>
+  <li><a href="tde widget/lib-widget.card.html">lib-widget.card</a></li>
+  <li><a href="tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
+  <li><a href="tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
+  <li><a href="tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
+  <li><a href="tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
+  <li><a href="tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
+  <li><a href="tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
+  <li><a href="tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
+  <li><a href="tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
+  <li><a href="tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
+  <li><a href="tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
+</ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
   <li><a href="input_handling/awful.button.html">awful.button</a></li>
@@ -247,7 +262,7 @@
 <div id="content">
 
 
-  <h2>API documentation for TDE a desktop environment build on top of awesomeWM  v4.3-920-g955c46b9-dirty).</h2>
+  <h2>API documentation for TDE a desktop environment build on top of awesomeWM  v4.3-922-g6e18bf09-dirty).</h2>
   <p>Welcome to the documentation for TDE. Below you find an
 overview of the individual parts which links to the full documentation.</p>
 
@@ -328,7 +343,8 @@ overview of the individual parts which links to the full documentation.</p>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.animations.tween.html">lib-tde.animations.tween</a></td>
-    <td class="summary">Tween functions used by the animation library</td>
+    <td class="summary">Tween functions used by the animation library
+ see <a href="https://github.com/kikito/tween.lua">tween.lua</a></td>
   </tr>
   <tr>
     <td class="name"  ><a href="tde/lib-tde.config-writer.html">lib-tde.config-writer</a></td>
@@ -451,6 +467,81 @@ serialize({<span class="number">1</span>,<span class="number">2</span>,<span cla
 <p> Quicksort is a divide and concore approach to sorting
  This is a crude implementation that provides decent sorting in most usecases
  However, it might not be the most optimal sorting algorithm for your case.</td>
+  </tr>
+</table>
+<h2>TDE Widget</h2>
+<table class="module_list">
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.button.html">lib-widget.button</a></td>
+    <td class="summary">Create a new button widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.card.html">lib-widget.card</a></td>
+    <td class="summary">Create a new card widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.checkbox.html">lib-widget.checkbox</a></td>
+    <td class="summary">Create a new checkbox widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.iconbox.html">lib-widget.iconbox</a></td>
+    <td class="summary">Create a new iconbox widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.imagebox.html">lib-widget.imagebox</a></td>
+    <td class="summary">Create a new imagebox widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.inputfield.html">lib-widget.inputfield</a></td>
+    <td class="summary">Create a new inputfield widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.profilebox.html">lib-widget.profilebox</a></td>
+    <td class="summary">
+<p>Create a new profilebox (rounded image)</p>
+
+<p> Usually used to show profile images</p>
+
+
+<pre>
+<span class="comment">-- Set the picture in the profilebox with a size of 100
+</span><span class="keyword">local</span> picture = lib-widget.profilebox(<span class="string">"file.png"</span>, dpi(<span class="number">100</span>), <span class="keyword">function</span>(button)
+ <span class="global">print</span>(<span class="string">"Clicked with button: "</span> ..
+</pre>
+
+</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></td>
+    <td class="summary">Create a new progress_bar (like a slider, but you can't use it as an input)</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></td>
+    <td class="summary">Create a new scrollbox widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.separator.html">lib-widget.separator</a></td>
+    <td class="summary">Create a new seperator widget</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.slider.html">lib-widget.slider</a></td>
+    <td class="summary">
+<p>Create a new slider widget</p>
+
+<p> Usefull when you to get the user to input a range of numbers</p>
+
+
+<pre>
+<span class="comment">-- A slider between 0 and 10 with increments of 0.05, the default value is 5 and a callback function each time the value is updated
+</span><span class="keyword">local</span> slider = lib-widget.slider(<span class="number">0</span>, <span class="number">10</span>, <span class="number">0.05</span>, <span class="number">5</span>, <span class="keyword">function</span>(value)
+     <span class="global">print</span>(<span class="string">"Updated slider value to: "</span> ..
+</pre>
+
+</td>
+  </tr>
+  <tr>
+    <td class="name"  ><a href="tde%20widget/lib-widget.textbox.html">lib-widget.textbox</a></td>
+    <td class="summary">Create a new textbox widget</td>
   </tr>
 </table>
 <h2>Input_handling</h2>
@@ -1003,7 +1094,7 @@ serialize({<span class="number">1</span>,<span class="number">2</span>,<span cla
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-08 22:59:23 </i>
+<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
