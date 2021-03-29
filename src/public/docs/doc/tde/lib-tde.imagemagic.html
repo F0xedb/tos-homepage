@@ -67,6 +67,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
@@ -89,6 +90,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -97,15 +99,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -252,12 +251,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -284,7 +285,7 @@
 <pre>
 <span class="comment">-- scale the image to 300x200 pixels and store it in out.png
 </span>lib-tde.imagemagic.scale(<span class="string">"file.png"</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="string">"out.png"</span>, <span class="keyword">function</span>()
-    <span class="global">print</span>(<span class="string">"Finished scalling image"</span>)
+    <span class="global">print</span>(<span class="string">"Finished scaling image"</span>)
 <span class="keyword">end</span>)
 </pre>
 
@@ -372,7 +373,7 @@
         </li>
         <li><span class="parameter">function</span>
             <span class="types"><span class="type">callback</span></span>
-         The function to trigger when the image is scalled
+         The function to trigger when the image is scaled
         </li>
     </ul>
 
@@ -382,12 +383,12 @@
     <h3>Usage:</h3>
     <ul>
         <pre class="example">lib-tde.imagemagic.scale(<span class="string">"file.png"</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="string">"out.png"</span>, <span class="keyword">function</span>()
-    <span class="global">print</span>(<span class="string">"Finished scalling image"</span>)
+    <span class="global">print</span>(<span class="string">"Finished scaling image"</span>)
 <span class="keyword">end</span>)</pre>
     </ul>
 
 
-    <span id=item814 class="hide_extra">
+    <span id=item816 class="hide_extra">
     </span>
 
 </dd>
@@ -428,7 +429,7 @@
     </ul>
 
 
-    <span id=item815 class="hide_extra">
+    <span id=item817 class="hide_extra">
     </span>
 
 </dd>
@@ -473,7 +474,7 @@
     </ul>
 
 
-    <span id=item816 class="hide_extra">
+    <span id=item818 class="hide_extra">
     </span>
 
 </dd>
@@ -518,7 +519,7 @@
     </ul>
 
 
-    <span id=item817 class="hide_extra">
+    <span id=item819 class="hide_extra">
     </span>
 
 </dd>
@@ -559,7 +560,7 @@
     </ul>
 
 
-    <span id=item818 class="hide_extra">
+    <span id=item820 class="hide_extra">
     </span>
 
 </dd>
@@ -570,7 +571,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -52,15 +52,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><strong>lib-widget.inputfield</strong></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -96,6 +93,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -104,6 +102,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -252,12 +251,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -270,16 +271,16 @@
 
 <h1>Module: <code>lib-widget.inputfield</code></h1>
 <p>Create a new inputfield widget</p>
-<p>
-<p> Usefull when you want to seperate widgets from eachother</p>
+<p> Useful when you want to separate widgets from each other</p>
 
 
 <pre>
-<span class="comment">-- inputfield that is 20 pixels high
-</span><span class="keyword">local</span> inputfield = lib-widget.inputfield(dpi(<span class="number">20</span>))
+<span class="comment">-- basic inputfield
+</span><span class="keyword">local</span> inputfield = lib-widget.inputfield()
 </pre>
 
-</p>
+<p> <img src="../images/hidden-inputfield.png" alt="hidden"/>
+ <img src="../images/inputfield.png" alt="inputfield"/></p>
     <h3>Info:</h3>
     <ul>
         <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
@@ -291,10 +292,45 @@
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#inputfield"><span class='function_modname'>lib-widget.inputfield.</span>inputfield <span class='function_args'> <b>(</b>size<b>)</b></span></a>
+        <a href="#inputfield"><span class='function_modname'>lib-widget.inputfield.</span>inputfield <span class='function_args'> <b>(</b>[typing_callback[, done_callback[, hidden]]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;widget</span></span>
       </td>
       <td colspan="2" class="summary">Create a new inputfield widget</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#get_text"><span class='function_modname'>lib-widget.inputfield.</span>get_text <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Get the current text that is in the inputfield</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#update_text"><span class='function_modname'>lib-widget.inputfield.</span>update_text <span class='function_args'> <b>(</b>text<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Change the text in the input field, useful when you want to validate input</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#clear_text"><span class='function_modname'>lib-widget.inputfield.</span>clear_text <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Clear the text from the inputfield, but keep the focus</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#stop_grabbing"><span class='function_modname'>lib-widget.inputfield.</span>stop_grabbing <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Stop listening for keystrokes, but keep the text in the input field</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#reset"><span class='function_modname'>lib-widget.inputfield.</span>reset <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Reset the inputfield, this means stop listening and reset the text</td>
     </tr>
 </table>
 
@@ -307,7 +343,7 @@
     <dl class="function">
     <dt>
     <a name = "inputfield"></a>
-    <strong><span class='function_modname'>lib-widget.inputfield.</span>inputfield <span class='function_args'> <b>(</b>size<b>)</b></span></strong>
+    <strong><span class='function_modname'>lib-widget.inputfield.</span>inputfield <span class='function_args'> <b>(</b>[typing_callback[, done_callback[, hidden]]]<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;widget</span></span>
     <span class="baseclass" >
     </span>
@@ -317,9 +353,20 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">size</span>
-            <span class="types"><span class="type">number</span></span>
-         The height of the inputfield
+        <li><span class="parameter">typing_callback</span>
+            <span class="types"><span class="type">function</span></span>
+         This callback gets triggered on every keystroke
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">done_callback</span>
+            <span class="types"><span class="type">function</span></span>
+         This callback gets triggered when the user finished typing
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">hidden</span>
+            <span class="types"><span class="type">bool</span></span>
+         This option tells us if we need to mask the input (with * instead of the real text)
+         (<em>optional</em>)
         </li>
     </ul>
 
@@ -334,13 +381,144 @@
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- This will create a inputfield that is 20 pixels high
-</span><span class="comment">-- inputfield that is 20 pixels high
-</span><span class="keyword">local</span> inputfield = lib-widget.inputfield(dpi(<span class="number">20</span>))</pre>
+        <pre class="example"><span class="comment">-- This will create a basic inputfield
+</span> <span class="keyword">local</span> inputfield = lib-widget.inputfield()</pre>
     </ul>
 
 
-    <span id=item945 class="hide_extra">
+    <span id=item972 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "get_text"></a>
+    <strong><span class='function_modname'>lib-widget.inputfield.</span>get_text <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Get the current text that is in the inputfield
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Get the active text in the input field
+</span> <span class="keyword">local</span> text = inputfield.get_text()</pre>
+    </ul>
+
+
+    <span id=item973 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "update_text"></a>
+    <strong><span class='function_modname'>lib-widget.inputfield.</span>update_text <span class='function_args'> <b>(</b>text<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Change the text in the input field, useful when you want to validate input
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text to supply
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Update the text in the inputfield
+</span> inputfield.update_text(<span class="string">"This is some new text"</span>)</pre>
+    </ul>
+
+
+    <span id=item974 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "clear_text"></a>
+    <strong><span class='function_modname'>lib-widget.inputfield.</span>clear_text <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Clear the text from the inputfield, but keep the focus
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Clear the text from the inputfield
+</span> inputfield.clear_text()</pre>
+    </ul>
+
+
+    <span id=item975 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "stop_grabbing"></a>
+    <strong><span class='function_modname'>lib-widget.inputfield.</span>stop_grabbing <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Stop listening for keystrokes, but keep the text in the input field
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Stop listening for keystrokes
+</span> inputfield.stop_grabbing()</pre>
+    </ul>
+
+
+    <span id=item976 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "reset"></a>
+    <strong><span class='function_modname'>lib-widget.inputfield.</span>reset <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Reset the inputfield, this means stop listening and reset the text
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Resets the inputfield
+</span> inputfield.reset()</pre>
+    </ul>
+
+
+    <span id=item977 class="hide_extra">
     </span>
 
 </dd>
@@ -351,7 +529,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

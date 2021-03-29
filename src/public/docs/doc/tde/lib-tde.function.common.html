@@ -67,6 +67,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
@@ -89,6 +90,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -97,15 +99,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -252,12 +251,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -274,8 +275,8 @@
 
 
 <p> Lua directly implements the C - standard library and nothing more.
- As a result a lot of common functions in higer level languages lack.
- A solution is to use the this common module including some usefull functions.</p>
+ As a result a lot of common functions in higher level languages lack.
+ A solution is to use the this common module including some useful functions.</p>
 
 <p> For example the split() function splits strings into a table of indexes:</p>
 
@@ -285,8 +286,8 @@ lib-tde.<span class="keyword">function</span>.common.split(<span class="string">
 </pre>
 
 <p> As another example you can use the sleep() function to implement delay into you logic.
- Be carefull using sleep() as it blocks the main thread and can result in extreem poor performance.
- As it also blocks user input from beeing processes.</p>
+ Be careful using sleep() as it blocks the main thread and can result in extreme poor performance.
+ As it also blocks user input from being processes.</p>
 
 
 <pre>
@@ -308,7 +309,14 @@ lib-tde.<span class="keyword">function</span>.common.sleep(<span class="number">
         <a href="#split"><span class='function_modname'>lib-tde.function.common.</span>split <span class='function_args'> <b>(</b>inputstr[, sep]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">split the input to a table based on the seperator</td>
+      <td colspan="2" class="summary">split the input to a table based on the separator</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#num_to_str"><span class='function_modname'>lib-tde.function.common.</span>num_to_str <span class='function_args'> <b>(</b>num[, precision]<b>)</b></span></a>
+        <span class="summarytype"></span>
+      </td>
+      <td colspan="2" class="summary">Convert a number to a string with a given precision</td>
     </tr>
     <tr>
       <td class="name" >
@@ -348,7 +356,7 @@ lib-tde.<span class="keyword">function</span>.common.sleep(<span class="number">
     </span>
     </dt>
     <dd>
-    split the input to a table based on the seperator
+    split the input to a table based on the separator
 
     <h3>Parameters:</h3>
     <ul>
@@ -379,7 +387,44 @@ lib-tde.<span class="keyword">function</span>.common.sleep(<span class="number">
     </ul>
 
 
-    <span id=item789 class="hide_extra">
+    <span id=item790 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "num_to_str"></a>
+    <strong><span class='function_modname'>lib-tde.function.common.</span>num_to_str <span class='function_args'> <b>(</b>num[, precision]<b>)</b></span></strong>
+    <span class="proptype"></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Convert a number to a string with a given precision
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">num</span>
+            <span class="types"><span class="type">number</span></span>
+         The number to convert to a given precision
+        </li>
+        <li><span class="parameter">precision</span>
+            <span class="types"><span class="type">number</span></span>
+         The precision after the decimal point (by default 2)
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- returns 12.123
+</span> lib-tde.<span class="keyword">function</span>.common.num_to_str(<span class="number">12.1234567</span>)</pre>
+    </ul>
+
+
+    <span id=item791 class="hide_extra">
     </span>
 
 </dd>
@@ -412,7 +457,7 @@ lib-tde.<span class="keyword">function</span>.common.sleep(<span class="number">
     </ul>
 
 
-    <span id=item790 class="hide_extra">
+    <span id=item792 class="hide_extra">
     </span>
 
 </dd>
@@ -434,7 +479,7 @@ lib-tde.<span class="keyword">function</span>.common.sleep(<span class="number">
         </li>
         <li><span class="parameter">start</span>
             <span class="types"><span class="type">number</span></span>
-         indicate if the number already has a prefix eg Kilo = 1, Mega =2, Giga = 3 etc
+         indicate if the number already has a prefix e.g. Kilo = 1, Mega =2, Giga = 3 etc
          (<em>optional</em>)
         </li>
     </ul>
@@ -444,13 +489,13 @@ lib-tde.<span class="keyword">function</span>.common.sleep(<span class="number">
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- returns 42.0K and 123.0M respectivly
+        <pre class="example"><span class="comment">-- returns 42.0K and 123.0M respectively
 </span>lib-tde.<span class="keyword">function</span>.common.num_to_si_prefix(<span class="number">42000</span>)
 lib-tde.<span class="keyword">function</span>.common.num_to_si_prefix(<span class="number">123000000</span>)</pre>
     </ul>
 
 
-    <span id=item791 class="hide_extra">
+    <span id=item793 class="hide_extra">
     </span>
 
 </dd>
@@ -472,7 +517,7 @@ lib-tde.<span class="keyword">function</span>.common.num_to_si_prefix(<span clas
         </li>
         <li><span class="parameter">start</span>
             <span class="types"><span class="type">number</span></span>
-         indicate if the number already has a prefix eg Kilo = 1, Mega =2, Giga = 3 etc
+         indicate if the number already has a prefix e.g. Kilo = 1, Mega =2, Giga = 3 etc
          (<em>optional</em>)
         </li>
     </ul>
@@ -482,13 +527,13 @@ lib-tde.<span class="keyword">function</span>.common.num_to_si_prefix(<span clas
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- returns 42.0KB and 123.0MB respectivly
+        <pre class="example"><span class="comment">-- returns 42.0KB and 123.0MB respectively
 </span>lib-tde.<span class="keyword">function</span>.common.bytes_to_grandness(<span class="number">42000</span>)
 lib-tde.<span class="keyword">function</span>.common.bytes_to_grandness(<span class="number">123000000</span>)</pre>
     </ul>
 
 
-    <span id=item792 class="hide_extra">
+    <span id=item794 class="hide_extra">
     </span>
 
 </dd>
@@ -499,7 +544,7 @@ lib-tde.<span class="keyword">function</span>.common.bytes_to_grandness(<span cl
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

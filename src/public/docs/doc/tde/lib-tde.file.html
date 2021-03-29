@@ -67,6 +67,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
@@ -89,6 +90,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -97,15 +99,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -252,12 +251,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -362,7 +363,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
         <a href="#dir_create"><span class='function_modname'>lib-tde.file.</span>dir_create <span class='function_args'> <b>(</b>path<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Recursivly create a directory</td>
+      <td colspan="2" class="summary">Recursively create a directory</td>
     </tr>
     <tr>
       <td class="name" >
@@ -404,7 +405,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
         <a href="#list_dir_full"><span class='function_modname'>lib-tde.file.</span>list_dir_full <span class='function_args'> <b>(</b>dir<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Return a table of filename found in a directory and all child directories (be carefull for big directories)</td>
+      <td colspan="2" class="summary">Return a table of filename found in a directory and all child directories (be careful for big directories)</td>
     </tr>
 </table>
 
@@ -449,7 +450,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item774 class="hide_extra">
+    <span id=item775 class="hide_extra">
     </span>
 
 </dd>
@@ -480,7 +481,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item775 class="hide_extra">
+    <span id=item776 class="hide_extra">
     </span>
 
 </dd>
@@ -511,7 +512,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item776 class="hide_extra">
+    <span id=item777 class="hide_extra">
     </span>
 
 </dd>
@@ -549,7 +550,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item777 class="hide_extra">
+    <span id=item778 class="hide_extra">
     </span>
 
 </dd>
@@ -561,7 +562,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </span>
     </dt>
     <dd>
-    Recursivly create a directory
+    Recursively create a directory
 
     <h3>Parameters:</h3>
     <ul>
@@ -580,7 +581,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item778 class="hide_extra">
+    <span id=item779 class="hide_extra">
     </span>
 
 </dd>
@@ -610,7 +611,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <ol>
 
            <span class="types"><span class="type">bool</span></span>
-        if the write was succesfull
+        if the write was successful
     </ol>
 
 
@@ -622,7 +623,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item779 class="hide_extra">
+    <span id=item780 class="hide_extra">
     </span>
 
 </dd>
@@ -652,7 +653,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <ol>
 
            <span class="types"><span class="type">bool</span></span>
-        if the write was succesfull
+        if the write was successful
     </ol>
 
 
@@ -664,7 +665,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item780 class="hide_extra">
+    <span id=item781 class="hide_extra">
     </span>
 
 </dd>
@@ -712,7 +713,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item781 class="hide_extra">
+    <span id=item782 class="hide_extra">
     </span>
 
 </dd>
@@ -760,7 +761,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item782 class="hide_extra">
+    <span id=item783 class="hide_extra">
     </span>
 
 </dd>
@@ -786,7 +787,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <ol>
 
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        an iterable table containg all files in the directory
+        an iterable table containing all files in the directory
     </ol>
 
 
@@ -798,7 +799,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item783 class="hide_extra">
+    <span id=item784 class="hide_extra">
     </span>
 
 </dd>
@@ -810,7 +811,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </span>
     </dt>
     <dd>
-    Return a table of filename found in a directory and all child directories (be carefull for big directories)
+    Return a table of filename found in a directory and all child directories (be careful for big directories)
 
     <h3>Parameters:</h3>
     <ul>
@@ -824,7 +825,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     <ol>
 
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        an iterable table containg all files in the directory
+        an iterable table containing all files in the directory
     </ol>
 
 
@@ -836,7 +837,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
     </ul>
 
 
-    <span id=item784 class="hide_extra">
+    <span id=item785 class="hide_extra">
     </span>
 
 </dd>
@@ -847,7 +848,7 @@ lib-tde.file.lines(<span class="global">os</span>.getenv(<span class="string">"H
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

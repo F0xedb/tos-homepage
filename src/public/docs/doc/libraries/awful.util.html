@@ -106,6 +106,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -114,6 +115,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -122,15 +124,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -254,12 +253,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -478,7 +479,7 @@
       <td class="name" >
         <a href="#util.table.keys">util.table.keys<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get a sorted table with all integer keys from a table</td>
+      <td colspan="2" class="summary">Get a sorted table with all keys from a table.</td>
     </tr>
     <tr>
       <td class="name" >
@@ -555,7 +556,7 @@
 
 
 
-    <span id=item3113 class="hide_extra">
+    <span id=item3145 class="hide_extra">
     </span>
 
 </dd>
@@ -588,7 +589,7 @@
 
 
 
-    <span id=item3114 class="hide_extra">
+    <span id=item3146 class="hide_extra">
     </span>
 
 </dd>
@@ -615,7 +616,7 @@
 
 
 
-    <span id=item3115 class="hide_extra">
+    <span id=item3147 class="hide_extra">
     </span>
 
 </dd>
@@ -655,7 +656,7 @@
 
 
 
-    <span id=item3116 class="hide_extra">
+    <span id=item3148 class="hide_extra">
     </span>
 
 </dd>
@@ -680,7 +681,7 @@
 
 
 
-    <span id=item3117 class="hide_extra">
+    <span id=item3149 class="hide_extra">
     </span>
 
 </dd>
@@ -723,7 +724,7 @@
 
 
 
-    <span id=item3118 class="hide_extra">
+    <span id=item3150 class="hide_extra">
     </span>
 
 </dd>
@@ -768,7 +769,7 @@
 
 
 
-    <span id=item3119 class="hide_extra">
+    <span id=item3151 class="hide_extra">
     </span>
 
 </dd>
@@ -807,7 +808,7 @@
 
 
 
-    <span id=item3120 class="hide_extra">
+    <span id=item3152 class="hide_extra">
     </span>
 
 </dd>
@@ -844,7 +845,7 @@
 
 
 
-    <span id=item3121 class="hide_extra">
+    <span id=item3153 class="hide_extra">
     </span>
 
 </dd>
@@ -878,7 +879,7 @@
 
 
 
-    <span id=item3122 class="hide_extra">
+    <span id=item3154 class="hide_extra">
     </span>
 
 </dd>
@@ -913,7 +914,7 @@
 
 
 
-    <span id=item3123 class="hide_extra">
+    <span id=item3155 class="hide_extra">
     </span>
 
 </dd>
@@ -947,7 +948,7 @@
 
 
 
-    <span id=item3124 class="hide_extra">
+    <span id=item3156 class="hide_extra">
     </span>
 
 </dd>
@@ -975,7 +976,7 @@
 
 
 
-    <span id=item3125 class="hide_extra">
+    <span id=item3157 class="hide_extra">
     </span>
 
 </dd>
@@ -1003,7 +1004,7 @@
 
 
 
-    <span id=item3126 class="hide_extra">
+    <span id=item3158 class="hide_extra">
     </span>
 
 </dd>
@@ -1032,7 +1033,7 @@
 
 
 
-    <span id=item3127 class="hide_extra">
+    <span id=item3159 class="hide_extra">
     </span>
 
 </dd>
@@ -1060,7 +1061,7 @@
 
 
 
-    <span id=item3128 class="hide_extra">
+    <span id=item3160 class="hide_extra">
     </span>
 
 </dd>
@@ -1088,7 +1089,7 @@
 
 
 
-    <span id=item3129 class="hide_extra">
+    <span id=item3161 class="hide_extra">
     </span>
 
 </dd>
@@ -1116,7 +1117,7 @@
 
 
 
-    <span id=item3130 class="hide_extra">
+    <span id=item3162 class="hide_extra">
     </span>
 
 </dd>
@@ -1152,7 +1153,7 @@
 
 
 
-    <span id=item3131 class="hide_extra">
+    <span id=item3163 class="hide_extra">
     </span>
 
 </dd>
@@ -1186,7 +1187,7 @@
 
 
 
-    <span id=item3132 class="hide_extra">
+    <span id=item3164 class="hide_extra">
     </span>
 
 </dd>
@@ -1222,7 +1223,7 @@
 
 
 
-    <span id=item3133 class="hide_extra">
+    <span id=item3165 class="hide_extra">
     </span>
 
 </dd>
@@ -1260,7 +1261,7 @@
 
 
 
-    <span id=item3134 class="hide_extra">
+    <span id=item3166 class="hide_extra">
     </span>
 
 </dd>
@@ -1298,7 +1299,7 @@
 
 
 
-    <span id=item3135 class="hide_extra">
+    <span id=item3167 class="hide_extra">
     </span>
 
 </dd>
@@ -1339,7 +1340,7 @@
 
 
 
-    <span id=item3136 class="hide_extra">
+    <span id=item3168 class="hide_extra">
     </span>
 
 </dd>
@@ -1374,7 +1375,7 @@
 
 
 
-    <span id=item3137 class="hide_extra">
+    <span id=item3169 class="hide_extra">
     </span>
 
 </dd>
@@ -1421,7 +1422,7 @@
 
 
 
-    <span id=item3138 class="hide_extra">
+    <span id=item3170 class="hide_extra">
     </span>
 
 </dd>
@@ -1462,7 +1463,7 @@
 
 
 
-    <span id=item3139 class="hide_extra">
+    <span id=item3171 class="hide_extra">
     </span>
 
 </dd>
@@ -1499,7 +1500,7 @@
 
 
 
-    <span id=item3140 class="hide_extra">
+    <span id=item3172 class="hide_extra">
     </span>
 
 </dd>
@@ -1539,7 +1540,7 @@
 
 
 
-    <span id=item3141 class="hide_extra">
+    <span id=item3173 class="hide_extra">
     </span>
 
 </dd>
@@ -1575,7 +1576,7 @@
 
 
 
-    <span id=item3142 class="hide_extra">
+    <span id=item3174 class="hide_extra">
     </span>
 
 </dd>
@@ -1586,7 +1587,7 @@
     </span>
     </dt>
     <dd>
-    Get a sorted table with all integer keys from a table
+    Get a sorted table with all keys from a table.
 
     <h3>Parameters:</h3>
     <ul>
@@ -1609,7 +1610,7 @@
 
 
 
-    <span id=item3143 class="hide_extra">
+    <span id=item3175 class="hide_extra">
     </span>
 
 </dd>
@@ -1646,7 +1647,7 @@
 
 
 
-    <span id=item3144 class="hide_extra">
+    <span id=item3176 class="hide_extra">
     </span>
 
 </dd>
@@ -1680,7 +1681,7 @@
 
 
 
-    <span id=item3145 class="hide_extra">
+    <span id=item3177 class="hide_extra">
     </span>
 
 </dd>
@@ -1717,7 +1718,7 @@
 
 
 
-    <span id=item3146 class="hide_extra">
+    <span id=item3178 class="hide_extra">
     </span>
 
 </dd>
@@ -1757,7 +1758,7 @@
 
 
 
-    <span id=item3147 class="hide_extra">
+    <span id=item3179 class="hide_extra">
     </span>
 
 </dd>
@@ -1797,7 +1798,7 @@
 
 
 
-    <span id=item3148 class="hide_extra">
+    <span id=item3180 class="hide_extra">
     </span>
 
 </dd>
@@ -1837,7 +1838,7 @@
 
 
 
-    <span id=item3149 class="hide_extra">
+    <span id=item3181 class="hide_extra">
     </span>
 
 </dd>
@@ -1861,7 +1862,7 @@
 
 
 
-    <span id=item3150 class="hide_extra">
+    <span id=item3182 class="hide_extra">
     </span>
 
 </dd>
@@ -1872,7 +1873,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

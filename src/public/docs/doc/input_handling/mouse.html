@@ -96,6 +96,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -104,6 +105,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -112,15 +114,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Declarative rules</h2>
 <ul class="nowrap">
@@ -260,12 +259,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -467,7 +468,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <tr>
       <td class="shortname" ><a href="#beautiful.snapper_gap">beautiful.snapper_gap</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The gap between snapped contents.</td>
+      <td colspan="2" class="summary">The gap between snapped clients.</td>
     </tr>
 </table>
 <h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
@@ -484,7 +485,12 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <tr>
       <td class="shortname" ><a href="#awful.mouse.snap.default_distance"><span class='function_modname'>mouse.</span>awful.mouse.snap.default_distance</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The default snap distance.</td>
+      <td colspan="2" class="summary">The default distance before snapping clients together.</td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#awful.mouse.snap.aerosnap_distance"><span class='function_modname'>mouse.</span>awful.mouse.snap.aerosnap_distance</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
+      <td colspan="2" class="summary">The default distance before activating screen edge snap.</td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#awful.mouse.snap.edge_enabled"><span class='function_modname'>mouse.</span>awful.mouse.snap.edge_enabled</a></td>
@@ -624,7 +630,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item991 class="hide_extra">
+    <span id=item1022 class="hide_extra">
     </span>
 
 </dd>
@@ -654,7 +660,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item992 class="hide_extra">
+    <span id=item1023 class="hide_extra">
     </span>
 
 </dd>
@@ -682,13 +688,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button993>
-     <a class="show_more_button" onclick="show_extra('993')">
+     <center id=button1024>
+     <a class="show_more_button" onclick="show_extra('1024')">
       Click to display more
      </a>
      </center>
 
-    <span id=item993 class="hide_extra">
+    <span id=item1024 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -734,7 +740,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item994 class="hide_extra">
+    <span id=item1025 class="hide_extra">
     </span>
 
 </dd>
@@ -765,7 +771,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item995 class="hide_extra">
+    <span id=item1026 class="hide_extra">
     </span>
 
 </dd>
@@ -798,13 +804,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button996>
-     <a class="show_more_button" onclick="show_extra('996')">
+     <center id=button1027>
+     <a class="show_more_button" onclick="show_extra('1027')">
       Click to display more
      </a>
      </center>
 
-    <span id=item996 class="hide_extra">
+    <span id=item1027 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>client_mousebinding::added</code></span>  </li>
@@ -845,7 +851,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item997 class="hide_extra">
+    <span id=item1028 class="hide_extra">
     </span>
 
 </dd>
@@ -882,7 +888,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item998 class="hide_extra">
+    <span id=item1029 class="hide_extra">
     </span>
 
 </dd>
@@ -961,7 +967,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </ul>
 
 
-    <span id=item999 class="hide_extra">
+    <span id=item1030 class="hide_extra">
     </span>
 
 </dd>
@@ -985,7 +991,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1000 class="hide_extra">
+    <span id=item1031 class="hide_extra">
     </span>
 
 </dd>
@@ -1012,7 +1018,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1001 class="hide_extra">
+    <span id=item1032 class="hide_extra">
     </span>
 
 </dd>
@@ -1039,7 +1045,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1002 class="hide_extra">
+    <span id=item1033 class="hide_extra">
     </span>
 
 </dd>
@@ -1066,7 +1072,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1003 class="hide_extra">
+    <span id=item1034 class="hide_extra">
     </span>
 
 </dd>
@@ -1097,7 +1103,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1004 class="hide_extra">
+    <span id=item1035 class="hide_extra">
     </span>
 
 </dd>
@@ -1128,7 +1134,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1005 class="hide_extra">
+    <span id=item1036 class="hide_extra">
     </span>
 
 </dd>
@@ -1159,7 +1165,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1006 class="hide_extra">
+    <span id=item1037 class="hide_extra">
     </span>
 
 </dd>
@@ -1179,7 +1185,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1007 class="hide_extra">
+    <span id=item1038 class="hide_extra">
     </span>
 
 </dd>
@@ -1199,7 +1205,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1008 class="hide_extra">
+    <span id=item1039 class="hide_extra">
     </span>
 
 </dd>
@@ -1219,7 +1225,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1009 class="hide_extra">
+    <span id=item1040 class="hide_extra">
     </span>
 
 </dd>
@@ -1243,7 +1249,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1010 class="hide_extra">
+    <span id=item1041 class="hide_extra">
     </span>
 
 </dd>
@@ -1263,7 +1269,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1011 class="hide_extra">
+    <span id=item1042 class="hide_extra">
     </span>
 
 </dd>
@@ -1290,7 +1296,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1012 class="hide_extra">
+    <span id=item1043 class="hide_extra">
     </span>
 
 </dd>
@@ -1302,22 +1308,15 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </span>
     </dt>
     <dd>
-    The gap between snapped contents.
-
-    <h3>Type constraints:</h3>
-    <ul>
-        <li><span class="parameter">default:</span>
-            <span class="types"><span class="type">number</span></span>
-         0)
-        </li>
-    </ul>
+    The gap between snapped clients.
 
 
 
 
 
 
-    <span id=item1013 class="hide_extra">
+
+    <span id=item1044 class="hide_extra">
     </span>
 
 </dd>
@@ -1349,7 +1348,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1014 class="hide_extra">
+    <span id=item1045 class="hide_extra">
     </span>
 
 </dd>
@@ -1365,7 +1364,11 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </span>
     </dt>
     <dd>
-    The default snap distance.
+    The default distance before snapping clients together. </p>
+
+
+
+<p><img src="../images/AUTOGEN_screen_client_snap.svg" alt="Usage example"/>
 
 
 
@@ -1377,7 +1380,31 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1015 class="hide_extra">
+    <span id=item1046 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.mouse.snap.aerosnap_distance"></a>
+    <strong><span class='function_modname'>mouse.</span>awful.mouse.snap.aerosnap_distance</strong>
+    <span class="proptype"><span class='summary_type'>integer</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    The default distance before activating screen edge snap.
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#awful.mouse.snap">awful.mouse.snap</a>
+    </ul>
+
+
+
+    <span id=item1047 class="hide_extra">
     </span>
 
 </dd>
@@ -1389,7 +1416,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </span>
     </dt>
     <dd>
-    Enable screen edges snapping.
+    Enable screen edges snapping. </p>
+
+
+
+
+
+<p><img src="../images/AUTOGEN_awful_placement_aero_snap.svg" alt="Usage example"/>
 
 
 
@@ -1397,7 +1430,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1016 class="hide_extra">
+    <span id=item1048 class="hide_extra">
     </span>
 
 </dd>
@@ -1417,7 +1450,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1017 class="hide_extra">
+    <span id=item1049 class="hide_extra">
     </span>
 
 </dd>
@@ -1437,7 +1470,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1018 class="hide_extra">
+    <span id=item1050 class="hide_extra">
     </span>
 
 </dd>
@@ -1474,13 +1507,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1019>
-     <a class="show_more_button" onclick="show_extra('1019')">
+     <center id=button1051>
+     <a class="show_more_button" onclick="show_extra('1051')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1019 class="hide_extra">
+    <span id=item1051 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1516,7 +1549,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1020 class="hide_extra">
+    <span id=item1052 class="hide_extra">
     </span>
 
 </dd>
@@ -1561,7 +1594,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1021 class="hide_extra">
+    <span id=item1053 class="hide_extra">
     </span>
 
 </dd>
@@ -1603,13 +1636,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1022>
-     <a class="show_more_button" onclick="show_extra('1022')">
+     <center id=button1054>
+     <a class="show_more_button" onclick="show_extra('1054')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1022 class="hide_extra">
+    <span id=item1054 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1644,7 +1677,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1023 class="hide_extra">
+    <span id=item1055 class="hide_extra">
     </span>
 
 </dd>
@@ -1664,7 +1697,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1024 class="hide_extra">
+    <span id=item1056 class="hide_extra">
     </span>
 
 </dd>
@@ -1698,7 +1731,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1025 class="hide_extra">
+    <span id=item1057 class="hide_extra">
     </span>
 
 </dd>
@@ -1729,7 +1762,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1026 class="hide_extra">
+    <span id=item1058 class="hide_extra">
     </span>
 
 </dd>
@@ -1761,7 +1794,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1027 class="hide_extra">
+    <span id=item1059 class="hide_extra">
     </span>
 
 </dd>
@@ -1792,7 +1825,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1028 class="hide_extra">
+    <span id=item1060 class="hide_extra">
     </span>
 
 </dd>
@@ -1840,13 +1873,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1029>
-     <a class="show_more_button" onclick="show_extra('1029')">
+     <center id=button1061>
+     <a class="show_more_button" onclick="show_extra('1061')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1029 class="hide_extra">
+    <span id=item1061 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1901,7 +1934,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1030 class="hide_extra">
+    <span id=item1062 class="hide_extra">
     </span>
 
 </dd>
@@ -1912,7 +1945,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

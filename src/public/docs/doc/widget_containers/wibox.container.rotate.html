@@ -98,6 +98,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -106,6 +107,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -114,15 +116,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -255,12 +254,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -533,7 +534,7 @@
 
 
 
-    <span id=item2158 class="hide_extra">
+    <span id=item2190 class="hide_extra">
     </span>
 
 </dd>
@@ -564,7 +565,7 @@
 
 
 
-    <span id=item2159 class="hide_extra">
+    <span id=item2191 class="hide_extra">
     </span>
 
 </dd>
@@ -629,13 +630,13 @@
     </ul>
 
      <br />
-     <center id=button2160>
-     <a class="show_more_button" onclick="show_extra('2160')">
+     <center id=button2192>
+     <a class="show_more_button" onclick="show_extra('2192')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2160 class="hide_extra">
+    <span id=item2192 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::direction</code></span>  When the <a href="../widget_containers/wibox.container.rotate.html#direction">direction</a> value changes.</li>
@@ -671,7 +672,7 @@
 
 
 
-    <span id=item2161 class="hide_extra">
+    <span id=item2193 class="hide_extra">
     </span>
 
 </dd>
@@ -702,7 +703,7 @@
 
 
 
-    <span id=item2162 class="hide_extra">
+    <span id=item2194 class="hide_extra">
     </span>
 
 </dd>
@@ -730,7 +731,7 @@
 
 
 
-    <span id=item2163 class="hide_extra">
+    <span id=item2195 class="hide_extra">
     </span>
 
 </dd>
@@ -758,7 +759,7 @@
 
 
 
-    <span id=item2164 class="hide_extra">
+    <span id=item2196 class="hide_extra">
     </span>
 
 </dd>
@@ -787,7 +788,7 @@
 
 
 
-    <span id=item2165 class="hide_extra">
+    <span id=item2197 class="hide_extra">
     </span>
 
 </dd>
@@ -808,7 +809,7 @@
 
 
 
-    <span id=item2166 class="hide_extra">
+    <span id=item2198 class="hide_extra">
     </span>
 
 </dd>
@@ -835,7 +836,7 @@
 
 
 
-    <span id=item2167 class="hide_extra">
+    <span id=item2199 class="hide_extra">
     </span>
 
 </dd>
@@ -861,7 +862,7 @@
 
 
 
-    <span id=item2168 class="hide_extra">
+    <span id=item2200 class="hide_extra">
     </span>
 
 </dd>
@@ -889,7 +890,7 @@
 
 
 
-    <span id=item2169 class="hide_extra">
+    <span id=item2201 class="hide_extra">
     </span>
 
 </dd>
@@ -917,7 +918,7 @@
 
 
 
-    <span id=item2170 class="hide_extra">
+    <span id=item2202 class="hide_extra">
     </span>
 
 </dd>
@@ -952,7 +953,7 @@
 
 
 
-    <span id=item2171 class="hide_extra">
+    <span id=item2203 class="hide_extra">
     </span>
 
 </dd>
@@ -985,7 +986,7 @@
 
 
 
-    <span id=item2172 class="hide_extra">
+    <span id=item2204 class="hide_extra">
     </span>
 
 </dd>
@@ -1017,7 +1018,7 @@
 
 
 
-    <span id=item2173 class="hide_extra">
+    <span id=item2205 class="hide_extra">
     </span>
 
 </dd>
@@ -1056,7 +1057,7 @@
 
 
 
-    <span id=item2174 class="hide_extra">
+    <span id=item2206 class="hide_extra">
     </span>
 
 </dd>
@@ -1087,7 +1088,7 @@
 
 
 
-    <span id=item2175 class="hide_extra">
+    <span id=item2207 class="hide_extra">
     </span>
 
 </dd>
@@ -1114,7 +1115,7 @@
 
 
 
-    <span id=item2176 class="hide_extra">
+    <span id=item2208 class="hide_extra">
     </span>
 
 </dd>
@@ -1211,7 +1212,7 @@
 
 
 
-    <span id=item2177 class="hide_extra">
+    <span id=item2209 class="hide_extra">
     </span>
 
 </dd>
@@ -1308,7 +1309,7 @@
 
 
 
-    <span id=item2178 class="hide_extra">
+    <span id=item2210 class="hide_extra">
     </span>
 
 </dd>
@@ -1387,7 +1388,7 @@
 
 
 
-    <span id=item2179 class="hide_extra">
+    <span id=item2211 class="hide_extra">
     </span>
 
 </dd>
@@ -1466,7 +1467,7 @@
 
 
 
-    <span id=item2180 class="hide_extra">
+    <span id=item2212 class="hide_extra">
     </span>
 
 </dd>
@@ -1477,7 +1478,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

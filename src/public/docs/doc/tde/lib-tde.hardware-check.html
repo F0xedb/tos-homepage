@@ -67,6 +67,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
@@ -89,6 +90,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -97,15 +99,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -252,12 +251,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -284,7 +285,7 @@ lib-tde.hardware-check.battery() <span class="comment">-- returns True if a batt
 
 <p> You can also use this module to verify if the environment is configured correctly.
  For example you can have hard dependencies on some software to get a plugin working.
- An example is the build in screen recorder that depends on ffmpeg beeing installed.</p>
+ An example is the build in screen recorder that depends on ffmpeg being installed.</p>
 
 
 <pre>
@@ -292,7 +293,7 @@ lib-tde.hardware-check.has_package_installed(<span class="string">"ffmpeg"</span
 </pre>
 
 <p> Warning never try to use <a href="../tde/lib-tde.hardware-check.html#execute">lib-tde.hardware-check.execute</a> unless you known what you are doing.
- execute runs on the main thread and can cause input from not beeing handled.
+ execute runs on the main thread and can cause input from not being handled.
  Which introduces lag to the system.
  Here is an example that locks the desktop for 2 seconds (where you can't do anything).</p>
 
@@ -321,21 +322,21 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </tr>
     <tr>
       <td class="name" >
-        <a href="#battery"><span class='function_modname'>lib-tde.hardware-check.</span>battery <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <a href="#hasBattery"><span class='function_modname'>lib-tde.hardware-check.</span>hasBattery <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check to see if a battery exists on the hardware</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#wifi"><span class='function_modname'>lib-tde.hardware-check.</span>wifi <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <a href="#hasWifi"><span class='function_modname'>lib-tde.hardware-check.</span>hasWifi <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check to see the hardware has a network card</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#bluetooth"><span class='function_modname'>lib-tde.hardware-check.</span>bluetooth <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <a href="#hasBluetooth"><span class='function_modname'>lib-tde.hardware-check.</span>hasBluetooth <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check to see the hardware has a network card with bluetooth support</td>
@@ -349,14 +350,14 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </tr>
     <tr>
       <td class="name" >
-        <a href="#ffmpeg"><span class='function_modname'>lib-tde.hardware-check.</span>ffmpeg <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <a href="#hasFfmpeg"><span class='function_modname'>lib-tde.hardware-check.</span>hasFfmpeg <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check to see if ffmpeg is installed</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#sound"><span class='function_modname'>lib-tde.hardware-check.</span>sound <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <a href="#hasSound"><span class='function_modname'>lib-tde.hardware-check.</span>hasSound <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
       </td>
       <td colspan="2" class="summary">Check to see the hardware has a sound card installed</td>
@@ -387,14 +388,14 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
         <a href="#isWeakHardware"><span class='function_modname'>lib-tde.hardware-check.</span>isWeakHardware <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Returns if the hardware is to weak, eg little amount of ram, cpu etc</td>
+      <td colspan="2" class="summary">Returns if the hardware is to weak, e.g.</td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#getDisplayFrequency"><span class='function_modname'>lib-tde.hardware-check.</span>getDisplayFrequency <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Returns The frequency of the display panel in Herts, for example 60 Hz</td>
+      <td colspan="2" class="summary">Returns The frequency of the display panel in Hertz, for example 60 Hz</td>
     </tr>
 </table>
 
@@ -439,13 +440,13 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item797 class="hide_extra">
+    <span id=item799 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "battery"></a>
-    <strong><span class='function_modname'>lib-tde.hardware-check.</span>battery <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <a name = "hasBattery"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>hasBattery <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -466,17 +467,17 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This True if it is a laptop
-</span> lib-tde.hardware-check.battery()</pre>
+</span> lib-tde.hardware-check.hasBattery()</pre>
     </ul>
 
 
-    <span id=item798 class="hide_extra">
+    <span id=item800 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "wifi"></a>
-    <strong><span class='function_modname'>lib-tde.hardware-check.</span>wifi <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <a name = "hasWifi"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>hasWifi <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -497,17 +498,17 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This True if a network card exists
-</span> lib-tde.hardware-check.wifi()</pre>
+</span> lib-tde.hardware-check.hasWifi()</pre>
     </ul>
 
 
-    <span id=item799 class="hide_extra">
+    <span id=item801 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "bluetooth"></a>
-    <strong><span class='function_modname'>lib-tde.hardware-check.</span>bluetooth <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <a name = "hasBluetooth"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>hasBluetooth <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -528,11 +529,11 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This True if a network card exists with bluetooth support
-</span> lib-tde.hardware-check.bluetooth()</pre>
+</span> lib-tde.hardware-check.hasBluetooth()</pre>
     </ul>
 
 
-    <span id=item800 class="hide_extra">
+    <span id=item802 class="hide_extra">
     </span>
 
 </dd>
@@ -570,13 +571,13 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item801 class="hide_extra">
+    <span id=item803 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "ffmpeg"></a>
-    <strong><span class='function_modname'>lib-tde.hardware-check.</span>ffmpeg <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <a name = "hasFfmpeg"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>hasFfmpeg <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -597,17 +598,17 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This True if ffmpeg is installed (a video processor)
-</span> lib-tde.hardware-check.ffmpeg()</pre>
+</span> lib-tde.hardware-check.hasFfmpeg()</pre>
     </ul>
 
 
-    <span id=item802 class="hide_extra">
+    <span id=item804 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "sound"></a>
-    <strong><span class='function_modname'>lib-tde.hardware-check.</span>sound <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <a name = "hasSound"></a>
+    <strong><span class='function_modname'>lib-tde.hardware-check.</span>hasSound <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;bool</span></span>
     <span class="baseclass" >
     </span>
@@ -628,11 +629,11 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="comment">-- This True if a sound card exists
-</span> lib-tde.hardware-check.sound()</pre>
+</span> lib-tde.hardware-check.hasSound()</pre>
     </ul>
 
 
-    <span id=item803 class="hide_extra">
+    <span id=item805 class="hide_extra">
     </span>
 
 </dd>
@@ -662,7 +663,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item804 class="hide_extra">
+    <span id=item806 class="hide_extra">
     </span>
 
 </dd>
@@ -693,7 +694,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item805 class="hide_extra">
+    <span id=item807 class="hide_extra">
     </span>
 
 </dd>
@@ -724,7 +725,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item806 class="hide_extra">
+    <span id=item808 class="hide_extra">
     </span>
 
 </dd>
@@ -736,13 +737,13 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </span>
     </dt>
     <dd>
-    Returns if the hardware is to weak, eg little amount of ram, cpu etc
+    Returns if the hardware is to weak, e.g.  little amount of ram, cpu etc
 
 
     <h3>Returns:</h3>
     <ol>
 
-        bool true if the hardware is below a certain treshold
+        bool true if the hardware is below a certain threshold
     </ol>
 
 
@@ -754,7 +755,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </ul>
 
 
-    <span id=item807 class="hide_extra">
+    <span id=item809 class="hide_extra">
     </span>
 
 </dd>
@@ -766,7 +767,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
     </span>
     </dt>
     <dd>
-    Returns The frequency of the display panel in Herts, for example 60 Hz
+    Returns The frequency of the display panel in Hertz, for example 60 Hz
 
 
     <h3>Returns:</h3>
@@ -779,12 +780,12 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- Returns The frequency of the display panel in Herts, for example 60 Hz
+        <pre class="example"><span class="comment">-- Returns The frequency of the display panel in Hertz, for example 60 Hz
 </span> lib-tde.hardware-check.getDisplayFrequency()</pre>
     </ul>
 
 
-    <span id=item808 class="hide_extra">
+    <span id=item810 class="hide_extra">
     </span>
 
 </dd>
@@ -795,7 +796,7 @@ lib-tde.hardware-check.execute(<span class="string">"sleep 2"</span>) <span clas
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

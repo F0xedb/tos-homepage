@@ -114,6 +114,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -122,6 +123,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -130,15 +132,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -255,12 +254,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -273,6 +274,8 @@
 
 <h1>Module: <code>awful.widget.watch</code></h1>
 <p>Watch widget.</p>
+<p>
+
 <p> Here is an example of simple temperature widget which will update each 15
  seconds implemented in two different ways.
  The first, simpler one, will just display the return command output
@@ -299,6 +302,21 @@
 </pre>
 
 <p> <img src="../images/awful_widget_watch.png" alt="Example screenshot"/></p>
+
+<p> Here is the most basic usage:</p>
+
+
+<p>DOC<em>HIDE --DOC</em>GEN_IMAGE</p>
+
+<p><img src="../images/AUTOGEN_wibox_awidget_defaults_watch.svg" alt="Usage example"/></p>
+
+
+
+<pre>
+awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | grep Hello<span class="string">''</span>, <span class="number">15</span>)
+</pre>
+
+</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>Copyright</strong>: 2015, 2016 Benjamin Petrenko, Yauheni Kirylau</li>
@@ -577,7 +595,7 @@
 
 
 
-    <span id=item1378 class="hide_extra">
+    <span id=item1410 class="hide_extra">
     </span>
 
 </dd>
@@ -609,7 +627,7 @@
 
 
 
-    <span id=item1379 class="hide_extra">
+    <span id=item1411 class="hide_extra">
     </span>
 
 </dd>
@@ -640,7 +658,7 @@
 
 
 
-    <span id=item1380 class="hide_extra">
+    <span id=item1412 class="hide_extra">
     </span>
 
 </dd>
@@ -668,7 +686,7 @@
 
 
 
-    <span id=item1381 class="hide_extra">
+    <span id=item1413 class="hide_extra">
     </span>
 
 </dd>
@@ -696,7 +714,7 @@
 
 
 
-    <span id=item1382 class="hide_extra">
+    <span id=item1414 class="hide_extra">
     </span>
 
 </dd>
@@ -725,7 +743,7 @@
 
 
 
-    <span id=item1383 class="hide_extra">
+    <span id=item1415 class="hide_extra">
     </span>
 
 </dd>
@@ -746,7 +764,7 @@
 
 
 
-    <span id=item1384 class="hide_extra">
+    <span id=item1416 class="hide_extra">
     </span>
 
 </dd>
@@ -773,7 +791,7 @@
 
 
 
-    <span id=item1385 class="hide_extra">
+    <span id=item1417 class="hide_extra">
     </span>
 
 </dd>
@@ -805,7 +823,7 @@
 
 
 
-    <span id=item1386 class="hide_extra">
+    <span id=item1418 class="hide_extra">
     </span>
 
 </dd>
@@ -833,7 +851,7 @@
 
 
 
-    <span id=item1387 class="hide_extra">
+    <span id=item1419 class="hide_extra">
     </span>
 
 </dd>
@@ -868,7 +886,7 @@
 
 
 
-    <span id=item1388 class="hide_extra">
+    <span id=item1420 class="hide_extra">
     </span>
 
 </dd>
@@ -901,7 +919,7 @@
 
 
 
-    <span id=item1389 class="hide_extra">
+    <span id=item1421 class="hide_extra">
     </span>
 
 </dd>
@@ -933,7 +951,7 @@
 
 
 
-    <span id=item1390 class="hide_extra">
+    <span id=item1422 class="hide_extra">
     </span>
 
 </dd>
@@ -972,7 +990,7 @@
 
 
 
-    <span id=item1391 class="hide_extra">
+    <span id=item1423 class="hide_extra">
     </span>
 
 </dd>
@@ -1003,7 +1021,7 @@
 
 
 
-    <span id=item1392 class="hide_extra">
+    <span id=item1424 class="hide_extra">
     </span>
 
 </dd>
@@ -1030,7 +1048,7 @@
 
 
 
-    <span id=item1393 class="hide_extra">
+    <span id=item1425 class="hide_extra">
     </span>
 
 </dd>
@@ -1127,7 +1145,7 @@
 
 
 
-    <span id=item1394 class="hide_extra">
+    <span id=item1426 class="hide_extra">
     </span>
 
 </dd>
@@ -1224,7 +1242,7 @@
 
 
 
-    <span id=item1395 class="hide_extra">
+    <span id=item1427 class="hide_extra">
     </span>
 
 </dd>
@@ -1303,7 +1321,7 @@
 
 
 
-    <span id=item1396 class="hide_extra">
+    <span id=item1428 class="hide_extra">
     </span>
 
 </dd>
@@ -1382,7 +1400,7 @@
 
 
 
-    <span id=item1397 class="hide_extra">
+    <span id=item1429 class="hide_extra">
     </span>
 
 </dd>
@@ -1393,7 +1411,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

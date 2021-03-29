@@ -58,12 +58,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><strong>NEWS</strong></li>
@@ -103,6 +105,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -111,6 +114,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -119,15 +123,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -344,51 +345,44 @@ automatically. This reduces the amount of boilerplate code.
 
 <p><a name="Noteworthy_fixes"></a></p>
 <h2>Noteworthy fixes</h2></li>
-    <li><p><code>$SOURCE_DATE_EPOCH</code> is honored in more places when generating the</p>
-
-<pre>
-documentation
-</pre>
-</li>
+    <li><p><code>$SOURCE_DATE_EPOCH</code> is honored in more places when generating the
+    documentation</p></li>
     <li><p>Fix setting shapes via <a href="../libraries/awful.rules.html#">awful.rules</a></p></li>
     <li><p>Set <code>_NET_WM_DESKTOP</code> for sticky windows correctly</p></li>
-    <li><p>Under complicated circumstances, AwesomeWM could have run Lua code while</p>
-
-<pre>
-having the X11 server grabbed. This had the potential to cause deadlocks with
-Lua code using <span class="backtick"><a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a></span>. Usage of <span class="backtick"><a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a></span> is still strongly discouraged.
-</pre>
-</li>
-    <li><p><code>wibox{ input_passthrough = true }</code> now works correctly. Previously, the</p>
-
-<pre>
-property could only be set on already-constructed wiboxes.
-</pre>
+    <li><p>Under complicated circumstances, AwesomeWM could have run Lua code while
+    having the X11 server grabbed. This had the potential to cause deadlocks with
+    Lua code using <a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a>. Usage of <a href="https://www.lua.org/manual/5.1/manual.html#pdf-io.popen">io.popen</a> is still strongly discouraged.</p></li>
+    <li><p><code>wibox{ input_passthrough = true }</code> now works correctly. Previously, the
+    property could only be set on already-constructed wiboxes.</p></li>
+    <li><p>Remove unused first parameter from multiple widget constructors: <a href="../widget_containers/wibox.container.place.html#">wibox.container.place</a>,  <a href="../widget_containers/wibox.container.radialprogressbar.html#">wibox.container.radialprogressbar</a>,  <a href="../widget_layouts/wibox.layout.stack.html#">wibox.layout.stack</a>,  <a href="../widgets/wibox.widget.slider.html#">wibox.widget.slider</a>.</p></li>
+</ul>
 
 <p><a name="Behavior_changes"></a></p>
-<h2>Behavior changes</h2></li>
-    <li><p><a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> applies shapes differently. The new approach</p>
+<h2>Behavior changes</h2>
+
+<ul>
+    <li><a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> applies shapes differently. The new approach
 
 <pre>
 should be more consistent with a border.
 </pre>
 </li>
-    <li><p>The <code>shape_clip</code> option of <a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> was removed. The code</p>
+    <li>The <code>shape_clip</code> option of <a href="../widget_containers/wibox.container.background.html#">wibox.container.background</a> was removed. The code
 
 <pre>
 now always behaves as <span class="keyword">if</span> this option is set to <span class="backtick"><code>true</code></span>. The old behaviour can
 be simulated with <span class="backtick"><a href="../widget_layouts/wibox.layout.stack.html#">wibox.layout.stack</a></span>.
 </pre>
 </li>
-    <li><p>Awesome now initialises Lua's random number generator from a good source</p></li>
-    <li><p><code>naughty.dbus</code> now uses Gio for talking to DBus. This is a first step in the</p>
+    <li>Awesome now initialises Lua's random number generator from a good source</li>
+    <li><code>naughty.dbus</code> now uses Gio for talking to DBus. This is a first step in the
 
 <pre>
 deprecation of Awesome's own DBus bindings <span class="keyword">and</span> could lead to behaviour changes
 on DBus.
 </pre>
 </li>
-    <li><p>The client <code>keys</code> and <code>buttons</code> property now return <a href="../input_handling/awful.key.html#">awful.key</a></p>
+    <li>The client <code>keys</code> and <code>buttons</code> property now return <a href="../input_handling/awful.key.html#">awful.key</a>
 
 <pre>
 <span class="keyword">and</span> <span class="backtick"><code>awful.buttons</code></span> objects rather than the lower level <span class="backtick"><code>key</code></span> <span class="keyword">and</span> <span class="backtick"><code>button</code></span>
@@ -397,7 +391,7 @@ please migrate your code to the corresponding <span class="backtick"><code>:appe
 client methods.
 </pre>
 </li>
-    <li><p><a href="../theme_related_libraries/beautiful.html#border_width">beautiful.border_width</a> and <a href="../theme_related_libraries/beautiful.html#border_color">beautiful.border_color</a> are now honored even</p>
+    <li><a href="../theme_related_libraries/beautiful.html#border_width">beautiful.border_width</a> and <a href="../theme_related_libraries/beautiful.html#border_color">beautiful.border_color</a> are now honored even
 
 <pre>
 when the part related to borders is removed from <span class="backtick"><a href="../sample files/rc.lua.html#">rc.lua</a></span>. Set them
@@ -405,7 +399,7 @@ appropriately <span class="keyword">in</span> your theme <span class="keyword">o
 handler.
 </pre>
 </li>
-    <li><p>The order by which the client rules compute the geometry have changed</p>
+    <li>The order by which the client rules compute the geometry have changed
 
 <pre>
 slightly. The border is now applied before the titlebar offset. This should
@@ -413,14 +407,14 @@ slightly. The border is now applied before the titlebar offset. This should
 the titlebar offset <span class="keyword">in</span> your rules.
 </pre>
 </li>
-    <li><p>Setting <code>awful.rules.rules</code> now append the rules to the existing set.</p>
+    <li>Setting <code>awful.rules.rules</code> now append the rules to the existing set.
 
 <pre>
 Clearing the rules was never officially supported. If you _really_ want the
 old behavior, use <span class="backtick"><code>awful.rules.rules = {}; awful.rules.rules = my_new_rules</code></span>.
 </pre>
 
-<p><a name="v43"></a></p></li>
+<a name="v43"></a></li>
 </ul>
 
 <h1>Awesome window manager framework version 4.3 changes</h1>
@@ -2032,7 +2026,7 @@ tests
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

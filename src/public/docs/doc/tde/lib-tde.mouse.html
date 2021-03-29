@@ -67,6 +67,7 @@
   <li><strong>lib-tde.mouse</strong></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Core components</h2>
@@ -89,6 +90,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -97,15 +99,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -252,12 +251,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -270,7 +271,7 @@
 
 <h1>Module: <code>lib-tde.mouse</code></h1>
 <p>This module exposes an api to manipulate mouse events through libinput</p>
-<p> Usefull functional for setting mouse acceleration, natural scrolling, mouse speed and more</p>
+<p> Useful functional for setting mouse acceleration, natural scrolling, mouse speed and more</p>
     <h3>Info:</h3>
     <ul>
         <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
@@ -289,17 +290,17 @@
     </tr>
     <tr>
       <td class="name" >
-        <a href="#setAccellaration"><span class='function_modname'>lib-tde.mouse.</span>setAccellaration <span class='function_args'> <b>(</b>id, speed<b>)</b></span></a>
+        <a href="#setAcceleration"><span class='function_modname'>lib-tde.mouse.</span>setAcceleration <span class='function_args'> <b>(</b>id, speed<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set the accellaration of a specific input device through xinput</td>
+      <td colspan="2" class="summary">Set the acceleration of a specific input device through xinput</td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#setMouseSpeed"><span class='function_modname'>lib-tde.mouse.</span>setMouseSpeed <span class='function_args'> <b>(</b>id, speed<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set the accellaration of a specific input device through xinput</td>
+      <td colspan="2" class="summary">Set the acceleration of a specific input device through xinput</td>
     </tr>
     <tr>
       <td class="name" >
@@ -345,19 +346,19 @@
     </ul>
 
 
-    <span id=item828 class="hide_extra">
+    <span id=item830 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "setAccellaration"></a>
-    <strong><span class='function_modname'>lib-tde.mouse.</span>setAccellaration <span class='function_args'> <b>(</b>id, speed<b>)</b></span></strong>
+    <a name = "setAcceleration"></a>
+    <strong><span class='function_modname'>lib-tde.mouse.</span>setAcceleration <span class='function_args'> <b>(</b>id, speed<b>)</b></span></strong>
     <span class="proptype"></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Set the accellaration of a specific input device through xinput
+    Set the acceleration of a specific input device through xinput
 
     <h3>Parameters:</h3>
     <ul>
@@ -367,7 +368,7 @@
         </li>
         <li><span class="parameter">speed</span>
             <span class="types"><span class="type">number</span></span>
-         The accellaration speed of the mouse, 1.0 means no accellaration and anything above indicates faster speed than default as a multiplier
+         The acceleration speed of the mouse, 1.0 means no acceleration and anything above indicates faster speed than default as a multiplier
         </li>
     </ul>
 
@@ -376,12 +377,12 @@
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- Make the "HID-compliant Mouse Trust Gaming Mouse" accellarate by twice its normal speed
-</span>    setAccellaration(<span class="number">11</span>, <span class="number">2</span>)</pre>
+        <pre class="example"><span class="comment">-- Make the "HID-compliant Mouse Trust Gaming Mouse" accelerate by twice its normal speed
+</span>    setAcceleration(<span class="number">11</span>, <span class="number">2</span>)</pre>
     </ul>
 
 
-    <span id=item829 class="hide_extra">
+    <span id=item831 class="hide_extra">
     </span>
 
 </dd>
@@ -393,7 +394,7 @@
     </span>
     </dt>
     <dd>
-    Set the accellaration of a specific input device through xinput
+    Set the acceleration of a specific input device through xinput
 
     <h3>Parameters:</h3>
     <ul>
@@ -417,7 +418,7 @@
     </ul>
 
 
-    <span id=item830 class="hide_extra">
+    <span id=item832 class="hide_extra">
     </span>
 
 </dd>
@@ -453,7 +454,7 @@
     </ul>
 
 
-    <span id=item831 class="hide_extra">
+    <span id=item833 class="hide_extra">
     </span>
 
 </dd>
@@ -464,7 +465,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

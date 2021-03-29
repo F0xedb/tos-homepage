@@ -117,6 +117,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -125,6 +126,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -133,15 +135,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -258,12 +257,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -907,7 +908,7 @@ awful.popup {
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#awful.tasklist.source.all_clients">awful.tasklist.source.all_clients</a>
+        <a href="#awful.widget.tasklist.source.all_clients"><span class='function_modname'>awful.widget.tasklist.</span>source.all_clients</a>
       </td>
       <td colspan="2" class="summary">Get all the clients in an undefined order.</td>
     </tr>
@@ -916,31 +917,31 @@ awful.popup {
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#awful.tasklist.filter.allscreen">awful.tasklist.filter.allscreen</a>
+        <a href="#awful.widget.tasklist.filter.allscreen"><span class='function_modname'>awful.widget.tasklist.</span>filter.allscreen</a>
       </td>
       <td colspan="2" class="summary">Filtering function to include all clients.</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#awful.tasklist.filter.alltags">awful.tasklist.filter.alltags</a>
+        <a href="#awful.widget.tasklist.filter.alltags"><span class='function_modname'>awful.widget.tasklist.</span>filter.alltags</a>
       </td>
       <td colspan="2" class="summary">Filtering function to include the clients from all tags on the screen.</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#awful.tasklist.filter.currenttags">awful.tasklist.filter.currenttags</a>
+        <a href="#awful.widget.tasklist.filter.currenttags"><span class='function_modname'>awful.widget.tasklist.</span>filter.currenttags</a>
       </td>
       <td colspan="2" class="summary">Filtering function to include only the clients from currently selected tags.</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#awful.tasklist.filter.minimizedcurrenttags">awful.tasklist.filter.minimizedcurrenttags</a>
+        <a href="#awful.widget.tasklist.filter.minimizedcurrenttags"><span class='function_modname'>awful.widget.tasklist.</span>filter.minimizedcurrenttags</a>
       </td>
       <td colspan="2" class="summary">Filtering function to include only the minimized clients from currently selected tags.</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#awful.tasklist.filter.focused">awful.tasklist.filter.focused</a>
+        <a href="#awful.widget.tasklist.filter.focused"><span class='function_modname'>awful.widget.tasklist.</span>filter.focused</a>
       </td>
       <td colspan="2" class="summary">Filtering function to include only the currently focused client.</td>
     </tr>
@@ -1002,7 +1003,7 @@ awful.popup {
             <span class="types"><span class="type">function</span></span>
          The
   function used to generate the list of client.
-         (<em>default</em> awful.tasklist.source.all_clients)
+         (<em>default</em> awful.widget.tasklist.source.all_clients)
         </li>
         <li><span class="parameter">widget_template</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
@@ -1302,7 +1303,7 @@ awful.popup {
 
 
 
-    <span id=item1311 class="hide_extra">
+    <span id=item1343 class="hide_extra">
     </span>
 
 </dd>
@@ -1334,7 +1335,7 @@ awful.popup {
 
 
 
-    <span id=item1312 class="hide_extra">
+    <span id=item1344 class="hide_extra">
     </span>
 
 </dd>
@@ -1365,7 +1366,7 @@ awful.popup {
 
 
 
-    <span id=item1313 class="hide_extra">
+    <span id=item1345 class="hide_extra">
     </span>
 
 </dd>
@@ -1393,7 +1394,7 @@ awful.popup {
 
 
 
-    <span id=item1314 class="hide_extra">
+    <span id=item1346 class="hide_extra">
     </span>
 
 </dd>
@@ -1421,7 +1422,7 @@ awful.popup {
 
 
 
-    <span id=item1315 class="hide_extra">
+    <span id=item1347 class="hide_extra">
     </span>
 
 </dd>
@@ -1450,7 +1451,7 @@ awful.popup {
 
 
 
-    <span id=item1316 class="hide_extra">
+    <span id=item1348 class="hide_extra">
     </span>
 
 </dd>
@@ -1471,7 +1472,7 @@ awful.popup {
 
 
 
-    <span id=item1317 class="hide_extra">
+    <span id=item1349 class="hide_extra">
     </span>
 
 </dd>
@@ -1498,7 +1499,7 @@ awful.popup {
 
 
 
-    <span id=item1318 class="hide_extra">
+    <span id=item1350 class="hide_extra">
     </span>
 
 </dd>
@@ -1530,7 +1531,7 @@ awful.popup {
 
 
 
-    <span id=item1319 class="hide_extra">
+    <span id=item1351 class="hide_extra">
     </span>
 
 </dd>
@@ -1558,7 +1559,7 @@ awful.popup {
 
 
 
-    <span id=item1320 class="hide_extra">
+    <span id=item1352 class="hide_extra">
     </span>
 
 </dd>
@@ -1593,7 +1594,7 @@ awful.popup {
 
 
 
-    <span id=item1321 class="hide_extra">
+    <span id=item1353 class="hide_extra">
     </span>
 
 </dd>
@@ -1626,7 +1627,7 @@ awful.popup {
 
 
 
-    <span id=item1322 class="hide_extra">
+    <span id=item1354 class="hide_extra">
     </span>
 
 </dd>
@@ -1658,7 +1659,7 @@ awful.popup {
 
 
 
-    <span id=item1323 class="hide_extra">
+    <span id=item1355 class="hide_extra">
     </span>
 
 </dd>
@@ -1697,7 +1698,7 @@ awful.popup {
 
 
 
-    <span id=item1324 class="hide_extra">
+    <span id=item1356 class="hide_extra">
     </span>
 
 </dd>
@@ -1728,7 +1729,7 @@ awful.popup {
 
 
 
-    <span id=item1325 class="hide_extra">
+    <span id=item1357 class="hide_extra">
     </span>
 
 </dd>
@@ -1755,7 +1756,7 @@ awful.popup {
 
 
 
-    <span id=item1326 class="hide_extra">
+    <span id=item1358 class="hide_extra">
     </span>
 
 </dd>
@@ -1852,7 +1853,7 @@ awful.popup {
 
 
 
-    <span id=item1327 class="hide_extra">
+    <span id=item1359 class="hide_extra">
     </span>
 
 </dd>
@@ -1949,7 +1950,7 @@ awful.popup {
 
 
 
-    <span id=item1328 class="hide_extra">
+    <span id=item1360 class="hide_extra">
     </span>
 
 </dd>
@@ -2028,7 +2029,7 @@ awful.popup {
 
 
 
-    <span id=item1329 class="hide_extra">
+    <span id=item1361 class="hide_extra">
     </span>
 
 </dd>
@@ -2107,7 +2108,7 @@ awful.popup {
 
 
 
-    <span id=item1330 class="hide_extra">
+    <span id=item1362 class="hide_extra">
     </span>
 
 </dd>
@@ -2135,7 +2136,7 @@ awful.popup {
 
 
 
-    <span id=item1331 class="hide_extra">
+    <span id=item1363 class="hide_extra">
     </span>
 
 </dd>
@@ -2159,7 +2160,7 @@ awful.popup {
 
 
 
-    <span id=item1332 class="hide_extra">
+    <span id=item1364 class="hide_extra">
     </span>
 
 </dd>
@@ -2183,7 +2184,7 @@ awful.popup {
 
 
 
-    <span id=item1333 class="hide_extra">
+    <span id=item1365 class="hide_extra">
     </span>
 
 </dd>
@@ -2207,7 +2208,7 @@ awful.popup {
 
 
 
-    <span id=item1334 class="hide_extra">
+    <span id=item1366 class="hide_extra">
     </span>
 
 </dd>
@@ -2231,7 +2232,7 @@ awful.popup {
 
 
 
-    <span id=item1335 class="hide_extra">
+    <span id=item1367 class="hide_extra">
     </span>
 
 </dd>
@@ -2255,7 +2256,7 @@ awful.popup {
 
 
 
-    <span id=item1336 class="hide_extra">
+    <span id=item1368 class="hide_extra">
     </span>
 
 </dd>
@@ -2279,7 +2280,7 @@ awful.popup {
 
 
 
-    <span id=item1337 class="hide_extra">
+    <span id=item1369 class="hide_extra">
     </span>
 
 </dd>
@@ -2303,7 +2304,7 @@ awful.popup {
 
 
 
-    <span id=item1338 class="hide_extra">
+    <span id=item1370 class="hide_extra">
     </span>
 
 </dd>
@@ -2323,7 +2324,7 @@ awful.popup {
 
 
 
-    <span id=item1339 class="hide_extra">
+    <span id=item1371 class="hide_extra">
     </span>
 
 </dd>
@@ -2343,7 +2344,7 @@ awful.popup {
 
 
 
-    <span id=item1340 class="hide_extra">
+    <span id=item1372 class="hide_extra">
     </span>
 
 </dd>
@@ -2363,7 +2364,7 @@ awful.popup {
 
 
 
-    <span id=item1341 class="hide_extra">
+    <span id=item1373 class="hide_extra">
     </span>
 
 </dd>
@@ -2383,7 +2384,7 @@ awful.popup {
 
 
 
-    <span id=item1342 class="hide_extra">
+    <span id=item1374 class="hide_extra">
     </span>
 
 </dd>
@@ -2403,7 +2404,7 @@ awful.popup {
 
 
 
-    <span id=item1343 class="hide_extra">
+    <span id=item1375 class="hide_extra">
     </span>
 
 </dd>
@@ -2423,7 +2424,7 @@ awful.popup {
 
 
 
-    <span id=item1344 class="hide_extra">
+    <span id=item1376 class="hide_extra">
     </span>
 
 </dd>
@@ -2445,7 +2446,7 @@ awful.popup {
 
 
 
-    <span id=item1345 class="hide_extra">
+    <span id=item1377 class="hide_extra">
     </span>
 
 </dd>
@@ -2465,7 +2466,7 @@ awful.popup {
 
 
 
-    <span id=item1346 class="hide_extra">
+    <span id=item1378 class="hide_extra">
     </span>
 
 </dd>
@@ -2485,7 +2486,7 @@ awful.popup {
 
 
 
-    <span id=item1347 class="hide_extra">
+    <span id=item1379 class="hide_extra">
     </span>
 
 </dd>
@@ -2505,7 +2506,7 @@ awful.popup {
 
 
 
-    <span id=item1348 class="hide_extra">
+    <span id=item1380 class="hide_extra">
     </span>
 
 </dd>
@@ -2525,7 +2526,7 @@ awful.popup {
 
 
 
-    <span id=item1349 class="hide_extra">
+    <span id=item1381 class="hide_extra">
     </span>
 
 </dd>
@@ -2545,7 +2546,7 @@ awful.popup {
 
 
 
-    <span id=item1350 class="hide_extra">
+    <span id=item1382 class="hide_extra">
     </span>
 
 </dd>
@@ -2565,7 +2566,7 @@ awful.popup {
 
 
 
-    <span id=item1351 class="hide_extra">
+    <span id=item1383 class="hide_extra">
     </span>
 
 </dd>
@@ -2585,7 +2586,7 @@ awful.popup {
 
 
 
-    <span id=item1352 class="hide_extra">
+    <span id=item1384 class="hide_extra">
     </span>
 
 </dd>
@@ -2605,7 +2606,7 @@ awful.popup {
 
 
 
-    <span id=item1353 class="hide_extra">
+    <span id=item1385 class="hide_extra">
     </span>
 
 </dd>
@@ -2625,7 +2626,7 @@ awful.popup {
 
 
 
-    <span id=item1354 class="hide_extra">
+    <span id=item1386 class="hide_extra">
     </span>
 
 </dd>
@@ -2653,7 +2654,7 @@ awful.popup {
 
 
 
-    <span id=item1355 class="hide_extra">
+    <span id=item1387 class="hide_extra">
     </span>
 
 </dd>
@@ -2673,7 +2674,7 @@ awful.popup {
 
 
 
-    <span id=item1356 class="hide_extra">
+    <span id=item1388 class="hide_extra">
     </span>
 
 </dd>
@@ -2693,7 +2694,7 @@ awful.popup {
 
 
 
-    <span id=item1357 class="hide_extra">
+    <span id=item1389 class="hide_extra">
     </span>
 
 </dd>
@@ -2713,7 +2714,7 @@ awful.popup {
 
 
 
-    <span id=item1358 class="hide_extra">
+    <span id=item1390 class="hide_extra">
     </span>
 
 </dd>
@@ -2741,7 +2742,7 @@ awful.popup {
 
 
 
-    <span id=item1359 class="hide_extra">
+    <span id=item1391 class="hide_extra">
     </span>
 
 </dd>
@@ -2761,7 +2762,7 @@ awful.popup {
 
 
 
-    <span id=item1360 class="hide_extra">
+    <span id=item1392 class="hide_extra">
     </span>
 
 </dd>
@@ -2781,7 +2782,7 @@ awful.popup {
 
 
 
-    <span id=item1361 class="hide_extra">
+    <span id=item1393 class="hide_extra">
     </span>
 
 </dd>
@@ -2805,7 +2806,7 @@ awful.popup {
 
 
 
-    <span id=item1362 class="hide_extra">
+    <span id=item1394 class="hide_extra">
     </span>
 
 </dd>
@@ -2825,7 +2826,7 @@ awful.popup {
 
 
 
-    <span id=item1363 class="hide_extra">
+    <span id=item1395 class="hide_extra">
     </span>
 
 </dd>
@@ -2845,7 +2846,7 @@ awful.popup {
 
 
 
-    <span id=item1364 class="hide_extra">
+    <span id=item1396 class="hide_extra">
     </span>
 
 </dd>
@@ -2869,7 +2870,7 @@ awful.popup {
 
 
 
-    <span id=item1365 class="hide_extra">
+    <span id=item1397 class="hide_extra">
     </span>
 
 </dd>
@@ -2889,7 +2890,7 @@ awful.popup {
 
 
 
-    <span id=item1366 class="hide_extra">
+    <span id=item1398 class="hide_extra">
     </span>
 
 </dd>
@@ -2909,7 +2910,7 @@ awful.popup {
 
 
 
-    <span id=item1367 class="hide_extra">
+    <span id=item1399 class="hide_extra">
     </span>
 
 </dd>
@@ -2933,7 +2934,7 @@ awful.popup {
 
 
 
-    <span id=item1368 class="hide_extra">
+    <span id=item1400 class="hide_extra">
     </span>
 
 </dd>
@@ -2953,7 +2954,7 @@ awful.popup {
 
 
 
-    <span id=item1369 class="hide_extra">
+    <span id=item1401 class="hide_extra">
     </span>
 
 </dd>
@@ -2973,7 +2974,7 @@ awful.popup {
 
 
 
-    <span id=item1370 class="hide_extra">
+    <span id=item1402 class="hide_extra">
     </span>
 
 </dd>
@@ -2997,7 +2998,7 @@ awful.popup {
 
 
 
-    <span id=item1371 class="hide_extra">
+    <span id=item1403 class="hide_extra">
     </span>
 
 </dd>
@@ -3006,8 +3007,8 @@ awful.popup {
 
     <dl class="function">
     <dt>
-    <a name = "awful.tasklist.source.all_clients"></a>
-    <strong>awful.tasklist.source.all_clients</strong>
+    <a name = "awful.widget.tasklist.source.all_clients"></a>
+    <strong><span class='function_modname'>awful.widget.tasklist.</span>source.all_clients</strong>
     <span class="baseclass" >
     </span>
     </dt>
@@ -3022,7 +3023,7 @@ awful.popup {
 
 
 
-    <span id=item1372 class="hide_extra">
+    <span id=item1404 class="hide_extra">
     </span>
 
 </dd>
@@ -3031,8 +3032,8 @@ awful.popup {
 
     <dl class="function">
     <dt>
-    <a name = "awful.tasklist.filter.allscreen"></a>
-    <strong>awful.tasklist.filter.allscreen</strong>
+    <a name = "awful.widget.tasklist.filter.allscreen"></a>
+    <strong><span class='function_modname'>awful.widget.tasklist.</span>filter.allscreen</strong>
     <span class="baseclass" >
     </span>
     </dt>
@@ -3045,13 +3046,13 @@ awful.popup {
 
 
 
-    <span id=item1373 class="hide_extra">
+    <span id=item1405 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.tasklist.filter.alltags"></a>
-    <strong>awful.tasklist.filter.alltags</strong>
+    <a name = "awful.widget.tasklist.filter.alltags"></a>
+    <strong><span class='function_modname'>awful.widget.tasklist.</span>filter.alltags</strong>
     <span class="baseclass" >
     </span>
     </dt>
@@ -3072,13 +3073,13 @@ awful.popup {
 
 
 
-    <span id=item1374 class="hide_extra">
+    <span id=item1406 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.tasklist.filter.currenttags"></a>
-    <strong>awful.tasklist.filter.currenttags</strong>
+    <a name = "awful.widget.tasklist.filter.currenttags"></a>
+    <strong><span class='function_modname'>awful.widget.tasklist.</span>filter.currenttags</strong>
     <span class="baseclass" >
     </span>
     </dt>
@@ -3099,13 +3100,13 @@ awful.popup {
 
 
 
-    <span id=item1375 class="hide_extra">
+    <span id=item1407 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.tasklist.filter.minimizedcurrenttags"></a>
-    <strong>awful.tasklist.filter.minimizedcurrenttags</strong>
+    <a name = "awful.widget.tasklist.filter.minimizedcurrenttags"></a>
+    <strong><span class='function_modname'>awful.widget.tasklist.</span>filter.minimizedcurrenttags</strong>
     <span class="baseclass" >
     </span>
     </dt>
@@ -3126,13 +3127,13 @@ awful.popup {
 
 
 
-    <span id=item1376 class="hide_extra">
+    <span id=item1408 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.tasklist.filter.focused"></a>
-    <strong>awful.tasklist.filter.focused</strong>
+    <a name = "awful.widget.tasklist.filter.focused"></a>
+    <strong><span class='function_modname'>awful.widget.tasklist.</span>filter.focused</strong>
     <span class="baseclass" >
     </span>
     </dt>
@@ -3153,7 +3154,7 @@ awful.popup {
 
 
 
-    <span id=item1377 class="hide_extra">
+    <span id=item1409 class="hide_extra">
     </span>
 
 </dd>
@@ -3164,7 +3165,7 @@ awful.popup {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

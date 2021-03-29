@@ -117,6 +117,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -125,6 +126,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -133,15 +135,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -258,12 +257,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -1025,7 +1026,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1254 class="hide_extra">
+    <span id=item1286 class="hide_extra">
     </span>
 
 </dd>
@@ -1057,7 +1058,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1255 class="hide_extra">
+    <span id=item1287 class="hide_extra">
     </span>
 
 </dd>
@@ -1088,7 +1089,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1256 class="hide_extra">
+    <span id=item1288 class="hide_extra">
     </span>
 
 </dd>
@@ -1116,7 +1117,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1257 class="hide_extra">
+    <span id=item1289 class="hide_extra">
     </span>
 
 </dd>
@@ -1144,7 +1145,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1258 class="hide_extra">
+    <span id=item1290 class="hide_extra">
     </span>
 
 </dd>
@@ -1173,7 +1174,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1259 class="hide_extra">
+    <span id=item1291 class="hide_extra">
     </span>
 
 </dd>
@@ -1194,7 +1195,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1260 class="hide_extra">
+    <span id=item1292 class="hide_extra">
     </span>
 
 </dd>
@@ -1221,7 +1222,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1261 class="hide_extra">
+    <span id=item1293 class="hide_extra">
     </span>
 
 </dd>
@@ -1253,7 +1254,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1262 class="hide_extra">
+    <span id=item1294 class="hide_extra">
     </span>
 
 </dd>
@@ -1281,7 +1282,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1263 class="hide_extra">
+    <span id=item1295 class="hide_extra">
     </span>
 
 </dd>
@@ -1316,7 +1317,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1264 class="hide_extra">
+    <span id=item1296 class="hide_extra">
     </span>
 
 </dd>
@@ -1349,7 +1350,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1265 class="hide_extra">
+    <span id=item1297 class="hide_extra">
     </span>
 
 </dd>
@@ -1381,7 +1382,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1266 class="hide_extra">
+    <span id=item1298 class="hide_extra">
     </span>
 
 </dd>
@@ -1420,7 +1421,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1267 class="hide_extra">
+    <span id=item1299 class="hide_extra">
     </span>
 
 </dd>
@@ -1451,7 +1452,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1268 class="hide_extra">
+    <span id=item1300 class="hide_extra">
     </span>
 
 </dd>
@@ -1478,7 +1479,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1269 class="hide_extra">
+    <span id=item1301 class="hide_extra">
     </span>
 
 </dd>
@@ -1575,7 +1576,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1270 class="hide_extra">
+    <span id=item1302 class="hide_extra">
     </span>
 
 </dd>
@@ -1672,7 +1673,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1271 class="hide_extra">
+    <span id=item1303 class="hide_extra">
     </span>
 
 </dd>
@@ -1751,7 +1752,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1272 class="hide_extra">
+    <span id=item1304 class="hide_extra">
     </span>
 
 </dd>
@@ -1830,7 +1831,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1273 class="hide_extra">
+    <span id=item1305 class="hide_extra">
     </span>
 
 </dd>
@@ -1858,7 +1859,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1274 class="hide_extra">
+    <span id=item1306 class="hide_extra">
     </span>
 
 </dd>
@@ -1882,7 +1883,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1275 class="hide_extra">
+    <span id=item1307 class="hide_extra">
     </span>
 
 </dd>
@@ -1906,7 +1907,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1276 class="hide_extra">
+    <span id=item1308 class="hide_extra">
     </span>
 
 </dd>
@@ -1930,7 +1931,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1277 class="hide_extra">
+    <span id=item1309 class="hide_extra">
     </span>
 
 </dd>
@@ -1954,7 +1955,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1278 class="hide_extra">
+    <span id=item1310 class="hide_extra">
     </span>
 
 </dd>
@@ -1978,7 +1979,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1279 class="hide_extra">
+    <span id=item1311 class="hide_extra">
     </span>
 
 </dd>
@@ -2002,7 +2003,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1280 class="hide_extra">
+    <span id=item1312 class="hide_extra">
     </span>
 
 </dd>
@@ -2026,7 +2027,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1281 class="hide_extra">
+    <span id=item1313 class="hide_extra">
     </span>
 
 </dd>
@@ -2050,7 +2051,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1282 class="hide_extra">
+    <span id=item1314 class="hide_extra">
     </span>
 
 </dd>
@@ -2074,7 +2075,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1283 class="hide_extra">
+    <span id=item1315 class="hide_extra">
     </span>
 
 </dd>
@@ -2098,7 +2099,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1284 class="hide_extra">
+    <span id=item1316 class="hide_extra">
     </span>
 
 </dd>
@@ -2122,7 +2123,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1285 class="hide_extra">
+    <span id=item1317 class="hide_extra">
     </span>
 
 </dd>
@@ -2146,7 +2147,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1286 class="hide_extra">
+    <span id=item1318 class="hide_extra">
     </span>
 
 </dd>
@@ -2170,7 +2171,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1287 class="hide_extra">
+    <span id=item1319 class="hide_extra">
     </span>
 
 </dd>
@@ -2190,7 +2191,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1288 class="hide_extra">
+    <span id=item1320 class="hide_extra">
     </span>
 
 </dd>
@@ -2210,7 +2211,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1289 class="hide_extra">
+    <span id=item1321 class="hide_extra">
     </span>
 
 </dd>
@@ -2230,7 +2231,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1290 class="hide_extra">
+    <span id=item1322 class="hide_extra">
     </span>
 
 </dd>
@@ -2258,7 +2259,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1291 class="hide_extra">
+    <span id=item1323 class="hide_extra">
     </span>
 
 </dd>
@@ -2288,7 +2289,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1292 class="hide_extra">
+    <span id=item1324 class="hide_extra">
     </span>
 
 </dd>
@@ -2312,7 +2313,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1293 class="hide_extra">
+    <span id=item1325 class="hide_extra">
     </span>
 
 </dd>
@@ -2336,7 +2337,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1294 class="hide_extra">
+    <span id=item1326 class="hide_extra">
     </span>
 
 </dd>
@@ -2360,7 +2361,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1295 class="hide_extra">
+    <span id=item1327 class="hide_extra">
     </span>
 
 </dd>
@@ -2384,7 +2385,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1296 class="hide_extra">
+    <span id=item1328 class="hide_extra">
     </span>
 
 </dd>
@@ -2408,7 +2409,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1297 class="hide_extra">
+    <span id=item1329 class="hide_extra">
     </span>
 
 </dd>
@@ -2432,7 +2433,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1298 class="hide_extra">
+    <span id=item1330 class="hide_extra">
     </span>
 
 </dd>
@@ -2456,7 +2457,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1299 class="hide_extra">
+    <span id=item1331 class="hide_extra">
     </span>
 
 </dd>
@@ -2480,7 +2481,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1300 class="hide_extra">
+    <span id=item1332 class="hide_extra">
     </span>
 
 </dd>
@@ -2504,7 +2505,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1301 class="hide_extra">
+    <span id=item1333 class="hide_extra">
     </span>
 
 </dd>
@@ -2528,7 +2529,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1302 class="hide_extra">
+    <span id=item1334 class="hide_extra">
     </span>
 
 </dd>
@@ -2552,7 +2553,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1303 class="hide_extra">
+    <span id=item1335 class="hide_extra">
     </span>
 
 </dd>
@@ -2576,7 +2577,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1304 class="hide_extra">
+    <span id=item1336 class="hide_extra">
     </span>
 
 </dd>
@@ -2600,7 +2601,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1305 class="hide_extra">
+    <span id=item1337 class="hide_extra">
     </span>
 
 </dd>
@@ -2624,7 +2625,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1306 class="hide_extra">
+    <span id=item1338 class="hide_extra">
     </span>
 
 </dd>
@@ -2653,7 +2654,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1307 class="hide_extra">
+    <span id=item1339 class="hide_extra">
     </span>
 
 </dd>
@@ -2681,7 +2682,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1308 class="hide_extra">
+    <span id=item1340 class="hide_extra">
     </span>
 
 </dd>
@@ -2705,7 +2706,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1309 class="hide_extra">
+    <span id=item1341 class="hide_extra">
     </span>
 
 </dd>
@@ -2724,7 +2725,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1310 class="hide_extra">
+    <span id=item1342 class="hide_extra">
     </span>
 
 </dd>
@@ -2735,7 +2736,7 @@ s.mytaglist = awful.widget.taglist {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

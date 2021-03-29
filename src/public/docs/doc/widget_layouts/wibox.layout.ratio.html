@@ -95,6 +95,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -103,6 +104,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -111,15 +113,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -256,12 +255,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -660,7 +661,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2409 class="hide_extra">
+    <span id=item2441 class="hide_extra">
     </span>
 
 </dd>
@@ -687,7 +688,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2410 class="hide_extra">
+    <span id=item2442 class="hide_extra">
     </span>
 
 </dd>
@@ -760,13 +761,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
      <br />
-     <center id=button2411>
-     <a class="show_more_button" onclick="show_extra('2411')">
+     <center id=button2443>
+     <a class="show_more_button" onclick="show_extra('2443')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2411 class="hide_extra">
+    <span id=item2443 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::spacing_widget</code></span>  When the <a href="../widget_layouts/wibox.layout.ratio.html#spacing_widget">spacing_widget</a> value changes.</li>
@@ -818,13 +819,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
      <br />
-     <center id=button2412>
-     <a class="show_more_button" onclick="show_extra('2412')">
+     <center id=button2444>
+     <a class="show_more_button" onclick="show_extra('2444')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2412 class="hide_extra">
+    <span id=item2444 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::spacing</code></span>  When the <a href="../widget_layouts/wibox.layout.ratio.html#spacing">spacing</a> value changes.</li>
@@ -876,13 +877,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2413>
-     <a class="show_more_button" onclick="show_extra('2413')">
+     <center id=button2445>
+     <a class="show_more_button" onclick="show_extra('2445')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2413 class="hide_extra">
+    <span id=item2445 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::inner_fill_strategy</code></span>  When the <a href="../widget_layouts/wibox.layout.ratio.html#inner_fill_strategy">inner_fill_strategy</a> value changes.</li>
@@ -918,7 +919,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2414 class="hide_extra">
+    <span id=item2446 class="hide_extra">
     </span>
 
 </dd>
@@ -949,7 +950,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2415 class="hide_extra">
+    <span id=item2447 class="hide_extra">
     </span>
 
 </dd>
@@ -977,7 +978,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2416 class="hide_extra">
+    <span id=item2448 class="hide_extra">
     </span>
 
 </dd>
@@ -1005,7 +1006,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2417 class="hide_extra">
+    <span id=item2449 class="hide_extra">
     </span>
 
 </dd>
@@ -1034,7 +1035,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2418 class="hide_extra">
+    <span id=item2450 class="hide_extra">
     </span>
 
 </dd>
@@ -1055,7 +1056,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2419 class="hide_extra">
+    <span id=item2451 class="hide_extra">
     </span>
 
 </dd>
@@ -1082,7 +1083,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2420 class="hide_extra">
+    <span id=item2452 class="hide_extra">
     </span>
 
 </dd>
@@ -1137,7 +1138,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
 
-    <span id=item2421 class="hide_extra">
+    <span id=item2453 class="hide_extra">
     </span>
 
 </dd>
@@ -1171,7 +1172,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2422 class="hide_extra">
+    <span id=item2454 class="hide_extra">
     </span>
 
 </dd>
@@ -1202,7 +1203,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2423 class="hide_extra">
+    <span id=item2455 class="hide_extra">
     </span>
 
 </dd>
@@ -1235,7 +1236,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2424 class="hide_extra">
+    <span id=item2456 class="hide_extra">
     </span>
 
 </dd>
@@ -1266,7 +1267,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2425 class="hide_extra">
+    <span id=item2457 class="hide_extra">
     </span>
 
 </dd>
@@ -1330,7 +1331,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
 
-    <span id=item2426 class="hide_extra">
+    <span id=item2458 class="hide_extra">
     </span>
 
 </dd>
@@ -1369,7 +1370,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2427 class="hide_extra">
+    <span id=item2459 class="hide_extra">
     </span>
 
 </dd>
@@ -1397,13 +1398,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2428>
-     <a class="show_more_button" onclick="show_extra('2428')">
+     <center id=button2460>
+     <a class="show_more_button" onclick="show_extra('2460')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2428 class="hide_extra">
+    <span id=item2460 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::added</code></span>  All new widgets are passed in the parameters.</li>
@@ -1444,13 +1445,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2429>
-     <a class="show_more_button" onclick="show_extra('2429')">
+     <center id=button2461>
+     <a class="show_more_button" onclick="show_extra('2461')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2429 class="hide_extra">
+    <span id=item2461 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::removed</code></span>  </li>
@@ -1491,13 +1492,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2430>
-     <a class="show_more_button" onclick="show_extra('2430')">
+     <center id=button2462>
+     <a class="show_more_button" onclick="show_extra('2462')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2430 class="hide_extra">
+    <span id=item2462 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::inserted</code></span>  </li>
@@ -1544,13 +1545,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2431>
-     <a class="show_more_button" onclick="show_extra('2431')">
+     <center id=button2463>
+     <a class="show_more_button" onclick="show_extra('2463')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2431 class="hide_extra">
+    <span id=item2463 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::replaced</code></span>  </li>
@@ -1606,13 +1607,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2432>
-     <a class="show_more_button" onclick="show_extra('2432')">
+     <center id=button2464>
+     <a class="show_more_button" onclick="show_extra('2464')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2432 class="hide_extra">
+    <span id=item2464 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::replaced</code></span>  </li>
@@ -1660,13 +1661,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2433>
-     <a class="show_more_button" onclick="show_extra('2433')">
+     <center id=button2465>
+     <a class="show_more_button" onclick="show_extra('2465')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2433 class="hide_extra">
+    <span id=item2465 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::swapped</code></span>  </li>
@@ -1723,13 +1724,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2434>
-     <a class="show_more_button" onclick="show_extra('2434')">
+     <center id=button2466>
+     <a class="show_more_button" onclick="show_extra('2466')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2434 class="hide_extra">
+    <span id=item2466 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::swapped</code></span>  </li>
@@ -1761,13 +1762,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button2435>
-     <a class="show_more_button" onclick="show_extra('2435')">
+     <center id=button2467>
+     <a class="show_more_button" onclick="show_extra('2467')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2435 class="hide_extra">
+    <span id=item2467 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::reset</code></span>  </li>
@@ -1802,7 +1803,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2436 class="hide_extra">
+    <span id=item2468 class="hide_extra">
     </span>
 
 </dd>
@@ -1830,7 +1831,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2437 class="hide_extra">
+    <span id=item2469 class="hide_extra">
     </span>
 
 </dd>
@@ -1865,7 +1866,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2438 class="hide_extra">
+    <span id=item2470 class="hide_extra">
     </span>
 
 </dd>
@@ -1898,7 +1899,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2439 class="hide_extra">
+    <span id=item2471 class="hide_extra">
     </span>
 
 </dd>
@@ -1930,7 +1931,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2440 class="hide_extra">
+    <span id=item2472 class="hide_extra">
     </span>
 
 </dd>
@@ -1969,7 +1970,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2441 class="hide_extra">
+    <span id=item2473 class="hide_extra">
     </span>
 
 </dd>
@@ -2000,7 +2001,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2442 class="hide_extra">
+    <span id=item2474 class="hide_extra">
     </span>
 
 </dd>
@@ -2027,7 +2028,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2443 class="hide_extra">
+    <span id=item2475 class="hide_extra">
     </span>
 
 </dd>
@@ -2124,7 +2125,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2444 class="hide_extra">
+    <span id=item2476 class="hide_extra">
     </span>
 
 </dd>
@@ -2221,7 +2222,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2445 class="hide_extra">
+    <span id=item2477 class="hide_extra">
     </span>
 
 </dd>
@@ -2300,7 +2301,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2446 class="hide_extra">
+    <span id=item2478 class="hide_extra">
     </span>
 
 </dd>
@@ -2379,7 +2380,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2447 class="hide_extra">
+    <span id=item2479 class="hide_extra">
     </span>
 
 </dd>
@@ -2443,7 +2444,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2448 class="hide_extra">
+    <span id=item2480 class="hide_extra">
     </span>
 
 </dd>
@@ -2499,7 +2500,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item2449 class="hide_extra">
+    <span id=item2481 class="hide_extra">
     </span>
 
 </dd>
@@ -2510,7 +2511,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

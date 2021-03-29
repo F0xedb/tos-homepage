@@ -90,6 +90,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -98,6 +99,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -106,15 +108,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -256,12 +255,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -721,7 +722,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1031 class="hide_extra">
+    <span id=item1063 class="hide_extra">
     </span>
 
 </dd>
@@ -747,7 +748,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1032 class="hide_extra">
+    <span id=item1064 class="hide_extra">
     </span>
 
 </dd>
@@ -774,7 +775,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1033 class="hide_extra">
+    <span id=item1065 class="hide_extra">
     </span>
 
 </dd>
@@ -815,7 +816,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1034 class="hide_extra">
+    <span id=item1066 class="hide_extra">
     </span>
 
 </dd>
@@ -852,7 +853,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1035 class="hide_extra">
+    <span id=item1067 class="hide_extra">
     </span>
 
 </dd>
@@ -892,7 +893,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1036 class="hide_extra">
+    <span id=item1068 class="hide_extra">
     </span>
 
 </dd>
@@ -930,7 +931,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1037 class="hide_extra">
+    <span id=item1069 class="hide_extra">
     </span>
 
 </dd>
@@ -968,7 +969,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1038 class="hide_extra">
+    <span id=item1070 class="hide_extra">
     </span>
 
 </dd>
@@ -1001,7 +1002,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1039 class="hide_extra">
+    <span id=item1071 class="hide_extra">
     </span>
 
 </dd>
@@ -1028,7 +1029,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1040 class="hide_extra">
+    <span id=item1072 class="hide_extra">
     </span>
 
 </dd>
@@ -1117,7 +1118,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1041 class="hide_extra">
+    <span id=item1073 class="hide_extra">
     </span>
 
 </dd>
@@ -1154,13 +1155,13 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
      <br />
-     <center id=button1042>
-     <a class="show_more_button" onclick="show_extra('1042')">
+     <center id=button1074>
+     <a class="show_more_button" onclick="show_extra('1074')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1042 class="hide_extra">
+    <span id=item1074 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1200,7 +1201,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1043 class="hide_extra">
+    <span id=item1075 class="hide_extra">
     </span>
 
 </dd>
@@ -1228,7 +1229,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1044 class="hide_extra">
+    <span id=item1076 class="hide_extra">
     </span>
 
 </dd>
@@ -1262,7 +1263,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1045 class="hide_extra">
+    <span id=item1077 class="hide_extra">
     </span>
 
 </dd>
@@ -1290,7 +1291,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1046 class="hide_extra">
+    <span id=item1078 class="hide_extra">
     </span>
 
 </dd>
@@ -1314,7 +1315,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1047 class="hide_extra">
+    <span id=item1079 class="hide_extra">
     </span>
 
 </dd>
@@ -1339,7 +1340,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1048 class="hide_extra">
+    <span id=item1080 class="hide_extra">
     </span>
 
 </dd>
@@ -1364,7 +1365,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1049 class="hide_extra">
+    <span id=item1081 class="hide_extra">
     </span>
 
 </dd>
@@ -1389,7 +1390,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1050 class="hide_extra">
+    <span id=item1082 class="hide_extra">
     </span>
 
 </dd>
@@ -1414,7 +1415,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1051 class="hide_extra">
+    <span id=item1083 class="hide_extra">
     </span>
 
 </dd>
@@ -1439,7 +1440,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1052 class="hide_extra">
+    <span id=item1084 class="hide_extra">
     </span>
 
 </dd>
@@ -1466,7 +1467,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1053 class="hide_extra">
+    <span id=item1085 class="hide_extra">
     </span>
 
 </dd>
@@ -1493,7 +1494,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1054 class="hide_extra">
+    <span id=item1086 class="hide_extra">
     </span>
 
 </dd>
@@ -1520,7 +1521,7 @@ awful.spawn(<span class="string">'xterm'</span>)
 
 
 
-    <span id=item1055 class="hide_extra">
+    <span id=item1087 class="hide_extra">
     </span>
 
 </dd>
@@ -1563,7 +1564,7 @@ end
 
 
 
-    <span id=item1056 class="hide_extra">
+    <span id=item1088 class="hide_extra">
     </span>
 
 </dd>
@@ -1603,7 +1604,7 @@ end
 
 
 
-    <span id=item1057 class="hide_extra">
+    <span id=item1089 class="hide_extra">
     </span>
 
 </dd>
@@ -1623,7 +1624,7 @@ end
 
 
 
-    <span id=item1058 class="hide_extra">
+    <span id=item1090 class="hide_extra">
     </span>
 
 </dd>
@@ -1634,7 +1635,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

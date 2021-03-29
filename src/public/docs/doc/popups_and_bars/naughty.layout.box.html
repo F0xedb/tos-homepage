@@ -98,6 +98,7 @@
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
+  <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
   <li><a href="../tde/lib-tde.widget.rounded.html">lib-tde.widget.rounded</a></li>
 </ul>
 <h2>Datastructures</h2>
@@ -106,6 +107,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
 </ul>
@@ -114,15 +116,12 @@
   <li><a href="../tde widget/lib-widget.button.html">lib-widget.button</a></li>
   <li><a href="../tde widget/lib-widget.card.html">lib-widget.card</a></li>
   <li><a href="../tde widget/lib-widget.checkbox.html">lib-widget.checkbox</a></li>
-  <li><a href="../tde widget/lib-widget.iconbox.html">lib-widget.iconbox</a></li>
-  <li><a href="../tde widget/lib-widget.imagebox.html">lib-widget.imagebox</a></li>
   <li><a href="../tde widget/lib-widget.inputfield.html">lib-widget.inputfield</a></li>
   <li><a href="../tde widget/lib-widget.profilebox.html">lib-widget.profilebox</a></li>
   <li><a href="../tde widget/lib-widget.progress_bar.html">lib-widget.progress_bar</a></li>
   <li><a href="../tde widget/lib-widget.scrollbox.html">lib-widget.scrollbox</a></li>
   <li><a href="../tde widget/lib-widget.separator.html">lib-widget.separator</a></li>
   <li><a href="../tde widget/lib-widget.slider.html">lib-widget.slider</a></li>
-  <li><a href="../tde widget/lib-widget.textbox.html">lib-widget.textbox</a></li>
 </ul>
 <h2>Input handling</h2>
 <ul class="nowrap">
@@ -255,12 +254,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -701,13 +702,13 @@
 
 
      <br />
-     <center id=button2778>
-     <a class="show_more_button" onclick="show_extra('2778')">
+     <center id=button2810>
+     <a class="show_more_button" onclick="show_extra('2810')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2778 class="hide_extra">
+    <span id=item2810 class="hide_extra">
      <h3>Consumed theme variables:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -740,13 +741,13 @@
 
 
      <br />
-     <center id=button2779>
-     <a class="show_more_button" onclick="show_extra('2779')">
+     <center id=button2811>
+     <a class="show_more_button" onclick="show_extra('2811')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2779 class="hide_extra">
+    <span id=item2811 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::notification</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#notification">notification</a> value changes.</li>
@@ -818,13 +819,13 @@
 
 
      <br />
-     <center id=button2780>
-     <a class="show_more_button" onclick="show_extra('2780')">
+     <center id=button2812>
+     <a class="show_more_button" onclick="show_extra('2812')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2780 class="hide_extra">
+    <span id=item2812 class="hide_extra">
      <h3>Consumed theme variables:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -854,13 +855,13 @@
 
 
      <br />
-     <center id=button2781>
-     <a class="show_more_button" onclick="show_extra('2781')">
+     <center id=button2813>
+     <a class="show_more_button" onclick="show_extra('2813')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2781 class="hide_extra">
+    <span id=item2813 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#border_width">border_width</a> value changes.</li>
@@ -909,13 +910,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2782>
-     <a class="show_more_button" onclick="show_extra('2782')">
+     <center id=button2814>
+     <a class="show_more_button" onclick="show_extra('2814')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2782 class="hide_extra">
+    <span id=item2814 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#border_color">border_color</a> value changes.</li>
@@ -944,13 +945,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2783>
-     <a class="show_more_button" onclick="show_extra('2783')">
+     <center id=button2815>
+     <a class="show_more_button" onclick="show_extra('2815')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2783 class="hide_extra">
+    <span id=item2815 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::ontop</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#ontop">ontop</a> value changes.</li>
@@ -983,13 +984,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2784>
-     <a class="show_more_button" onclick="show_extra('2784')">
+     <center id=button2816>
+     <a class="show_more_button" onclick="show_extra('2816')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2784 class="hide_extra">
+    <span id=item2816 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::cursor</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#cursor">cursor</a> value changes.</li>
@@ -1018,13 +1019,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2785>
-     <a class="show_more_button" onclick="show_extra('2785')">
+     <center id=button2817>
+     <a class="show_more_button" onclick="show_extra('2817')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2785 class="hide_extra">
+    <span id=item2817 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::visible</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#visible">visible</a> value changes.</li>
@@ -1060,13 +1061,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2786>
-     <a class="show_more_button" onclick="show_extra('2786')">
+     <center id=button2818>
+     <a class="show_more_button" onclick="show_extra('2818')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2786 class="hide_extra">
+    <span id=item2818 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::opacity</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#opacity">opacity</a> value changes.</li>
@@ -1099,13 +1100,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2787>
-     <a class="show_more_button" onclick="show_extra('2787')">
+     <center id=button2819>
+     <a class="show_more_button" onclick="show_extra('2819')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2787 class="hide_extra">
+    <span id=item2819 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::type</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#type">type</a> value changes.</li>
@@ -1134,13 +1135,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2788>
-     <a class="show_more_button" onclick="show_extra('2788')">
+     <center id=button2820>
+     <a class="show_more_button" onclick="show_extra('2820')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2788 class="hide_extra">
+    <span id=item2820 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::x</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#x">x</a> value changes.</li>
@@ -1169,13 +1170,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2789>
-     <a class="show_more_button" onclick="show_extra('2789')">
+     <center id=button2821>
+     <a class="show_more_button" onclick="show_extra('2821')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2789 class="hide_extra">
+    <span id=item2821 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::y</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#y">y</a> value changes.</li>
@@ -1204,13 +1205,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2790>
-     <a class="show_more_button" onclick="show_extra('2790')">
+     <center id=button2822>
+     <a class="show_more_button" onclick="show_extra('2822')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2790 class="hide_extra">
+    <span id=item2822 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::width</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#width">width</a> value changes.</li>
@@ -1239,13 +1240,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2791>
-     <a class="show_more_button" onclick="show_extra('2791')">
+     <center id=button2823>
+     <a class="show_more_button" onclick="show_extra('2823')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2791 class="hide_extra">
+    <span id=item2823 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::height</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#height">height</a> value changes.</li>
@@ -1274,13 +1275,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2792>
-     <a class="show_more_button" onclick="show_extra('2792')">
+     <center id=button2824>
+     <a class="show_more_button" onclick="show_extra('2824')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2792 class="hide_extra">
+    <span id=item2824 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::screen</code></span>  When the <a href="../core_components/screen.html#">screen</a> value changes.</li>
@@ -1310,13 +1311,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2793>
-     <a class="show_more_button" onclick="show_extra('2793')">
+     <center id=button2825>
+     <a class="show_more_button" onclick="show_extra('2825')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2793 class="hide_extra">
+    <span id=item2825 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::drawable</code></span>  When the <a href="../core_components/drawable.html#">drawable</a> value changes.</li>
@@ -1345,13 +1346,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2794>
-     <a class="show_more_button" onclick="show_extra('2794')">
+     <center id=button2826>
+     <a class="show_more_button" onclick="show_extra('2826')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2794 class="hide_extra">
+    <span id=item2826 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::widget</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#widget">widget</a> value changes.</li>
@@ -1385,13 +1386,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2795>
-     <a class="show_more_button" onclick="show_extra('2795')">
+     <center id=button2827>
+     <a class="show_more_button" onclick="show_extra('2827')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2795 class="hide_extra">
+    <span id=item2827 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::window</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#window">window</a> value changes.</li>
@@ -1428,13 +1429,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2796>
-     <a class="show_more_button" onclick="show_extra('2796')">
+     <center id=button2828>
+     <a class="show_more_button" onclick="show_extra('2828')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2796 class="hide_extra">
+    <span id=item2828 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_bounding</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#shape_bounding">shape_bounding</a> value changes.</li>
@@ -1470,13 +1471,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2797>
-     <a class="show_more_button" onclick="show_extra('2797')">
+     <center id=button2829>
+     <a class="show_more_button" onclick="show_extra('2829')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2797 class="hide_extra">
+    <span id=item2829 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_clip</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#shape_clip">shape_clip</a> value changes.</li>
@@ -1513,13 +1514,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2798>
-     <a class="show_more_button" onclick="show_extra('2798')">
+     <center id=button2830>
+     <a class="show_more_button" onclick="show_extra('2830')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2798 class="hide_extra">
+    <span id=item2830 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_input</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#shape_input">shape_input</a> value changes.</li>
@@ -1552,13 +1553,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2799>
-     <a class="show_more_button" onclick="show_extra('2799')">
+     <center id=button2831>
+     <a class="show_more_button" onclick="show_extra('2831')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2799 class="hide_extra">
+    <span id=item2831 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#shape">shape</a> value changes.</li>
@@ -1598,13 +1599,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2800>
-     <a class="show_more_button" onclick="show_extra('2800')">
+     <center id=button2832>
+     <a class="show_more_button" onclick="show_extra('2832')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2800 class="hide_extra">
+    <span id=item2832 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::input_passthrough</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#input_passthrough">input_passthrough</a> value changes.</li>
@@ -1640,13 +1641,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2801>
-     <a class="show_more_button" onclick="show_extra('2801')">
+     <center id=button2833>
+     <a class="show_more_button" onclick="show_extra('2833')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2801 class="hide_extra">
+    <span id=item2833 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::buttons</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#buttons">buttons</a> value changes.</li>
@@ -1694,13 +1695,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2802>
-     <a class="show_more_button" onclick="show_extra('2802')">
+     <center id=button2834>
+     <a class="show_more_button" onclick="show_extra('2834')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2802 class="hide_extra">
+    <span id=item2834 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#bg">bg</a> value changes.</li>
@@ -1752,13 +1753,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2803>
-     <a class="show_more_button" onclick="show_extra('2803')">
+     <center id=button2835>
+     <a class="show_more_button" onclick="show_extra('2835')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2803 class="hide_extra">
+    <span id=item2835 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bgimage</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#bgimage">bgimage</a> value changes.</li>
@@ -1806,13 +1807,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2804>
-     <a class="show_more_button" onclick="show_extra('2804')">
+     <center id=button2836>
+     <a class="show_more_button" onclick="show_extra('2836')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2804 class="hide_extra">
+    <span id=item2836 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fg</code></span>  When the <a href="../popups_and_bars/naughty.layout.box.html#fg">fg</a> value changes.</li>
@@ -1866,13 +1867,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2805>
-     <a class="show_more_button" onclick="show_extra('2805')">
+     <center id=button2837>
+     <a class="show_more_button" onclick="show_extra('2837')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2805 class="hide_extra">
+    <span id=item2837 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  When the geometry change.</li>
@@ -1923,13 +1924,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button2806>
-     <a class="show_more_button" onclick="show_extra('2806')">
+     <center id=button2838>
+     <a class="show_more_button" onclick="show_extra('2838')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2806 class="hide_extra">
+    <span id=item2838 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::struts</code></span>  </li>
@@ -1961,7 +1962,7 @@ Green   Alpha
 
 
 
-    <span id=item2807 class="hide_extra">
+    <span id=item2839 class="hide_extra">
     </span>
 
 </dd>
@@ -2002,7 +2003,7 @@ Green   Alpha
 
 
 
-    <span id=item2808 class="hide_extra">
+    <span id=item2840 class="hide_extra">
     </span>
 
 </dd>
@@ -2026,7 +2027,7 @@ Green   Alpha
 
 
 
-    <span id=item2809 class="hide_extra">
+    <span id=item2841 class="hide_extra">
     </span>
 
 </dd>
@@ -2060,7 +2061,7 @@ Green   Alpha
 
 
 
-    <span id=item2810 class="hide_extra">
+    <span id=item2842 class="hide_extra">
     </span>
 
 </dd>
@@ -2091,7 +2092,7 @@ Green   Alpha
 
 
 
-    <span id=item2811 class="hide_extra">
+    <span id=item2843 class="hide_extra">
     </span>
 
 </dd>
@@ -2116,7 +2117,7 @@ Green   Alpha
 
 
 
-    <span id=item2812 class="hide_extra">
+    <span id=item2844 class="hide_extra">
     </span>
 
 </dd>
@@ -2127,7 +2128,7 @@ Green   Alpha
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-01-10 21:05:22 </i>
+<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
