@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -96,6 +98,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -178,6 +181,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -277,11 +281,18 @@
 <p>The object oriented programming base class used by various Awesome
  widgets and components.</p>
 <p> It provide basic observer pattern, signaling and dynamic properties.</p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
-        <li><strong>Author</strong>: Uli Schlachter</li>
+            <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+            <li><strong>Author</strong>: Uli Schlachter</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -339,7 +350,7 @@
         <a href="#disconnect_signal">:disconnect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Disonnect to a signal.</td>
+      <td colspan="2" class="summary">Disonnect from a signal.</td>
     </tr>
     <tr>
       <td class="name" >
@@ -474,13 +485,13 @@ o.something = <span class="string">'a cow'</span>
     </ul>
 
 
-    <span id=item2917 class="hide_extra">
+    <span id=item2344 class="hide_extra">
     </span>
 
 </dd>
 </dl>
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
-    Methods
+
     <dl class="function">
     <dt>
     <a name = "t.emit_signal"></a>
@@ -507,7 +518,7 @@ o.something = <span class="string">'a cow'</span>
 
 
 
-    <span id=item2918 class="hide_extra">
+    <span id=item2345 class="hide_extra">
     </span>
 
 </dd>
@@ -543,7 +554,7 @@ o.something = <span class="string">'a cow'</span>
 
 
 
-    <span id=item2919 class="hide_extra">
+    <span id=item2346 class="hide_extra">
     </span>
 
 </dd>
@@ -590,7 +601,7 @@ mt.__tostring = <span class="keyword">function</span>(o)
     </ul>
 
 
-    <span id=item2920 class="hide_extra">
+    <span id=item2347 class="hide_extra">
     </span>
 
 </dd>
@@ -611,6 +622,7 @@ mt.__tostring = <span class="keyword">function</span>(o)
 
 
 
+
 <p><strong>Usage example output</strong>:</p>
 
 <pre><code>In slot [obj]   nil nil nil
@@ -624,11 +636,11 @@ In slot [obj]   foo bar 42
     <ul>
         <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The name of the signal
+         The name of the signal.
         </li>
         <li><span class="parameter">func</span>
             <span class="types"><span class="type">function</span></span>
-         The callback to call when the signal is emitted
+         The callback to call when the signal is emitted.
         </li>
     </ul>
 
@@ -656,7 +668,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </ul>
 
 
-    <span id=item2921 class="hide_extra">
+    <span id=item924 class="hide_extra">
     </span>
 
 </dd>
@@ -668,18 +680,23 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </span>
     </dt>
     <dd>
-    Connect to a signal weakly.  This allows the callback function to be garbage
- collected and automatically disconnects the signal when that happens.
+    Connect to a signal weakly. </p>
+
+<p> This allows the callback function to be garbage collected and
+ automatically disconnects the signal when that happens.
+ <strong>Warning:</strong>
+ Only use this function if you really, really, really know what you
+ are doing.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The name of the signal
+         The name of the signal.
         </li>
         <li><span class="parameter">func</span>
             <span class="types"><span class="type">function</span></span>
-         The callback to call when the signal is emitted
+         The callback to call when the signal is emitted.
         </li>
     </ul>
 
@@ -688,7 +705,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item2922 class="hide_extra">
+    <span id=item925 class="hide_extra">
     </span>
 
 </dd>
@@ -700,17 +717,17 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </span>
     </dt>
     <dd>
-    Disonnect to a signal.
+    Disonnect from a signal.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The name of the signal
+         The name of the signal.
         </li>
         <li><span class="parameter">func</span>
             <span class="types"><span class="type">function</span></span>
-         The callback that should be disconnected
+         The callback that should be disconnected.
         </li>
     </ul>
 
@@ -719,7 +736,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item2923 class="hide_extra">
+    <span id=item926 class="hide_extra">
     </span>
 
 </dd>
@@ -741,8 +758,8 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
         </li>
         <li><span class="parameter">...</span>
          Extra arguments for the callback functions. Each connected
-   function receives the object as first argument and then any extra arguments
-   that are given to emit_signal()
+   function receives the object as first argument and then any extra
+   arguments that are given to emit_signal()
         </li>
     </ul>
 
@@ -751,7 +768,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item2924 class="hide_extra">
+    <span id=item927 class="hide_extra">
     </span>
 
 </dd>
@@ -802,7 +819,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item2925 class="hide_extra">
+    <span id=item2348 class="hide_extra">
     </span>
 
 </dd>
@@ -813,7 +830,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

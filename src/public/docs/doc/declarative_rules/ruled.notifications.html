@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -87,6 +89,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -164,6 +167,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -479,11 +483,18 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
  </table>
 
 </p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2017-2019 Emmanuel Lepage Vallee</li>
-        <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+            <li><strong>Copyright</strong>: 2017-2019 Emmanuel Lepage Vallee</li>
+            <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -657,7 +668,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1091 class="hide_extra">
+    <span id=item1177 class="hide_extra">
     </span>
 
 </dd>
@@ -688,7 +699,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1092 class="hide_extra">
+    <span id=item1178 class="hide_extra">
     </span>
 
 </dd>
@@ -715,7 +726,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1093 class="hide_extra">
+    <span id=item1179 class="hide_extra">
     </span>
 
 </dd>
@@ -742,7 +753,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1094 class="hide_extra">
+    <span id=item1180 class="hide_extra">
     </span>
 
 </dd>
@@ -769,7 +780,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1095 class="hide_extra">
+    <span id=item1181 class="hide_extra">
     </span>
 
 </dd>
@@ -835,7 +846,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1096 class="hide_extra">
+    <span id=item1182 class="hide_extra">
     </span>
 
 </dd>
@@ -863,7 +874,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1097 class="hide_extra">
+    <span id=item1183 class="hide_extra">
     </span>
 
 </dd>
@@ -887,7 +898,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1098 class="hide_extra">
+    <span id=item1184 class="hide_extra">
     </span>
 
 </dd>
@@ -912,7 +923,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1099 class="hide_extra">
+    <span id=item1185 class="hide_extra">
     </span>
 
 </dd>
@@ -937,7 +948,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1100 class="hide_extra">
+    <span id=item1186 class="hide_extra">
     </span>
 
 </dd>
@@ -962,7 +973,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1101 class="hide_extra">
+    <span id=item1187 class="hide_extra">
     </span>
 
 </dd>
@@ -987,7 +998,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1102 class="hide_extra">
+    <span id=item1188 class="hide_extra">
     </span>
 
 </dd>
@@ -1012,7 +1023,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1103 class="hide_extra">
+    <span id=item1189 class="hide_extra">
     </span>
 
 </dd>
@@ -1039,7 +1050,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1104 class="hide_extra">
+    <span id=item1190 class="hide_extra">
     </span>
 
 </dd>
@@ -1066,7 +1077,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1105 class="hide_extra">
+    <span id=item1191 class="hide_extra">
     </span>
 
 </dd>
@@ -1093,7 +1104,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1106 class="hide_extra">
+    <span id=item1192 class="hide_extra">
     </span>
 
 </dd>
@@ -1120,7 +1131,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1107 class="hide_extra">
+    <span id=item1193 class="hide_extra">
     </span>
 
 </dd>
@@ -1143,7 +1154,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1108 class="hide_extra">
+    <span id=item1194 class="hide_extra">
     </span>
 
 </dd>
@@ -1163,7 +1174,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 
 
 
-    <span id=item1109 class="hide_extra">
+    <span id=item1195 class="hide_extra">
     </span>
 
 </dd>
@@ -1199,7 +1210,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     </ul>
 
 
-    <span id=item1110 class="hide_extra">
+    <span id=item1196 class="hide_extra">
     </span>
 
 </dd>
@@ -1233,7 +1244,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     </ul>
 
 
-    <span id=item1111 class="hide_extra">
+    <span id=item1197 class="hide_extra">
     </span>
 
 </dd>
@@ -1267,7 +1278,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
     </ul>
 
 
-    <span id=item1112 class="hide_extra">
+    <span id=item1198 class="hide_extra">
     </span>
 
 </dd>
@@ -1278,7 +1289,7 @@ ruled.notification.connect_signal(<span class="string">'request::rules'</span>, 
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

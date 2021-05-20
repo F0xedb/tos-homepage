@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -115,6 +117,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -167,6 +170,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -397,11 +401,18 @@ s.mytaglist = awful.widget.taglist {
     <li><code>tags</code>: The list of tag, in order (<em>table</em>)</li>
 </ul>
 </p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-        <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -419,7 +430,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get or set the children elements.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -427,7 +438,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -435,7 +446,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget height.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -443,7 +454,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget width.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -451,7 +462,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
       <td colspan="1" class="summary">The widget opacity (transparency).</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -459,7 +470,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
       <td colspan="1" class="summary">The widget visibility.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -467,7 +478,7 @@ s.mytaglist = awful.widget.taglist {
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">The widget buttons.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -480,7 +491,7 @@ s.mytaglist = awful.widget.taglist {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -490,7 +501,7 @@ s.mytaglist = awful.widget.taglist {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -501,7 +512,7 @@ s.mytaglist = awful.widget.taglist {
       </td>
       <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
  forward the signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -511,7 +522,7 @@ s.mytaglist = awful.widget.taglist {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Emit a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -521,7 +532,7 @@ s.mytaglist = awful.widget.taglist {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -531,7 +542,7 @@ s.mytaglist = awful.widget.taglist {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal weakly.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -543,7 +554,7 @@ s.mytaglist = awful.widget.taglist {
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
       <td colspan="1" class="summary">When the layout (size) change.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -552,7 +563,7 @@ s.mytaglist = awful.widget.taglist {
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
       <td colspan="1" class="summary">When the widget content changed.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -561,7 +572,7 @@ s.mytaglist = awful.widget.taglist {
         <a href="#button::press">button::press</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -570,7 +581,7 @@ s.mytaglist = awful.widget.taglist {
         <a href="#button::release">button::release</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -579,7 +590,7 @@ s.mytaglist = awful.widget.taglist {
         <a href="#mouse::enter">mouse::enter</a>
       </td>
       <td colspan="1" class="summary">When the mouse enter a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -588,7 +599,7 @@ s.mytaglist = awful.widget.taglist {
         <a href="#mouse::leave">mouse::leave</a>
       </td>
       <td colspan="1" class="summary">When the mouse leave a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -1026,7 +1037,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1286 class="hide_extra">
+    <span id=item1298 class="hide_extra">
     </span>
 
 </dd>
@@ -1058,7 +1069,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1287 class="hide_extra">
+    <span id=item1299 class="hide_extra">
     </span>
 
 </dd>
@@ -1089,7 +1100,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1288 class="hide_extra">
+    <span id=item1300 class="hide_extra">
     </span>
 
 </dd>
@@ -1117,7 +1128,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1289 class="hide_extra">
+    <span id=item1301 class="hide_extra">
     </span>
 
 </dd>
@@ -1145,7 +1156,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1290 class="hide_extra">
+    <span id=item1302 class="hide_extra">
     </span>
 
 </dd>
@@ -1174,7 +1185,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1291 class="hide_extra">
+    <span id=item1303 class="hide_extra">
     </span>
 
 </dd>
@@ -1195,7 +1206,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1292 class="hide_extra">
+    <span id=item1304 class="hide_extra">
     </span>
 
 </dd>
@@ -1222,7 +1233,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1293 class="hide_extra">
+    <span id=item1305 class="hide_extra">
     </span>
 
 </dd>
@@ -1254,7 +1265,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1294 class="hide_extra">
+    <span id=item1306 class="hide_extra">
     </span>
 
 </dd>
@@ -1282,7 +1293,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1295 class="hide_extra">
+    <span id=item1307 class="hide_extra">
     </span>
 
 </dd>
@@ -1317,7 +1328,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1296 class="hide_extra">
+    <span id=item1308 class="hide_extra">
     </span>
 
 </dd>
@@ -1350,7 +1361,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1297 class="hide_extra">
+    <span id=item1309 class="hide_extra">
     </span>
 
 </dd>
@@ -1382,7 +1393,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1298 class="hide_extra">
+    <span id=item1310 class="hide_extra">
     </span>
 
 </dd>
@@ -1421,7 +1432,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1299 class="hide_extra">
+    <span id=item1311 class="hide_extra">
     </span>
 
 </dd>
@@ -1452,7 +1463,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1300 class="hide_extra">
+    <span id=item1312 class="hide_extra">
     </span>
 
 </dd>
@@ -1479,7 +1490,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1301 class="hide_extra">
+    <span id=item1313 class="hide_extra">
     </span>
 
 </dd>
@@ -1576,7 +1587,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1302 class="hide_extra">
+    <span id=item1314 class="hide_extra">
     </span>
 
 </dd>
@@ -1673,7 +1684,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1303 class="hide_extra">
+    <span id=item1315 class="hide_extra">
     </span>
 
 </dd>
@@ -1752,7 +1763,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1304 class="hide_extra">
+    <span id=item1316 class="hide_extra">
     </span>
 
 </dd>
@@ -1831,7 +1842,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1305 class="hide_extra">
+    <span id=item1317 class="hide_extra">
     </span>
 
 </dd>
@@ -1859,7 +1870,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1306 class="hide_extra">
+    <span id=item1318 class="hide_extra">
     </span>
 
 </dd>
@@ -1883,7 +1894,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1307 class="hide_extra">
+    <span id=item1319 class="hide_extra">
     </span>
 
 </dd>
@@ -1907,7 +1918,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1308 class="hide_extra">
+    <span id=item1320 class="hide_extra">
     </span>
 
 </dd>
@@ -1931,7 +1942,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1309 class="hide_extra">
+    <span id=item1321 class="hide_extra">
     </span>
 
 </dd>
@@ -1955,7 +1966,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1310 class="hide_extra">
+    <span id=item1322 class="hide_extra">
     </span>
 
 </dd>
@@ -1979,7 +1990,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1311 class="hide_extra">
+    <span id=item1323 class="hide_extra">
     </span>
 
 </dd>
@@ -2003,7 +2014,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1312 class="hide_extra">
+    <span id=item1324 class="hide_extra">
     </span>
 
 </dd>
@@ -2027,7 +2038,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1313 class="hide_extra">
+    <span id=item1325 class="hide_extra">
     </span>
 
 </dd>
@@ -2051,7 +2062,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1314 class="hide_extra">
+    <span id=item1326 class="hide_extra">
     </span>
 
 </dd>
@@ -2075,7 +2086,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1315 class="hide_extra">
+    <span id=item1327 class="hide_extra">
     </span>
 
 </dd>
@@ -2099,7 +2110,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1316 class="hide_extra">
+    <span id=item1328 class="hide_extra">
     </span>
 
 </dd>
@@ -2123,7 +2134,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1317 class="hide_extra">
+    <span id=item1329 class="hide_extra">
     </span>
 
 </dd>
@@ -2147,7 +2158,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1318 class="hide_extra">
+    <span id=item1330 class="hide_extra">
     </span>
 
 </dd>
@@ -2171,7 +2182,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1319 class="hide_extra">
+    <span id=item1331 class="hide_extra">
     </span>
 
 </dd>
@@ -2191,7 +2202,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1320 class="hide_extra">
+    <span id=item1332 class="hide_extra">
     </span>
 
 </dd>
@@ -2211,7 +2222,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1321 class="hide_extra">
+    <span id=item1333 class="hide_extra">
     </span>
 
 </dd>
@@ -2231,7 +2242,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1322 class="hide_extra">
+    <span id=item1334 class="hide_extra">
     </span>
 
 </dd>
@@ -2259,7 +2270,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1323 class="hide_extra">
+    <span id=item1335 class="hide_extra">
     </span>
 
 </dd>
@@ -2289,7 +2300,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1324 class="hide_extra">
+    <span id=item1336 class="hide_extra">
     </span>
 
 </dd>
@@ -2313,7 +2324,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1325 class="hide_extra">
+    <span id=item1337 class="hide_extra">
     </span>
 
 </dd>
@@ -2337,7 +2348,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1326 class="hide_extra">
+    <span id=item1338 class="hide_extra">
     </span>
 
 </dd>
@@ -2361,7 +2372,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1327 class="hide_extra">
+    <span id=item1339 class="hide_extra">
     </span>
 
 </dd>
@@ -2385,7 +2396,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1328 class="hide_extra">
+    <span id=item1340 class="hide_extra">
     </span>
 
 </dd>
@@ -2409,7 +2420,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1329 class="hide_extra">
+    <span id=item1341 class="hide_extra">
     </span>
 
 </dd>
@@ -2433,7 +2444,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1330 class="hide_extra">
+    <span id=item1342 class="hide_extra">
     </span>
 
 </dd>
@@ -2457,7 +2468,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1331 class="hide_extra">
+    <span id=item1343 class="hide_extra">
     </span>
 
 </dd>
@@ -2481,7 +2492,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1332 class="hide_extra">
+    <span id=item1344 class="hide_extra">
     </span>
 
 </dd>
@@ -2505,7 +2516,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1333 class="hide_extra">
+    <span id=item1345 class="hide_extra">
     </span>
 
 </dd>
@@ -2529,7 +2540,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1334 class="hide_extra">
+    <span id=item1346 class="hide_extra">
     </span>
 
 </dd>
@@ -2553,7 +2564,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1335 class="hide_extra">
+    <span id=item1347 class="hide_extra">
     </span>
 
 </dd>
@@ -2577,7 +2588,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1336 class="hide_extra">
+    <span id=item1348 class="hide_extra">
     </span>
 
 </dd>
@@ -2601,7 +2612,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1337 class="hide_extra">
+    <span id=item1349 class="hide_extra">
     </span>
 
 </dd>
@@ -2625,7 +2636,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1338 class="hide_extra">
+    <span id=item1350 class="hide_extra">
     </span>
 
 </dd>
@@ -2654,7 +2665,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1339 class="hide_extra">
+    <span id=item1351 class="hide_extra">
     </span>
 
 </dd>
@@ -2682,7 +2693,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1340 class="hide_extra">
+    <span id=item1352 class="hide_extra">
     </span>
 
 </dd>
@@ -2706,7 +2717,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1341 class="hide_extra">
+    <span id=item1353 class="hide_extra">
     </span>
 
 </dd>
@@ -2725,7 +2736,7 @@ s.mytaglist = awful.widget.taglist {
 
 
 
-    <span id=item1342 class="hide_extra">
+    <span id=item1354 class="hide_extra">
     </span>
 
 </dd>
@@ -2736,7 +2747,7 @@ s.mytaglist = awful.widget.taglist {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

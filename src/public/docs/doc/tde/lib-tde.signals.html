@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -44,6 +46,8 @@
 <h2>Contents</h2>
 <ul>
 <li><a href="#Static_module_functions">Static module functions</a></li>
+<li><a href="#Signals">Signals</a></li>
+<li><a href="#Fields">Fields</a></li>
 </ul>
 
 
@@ -65,6 +69,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><strong>lib-tde.signals</strong></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -161,6 +166,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -285,11 +291,35 @@ connect_property_ram(
 </pre>
 
 <p> This module tries to improve re-usage of know variables throughout the tde infrastructure.</p>
+    <div class="extra-header">
+  <div class="extra-header__section">
+    <h3>Class Hierarchy</h3>
+    <div class="inheritance">
+    <ul class="inheritance__level inheritance__level--root">
+        <li class="inheritance__level__node inheritance__level__node--root">
+            <a href="../core_components/awesome.html">awesome</a>
+        </li>
+        <li>
+    <ul class="inheritance__level ">
+        <li class="inheritance__level__node ">
+            <strong>lib-tde.signals</strong>
+        </li>
+    </ul>
+        </li>
+    </ul>
+    </div>
+  </div>
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
-        <li><strong>Author</strong>: Tom Meyers</li>
+            <li><strong>Copyright</strong>: 2020 Tom Meyers</li>
+            <li><strong>Author</strong>: Tom Meyers</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -722,6 +752,254 @@ connect_property_ram(
       <td colspan="2" class="summary">Trigger a callback function when the oled brightness mode changed</td>
     </tr>
 </table>
+<h2><a href="#Signals">Signals</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="name" >
+        <a href="#debug::error">debug::error</a>
+      </td>
+      <td colspan="1" class="summary">A call into the Lua code aborted with an error.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#debug::deprecation">debug::deprecation</a>
+      </td>
+      <td colspan="1" class="summary">A deprecated Lua function was called.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#debug::index::miss">debug::index::miss</a>
+      </td>
+      <td colspan="1" class="summary">An invalid key was read from an object.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#debug::newindex::miss">debug::newindex::miss</a>
+      </td>
+      <td colspan="1" class="summary">An invalid key was written to an object.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#systray::update">systray::update</a>
+      </td>
+      <td colspan="1" class="summary">The systray should be updated.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#wallpaper_changed">wallpaper_changed</a>
+      </td>
+      <td colspan="1" class="summary">The wallpaper has changed.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#xkb::map_changed">xkb::map_changed</a>
+      </td>
+      <td colspan="1" class="summary">Keyboard map has changed.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#xkb::group_changed.">xkb::group_changed.</a>
+      </td>
+      <td colspan="1" class="summary">Keyboard group has changed.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#refresh">refresh</a>
+      </td>
+      <td colspan="1" class="summary">Refresh.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#startup">startup</a>
+      </td>
+      <td colspan="1" class="summary">AwesomeWM is about to enter the event loop.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#exit">exit</a>
+      </td>
+      <td colspan="1" class="summary">AwesomeWM is exiting / about to restart.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#screen::change">screen::change</a>
+      </td>
+      <td colspan="1" class="summary">The output status of a screen has changed.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#spawn::canceled">spawn::canceled</a>
+      </td>
+      <td colspan="1" class="summary">For some reason the application aborted startup</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#spawn::change">spawn::change</a>
+      </td>
+      <td colspan="1" class="summary">When one of the fields from the ??? table changes</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#spawn::completed">spawn::completed</a>
+      </td>
+      <td colspan="1" class="summary">An application finished starting</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#spawn::initiated">spawn::initiated</a>
+      </td>
+      <td colspan="1" class="summary">When a new client is beginning to start</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#spawn::timeout">spawn::timeout</a>
+      </td>
+      <td colspan="1" class="summary">An application started a spawn event but didn't start in time.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="shortname" ><a href="#version"><span class='function_modname'>awesome.</span>version</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The AwesomeWM version.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#release"><span class='function_modname'>awesome.</span>release</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The AwesomeWM release name.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#api_level"><span class='function_modname'>awesome.</span>api_level</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The AwesomeWM API level.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#conffile"><span class='function_modname'>awesome.</span>conffile</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The configuration file which has been loaded.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#startup"><span class='function_modname'>awesome.</span>startup</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="1" class="summary">True if we are still in startup, false otherwise.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#startup_errors"><span class='function_modname'>awesome.</span>startup_errors</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">Error message for errors that occured during
+  startup.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#composite_manager_running"><span class='function_modname'>awesome.</span>composite_manager_running</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="1" class="summary">True if a composite manager is running.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#unix_signal"><span class='function_modname'>awesome.</span>unix_signal</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
+      <td colspan="1" class="summary">Table mapping between signal numbers and signal identifiers.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#hostname"><span class='function_modname'>awesome.</span>hostname</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The hostname of the computer on which we are running.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#themes_path"><span class='function_modname'>awesome.</span>themes_path</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The path where themes were installed to.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#icon_path"><span class='function_modname'>awesome.</span>icon_path</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="1" class="summary">The path where icons were installed to.</td>
+      <td class="baseclass" nowrap>
+        Inherited from awesome
+      </td>
+    </tr>
+</table>
 
 <br/>
 <br/>
@@ -758,7 +1036,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item838 class="hide_extra">
+    <span id=item842 class="hide_extra">
     </span>
 
 </dd>
@@ -793,7 +1071,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item839 class="hide_extra">
+    <span id=item843 class="hide_extra">
     </span>
 
 </dd>
@@ -818,7 +1096,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item840 class="hide_extra">
+    <span id=item844 class="hide_extra">
     </span>
 
 </dd>
@@ -853,7 +1131,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item841 class="hide_extra">
+    <span id=item845 class="hide_extra">
     </span>
 
 </dd>
@@ -885,7 +1163,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item842 class="hide_extra">
+    <span id=item846 class="hide_extra">
     </span>
 
 </dd>
@@ -920,7 +1198,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item843 class="hide_extra">
+    <span id=item847 class="hide_extra">
     </span>
 
 </dd>
@@ -952,7 +1230,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item844 class="hide_extra">
+    <span id=item848 class="hide_extra">
     </span>
 
 </dd>
@@ -987,7 +1265,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item845 class="hide_extra">
+    <span id=item849 class="hide_extra">
     </span>
 
 </dd>
@@ -1019,7 +1297,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item846 class="hide_extra">
+    <span id=item850 class="hide_extra">
     </span>
 
 </dd>
@@ -1054,7 +1332,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item847 class="hide_extra">
+    <span id=item851 class="hide_extra">
     </span>
 
 </dd>
@@ -1086,7 +1364,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item848 class="hide_extra">
+    <span id=item852 class="hide_extra">
     </span>
 
 </dd>
@@ -1121,7 +1399,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item849 class="hide_extra">
+    <span id=item853 class="hide_extra">
     </span>
 
 </dd>
@@ -1146,7 +1424,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item850 class="hide_extra">
+    <span id=item854 class="hide_extra">
     </span>
 
 </dd>
@@ -1181,7 +1459,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item851 class="hide_extra">
+    <span id=item855 class="hide_extra">
     </span>
 
 </dd>
@@ -1213,7 +1491,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item852 class="hide_extra">
+    <span id=item856 class="hide_extra">
     </span>
 
 </dd>
@@ -1248,7 +1526,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item853 class="hide_extra">
+    <span id=item857 class="hide_extra">
     </span>
 
 </dd>
@@ -1288,7 +1566,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item854 class="hide_extra">
+    <span id=item858 class="hide_extra">
     </span>
 
 </dd>
@@ -1324,7 +1602,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item855 class="hide_extra">
+    <span id=item859 class="hide_extra">
     </span>
 
 </dd>
@@ -1356,7 +1634,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item856 class="hide_extra">
+    <span id=item860 class="hide_extra">
     </span>
 
 </dd>
@@ -1391,7 +1669,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item857 class="hide_extra">
+    <span id=item861 class="hide_extra">
     </span>
 
 </dd>
@@ -1423,7 +1701,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item858 class="hide_extra">
+    <span id=item862 class="hide_extra">
     </span>
 
 </dd>
@@ -1458,7 +1736,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item859 class="hide_extra">
+    <span id=item863 class="hide_extra">
     </span>
 
 </dd>
@@ -1490,7 +1768,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item860 class="hide_extra">
+    <span id=item864 class="hide_extra">
     </span>
 
 </dd>
@@ -1525,7 +1803,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item861 class="hide_extra">
+    <span id=item865 class="hide_extra">
     </span>
 
 </dd>
@@ -1557,7 +1835,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item862 class="hide_extra">
+    <span id=item866 class="hide_extra">
     </span>
 
 </dd>
@@ -1592,7 +1870,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item863 class="hide_extra">
+    <span id=item867 class="hide_extra">
     </span>
 
 </dd>
@@ -1624,7 +1902,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item864 class="hide_extra">
+    <span id=item868 class="hide_extra">
     </span>
 
 </dd>
@@ -1659,7 +1937,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item865 class="hide_extra">
+    <span id=item869 class="hide_extra">
     </span>
 
 </dd>
@@ -1691,7 +1969,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item866 class="hide_extra">
+    <span id=item870 class="hide_extra">
     </span>
 
 </dd>
@@ -1726,7 +2004,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item867 class="hide_extra">
+    <span id=item871 class="hide_extra">
     </span>
 
 </dd>
@@ -1758,7 +2036,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item868 class="hide_extra">
+    <span id=item872 class="hide_extra">
     </span>
 
 </dd>
@@ -1793,7 +2071,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item869 class="hide_extra">
+    <span id=item873 class="hide_extra">
     </span>
 
 </dd>
@@ -1825,7 +2103,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item870 class="hide_extra">
+    <span id=item874 class="hide_extra">
     </span>
 
 </dd>
@@ -1860,7 +2138,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item871 class="hide_extra">
+    <span id=item875 class="hide_extra">
     </span>
 
 </dd>
@@ -1892,7 +2170,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item872 class="hide_extra">
+    <span id=item876 class="hide_extra">
     </span>
 
 </dd>
@@ -1927,7 +2205,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item873 class="hide_extra">
+    <span id=item877 class="hide_extra">
     </span>
 
 </dd>
@@ -1959,7 +2237,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item874 class="hide_extra">
+    <span id=item878 class="hide_extra">
     </span>
 
 </dd>
@@ -1994,7 +2272,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item875 class="hide_extra">
+    <span id=item879 class="hide_extra">
     </span>
 
 </dd>
@@ -2026,7 +2304,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item876 class="hide_extra">
+    <span id=item880 class="hide_extra">
     </span>
 
 </dd>
@@ -2061,7 +2339,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item877 class="hide_extra">
+    <span id=item881 class="hide_extra">
     </span>
 
 </dd>
@@ -2093,7 +2371,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item878 class="hide_extra">
+    <span id=item882 class="hide_extra">
     </span>
 
 </dd>
@@ -2128,7 +2406,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item879 class="hide_extra">
+    <span id=item883 class="hide_extra">
     </span>
 
 </dd>
@@ -2163,7 +2441,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item880 class="hide_extra">
+    <span id=item884 class="hide_extra">
     </span>
 
 </dd>
@@ -2195,7 +2473,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item881 class="hide_extra">
+    <span id=item885 class="hide_extra">
     </span>
 
 </dd>
@@ -2230,7 +2508,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item882 class="hide_extra">
+    <span id=item886 class="hide_extra">
     </span>
 
 </dd>
@@ -2262,7 +2540,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item883 class="hide_extra">
+    <span id=item887 class="hide_extra">
     </span>
 
 </dd>
@@ -2297,7 +2575,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item884 class="hide_extra">
+    <span id=item888 class="hide_extra">
     </span>
 
 </dd>
@@ -2329,7 +2607,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item885 class="hide_extra">
+    <span id=item889 class="hide_extra">
     </span>
 
 </dd>
@@ -2364,7 +2642,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item886 class="hide_extra">
+    <span id=item890 class="hide_extra">
     </span>
 
 </dd>
@@ -2389,7 +2667,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item887 class="hide_extra">
+    <span id=item891 class="hide_extra">
     </span>
 
 </dd>
@@ -2424,7 +2702,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item888 class="hide_extra">
+    <span id=item892 class="hide_extra">
     </span>
 
 </dd>
@@ -2456,7 +2734,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item889 class="hide_extra">
+    <span id=item893 class="hide_extra">
     </span>
 
 </dd>
@@ -2491,7 +2769,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item890 class="hide_extra">
+    <span id=item894 class="hide_extra">
     </span>
 
 </dd>
@@ -2523,7 +2801,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item891 class="hide_extra">
+    <span id=item895 class="hide_extra">
     </span>
 
 </dd>
@@ -2558,7 +2836,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item892 class="hide_extra">
+    <span id=item896 class="hide_extra">
     </span>
 
 </dd>
@@ -2590,7 +2868,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item893 class="hide_extra">
+    <span id=item897 class="hide_extra">
     </span>
 
 </dd>
@@ -2625,7 +2903,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item894 class="hide_extra">
+    <span id=item898 class="hide_extra">
     </span>
 
 </dd>
@@ -2657,7 +2935,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item895 class="hide_extra">
+    <span id=item899 class="hide_extra">
     </span>
 
 </dd>
@@ -2692,7 +2970,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item896 class="hide_extra">
+    <span id=item900 class="hide_extra">
     </span>
 
 </dd>
@@ -2724,7 +3002,7 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item897 class="hide_extra">
+    <span id=item901 class="hide_extra">
     </span>
 
 </dd>
@@ -2759,7 +3037,735 @@ connect_property_ram(
     </ul>
 
 
-    <span id=item898 class="hide_extra">
+    <span id=item902 class="hide_extra">
+    </span>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Signals"></a>Signals</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "debug::error"></a>
+    <strong>debug::error</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    A call into the Lua code aborted with an error. </p>
+
+<p> This signal is used in the example configuration, <a href="../documentation/05-awesomerc.md.html#">05-awesomerc.md</a>,
+ to let a notification box pop up.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">err</span>
+         Table with the error object, can be converted to a string with
+ <code>tostring(err)</code>.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item188 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "debug::deprecation"></a>
+    <strong>debug::deprecation</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    A deprecated Lua function was called.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         String with a hint on what to use instead of the
+ deprecated functionality.
+        </li>
+        <li><span class="parameter">see</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">nil</span></span>
+         The name of the newer API
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">args</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
+         The name of the newer API
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item189 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "debug::index::miss"></a>
+    <strong>debug::index::miss</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    An invalid key was read from an object. </p>
+
+<p> This can happen if <code>foo</code> in an <code>c.foo</code> access does not exist.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">unknown1</span>
+         Class?
+        </li>
+        <li><span class="parameter">unknown2</span>
+         Key?
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item190 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "debug::newindex::miss"></a>
+    <strong>debug::newindex::miss</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    An invalid key was written to an object. </p>
+
+<p> This can happen if <code>foo</code> in an <code>c.foo = &quot;bar&quot;</code> assignment doesn't exist.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">unknown1</span>
+         Class?
+        </li>
+        <li><span class="parameter">unknown2</span>
+         Key?
+        </li>
+        <li><span class="parameter">unknown3</span>
+         Value?
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item191 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "systray::update"></a>
+    <strong>systray::update</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The systray should be updated. </p>
+
+<p> This signal is used in <a href="../widgets/wibox.widget.systray.html#">wibox.widget.systray</a>.
+
+
+
+
+
+
+
+    <span id=item192 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "wallpaper_changed"></a>
+    <strong>wallpaper_changed</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The wallpaper has changed. </p>
+
+<p> This signal is used for pseudo-transparency in <a href="../classes/wibox.drawable.html#">wibox.drawable</a> if no
+ composite manager is running.
+
+
+
+
+
+
+
+    <span id=item193 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "xkb::map_changed"></a>
+    <strong>xkb::map_changed</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    Keyboard map has changed. </p>
+
+<p> This signal is sent after the new keymap has been loaded. It is used in
+ <a href="../widgets/awful.widget.keyboardlayout.html#">awful.widget.keyboardlayout</a> to redraw the layout.
+
+
+
+
+
+
+
+    <span id=item194 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "xkb::group_changed."></a>
+    <strong>xkb::group_changed.</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    Keyboard group has changed. </p>
+
+<p> It's used in <a href="../widgets/awful.widget.keyboardlayout.html#">awful.widget.keyboardlayout</a> to redraw the layout.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">group</span>
+         Integer containing the changed group
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item195 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "refresh"></a>
+    <strong>refresh</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    Refresh. </p>
+
+<p> This signal is emitted as a kind of idle signal in the event loop.
+ One example usage is in <a href="../core_components/gears.timer.html#">gears.timer</a> to executed delayed calls.
+
+
+
+
+
+
+
+    <span id=item196 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "startup"></a>
+    <strong>startup</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    AwesomeWM is about to enter the event loop. </p>
+
+<p> This means all initialization has been done.
+
+
+
+
+
+
+
+    <span id=item197 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "exit"></a>
+    <strong>exit</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    AwesomeWM is exiting / about to restart. </p>
+
+<p> This signal is emitted in the <code>atexit</code> handler as well when awesome
+ restarts.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">reason_restart</span>
+         Boolean value is true if the signal was sent
+ because of a restart.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item198 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "screen::change"></a>
+    <strong>screen::change</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The output status of a screen has changed.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">output</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         String containing which output has changed.
+        </li>
+        <li><span class="parameter">connection_state</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         String containing the connection status of
+ the output: It will be either "Connected", "Disconnected" or
+ "Unknown".
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item199 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "spawn::canceled"></a>
+    <strong>spawn::canceled</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    For some reason the application aborted startup
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">arg</span>
+         Table which only got the "id" key set
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item200 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "spawn::change"></a>
+    <strong>spawn::change</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    When one of the fields from the ??? table changes
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">arg</span>
+         Table which describes the spawn event
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item201 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "spawn::completed"></a>
+    <strong>spawn::completed</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    An application finished starting
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">arg</span>
+         Table which only got the "id" key set
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item202 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "spawn::initiated"></a>
+    <strong>spawn::initiated</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    When a new client is beginning to start
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">arg</span>
+         Table which describes the spawn event
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item203 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "spawn::timeout"></a>
+    <strong>spawn::timeout</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    An application started a spawn event but didn't start in time.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">arg</span>
+         Table which only got the "id" key set
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item204 class="hide_extra">
+    </span>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "version"></a>
+    <strong><span class='function_modname'>awesome.</span>version</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The AwesomeWM version.
+
+
+
+
+
+
+
+    <span id=item205 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "release"></a>
+    <strong><span class='function_modname'>awesome.</span>release</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The AwesomeWM release name.
+
+
+
+
+
+
+
+    <span id=item206 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "api_level"></a>
+    <strong><span class='function_modname'>awesome.</span>api_level</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The AwesomeWM API level. </p>
+
+<p> By default, this matches the major version (first component of the version).</p>
+
+<p> API levels are used to allow newer version of AwesomeWM to alter the behavior
+ and subset deprecated APIs. Using an older API level than the current major
+ version allows to use legacy <a href="../sample files/rc.lua.html#">rc.lua</a> with little porting. However, they wont
+ be able to use all the new features. Attempting to use a newer feature along
+ with an older API level is not and will not be supported, even if it almost
+ works. Keeping up to date with the newer API levels is highly recommended.</p>
+
+<p> Going the other direction, setting an higher API level allows to take
+ advantage of experimental feature. It will also be much harsher when it comes
+ to deprecation. Setting the API level value beyond <code>current+3</code> will treat
+ using APIs currently pending deprecation as fatal errors. All new code
+ submitted to the upstream AwesomeWM codebase is forbidden to use deprecated
+ APIs. Testing your patches with mode and the default config is recommended
+ before submitting a patch.</p>
+
+<p> You can use the <a href="../tde/lib-tde.signals.html#emit_kernel">-l</a> command line option or <code>api-level</code> modeline key to set
+ the API level for your <a href="../sample files/rc.lua.html#">rc.lua</a>. This setting is global and read only,
+ individual modules cannot set their own API level.
+
+
+
+
+
+
+
+    <span id=item207 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "conffile"></a>
+    <strong><span class='function_modname'>awesome.</span>conffile</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The configuration file which has been loaded.
+
+
+
+
+
+
+
+    <span id=item208 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "startup"></a>
+    <strong><span class='function_modname'>awesome.</span>startup</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    True if we are still in startup, false otherwise.
+
+
+
+
+
+
+
+    <span id=item209 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "startup_errors"></a>
+    <strong><span class='function_modname'>awesome.</span>startup_errors</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    Error message for errors that occured during
+  startup.
+
+
+
+
+
+
+
+    <span id=item210 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "composite_manager_running"></a>
+    <strong><span class='function_modname'>awesome.</span>composite_manager_running</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    True if a composite manager is running.
+
+
+
+
+
+
+
+    <span id=item211 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "unix_signal"></a>
+    <strong><span class='function_modname'>awesome.</span>unix_signal</strong>
+    <span class="proptype"><span class='summary_type'>table</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    Table mapping between signal numbers and signal identifiers.
+
+
+
+
+
+
+
+    <span id=item212 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "hostname"></a>
+    <strong><span class='function_modname'>awesome.</span>hostname</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The hostname of the computer on which we are running.
+
+
+
+
+
+
+
+    <span id=item213 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "themes_path"></a>
+    <strong><span class='function_modname'>awesome.</span>themes_path</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The path where themes were installed to.
+
+
+
+
+
+
+
+    <span id=item214 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "icon_path"></a>
+    <strong><span class='function_modname'>awesome.</span>icon_path</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from awesome
+    </span>
+    </dt>
+    <dd>
+    The path where icons were installed to.
+
+
+
+
+
+
+
+    <span id=item215 class="hide_extra">
     </span>
 
 </dd>
@@ -2770,7 +3776,7 @@ connect_property_ram(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

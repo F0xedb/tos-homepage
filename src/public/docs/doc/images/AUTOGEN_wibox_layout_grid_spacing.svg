@@ -210,12 +210,12 @@
 <path style="fill:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(38.039216%,50.588235%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 0 L 31 0 L 31 13 L 0 13 Z M 0 0 " transform="matrix(1,0,0,1,157,19)"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-5" x="159" y="29.441406"/>
-  <use xlink:href="#glyph1-7" x="164" y="29.441406"/>
-  <use xlink:href="#glyph1-8" x="170" y="29.441406"/>
+  <use xlink:href="#glyph1-5" x="157" y="29.441406"/>
+  <use xlink:href="#glyph1-7" x="162" y="29.441406"/>
+  <use xlink:href="#glyph1-8" x="168" y="29.441406"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-16" x="175" y="29.441406"/>
+  <use xlink:href="#glyph1-16" x="173" y="29.441406"/>
 </g>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(38.039216%,50.588235%,100%);fill-opacity:0.490196;" d="M 103 52 L 137 52 L 137 65 L 103 65 Z M 103 52 "/>
 <g clip-path="url(#clip7)" clip-rule="nonzero">

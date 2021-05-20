@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -86,6 +88,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -168,6 +171,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -406,11 +410,18 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
  with the modifiers as keys instead of value. It allow to save time by
  checking <code>if modset.Mod4 then ... end</code> instead of looping into the <code>modifiers</code>
  table or using <a href="../utility_libraries/gears.table.html#">gears.table</a>.</p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2012 dodo,2017 Emmanuel Lepage Vallee</li>
-        <li><strong>Author</strong>: dodo,Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+            <li><strong>Copyright</strong>: 2012 dodo,2017 Emmanuel Lepage Vallee</li>
+            <li><strong>Author</strong>: dodo,Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -528,7 +539,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Emit a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -538,7 +549,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -548,7 +559,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal weakly.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -763,7 +774,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item214 class="hide_extra">
+    <span id=item216 class="hide_extra">
     </span>
 
 </dd>
@@ -798,7 +809,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item215 class="hide_extra">
+    <span id=item217 class="hide_extra">
     </span>
 
 </dd>
@@ -829,7 +840,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item216 class="hide_extra">
+    <span id=item218 class="hide_extra">
     </span>
 
 </dd>
@@ -863,7 +874,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item217 class="hide_extra">
+    <span id=item219 class="hide_extra">
     </span>
 
 </dd>
@@ -902,7 +913,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
     </ul>
 
 
-    <span id=item218 class="hide_extra">
+    <span id=item220 class="hide_extra">
     </span>
 
 </dd>
@@ -951,7 +962,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item219 class="hide_extra">
+    <span id=item221 class="hide_extra">
     </span>
 
 </dd>
@@ -985,7 +996,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item220 class="hide_extra">
+    <span id=item222 class="hide_extra">
     </span>
 
 </dd>
@@ -1017,7 +1028,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item221 class="hide_extra">
+    <span id=item223 class="hide_extra">
     </span>
 
 </dd>
@@ -1041,7 +1052,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item222 class="hide_extra">
+    <span id=item224 class="hide_extra">
     </span>
 
 </dd>
@@ -1069,7 +1080,7 @@ mykeygrabber:connect_signal(<span class="string">"Escape::pressed"</span>, <span
 
 
 
-    <span id=item223 class="hide_extra">
+    <span id=item225 class="hide_extra">
     </span>
 
 </dd>
@@ -1161,7 +1172,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item224 class="hide_extra">
+    <span id=item226 class="hide_extra">
     </span>
 
 </dd>
@@ -1189,7 +1200,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item225 class="hide_extra">
+    <span id=item227 class="hide_extra">
     </span>
 
 </dd>
@@ -1231,7 +1242,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item226 class="hide_extra">
+    <span id=item228 class="hide_extra">
     </span>
 
 </dd>
@@ -1267,7 +1278,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item227 class="hide_extra">
+    <span id=item229 class="hide_extra">
     </span>
 
 </dd>
@@ -1301,13 +1312,13 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
      <br />
-     <center id=button228>
-     <a class="show_more_button" onclick="show_extra('228')">
+     <center id=button230>
+     <a class="show_more_button" onclick="show_extra('230')">
       Click to display more
      </a>
      </center>
 
-    <span id=item228 class="hide_extra">
+    <span id=item230 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/awful.keygrabber.html#started">started</a></span>  </li>
@@ -1333,13 +1344,13 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
      <br />
-     <center id=button229>
-     <a class="show_more_button" onclick="show_extra('229')">
+     <center id=button231>
+     <a class="show_more_button" onclick="show_extra('231')">
       Click to display more
      </a>
      </center>
 
-    <span id=item229 class="hide_extra">
+    <span id=item231 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/awful.keygrabber.html#stopped">stopped</a></span>  </li>
@@ -1373,7 +1384,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item230 class="hide_extra">
+    <span id=item232 class="hide_extra">
     </span>
 
 </dd>
@@ -1406,7 +1417,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item231 class="hide_extra">
+    <span id=item233 class="hide_extra">
     </span>
 
 </dd>
@@ -1438,7 +1449,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item232 class="hide_extra">
+    <span id=item234 class="hide_extra">
     </span>
 
 </dd>
@@ -1477,7 +1488,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item233 class="hide_extra">
+    <span id=item235 class="hide_extra">
     </span>
 
 </dd>
@@ -1500,7 +1511,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item234 class="hide_extra">
+    <span id=item236 class="hide_extra">
     </span>
 
 </dd>
@@ -1519,7 +1530,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item235 class="hide_extra">
+    <span id=item237 class="hide_extra">
     </span>
 
 </dd>
@@ -1538,7 +1549,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item236 class="hide_extra">
+    <span id=item238 class="hide_extra">
     </span>
 
 </dd>
@@ -1571,7 +1582,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item237 class="hide_extra">
+    <span id=item239 class="hide_extra">
     </span>
 
 </dd>
@@ -1652,7 +1663,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item238 class="hide_extra">
+    <span id=item240 class="hide_extra">
     </span>
 
 </dd>
@@ -1682,7 +1693,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item239 class="hide_extra">
+    <span id=item241 class="hide_extra">
     </span>
 
 </dd>
@@ -1731,7 +1742,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item240 class="hide_extra">
+    <span id=item242 class="hide_extra">
     </span>
 
 </dd>
@@ -1756,7 +1767,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item241 class="hide_extra">
+    <span id=item243 class="hide_extra">
     </span>
 
 </dd>
@@ -1801,7 +1812,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item242 class="hide_extra">
+    <span id=item244 class="hide_extra">
     </span>
 
 </dd>
@@ -1846,7 +1857,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
     </ul>
 
 
-    <span id=item243 class="hide_extra">
+    <span id=item245 class="hide_extra">
     </span>
 
 </dd>
@@ -1876,13 +1887,13 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
      <br />
-     <center id=button244>
-     <a class="show_more_button" onclick="show_extra('244')">
+     <center id=button246>
+     <a class="show_more_button" onclick="show_extra('246')">
       Click to display more
      </a>
      </center>
 
-    <span id=item244 class="hide_extra">
+    <span id=item246 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/awful.keygrabber.html#property::current_instance">property::current_instance</a></span>  </li>
@@ -1906,7 +1917,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 
 
 
-    <span id=item245 class="hide_extra">
+    <span id=item247 class="hide_extra">
     </span>
 
 </dd>
@@ -1917,7 +1928,7 @@ root.fake_input(<span class="string">'key_release'</span>  , <span class="string
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

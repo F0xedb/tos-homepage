@@ -9,7 +9,8 @@ body {
 #content ul {
   list-style: none;
 }
-#content li::before {
+
+#content li a, #content li strong::before {
   content: "•";
   color: #7036ff;
 }
@@ -635,4 +636,33 @@ pre .url {
 
 .index_guides div a:hover {
     background-color: #99b3ec;
+}
+
+/* Inheritance diagram */
+.inheritance .inheritance__level {
+    list-style: none;
+}
+
+.inheritance .inheritance__level--root {
+    padding-left: 0;
+}
+
+.inheritance .inheritance__level__node::before {
+    content: "↳";
+}
+
+.inheritance .inheritance__level__node--root::before {
+    /* simulate the spacing of the arrow character */
+    content: "   ";
+    white-space: pre;
+}
+
+.extra-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.extra-header__section {
+    flex-grow: 1;
 }

@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -92,6 +94,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -174,6 +177,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -295,6 +299,11 @@ for i=1, #res do
 end
 </pre>
     </ul>
+    <div class="extra-header">
+
+
+
+</div>
 
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -347,6 +356,13 @@ end
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
       <td colspan="2" class="summary">Get a sorted table with all keys from a table.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#count_keys"><span class='function_modname'>gears.table.</span>count_keys <span class='function_args'> <b>(</b>t<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
+      </td>
+      <td colspan="2" class="summary">Get the number of keys in a table, both integer and string indicies.</td>
     </tr>
     <tr>
       <td class="name" >
@@ -443,7 +459,7 @@ end
 
 
 
-    <span id=item2942 class="hide_extra">
+    <span id=item2365 class="hide_extra">
     </span>
 
 </dd>
@@ -487,7 +503,7 @@ end
 
 
 
-    <span id=item2943 class="hide_extra">
+    <span id=item2366 class="hide_extra">
     </span>
 
 </dd>
@@ -525,7 +541,7 @@ end
 
 
 
-    <span id=item2944 class="hide_extra">
+    <span id=item2367 class="hide_extra">
     </span>
 
 </dd>
@@ -569,7 +585,7 @@ end
 
 
 
-    <span id=item2945 class="hide_extra">
+    <span id=item2368 class="hide_extra">
     </span>
 
 </dd>
@@ -619,7 +635,7 @@ end
 
 
 
-    <span id=item2946 class="hide_extra">
+    <span id=item2369 class="hide_extra">
     </span>
 
 </dd>
@@ -662,7 +678,7 @@ end
 
 
 
-    <span id=item2947 class="hide_extra">
+    <span id=item2370 class="hide_extra">
     </span>
 
 </dd>
@@ -695,7 +711,53 @@ end
 
 
 
-    <span id=item2948 class="hide_extra">
+    <span id=item2371 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "count_keys"></a>
+    <strong><span class='function_modname'>gears.table.</span>count_keys <span class='function_args'> <b>(</b>t<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Get the number of keys in a table, both integer and string indicies. </p>
+
+<p> This is functionally equivalent, but faster than <code>#gears.table.keys(t)</code>.</p>
+
+
+
+
+<p><strong>Usage example output</strong>:
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The table for which to count the keys.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        The number of keys in the table.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tab = { <span class="number">1</span>, <span class="keyword">nil</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, foo = <span class="string">'bar'</span> }
+<span class="keyword">local</span> count = gears.<span class="global">table</span>.count_keys(tab)
+<span class="global">print</span>(<span class="string">'The table has '</span> .. count .. <span class="string">' keys'</span>)</pre>
+    </ul>
+
+
+    <span id=item2372 class="hide_extra">
     </span>
 
 </dd>
@@ -732,7 +794,7 @@ end
 
 
 
-    <span id=item2949 class="hide_extra">
+    <span id=item2373 class="hide_extra">
     </span>
 
 </dd>
@@ -765,7 +827,7 @@ end
 
 
 
-    <span id=item2950 class="hide_extra">
+    <span id=item2374 class="hide_extra">
     </span>
 
 </dd>
@@ -803,7 +865,7 @@ end
 
 
 
-    <span id=item2951 class="hide_extra">
+    <span id=item2375 class="hide_extra">
     </span>
 
 </dd>
@@ -827,18 +889,19 @@ end
          The input table.
         </li>
         <li><span class="parameter">value</span>
-         A value from the table.
+         The start value. Must be an element of the input table <code>t</code>.
         </li>
         <li><span class="parameter">step_size</span>
             <span class="types"><span class="type">number</span></span>
-         How many element forward (or backward) to pick.
+         The amount to increment the index by.
+   When this is negative, the function will cycle through the table backwards.
          (<em>default</em> 1)
         </li>
         <li><span class="parameter">filter</span>
             <span class="types"><span class="type">function</span></span>
-         An optional function. When it returns
-  <code>false</code>, the element are skipped until a match if found. It takes the value
-  as its sole parameter.
+         An optional filter function. It receives a
+   value from the table as parameter and should return a boolean. If it
+   returns <code>false</code>, the value is skipped and <a href="../utility_libraries/gears.table.html#cycle_value">cycle_value</a> tries the next one.
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">start_at</span>
@@ -851,17 +914,18 @@ end
     <h3>Returns:</h3>
     <ol>
         <li>
-        The value. If no element match, then <code>nil</code> is returned.</li>
+        The next eligible value. If no value matches, <code>nil</code> is returned.</li>
         <li>
            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
-        The element (if any) key.</li>
+        If a value is found, this is its index within the input
+   table.</li>
     </ol>
 
 
 
 
 
-    <span id=item2952 class="hide_extra">
+    <span id=item2376 class="hide_extra">
     </span>
 
 </dd>
@@ -910,7 +974,7 @@ end
 
 
 
-    <span id=item2953 class="hide_extra">
+    <span id=item2377 class="hide_extra">
     </span>
 
 </dd>
@@ -947,7 +1011,7 @@ end
 
 
 
-    <span id=item2954 class="hide_extra">
+    <span id=item2378 class="hide_extra">
     </span>
 
 </dd>
@@ -1022,7 +1086,7 @@ end
     </ul>
 
 
-    <span id=item2955 class="hide_extra">
+    <span id=item2379 class="hide_extra">
     </span>
 
 </dd>
@@ -1064,7 +1128,7 @@ end
 
 
 
-    <span id=item2956 class="hide_extra">
+    <span id=item2380 class="hide_extra">
     </span>
 
 </dd>
@@ -1075,7 +1139,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

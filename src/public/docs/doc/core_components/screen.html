@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -86,6 +88,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -168,6 +171,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -383,11 +387,18 @@ awful.screen.connect_for_each_screen(<span class="keyword">function</span>(s)
  </table></p>
 
 <p> </p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-        <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -693,7 +704,7 @@ awful.screen.connect_for_each_screen(<span class="keyword">function</span>(s)
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Emit a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -703,7 +714,7 @@ awful.screen.connect_for_each_screen(<span class="keyword">function</span>(s)
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -713,7 +724,7 @@ awful.screen.connect_for_each_screen(<span class="keyword">function</span>(s)
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal weakly.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -919,7 +930,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item608 class="hide_extra">
+    <span id=item610 class="hide_extra">
     </span>
 
 </dd>
@@ -948,7 +959,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item609 class="hide_extra">
+    <span id=item611 class="hide_extra">
     </span>
 
 </dd>
@@ -974,7 +985,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
     </ul>
 
 
-    <span id=item610 class="hide_extra">
+    <span id=item612 class="hide_extra">
     </span>
 
 </dd>
@@ -999,7 +1010,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item611 class="hide_extra">
+    <span id=item613 class="hide_extra">
     </span>
 
 </dd>
@@ -1030,7 +1041,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item612 class="hide_extra">
+    <span id=item614 class="hide_extra">
     </span>
 
 </dd>
@@ -1062,7 +1073,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item613 class="hide_extra">
+    <span id=item615 class="hide_extra">
     </span>
 
 </dd>
@@ -1093,7 +1104,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item614 class="hide_extra">
+    <span id=item616 class="hide_extra">
     </span>
 
 </dd>
@@ -1133,7 +1144,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item615 class="hide_extra">
+    <span id=item617 class="hide_extra">
     </span>
 
 </dd>
@@ -1164,13 +1175,13 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
      <br />
-     <center id=button616>
-     <a class="show_more_button" onclick="show_extra('616')">
+     <center id=button618>
+     <a class="show_more_button" onclick="show_extra('618')">
       Click to display more
      </a>
      </center>
 
-    <span id=item616 class="hide_extra">
+    <span id=item618 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1213,7 +1224,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item617 class="hide_extra">
+    <span id=item619 class="hide_extra">
     </span>
 
 </dd>
@@ -1242,7 +1253,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item618 class="hide_extra">
+    <span id=item620 class="hide_extra">
     </span>
 
 </dd>
@@ -1280,7 +1291,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item619 class="hide_extra">
+    <span id=item621 class="hide_extra">
     </span>
 
 </dd>
@@ -1329,7 +1340,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item620 class="hide_extra">
+    <span id=item622 class="hide_extra">
     </span>
 
 </dd>
@@ -1406,7 +1417,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
     </ul>
 
 
-    <span id=item621 class="hide_extra">
+    <span id=item623 class="hide_extra">
     </span>
 
 </dd>
@@ -1436,7 +1447,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item622 class="hide_extra">
+    <span id=item624 class="hide_extra">
     </span>
 
 </dd>
@@ -1463,7 +1474,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item623 class="hide_extra">
+    <span id=item625 class="hide_extra">
     </span>
 
 </dd>
@@ -1508,7 +1519,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item624 class="hide_extra">
+    <span id=item626 class="hide_extra">
     </span>
 
 </dd>
@@ -1544,7 +1555,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item625 class="hide_extra">
+    <span id=item627 class="hide_extra">
     </span>
 
 </dd>
@@ -1597,7 +1608,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item626 class="hide_extra">
+    <span id=item628 class="hide_extra">
     </span>
 
 </dd>
@@ -1658,7 +1669,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item627 class="hide_extra">
+    <span id=item629 class="hide_extra">
     </span>
 
 </dd>
@@ -1691,7 +1702,7 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
 
-    <span id=item628 class="hide_extra">
+    <span id=item630 class="hide_extra">
     </span>
 
 </dd>
@@ -1739,13 +1750,13 @@ screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
 
 
      <br />
-     <center id=button629>
-     <a class="show_more_button" onclick="show_extra('629')">
+     <center id=button631>
+     <a class="show_more_button" onclick="show_extra('631')">
       Click to display more
      </a>
      </center>
 
-    <span id=item629 class="hide_extra">
+    <span id=item631 class="hide_extra">
      <h3>Consumed theme variables:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1791,7 +1802,7 @@ end
 
 
 
-    <span id=item630 class="hide_extra">
+    <span id=item632 class="hide_extra">
     </span>
 
 </dd>
@@ -1832,7 +1843,7 @@ end
 
 
 
-    <span id=item631 class="hide_extra">
+    <span id=item633 class="hide_extra">
     </span>
 
 </dd>
@@ -1866,7 +1877,7 @@ end
 
 
 
-    <span id=item632 class="hide_extra">
+    <span id=item634 class="hide_extra">
     </span>
 
 </dd>
@@ -1898,7 +1909,7 @@ end
 
 
 
-    <span id=item633 class="hide_extra">
+    <span id=item635 class="hide_extra">
     </span>
 
 </dd>
@@ -1936,7 +1947,7 @@ end
 
 
 
-    <span id=item634 class="hide_extra">
+    <span id=item636 class="hide_extra">
     </span>
 
 </dd>
@@ -1959,7 +1970,7 @@ end
 
 
 
-    <span id=item635 class="hide_extra">
+    <span id=item637 class="hide_extra">
     </span>
 
 </dd>
@@ -1984,7 +1995,7 @@ end
 
 
 
-    <span id=item636 class="hide_extra">
+    <span id=item638 class="hide_extra">
     </span>
 
 </dd>
@@ -2009,7 +2020,7 @@ end
 
 
 
-    <span id=item637 class="hide_extra">
+    <span id=item639 class="hide_extra">
     </span>
 
 </dd>
@@ -2041,7 +2052,7 @@ end
 
 
 
-    <span id=item638 class="hide_extra">
+    <span id=item640 class="hide_extra">
     </span>
 
 </dd>
@@ -2067,7 +2078,7 @@ end
 
 
 
-    <span id=item639 class="hide_extra">
+    <span id=item641 class="hide_extra">
     </span>
 
 </dd>
@@ -2093,7 +2104,7 @@ end
 
 
 
-    <span id=item640 class="hide_extra">
+    <span id=item642 class="hide_extra">
     </span>
 
 </dd>
@@ -2122,7 +2133,7 @@ end
 
 
 
-    <span id=item641 class="hide_extra">
+    <span id=item643 class="hide_extra">
     </span>
 
 </dd>
@@ -2142,7 +2153,7 @@ end
 
 
 
-    <span id=item642 class="hide_extra">
+    <span id=item644 class="hide_extra">
     </span>
 
 </dd>
@@ -2162,7 +2173,7 @@ end
 
 
 
-    <span id=item643 class="hide_extra">
+    <span id=item645 class="hide_extra">
     </span>
 
 </dd>
@@ -2182,7 +2193,7 @@ end
 
 
 
-    <span id=item644 class="hide_extra">
+    <span id=item646 class="hide_extra">
     </span>
 
 </dd>
@@ -2202,7 +2213,7 @@ end
 
 
 
-    <span id=item645 class="hide_extra">
+    <span id=item647 class="hide_extra">
     </span>
 
 </dd>
@@ -2235,7 +2246,7 @@ end
     </ul>
 
 
-    <span id=item646 class="hide_extra">
+    <span id=item648 class="hide_extra">
     </span>
 
 </dd>
@@ -2286,7 +2297,7 @@ end
     </ul>
 
 
-    <span id=item647 class="hide_extra">
+    <span id=item649 class="hide_extra">
     </span>
 
 </dd>
@@ -2322,7 +2333,7 @@ end
     </ul>
 
 
-    <span id=item648 class="hide_extra">
+    <span id=item650 class="hide_extra">
     </span>
 
 </dd>
@@ -2359,7 +2370,7 @@ end
 
 
 
-    <span id=item649 class="hide_extra">
+    <span id=item651 class="hide_extra">
     </span>
 
 </dd>
@@ -2391,7 +2402,7 @@ end
 
 
 
-    <span id=item650 class="hide_extra">
+    <span id=item652 class="hide_extra">
     </span>
 
 </dd>
@@ -2427,7 +2438,7 @@ end
 
 
 
-    <span id=item651 class="hide_extra">
+    <span id=item653 class="hide_extra">
     </span>
 
 </dd>
@@ -2463,7 +2474,7 @@ end
 
 
 
-    <span id=item652 class="hide_extra">
+    <span id=item654 class="hide_extra">
     </span>
 
 </dd>
@@ -2499,7 +2510,7 @@ end
 
 
 
-    <span id=item653 class="hide_extra">
+    <span id=item655 class="hide_extra">
     </span>
 
 </dd>
@@ -2558,7 +2569,7 @@ end
 
 
 
-    <span id=item654 class="hide_extra">
+    <span id=item656 class="hide_extra">
     </span>
 
 </dd>
@@ -2591,7 +2602,7 @@ end
 
 
 
-    <span id=item655 class="hide_extra">
+    <span id=item657 class="hide_extra">
     </span>
 
 </dd>
@@ -2623,7 +2634,7 @@ end
 
 
 
-    <span id=item656 class="hide_extra">
+    <span id=item658 class="hide_extra">
     </span>
 
 </dd>
@@ -2662,7 +2673,7 @@ end
 
 
 
-    <span id=item657 class="hide_extra">
+    <span id=item659 class="hide_extra">
     </span>
 
 </dd>
@@ -2699,7 +2710,7 @@ end
 
 
 
-    <span id=item658 class="hide_extra">
+    <span id=item660 class="hide_extra">
     </span>
 
 </dd>
@@ -2731,7 +2742,7 @@ end
 
 
 
-    <span id=item659 class="hide_extra">
+    <span id=item661 class="hide_extra">
     </span>
 
 </dd>
@@ -2752,7 +2763,7 @@ end
 
 
 
-    <span id=item660 class="hide_extra">
+    <span id=item662 class="hide_extra">
     </span>
 
 </dd>
@@ -2771,7 +2782,7 @@ end
 
 
 
-    <span id=item661 class="hide_extra">
+    <span id=item663 class="hide_extra">
     </span>
 
 </dd>
@@ -2791,13 +2802,13 @@ end
 
 
      <br />
-     <center id=button662>
-     <a class="show_more_button" onclick="show_extra('662')">
+     <center id=button664>
+     <a class="show_more_button" onclick="show_extra('664')">
       Click to display more
      </a>
      </center>
 
-    <span id=item662 class="hide_extra">
+    <span id=item664 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -2827,7 +2838,7 @@ end
 
 
 
-    <span id=item663 class="hide_extra">
+    <span id=item665 class="hide_extra">
     </span>
 
 </dd>
@@ -2857,7 +2868,7 @@ end
 
 
 
-    <span id=item664 class="hide_extra">
+    <span id=item666 class="hide_extra">
     </span>
 
 </dd>
@@ -2903,7 +2914,7 @@ end
 
 
 
-    <span id=item665 class="hide_extra">
+    <span id=item667 class="hide_extra">
     </span>
 
 </dd>
@@ -2936,13 +2947,13 @@ end
 
 
      <br />
-     <center id=button666>
-     <a class="show_more_button" onclick="show_extra('666')">
+     <center id=button668>
+     <a class="show_more_button" onclick="show_extra('668')">
       Click to display more
      </a>
      </center>
 
-    <span id=item666 class="hide_extra">
+    <span id=item668 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -2986,13 +2997,13 @@ end
 
 
      <br />
-     <center id=button667>
-     <a class="show_more_button" onclick="show_extra('667')">
+     <center id=button669>
+     <a class="show_more_button" onclick="show_extra('669')">
       Click to display more
      </a>
      </center>
 
-    <span id=item667 class="hide_extra">
+    <span id=item669 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -3093,7 +3104,7 @@ end
 
 
 
-    <span id=item668 class="hide_extra">
+    <span id=item670 class="hide_extra">
     </span>
 
 </dd>
@@ -3177,7 +3188,7 @@ end
 
 
 
-    <span id=item669 class="hide_extra">
+    <span id=item671 class="hide_extra">
     </span>
 
 </dd>
@@ -3300,7 +3311,7 @@ end
 
 
 
-    <span id=item670 class="hide_extra">
+    <span id=item672 class="hide_extra">
     </span>
 
 </dd>
@@ -3319,7 +3330,7 @@ end
 
 
 
-    <span id=item671 class="hide_extra">
+    <span id=item673 class="hide_extra">
     </span>
 
 </dd>
@@ -3361,7 +3372,7 @@ end
 
 
 
-    <span id=item672 class="hide_extra">
+    <span id=item674 class="hide_extra">
     </span>
 
 </dd>
@@ -3402,7 +3413,7 @@ end
 
 
 
-    <span id=item673 class="hide_extra">
+    <span id=item675 class="hide_extra">
     </span>
 
 </dd>
@@ -3445,7 +3456,7 @@ end
 
 
 
-    <span id=item674 class="hide_extra">
+    <span id=item676 class="hide_extra">
     </span>
 
 </dd>
@@ -3489,7 +3500,7 @@ end
 
 
 
-    <span id=item675 class="hide_extra">
+    <span id=item677 class="hide_extra">
     </span>
 
 </dd>
@@ -3530,7 +3541,7 @@ end
 
 
 
-    <span id=item676 class="hide_extra">
+    <span id=item678 class="hide_extra">
     </span>
 
 </dd>
@@ -3554,7 +3565,7 @@ end
 
 
 
-    <span id=item677 class="hide_extra">
+    <span id=item679 class="hide_extra">
     </span>
 
 </dd>
@@ -3582,7 +3593,7 @@ end
 
 
 
-    <span id=item678 class="hide_extra">
+    <span id=item680 class="hide_extra">
     </span>
 
 </dd>
@@ -3602,7 +3613,7 @@ end
 
 
 
-    <span id=item679 class="hide_extra">
+    <span id=item681 class="hide_extra">
     </span>
 
 </dd>
@@ -3613,7 +3624,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

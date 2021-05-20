@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -113,6 +115,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -165,6 +168,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -441,15 +445,24 @@ wibox.widget {
 </pre>
 
 </p>
-    <h3>See also:</h3>
-    <ul>
-         <a href="../classes/awful.widget.common.html#">awful.widget.common</a>
-    </ul>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2017 Emmanuel Lepage Vallee</li>
-        <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+            <li><strong>Copyright</strong>: 2017 Emmanuel Lepage Vallee</li>
+            <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
     </ul>
+  </div>
+
+  <div class="extra-header__section">
+    <h3>See also:</h3>
+    <p>
+         <a href="../classes/awful.widget.common.html#">awful.widget.common</a>
+    </p>
+  </div>
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -487,7 +500,7 @@ wibox.widget {
       <td class="shortname" ><a href="#children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get or set the children elements.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -495,7 +508,7 @@ wibox.widget {
       <td class="shortname" ><a href="#all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -503,7 +516,7 @@ wibox.widget {
       <td class="shortname" ><a href="#forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget height.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -511,7 +524,7 @@ wibox.widget {
       <td class="shortname" ><a href="#forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget width.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -519,7 +532,7 @@ wibox.widget {
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
       <td colspan="1" class="summary">The widget opacity (transparency).</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -527,7 +540,7 @@ wibox.widget {
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
       <td colspan="1" class="summary">The widget visibility.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -535,7 +548,7 @@ wibox.widget {
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">The widget buttons.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -548,7 +561,7 @@ wibox.widget {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -558,7 +571,7 @@ wibox.widget {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -569,7 +582,7 @@ wibox.widget {
       </td>
       <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
  forward the signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -579,7 +592,7 @@ wibox.widget {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Emit a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -589,7 +602,7 @@ wibox.widget {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -599,7 +612,7 @@ wibox.widget {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal weakly.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -611,7 +624,7 @@ wibox.widget {
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
       <td colspan="1" class="summary">When the layout (size) change.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -620,7 +633,7 @@ wibox.widget {
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
       <td colspan="1" class="summary">When the widget content changed.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -629,7 +642,7 @@ wibox.widget {
         <a href="#button::press">button::press</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -638,7 +651,7 @@ wibox.widget {
         <a href="#button::release">button::release</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -647,7 +660,7 @@ wibox.widget {
         <a href="#mouse::enter">mouse::enter</a>
       </td>
       <td colspan="1" class="summary">When the mouse enter a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -656,7 +669,7 @@ wibox.widget {
         <a href="#mouse::leave">mouse::leave</a>
       </td>
       <td colspan="1" class="summary">When the mouse leave a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -898,7 +911,7 @@ wibox.widget {
 
 
 
-    <span id=item1430 class="hide_extra">
+    <span id=item1442 class="hide_extra">
     </span>
 
 </dd>
@@ -927,13 +940,13 @@ wibox.widget {
 
 
      <br />
-     <center id=button1431>
-     <a class="show_more_button" onclick="show_extra('1431')">
+     <center id=button1443>
+     <a class="show_more_button" onclick="show_extra('1443')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1431 class="hide_extra">
+    <span id=item1443 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::notification</code></span>  When the <a href="../widgets/naughty.list.actions.html#notification">notification</a> value changes.</li>
@@ -968,13 +981,13 @@ wibox.widget {
 
 
      <br />
-     <center id=button1432>
-     <a class="show_more_button" onclick="show_extra('1432')">
+     <center id=button1444>
+     <a class="show_more_button" onclick="show_extra('1444')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1432 class="hide_extra">
+    <span id=item1444 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::base_layout</code></span>  When the <a href="../widgets/naughty.list.actions.html#base_layout">base_layout</a> value changes.</li>
@@ -1003,13 +1016,13 @@ wibox.widget {
 
 
      <br />
-     <center id=button1433>
-     <a class="show_more_button" onclick="show_extra('1433')">
+     <center id=button1445>
+     <a class="show_more_button" onclick="show_extra('1445')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1433 class="hide_extra">
+    <span id=item1445 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::widget_template</code></span>  When the <a href="../widgets/naughty.list.actions.html#widget_template">widget_template</a> value changes.</li>
@@ -1039,13 +1052,13 @@ wibox.widget {
 
 
      <br />
-     <center id=button1434>
-     <a class="show_more_button" onclick="show_extra('1434')">
+     <center id=button1446>
+     <a class="show_more_button" onclick="show_extra('1446')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1434 class="hide_extra">
+    <span id=item1446 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::style</code></span>  When the <a href="../widgets/naughty.list.actions.html#style">style</a> value changes.</li>
@@ -1107,7 +1120,7 @@ wibox.widget {
 
 
 
-    <span id=item1435 class="hide_extra">
+    <span id=item1447 class="hide_extra">
     </span>
 
 </dd>
@@ -1138,7 +1151,7 @@ wibox.widget {
 
 
 
-    <span id=item1436 class="hide_extra">
+    <span id=item1448 class="hide_extra">
     </span>
 
 </dd>
@@ -1166,7 +1179,7 @@ wibox.widget {
 
 
 
-    <span id=item1437 class="hide_extra">
+    <span id=item1449 class="hide_extra">
     </span>
 
 </dd>
@@ -1194,7 +1207,7 @@ wibox.widget {
 
 
 
-    <span id=item1438 class="hide_extra">
+    <span id=item1450 class="hide_extra">
     </span>
 
 </dd>
@@ -1223,7 +1236,7 @@ wibox.widget {
 
 
 
-    <span id=item1439 class="hide_extra">
+    <span id=item1451 class="hide_extra">
     </span>
 
 </dd>
@@ -1244,7 +1257,7 @@ wibox.widget {
 
 
 
-    <span id=item1440 class="hide_extra">
+    <span id=item1452 class="hide_extra">
     </span>
 
 </dd>
@@ -1271,7 +1284,7 @@ wibox.widget {
 
 
 
-    <span id=item1441 class="hide_extra">
+    <span id=item1453 class="hide_extra">
     </span>
 
 </dd>
@@ -1303,7 +1316,7 @@ wibox.widget {
 
 
 
-    <span id=item1442 class="hide_extra">
+    <span id=item1454 class="hide_extra">
     </span>
 
 </dd>
@@ -1331,7 +1344,7 @@ wibox.widget {
 
 
 
-    <span id=item1443 class="hide_extra">
+    <span id=item1455 class="hide_extra">
     </span>
 
 </dd>
@@ -1366,7 +1379,7 @@ wibox.widget {
 
 
 
-    <span id=item1444 class="hide_extra">
+    <span id=item1456 class="hide_extra">
     </span>
 
 </dd>
@@ -1399,7 +1412,7 @@ wibox.widget {
 
 
 
-    <span id=item1445 class="hide_extra">
+    <span id=item1457 class="hide_extra">
     </span>
 
 </dd>
@@ -1431,7 +1444,7 @@ wibox.widget {
 
 
 
-    <span id=item1446 class="hide_extra">
+    <span id=item1458 class="hide_extra">
     </span>
 
 </dd>
@@ -1470,7 +1483,7 @@ wibox.widget {
 
 
 
-    <span id=item1447 class="hide_extra">
+    <span id=item1459 class="hide_extra">
     </span>
 
 </dd>
@@ -1501,7 +1514,7 @@ wibox.widget {
 
 
 
-    <span id=item1448 class="hide_extra">
+    <span id=item1460 class="hide_extra">
     </span>
 
 </dd>
@@ -1528,7 +1541,7 @@ wibox.widget {
 
 
 
-    <span id=item1449 class="hide_extra">
+    <span id=item1461 class="hide_extra">
     </span>
 
 </dd>
@@ -1625,7 +1638,7 @@ wibox.widget {
 
 
 
-    <span id=item1450 class="hide_extra">
+    <span id=item1462 class="hide_extra">
     </span>
 
 </dd>
@@ -1722,7 +1735,7 @@ wibox.widget {
 
 
 
-    <span id=item1451 class="hide_extra">
+    <span id=item1463 class="hide_extra">
     </span>
 
 </dd>
@@ -1801,7 +1814,7 @@ wibox.widget {
 
 
 
-    <span id=item1452 class="hide_extra">
+    <span id=item1464 class="hide_extra">
     </span>
 
 </dd>
@@ -1880,7 +1893,7 @@ wibox.widget {
 
 
 
-    <span id=item1453 class="hide_extra">
+    <span id=item1465 class="hide_extra">
     </span>
 
 </dd>
@@ -1904,7 +1917,7 @@ wibox.widget {
 
 
 
-    <span id=item1454 class="hide_extra">
+    <span id=item1466 class="hide_extra">
     </span>
 
 </dd>
@@ -1924,7 +1937,7 @@ wibox.widget {
 
 
 
-    <span id=item1455 class="hide_extra">
+    <span id=item1467 class="hide_extra">
     </span>
 
 </dd>
@@ -1944,7 +1957,7 @@ wibox.widget {
 
 
 
-    <span id=item1456 class="hide_extra">
+    <span id=item1468 class="hide_extra">
     </span>
 
 </dd>
@@ -1964,7 +1977,7 @@ wibox.widget {
 
 
 
-    <span id=item1457 class="hide_extra">
+    <span id=item1469 class="hide_extra">
     </span>
 
 </dd>
@@ -1988,7 +2001,7 @@ wibox.widget {
 
 
 
-    <span id=item1458 class="hide_extra">
+    <span id=item1470 class="hide_extra">
     </span>
 
 </dd>
@@ -2012,7 +2025,7 @@ wibox.widget {
 
 
 
-    <span id=item1459 class="hide_extra">
+    <span id=item1471 class="hide_extra">
     </span>
 
 </dd>
@@ -2036,7 +2049,7 @@ wibox.widget {
 
 
 
-    <span id=item1460 class="hide_extra">
+    <span id=item1472 class="hide_extra">
     </span>
 
 </dd>
@@ -2060,7 +2073,7 @@ wibox.widget {
 
 
 
-    <span id=item1461 class="hide_extra">
+    <span id=item1473 class="hide_extra">
     </span>
 
 </dd>
@@ -2080,7 +2093,7 @@ wibox.widget {
 
 
 
-    <span id=item1462 class="hide_extra">
+    <span id=item1474 class="hide_extra">
     </span>
 
 </dd>
@@ -2100,7 +2113,7 @@ wibox.widget {
 
 
 
-    <span id=item1463 class="hide_extra">
+    <span id=item1475 class="hide_extra">
     </span>
 
 </dd>
@@ -2120,7 +2133,7 @@ wibox.widget {
 
 
 
-    <span id=item1464 class="hide_extra">
+    <span id=item1476 class="hide_extra">
     </span>
 
 </dd>
@@ -2140,7 +2153,7 @@ wibox.widget {
 
 
 
-    <span id=item1465 class="hide_extra">
+    <span id=item1477 class="hide_extra">
     </span>
 
 </dd>
@@ -2164,7 +2177,7 @@ wibox.widget {
 
 
 
-    <span id=item1466 class="hide_extra">
+    <span id=item1478 class="hide_extra">
     </span>
 
 </dd>
@@ -2188,7 +2201,7 @@ wibox.widget {
 
 
 
-    <span id=item1467 class="hide_extra">
+    <span id=item1479 class="hide_extra">
     </span>
 
 </dd>
@@ -2212,7 +2225,7 @@ wibox.widget {
 
 
 
-    <span id=item1468 class="hide_extra">
+    <span id=item1480 class="hide_extra">
     </span>
 
 </dd>
@@ -2236,7 +2249,7 @@ wibox.widget {
 
 
 
-    <span id=item1469 class="hide_extra">
+    <span id=item1481 class="hide_extra">
     </span>
 
 </dd>
@@ -2260,7 +2273,7 @@ wibox.widget {
 
 
 
-    <span id=item1470 class="hide_extra">
+    <span id=item1482 class="hide_extra">
     </span>
 
 </dd>
@@ -2284,7 +2297,7 @@ wibox.widget {
 
 
 
-    <span id=item1471 class="hide_extra">
+    <span id=item1483 class="hide_extra">
     </span>
 
 </dd>
@@ -2295,7 +2308,7 @@ wibox.widget {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

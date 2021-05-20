@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -106,6 +108,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -188,6 +191,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -278,11 +282,18 @@
 <p>
 
 </p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
-        <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+            <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
+            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -627,7 +638,7 @@
 
 
 
-    <span id=item3029 class="hide_extra">
+    <span id=item2453 class="hide_extra">
     </span>
 
 </dd>
@@ -658,7 +669,7 @@
 
 
 
-    <span id=item3030 class="hide_extra">
+    <span id=item2454 class="hide_extra">
     </span>
 
 </dd>
@@ -691,7 +702,7 @@
 
 
 
-    <span id=item3031 class="hide_extra">
+    <span id=item2455 class="hide_extra">
     </span>
 
 </dd>
@@ -722,7 +733,7 @@
 
 
 
-    <span id=item3032 class="hide_extra">
+    <span id=item2456 class="hide_extra">
     </span>
 
 </dd>
@@ -768,7 +779,7 @@
 
 
 
-    <span id=item3033 class="hide_extra">
+    <span id=item2457 class="hide_extra">
     </span>
 
 </dd>
@@ -794,7 +805,7 @@
 
 
 
-    <span id=item3034 class="hide_extra">
+    <span id=item2458 class="hide_extra">
     </span>
 
 </dd>
@@ -825,7 +836,7 @@
 
 
 
-    <span id=item3035 class="hide_extra">
+    <span id=item2459 class="hide_extra">
     </span>
 
 </dd>
@@ -895,7 +906,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
     </ul>
 
 
-    <span id=item3036 class="hide_extra">
+    <span id=item2460 class="hide_extra">
     </span>
 
 </dd>
@@ -926,7 +937,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3037 class="hide_extra">
+    <span id=item2461 class="hide_extra">
     </span>
 
 </dd>
@@ -957,7 +968,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3038 class="hide_extra">
+    <span id=item2462 class="hide_extra">
     </span>
 
 </dd>
@@ -996,7 +1007,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3039 class="hide_extra">
+    <span id=item2463 class="hide_extra">
     </span>
 
 </dd>
@@ -1024,7 +1035,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3040 class="hide_extra">
+    <span id=item2464 class="hide_extra">
     </span>
 
 </dd>
@@ -1048,7 +1059,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3041 class="hide_extra">
+    <span id=item2465 class="hide_extra">
     </span>
 
 </dd>
@@ -1072,7 +1083,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3042 class="hide_extra">
+    <span id=item2466 class="hide_extra">
     </span>
 
 </dd>
@@ -1096,7 +1107,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3043 class="hide_extra">
+    <span id=item2467 class="hide_extra">
     </span>
 
 </dd>
@@ -1120,7 +1131,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3044 class="hide_extra">
+    <span id=item2468 class="hide_extra">
     </span>
 
 </dd>
@@ -1144,7 +1155,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3045 class="hide_extra">
+    <span id=item2469 class="hide_extra">
     </span>
 
 </dd>
@@ -1168,7 +1179,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3046 class="hide_extra">
+    <span id=item2470 class="hide_extra">
     </span>
 
 </dd>
@@ -1192,7 +1203,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3047 class="hide_extra">
+    <span id=item2471 class="hide_extra">
     </span>
 
 </dd>
@@ -1216,7 +1227,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3048 class="hide_extra">
+    <span id=item2472 class="hide_extra">
     </span>
 
 </dd>
@@ -1240,7 +1251,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3049 class="hide_extra">
+    <span id=item2473 class="hide_extra">
     </span>
 
 </dd>
@@ -1264,7 +1275,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3050 class="hide_extra">
+    <span id=item2474 class="hide_extra">
     </span>
 
 </dd>
@@ -1288,7 +1299,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3051 class="hide_extra">
+    <span id=item2475 class="hide_extra">
     </span>
 
 </dd>
@@ -1312,7 +1323,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3052 class="hide_extra">
+    <span id=item2476 class="hide_extra">
     </span>
 
 </dd>
@@ -1336,7 +1347,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3053 class="hide_extra">
+    <span id=item2477 class="hide_extra">
     </span>
 
 </dd>
@@ -1360,7 +1371,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3054 class="hide_extra">
+    <span id=item2478 class="hide_extra">
     </span>
 
 </dd>
@@ -1384,7 +1395,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3055 class="hide_extra">
+    <span id=item2479 class="hide_extra">
     </span>
 
 </dd>
@@ -1408,7 +1419,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3056 class="hide_extra">
+    <span id=item2480 class="hide_extra">
     </span>
 
 </dd>
@@ -1432,7 +1443,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3057 class="hide_extra">
+    <span id=item2481 class="hide_extra">
     </span>
 
 </dd>
@@ -1457,7 +1468,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3058 class="hide_extra">
+    <span id=item2482 class="hide_extra">
     </span>
 
 </dd>
@@ -1478,7 +1489,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3059 class="hide_extra">
+    <span id=item2483 class="hide_extra">
     </span>
 
 </dd>
@@ -1499,7 +1510,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3060 class="hide_extra">
+    <span id=item2484 class="hide_extra">
     </span>
 
 </dd>
@@ -1520,7 +1531,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3061 class="hide_extra">
+    <span id=item2485 class="hide_extra">
     </span>
 
 </dd>
@@ -1540,7 +1551,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3062 class="hide_extra">
+    <span id=item2486 class="hide_extra">
     </span>
 
 </dd>
@@ -1560,7 +1571,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3063 class="hide_extra">
+    <span id=item2487 class="hide_extra">
     </span>
 
 </dd>
@@ -1579,7 +1590,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3064 class="hide_extra">
+    <span id=item2488 class="hide_extra">
     </span>
 
 </dd>
@@ -1598,7 +1609,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3065 class="hide_extra">
+    <span id=item2489 class="hide_extra">
     </span>
 
 </dd>
@@ -1617,7 +1628,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3066 class="hide_extra">
+    <span id=item2490 class="hide_extra">
     </span>
 
 </dd>
@@ -1636,7 +1647,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3067 class="hide_extra">
+    <span id=item2491 class="hide_extra">
     </span>
 
 </dd>
@@ -1655,7 +1666,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3068 class="hide_extra">
+    <span id=item2492 class="hide_extra">
     </span>
 
 </dd>
@@ -1674,7 +1685,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3069 class="hide_extra">
+    <span id=item2493 class="hide_extra">
     </span>
 
 </dd>
@@ -1699,7 +1710,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3070 class="hide_extra">
+    <span id=item2494 class="hide_extra">
     </span>
 
 </dd>
@@ -1724,7 +1735,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3071 class="hide_extra">
+    <span id=item2495 class="hide_extra">
     </span>
 
 </dd>
@@ -1749,7 +1760,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3072 class="hide_extra">
+    <span id=item2496 class="hide_extra">
     </span>
 
 </dd>
@@ -1774,7 +1785,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3073 class="hide_extra">
+    <span id=item2497 class="hide_extra">
     </span>
 
 </dd>
@@ -1793,7 +1804,7 @@ awful.layout.remove_default_layout(awful.layout.suit.tile)
 
 
 
-    <span id=item3074 class="hide_extra">
+    <span id=item2498 class="hide_extra">
     </span>
 
 </dd>
@@ -1840,7 +1851,7 @@ awful.layout.suit.corner.se,
 
 
 
-    <span id=item3075 class="hide_extra">
+    <span id=item2499 class="hide_extra">
     </span>
 
 </dd>
@@ -1860,7 +1871,7 @@ awful.layout.suit.corner.se,
 
 
 
-    <span id=item3076 class="hide_extra">
+    <span id=item2500 class="hide_extra">
     </span>
 
 </dd>
@@ -1880,7 +1891,7 @@ awful.layout.suit.corner.se,
 
 
 
-    <span id=item3077 class="hide_extra">
+    <span id=item2501 class="hide_extra">
     </span>
 
 </dd>
@@ -1891,7 +1902,7 @@ awful.layout.suit.corner.se,
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

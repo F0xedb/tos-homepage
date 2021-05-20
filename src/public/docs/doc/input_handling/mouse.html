@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -94,6 +96,7 @@
   <li><a href="../tde/lib-tde.logger.html">lib-tde.logger</a></li>
   <li><a href="../tde/lib-tde.mappers.html">lib-tde.mappers</a></li>
   <li><a href="../tde/lib-tde.mouse.html">lib-tde.mouse</a></li>
+  <li><a href="../tde/lib-tde.network.html">lib-tde.network</a></li>
   <li><a href="../tde/lib-tde.serialize.html">lib-tde.serialize</a></li>
   <li><a href="../tde/lib-tde.signals.html">lib-tde.signals</a></li>
   <li><a href="../tde/lib-tde.volume.html">lib-tde.volume</a></li>
@@ -169,6 +172,7 @@
   <li><a href="../widget_containers/wibox.container.radialprogressbar.html">wibox.container.radialprogressbar</a></li>
   <li><a href="../widget_containers/wibox.container.rotate.html">wibox.container.rotate</a></li>
   <li><a href="../widget_containers/wibox.container.scroll.html">wibox.container.scroll</a></li>
+  <li><a href="../widget_containers/wibox.container.tile.html">wibox.container.tile</a></li>
 </ul>
 <h2>Widget layouts</h2>
 <ul class="nowrap">
@@ -320,11 +324,18 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 </pre>
 
 <p> See also <a href="../core_components/mousegrabber.html#">mousegrabber</a></p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-        <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Functions">Functions</a></h2>
@@ -596,7 +607,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
-    Methods
+
     <dl class="function">
     <dt>
     <a name = "append_global_mousebindings"></a>
@@ -630,7 +641,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1022 class="hide_extra">
+    <span id=item1108 class="hide_extra">
     </span>
 
 </dd>
@@ -660,7 +671,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1023 class="hide_extra">
+    <span id=item1109 class="hide_extra">
     </span>
 
 </dd>
@@ -688,13 +699,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1024>
-     <a class="show_more_button" onclick="show_extra('1024')">
+     <center id=button1110>
+     <a class="show_more_button" onclick="show_extra('1110')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1024 class="hide_extra">
+    <span id=item1110 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -740,7 +751,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1025 class="hide_extra">
+    <span id=item1111 class="hide_extra">
     </span>
 
 </dd>
@@ -771,7 +782,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1026 class="hide_extra">
+    <span id=item1112 class="hide_extra">
     </span>
 
 </dd>
@@ -804,13 +815,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1027>
-     <a class="show_more_button" onclick="show_extra('1027')">
+     <center id=button1113>
+     <a class="show_more_button" onclick="show_extra('1113')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1027 class="hide_extra">
+    <span id=item1113 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>client_mousebinding::added</code></span>  </li>
@@ -851,7 +862,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1028 class="hide_extra">
+    <span id=item1114 class="hide_extra">
     </span>
 
 </dd>
@@ -888,7 +899,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1029 class="hide_extra">
+    <span id=item1115 class="hide_extra">
     </span>
 
 </dd>
@@ -967,7 +978,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </ul>
 
 
-    <span id=item1030 class="hide_extra">
+    <span id=item1116 class="hide_extra">
     </span>
 
 </dd>
@@ -991,7 +1002,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1031 class="hide_extra">
+    <span id=item1117 class="hide_extra">
     </span>
 
 </dd>
@@ -1018,7 +1029,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1032 class="hide_extra">
+    <span id=item1118 class="hide_extra">
     </span>
 
 </dd>
@@ -1045,7 +1056,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1033 class="hide_extra">
+    <span id=item1119 class="hide_extra">
     </span>
 
 </dd>
@@ -1072,7 +1083,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1034 class="hide_extra">
+    <span id=item1120 class="hide_extra">
     </span>
 
 </dd>
@@ -1103,7 +1114,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1035 class="hide_extra">
+    <span id=item1121 class="hide_extra">
     </span>
 
 </dd>
@@ -1134,7 +1145,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1036 class="hide_extra">
+    <span id=item1122 class="hide_extra">
     </span>
 
 </dd>
@@ -1165,7 +1176,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1037 class="hide_extra">
+    <span id=item1123 class="hide_extra">
     </span>
 
 </dd>
@@ -1185,7 +1196,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1038 class="hide_extra">
+    <span id=item1124 class="hide_extra">
     </span>
 
 </dd>
@@ -1205,7 +1216,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1039 class="hide_extra">
+    <span id=item1125 class="hide_extra">
     </span>
 
 </dd>
@@ -1225,7 +1236,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1040 class="hide_extra">
+    <span id=item1126 class="hide_extra">
     </span>
 
 </dd>
@@ -1249,7 +1260,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1041 class="hide_extra">
+    <span id=item1127 class="hide_extra">
     </span>
 
 </dd>
@@ -1269,7 +1280,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1042 class="hide_extra">
+    <span id=item1128 class="hide_extra">
     </span>
 
 </dd>
@@ -1296,7 +1307,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1043 class="hide_extra">
+    <span id=item1129 class="hide_extra">
     </span>
 
 </dd>
@@ -1316,7 +1327,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1044 class="hide_extra">
+    <span id=item1130 class="hide_extra">
     </span>
 
 </dd>
@@ -1348,7 +1359,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1045 class="hide_extra">
+    <span id=item1131 class="hide_extra">
     </span>
 
 </dd>
@@ -1380,7 +1391,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1046 class="hide_extra">
+    <span id=item1132 class="hide_extra">
     </span>
 
 </dd>
@@ -1404,7 +1415,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1047 class="hide_extra">
+    <span id=item1133 class="hide_extra">
     </span>
 
 </dd>
@@ -1430,7 +1441,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1048 class="hide_extra">
+    <span id=item1134 class="hide_extra">
     </span>
 
 </dd>
@@ -1450,7 +1461,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1049 class="hide_extra">
+    <span id=item1135 class="hide_extra">
     </span>
 
 </dd>
@@ -1470,7 +1481,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1050 class="hide_extra">
+    <span id=item1136 class="hide_extra">
     </span>
 
 </dd>
@@ -1507,13 +1518,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1051>
-     <a class="show_more_button" onclick="show_extra('1051')">
+     <center id=button1137>
+     <a class="show_more_button" onclick="show_extra('1137')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1051 class="hide_extra">
+    <span id=item1137 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1549,7 +1560,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1052 class="hide_extra">
+    <span id=item1138 class="hide_extra">
     </span>
 
 </dd>
@@ -1594,7 +1605,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1053 class="hide_extra">
+    <span id=item1139 class="hide_extra">
     </span>
 
 </dd>
@@ -1636,13 +1647,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1054>
-     <a class="show_more_button" onclick="show_extra('1054')">
+     <center id=button1140>
+     <a class="show_more_button" onclick="show_extra('1140')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1054 class="hide_extra">
+    <span id=item1140 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1677,7 +1688,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1055 class="hide_extra">
+    <span id=item1141 class="hide_extra">
     </span>
 
 </dd>
@@ -1697,7 +1708,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1056 class="hide_extra">
+    <span id=item1142 class="hide_extra">
     </span>
 
 </dd>
@@ -1731,7 +1742,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1057 class="hide_extra">
+    <span id=item1143 class="hide_extra">
     </span>
 
 </dd>
@@ -1762,7 +1773,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1058 class="hide_extra">
+    <span id=item1144 class="hide_extra">
     </span>
 
 </dd>
@@ -1794,7 +1805,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1059 class="hide_extra">
+    <span id=item1145 class="hide_extra">
     </span>
 
 </dd>
@@ -1825,7 +1836,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1060 class="hide_extra">
+    <span id=item1146 class="hide_extra">
     </span>
 
 </dd>
@@ -1873,13 +1884,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button1061>
-     <a class="show_more_button" onclick="show_extra('1061')">
+     <center id=button1147>
+     <a class="show_more_button" onclick="show_extra('1147')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1061 class="hide_extra">
+    <span id=item1147 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1934,7 +1945,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item1062 class="hide_extra">
+    <span id=item1148 class="hide_extra">
     </span>
 
 </dd>
@@ -1945,7 +1956,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 09:14:10 </i>
+<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
