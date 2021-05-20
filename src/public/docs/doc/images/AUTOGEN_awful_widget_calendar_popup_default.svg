@@ -278,8 +278,8 @@
   <use xlink:href="#glyph0-1" x="451" y="10.941406"/>
   <use xlink:href="#glyph0-3" x="457" y="10.941406"/>
   <use xlink:href="#glyph0-20" x="463" y="10.941406"/>
-  <use xlink:href="#glyph0-1" x="466" y="10.941406"/>
-  <use xlink:href="#glyph0-4" x="472" y="10.941406"/>
+  <use xlink:href="#glyph0-3" x="466" y="10.941406"/>
+  <use xlink:href="#glyph0-1" x="472" y="10.941406"/>
   <use xlink:href="#glyph0-10" x="478" y="10.941406"/>
 </g>
 <path style="fill:none;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 0 L 195 0 L 195 177 L 0 177 Z M 0 0 " transform="matrix(1,0,0,1,142.5,11.5)"/>
