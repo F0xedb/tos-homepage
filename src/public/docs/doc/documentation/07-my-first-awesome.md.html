@@ -43,6 +43,18 @@
   <li><a href="../index.html">Index</a></li>
 </ul>
 
+<h2>Contents</h2>
+<ul>
+<li><a href="#Example_plugins">Example plugins </a></li>
+<li><a href="#Plugin_location">Plugin location </a></li>
+<li><a href="#Plugin_configuration_file">Plugin configuration file </a></li>
+<li><a href="#Plugin_Types">Plugin Types </a></li>
+<li><a href="#Setting_up_development_environment">Setting up development environment </a></li>
+<li><a href="#Module">Module </a></li>
+<li><a href="#More_advanced_example">More advanced example </a></li>
+<li><a href="#Widget">Widget </a></li>
+<li><a href="#Docs">Docs </a></li>
+</ul>
 
 
 <h2>Documentation</h2>
@@ -53,7 +65,7 @@
   <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change TDE appearance</a></li>
-  <li><strong>My First Plugin</strong></li>
+  <li><strong>Plugin Intro</strong></li>
   <li><a href="../documentation/08-client-layout-system.md.html">The TDE client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
   <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
@@ -268,9 +280,330 @@
 <div id="content">
 
 
+<h1>Plugin Intro</h1>
+
+<p><a name="Example_plugins"></a></p>
+<h2>Example plugins</h2>
+<p>First of all example plugins can be found in the <code>/etc/skel/.config/tde</code> directory.</p>
+
+<p>For a fun example of what a plugin can do take a look at the snake game:</p>
+
+
+<pre>
+cat /etc/skel/.config/tde/snake/init.lua | tde-client
+</pre>
+
+
+<blockquote>
+    <p>Note: To stop the game press escape</p>
+</blockquote>
+
+<p><a name="Plugin_location"></a></p>
+<h2>Plugin location</h2>
+
+<p>Before writing your first plugin you need to understand where they need to be located.
+Plugins are located in the <code>~/.config/tde</code> directory.</p>
+
+<p>If the directory doesn't exist yet then create one.</p>
+
+
+<pre>
+mkdir -p <span class="string">"$HOME/.config/tde"</span>
+</pre>
+
+
+<p>Each subdirectory in this directory is one plugin</p>
+
+<p><a name="Plugin_configuration_file"></a></p>
+<h2>Plugin configuration file</h2>
+
+<p>The configuration file to enable/disable plugins can be found in the following location <code>~/.config/tos/plugins.conf</code></p>
+
+<p>By default it looks like this:</p>
+
+<pre>
+# Notification widget plugins will be added <span class="keyword">in</span> the notification center
+notification=<span class="string">"widget.user-profile"</span>
+notification=<span class="string">"widget.social-media"</span>
+notification=<span class="string">"widget.weather"</span>
+notification=<span class="string">"widget.sars-cov-2"</span>
+notification=<span class="string">"widget.calculator"</span>
+
+#<span class="global">module</span>=<span class="string">"hello-world"</span>
+
+#settings=<span class="string">"hello-world-widget"</span>
+
+
+#topbar-right=<span class="string">"icon_button"</span>
+
+# topbar-left=<span class="string">"icon_button"</span>
+
+# topbar-center=<span class="string">"icon_button"</span>
+
+#settings=<span class="string">"settings-app-widget"</span>
+</pre>
+
+
+<p>As you can see by default tde already makes use of some plugins.</p>
+
+<blockquote>
+    <p>NOTE: plugins starting with <code>widget</code> are threated as internal widget implemented directly into <code>TDE</code></p>
+</blockquote>
+
+<p><a name="Plugin_Types"></a></p>
+<h2>Plugin Types</h2>
+
+<ol>
+    <li><code>Modules</code>:
+    These plugins are simple scripts written in <code>lua</code> that are ran in the background under the same process as widgets (thus they can manipulate widgets and more).
+    Users usually don't see these plugins working. </li>
+</ol>
+
+<p>Examples are: </p>
+
+<ul>
+    <li>low battery notifier</li>
+    <li>keybindings</li>
+    <li>settings modifiers</li>
+    <li>file watchers </li>
+    <li>and many more. </li>
+</ul>
+
+<p>You can compair then with <a href="https://en.wikipedia.org/wiki/Daemon_(computing">daemons</a>.</p>
+
+<ol>
+    <li><code>Widgets</code>:
+    Next you have widgets, these are the plugins you see every day.
+    They are the GUI representation of a certain object.
+    You can see them all over the place.
+    Starting from the clock, package updater, wifi widget, workspaces, settings app and more.
+    When writting a plugin you must take into consideration which one to use.
+    Everything is allowed in a Module, however when writing a Widget you must inherit wibox and return such an object to be consumed by TDE.</li>
+</ol>
+
+<p>This will be explained below</p>
+
+<h3>Plugin Widgets</h3>
+<p>Plugins widgets can be placed in multiple locations around the user interface.
+In the configuration file you can specify where the widget should be placed.
+Here are the current widget locations.</p>
+
+<ol>
+    <li><code>settings</code> - The widget will be placed at the bottom of the settings app (left menu)</li>
+    <li><code>topbar</code> - The widget will be placed in the topbar on the right side next to all the buttons</li>
+    <li><code>notification center</code> - The widget will be put in the notification center under the widget tab</li>
+</ol>
+
+
 <h1>My First Plugin</h1>
 
-<p> TODO</p>
+<p>This part is interactive, it will guide you to make both a <code>Module</code> and a <code>Widget</code>, how to debug, testing out etc.</p>
+
+<p>Follow this tutorial if you have never build a plugin before.</p>
+
+<p><a name="Setting_up_development_environment"></a></p>
+<h2>Setting up development environment</h2>
+
+<p>First of all, make sure you have <a href="https://github.com/ODEX-TOS/wm-debug">wm-launch</a> installed.
+This will create a mock <code>TDE</code> instance that you can test without messing up your real desktop environment.
+It is highly recommended you use this and this tutorial will make great use of it.</p>
+
+<blockquote>
+    <p>Note: The above is not a hard requirement but makes debugging a lot more easily</p>
+</blockquote>
+
+<p>To test if you installed wm-launch correctly execute the following command:</p>
+
+
+<pre>
+wm-launch -r <span class="number">1080</span>x1080
+</pre>
+
+
+<blockquote>
+    <p>Note: the <code>1080x1080</code> option creates a window of size 1080 pixels x 1080 pixels, if your monitor is sufficiently large increase this number</p>
+</blockquote>
+
+<h3>IDE</h3>
+
+<p>Having autocompletion for <code>TDE</code> is really usefull and makes developing a lot easier.
+Currently <code>TDE</code> only support autocomplete in VS Code using the following <a href="https://wiki.odex.be/en/Developer/vscode-tde">docs</a></p>
+
+<p><a name="Module"></a></p>
+<h2>Module</h2>
+
+<h3>Setup</h3>
+
+<p>Lets get started with your first module.</p>
+
+<p>Firstly create a new directory in <code>~/.config/tde/</code> called <code>my-first-module</code></p>
+
+
+<pre>
+mkdir -p <span class="string">"$HOME/.config/tde/my-first-module"</span>
+</pre>
+
+
+<p>This directory will house everything related to your project.</p>
+
+<p>Next we tell <code>TDE</code> that we want to enable this module called <code>my-first-module</code></p>
+
+<p>Edit the following file <code>~/.config/tos/plugins.conf</code> and add the following:</p>
+
+
+<pre>
+<span class="global">module</span>=<span class="string">"my-first-module"</span>
+</pre>
+
+
+<p>The above line will make <code>tde</code> use your module.</p>
+
+
+<h3>Code</h3>
+
+<p>Next we will create the <code>lua</code> file that is your plugins entrypoint</p>
+
+<p>The file is located in <code>~/.config/tde/my-first-module/init.lua</code></p>
+
+<p>Write the following into that file</p>
+
+
+<pre>
+<span class="global">print</span>(<span class="string">"Hello, World!"</span>)
+<span class="global">print</span>(<span class="string">"This is executed from my plugin"</span>)
+</pre>
+
+
+<p>In essence you should have the following directory structure:</p>
+
+<pre>
+.config/
+├─ tos/
+│  ├─ plugins.conf
+├─ tde/
+│  ├─ my-first-<span class="global">module</span>/
+│  │  ├─ init.lua
+</pre>
+
+
+<h3>Run Your Plugin</h3>
+
+<p>Now lets run your plugin!</p>
+
+<h4>wm-launch</h4>
+
+<p>wm-launch is your best bet
+Since you created the plugin and enabled it can simply launch the <code>wm-launch</code> command.</p>
+
+<p>Look at your terminal and wait a few seconds until you see the <code>Hello, World!</code> and the <code>This is executed from my plugin</code> lines appear somewhere in the output</p>
+
+<h4>In current session</h4>
+
+<blockquote>
+    <p>Note: running arbitrary code in the current session could potentially break the system, make sure nothing wrong can happen
+    The code you run can potentially contain leaks making the active session slow. This simple example couldn't hurt, but larger plugins can</p>
+</blockquote>
+
+<p>First of all open 2 terminal.</p>
+
+<ol>
+    <li>The first monitors the log file from the active session</li>
+    <li>The second starts/activates your plugin.</li>
+</ol>
+
+<p>Executed this command in the first terminal:</p>
+
+<pre>
+tail -f <span class="string">"$HOME/.cache/tde/stdout.log"</span>
+</pre>
+
+
+<p>Executed this command in the seconds terminal:</p>
+
+<pre>
+cat <span class="string">"$HOME/.config/tde/my-first-module/init.lua"</span> | tde-client
+</pre>
+
+
+<p>Afterwards check the first terminal, you should see your <code>Hello, World!</code> and <code>This is executed from my plugin</code> messages appear in the output.</p>
+
+
+<blockquote>
+    <p>Note: <code>tde-client</code> is an interface into the active session, it allows sending <code>commands</code> to the interpreter so that you can modify the behaviour of <code>TDE</code></p>
+</blockquote>
+
+
+<p><a name="More_advanced_example"></a></p>
+<h2>More advanced example</h2>
+
+<p>Great you created your first module, of course you can do more than printing to <code>stdout</code>
+Since you are writing <code>lua</code> you have full control over the plugin.</p>
+
+<p>Lets take a more advanced example.
+A plugin that performs 2 simple tasks.
+1. Execute a shell script
+2. Plays a sound once the script finished</p>
+
+<p>Open your <code>init.lua</code> file and add the following content</p>
+
+<pre>
+<span class="comment">-- include some required modules
+</span><span class="keyword">local</span> spawn = awful.spawn
+
+<span class="comment">-- this is an example of the default 'pop' sound that tos uses, change the file to your liking
+</span><span class="keyword">local</span> <span class="keyword">function</span> play_sound()
+    spawn(<span class="string">"paplay /etc/xdg/tde/sound/audio-pop.wav"</span>)
+<span class="keyword">end</span>
+
+<span class="comment">-- This function gets called when our shell script is done executing
+</span><span class="comment">-- In our example we don't make use of the parameters
+</span><span class="keyword">local</span> <span class="keyword">function</span> done_callback(stdout, stderr, reason, exitcode)
+    <span class="global">print</span>(<span class="string">"Done executing shell script"</span>)
+    <span class="global">print</span>(<span class="string">"STDOUT:"</span>)
+    <span class="global">print</span>(stdout)
+
+    play_sound()
+<span class="keyword">end</span>
+
+<span class="comment">-- start of this plugin
+</span><span class="global">print</span>(<span class="string">'Plugin Loaded'</span>)
+play_sound() <span class="comment">-- pop sound
+</span>
+<span class="comment">-- lets execute a simple shell script
+</span><span class="keyword">local</span> cmd = <span class="string">[[
+    echo 'Script started'
+    sleep 5
+    echo 'Script stopped'
+]]</span>
+<span class="comment">-- and execute it, we 'bind' the done_callback function to this shell script
+</span>spawn.easy_async_with_shell(cmd, done_callback)
+</pre>
+
+
+<p>The only build in module we use is called <a href="../libraries/awful.spawn.html#">awful.spawn</a></p>
+
+<p>Now execute your plugin as noted in the last section and see what happens.</p>
+
+<p><a name="Widget"></a></p>
+<h2>Widget</h2>
+
+<p>This section will be explained in the future</p>
+
+<p><a name="Docs"></a></p>
+<h2>Docs</h2>
+
+<p>Now that you have followed the tutorial and created both a basic <code>Module</code> and <code>Widget</code> you can explore the documentation.
+Learn about the api and what <code>TDE</code> directly has to offer.</p>
+
+<p>Some useful resources:</p>
+
+<ol>
+    <li><code>Lua</code> <a href="https://www.lua.org/pil/1.html">getting started</a></li>
+    <li><code>Example plugins</code> <a href="https://github.com/ODEX-TOS/tos-desktop-environment/tree/master/plugins">Official plugins</a></li>
+    <li><code>This documentation</code> <a href="../index.html">site</a></li>
+    <li><code>Recommended patterns</code> <a href="https://wiki.odex.be/en/Usage/Plugin">Plugin recommended patterns</a></li>
+    <li><code>lib-widget</code> <a href="../tde%20widget/lib-widget.button.html">contains useful widgets</a></li>
+</ol>
 
 
 </div> <!-- id="content" -->
@@ -278,7 +611,7 @@
 <div id="about">
 <i style="float:left;">generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
 <i>Build with 💜 By F0xedb</i>
-<i style="float:right;">Last updated 2021-05-20 13:46:23 </i>
+<i style="float:right;">Last updated 2021-05-20 15:08:00 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
