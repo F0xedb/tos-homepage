@@ -45,35 +45,30 @@
 
 <h2>Contents</h2>
 <ul>
+<li><a href="#About_The_Project">About The Project </a></li>
+<li><a href="#Getting_Started">Getting Started </a></li>
+<li><a href="#Usage">Usage </a></li>
+<li><a href="#Roadmap">Roadmap </a></li>
+<li><a href="#Contributing">Contributing </a></li>
 <li><a href="#License">License </a></li>
-<li><a href="#About_Awesome">About Awesome </a></li>
-<li><a href="#Building_and_installation">Building and installation </a></li>
-<li><a href="#Running_Awesome">Running Awesome </a></li>
-<li><a href="#Configuration">Configuration </a></li>
-<li><a href="#Troubleshooting">Troubleshooting </a></li>
-<li><a href="#Asking_questions">Asking questions </a></li>
-<li><a href="#Reporting_issues">Reporting issues </a></li>
-<li><a href="#Contributing_code">Contributing code </a></li>
-<li><a href="#Status">Status </a></li>
-<li><a href="#Documentation">Documentation </a></li>
+<li><a href="#Contact">Contact </a></li>
+<li><a href="#Acknowledgments">Acknowledgments </a></li>
 </ul>
 
 
 <h2>Documentation</h2>
 <ul class="nowrap">
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
-  <li><strong>Readme</strong></li>
+  <li><strong>01-readme</strong></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
   <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
-  <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
-  <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
-  <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
-  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
+  <li><a href="../documentation/06-appearance.md.html">Change TDE appearance</a></li>
+  <li><a href="../documentation/07-my-first-awesome.md.html">My First Plugin</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The TDE client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
   <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
-  <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
   <li><a href="../documentation/90-FAQ.md.html">FAQ</a></li>
 </ul>
@@ -284,315 +279,356 @@
 <div id="content">
 
 
-<h1>Readme</h1>
-
-<p><a name="About_Awesome"></a></p>
-<h2>About Awesome</h2>
-
-<p>Awesome is a highly configurable, next generation framework window manager for X.</p>
-
-<p><a name="Building_and_installation"></a></p>
-<h2>Building and installation</h2>
-
-<p>After extracting the dist tarball or cloning the repository, run:</p>
+<p><a href="https://jenkins.odex.be/job/tos-repo/"><img src="https://jenkins.odex.be/buildStatus/icon?job=tos-repo&amp;style=flat-square&amp;subject=tde-build" alt="Build Status repo"/></a>
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/graphs/contributors"><img src="https://img.shields.io/github/contributors/ODEX-TOS/tos-desktop-environment.svg?style=flat-square" alt="Contributors"/></a>
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/network/members"><img src="https://img.shields.io/github/forks/ODEX-TOS/tos-desktop-environment.svg?style=flat-square" alt="Forks"/></a> <a href="https://github.com/ODEX-TOS/tos-desktop-environment/stargazers"><img src="https://img.shields.io/github/stars/ODEX-TOS/tos-desktop-environment.svg?style=flat-square" alt="Stargazers"/></a>
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/issues"><img src="https://img.shields.io/github/issues/ODEX-TOS/tos-desktop-environment.svg?style=flat-square" alt="Issues"/></a>
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/ODEX-TOS/tos-desktop-environment.svg?style=flat-square" alt="GPL License"/></a></p>
 
 
-<pre>
-make
-sudo make install
-</pre>
+<p><img src="https://tos.odex.be/images/logo.svg" alt="tde"/></p>
+
+<h3>TOS Desktop Environment</h3>
+<p>A desktop environment build ontop of awesome wm</p>
+
+<p><strong><a href="https://tos.odex.be/docs/">Explore the docs »</a></strong></p>
+
+<p><a href="https://wiki.odex.be">View wiki</a> -
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/issues">Report Bug</a> -
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/issues">Request Feature</a></p>
 
 
-<p>This will</p>
+<!-- ABOUT THE PROJECT -->
+
+
+<p><a name="About_The_Project"></a></p>
+<h2>About The Project</h2>
+
+<h3>Built By</h3>
+
+<ul>
+    <li><a href="https://www.odex.be">F0xedb</a></li>
+</ul>
+
+
+<!-- GETTING STARTED -->
+
+
+<p><a name="Getting_Started"></a></p>
+<h2>Getting Started</h2>
+
+<p>To get a local copy up and running follow these simple steps.</p>
+
+<h3>Prerequisites</h3>
+
+<blockquote>
+    <p>TDE depends on a lot of different tools and projects. A list can be found
+    <a href="https://github.com/ODEX-TOS/tos-live/blob/master/repo/BUILD/PKGBUILD_AWESOME">here</a></p>
+</blockquote>
+
+<p><img src="https://github.com/ODEX-TOS/tos-desktop-environment/blob/master/images/desktop.png?raw=true" alt="desktop"/></p>
+
+<h3>Installation</h3>
 
 <ol>
-    <li>create a build directory at <code>./build</code>,</li>
-    <li>run <code>cmake</code>,</li>
-    <li>build Awesome and</li>
-    <li>install it to the default prefix path <code>/usr/local</code>.</li>
+    <li>Install dependencies</li>
 </ol>
 
-<p>Alternatively to the above, you can generate a <code>.deb</code> or <code>.rpm</code> package, for easy installation management:</p>
-
 
 <pre>
-make <span class="global">package</span>
-
-sudo dpkg -i awesome-x.y.z.deb
-# <span class="keyword">or</span>
-sudo rpm -Uvh awesome-x.y.z.rpm
+sudo tos -S tde xorg-server-xephyr
 </pre>
 
 
-<h3>Advanced options and testing</h3>
-
-<p>A full list of dependencies, more advanced build options, as well as instructions on how to use the test suite can be found <a href="https://tos.odex.be/docs/10-building-and-testing.md.html">here</a>.</p>
-
-<h3>Installing current git master as a package receipts</h3>
-
-<h4>Arch Linux AUR</h4>
+<p>if you are using an arch based distro that is not tos add the following repo to <code>/etc/pacman.conf</code></p>
 
 
 <pre>
-sudo pacman -S <span class="comment">--needed base-devel git
-</span>git clone https://aur.archlinux.org/awesome-git.git
-cd awesome-git
-makepkg -fsri
+[tos]
+Server = https://repo.odex.be
 </pre>
 
 
-<h4>Debian-based</h4>
+<ol>
+    <li>Clone the repo</li>
+</ol>
 
 
 <pre>
-sudo apt build-dep awesome
-git clone https://github.com/awesomewm/awesome
-cd awesome
-make <span class="global">package</span>
-sudo apt install *.deb
+git clone https://github.com/ODEX-TOS/tos-desktop-environment.git
 </pre>
 
 
-<p>&lt;<&lt;<&lt;<&lt; HEAD</p>
-<h3>Build dependencies</h3>
+<ol>
+    <li>Set the required files in the appropriate locations</li>
+</ol>
 
-<p>Awesome has the following dependencies (besides a more-or-less standard POSIX
-environment):</p>
+
+<pre>
+sudo mkdir -p /etc/xdg/tde
+sudo cp -r tos-desktop-environment/tde/* /etc/xdg/tde
+</pre>
+
+
+<ol>
+    <li>Use wm-debug for easier development</li>
+</ol>
+
+
+<pre>
+git clone https://github.com:ODEX-TOS/wm-<span class="global">debug</span>.git
+cd wm-<span class="global">debug</span>
+# prepare the wm-launch settings etc
+sudo ./wm-launch -i
+
+# you can now access wm-launch from everywhere
+# the -r <span class="number">100</span>x720 will create a screen of that size with TDE inside of it
+wm-launch -r <span class="number">1080</span>x720
+</pre>
+
+
+<p><a name="Usage"></a></p>
+<h2>Usage</h2>
+
+<p><code>TDE</code> has an entire wiki which explains most in detail. It can be found
+<a href="https://wiki.odex.be">here</a> The README helps you into figuring out how to help
+and how to get started</p>
+
+<p>We have three major directories</p>
 
 <ul>
-    <li><a href="https://cmake.org">CMake >= 3.0.0</a></li>
-    <li><a href="https://www.lua.org">Lua >= 5.1.0</a> or <a href="http://luajit.org">LuaJIT</a></li>
-    <li><a href="https://github.com/pavouk/lgi">LGI >= 0.8.0</a></li>
-    <li><a href="https://www.x.org/archive//individual/proto/">xproto >= 7.0.15</a></li>
-    <li><a href="https://xcb.freedesktop.org/">libxcb >= 1.6</a> with support for the RandR, XTest, Xinerama, SHAPE and
-
-<pre>
-XKB extensions
-</pre>
-</li>
-    <li><a href="https://xcb.freedesktop.org/">libxcb-cursor</a></li>
-    <li><a href="https://xcb.freedesktop.org/">libxcb-util >= 0.3.8</a></li>
-    <li><a href="https://xcb.freedesktop.org/">libxcb-keysyms >= 0.3.4</a></li>
-    <li><a href="https://xcb.freedesktop.org/">libxcb-icccm >= 0.3.8</a></li>
-    <li><a href="https://xcb.freedesktop.org/">libxcb-xfixes</a></li>
-    <li><a href="https://github.com/Airblader/xcb-util-xrm">xcb-util-xrm >= 1.0</a></li>
-    <li><a href="http://xkbcommon.org/">libxkbcommon</a> with X11 support enabled</li>
-    <li>[libstartup-notification >=
-
-<pre>
-<span class="number">0.10</span>](https://www.freedesktop.org/wiki/Software/startup-notification/)
-</pre>
-</li>
-    <li><a href="https://www.cairographics.org/">cairo</a> with support for XCB and GObject
-
-<pre>
-introspection
-</pre>
-</li>
-    <li><a href="http://www.pango.org/">Pango</a> with support for Cairo and GObject
-
-<pre>
-introspection
-</pre>
-</li>
-    <li><a href="https://wiki.gnome.org/Projects/GLib">GLib >= 2.40</a> with support for GObject
-
-<pre>
-introspection
-</pre>
-</li>
-    <li><a href="https://developer.gnome.org/gio/stable/">GIO</a> with support for GObject
-
-<pre>
-introspection
-</pre>
-</li>
-    <li><a href="https://wiki.gnome.org/Projects/GdkPixbuf">GdkPixbuf</a></li>
-    <li>libX11 with xcb support</li>
-    <li><a href="http://www.imagemagick.org/script/index.php">Imagemagick's convert utility</a></li>
-    <li><a href="https://github.com/devnev/libxdg-basedir">libxdg-basedir >= 1.0.0</a></li>
+    <li><code>tos</code> contains the configuration files of TDE - this directory contains
+    example conf files (the real once are stored in <code>~/.config/tos</code>)</li>
+    <li><code>plugins</code> contains example plugins for TDE (the real once are stored in
+    <code>~/.config/tde</code>)</li>
+    <li><code>tde</code> the source code of the desktop environment</li>
 </ul>
 
-<p>Additionally, the following optional dependencies exist:</p>
+<h3>Unit Test</h3>
 
-<ul>
-    <li><a href="https://www.freedesktop.org/wiki/Software/dbus/">DBus</a> for DBus integration
+<p>You can run unit tests by executing the following command in the root project
+directory</p>
 
-<pre>
-<span class="keyword">and</span> the <span class="backtick"><code>tde-client</code></span> utility
-</pre>
-</li>
-    <li><a href="https://asciidoctor.org/">asciidoctor</a> for generating man pages</li>
-    <li><a href="http://www.gzip.org/">gzip</a> for compressing man pages</li>
-    <li><a href="https://stevedonovan.github.io/ldoc/">ldoc >= 1.4.5</a> for generating the
 
 <pre>
-documentation
+bash test-runner.sh
 </pre>
-</li>
-    <li><a href="https://olivinelabs.com/busted/">busted</a> for running unit tests</li>
-    <li><a href="https://github.com/mpeterv/luacheck">luacheck</a> for static code analysis</li>
-    <li><a href="https://keplerproject.github.io/luacov/">LuaCov</a> for collecting code coverage
+
+
+<p>You can also get the JUNIT output by executing the following (t will be saved in
+result.xml)</p>
+
 
 <pre>
-information
+bash test-runner.sh result.xml
 </pre>
-</li>
-    <li>libexecinfo on systems where libc does not provide <code>backtrace_symbols()</code> to
+
+
+<p>Alternative unit testing output is also available</p>
+
 
 <pre>
-generate slightly better backtraces on crashes
+RUNNER=<span class="string">"tap"</span> bash test-runner.sh
 </pre>
-</li>
-    <li><code>Xephyr</code> or <code>Xvfb</code> for running integration tests</li>
-    <li><a href="https://www.gtk.org/">GTK+ >= 3.10</a> for <code>./themes/gtk/</code></li>
-    <li><a href="https://gitlab.freedesktop.org/xorg/lib/libxcb-errors">xcb-errors</a> for
+
+
+<h4>Docker</h4>
+
+<p>You can also run the test suite using the <code>tos</code> docker image We have provided an
+image on top of that located in <code>tests/Dockerfile</code>` You can build and run it
+like this:</p>
+
 
 <pre>
-pretty-printing of X11 errors
+# build the image
+docker build -t <span class="string">"tde-test-suite"</span> tests
+
+# run the test suite
+docker run -v <span class="string">"$(pwd):/data"</span> tde-test-suite
 </pre>
-</li>
-    <li><a href="https://wiki.gnome.org/action/show/Projects/LibRsvg">libRSVG</a> for displaying
+
+
+<p>Alternatively we have provided a docker-compose file that does this all for you</p>
+
 
 <pre>
-SVG files without scaling artifacts
+docker-compose up
 </pre>
-</li>
-    <li><a href="http://tripie.sweb.cz/utils/wmctrl">wmctrl</a> for testing WM interactions
+
+
+<h3>Profiling</h3>
+
+<p>When developing you can also perform some profiling.
+The <code>TDE profiler</code> listens for function calls and counts how many times the happen. For each function call we measure the time it took.
+This way we can have educated guesses where the time gets spent the most.
+Thus improving performance in the most critical parts of the system.</p>
+
+<p>Profiling can be done by executing the following command:</p>
+
 
 <pre>
-with external actions
-</pre>
-</li>
-    <li><a href="https://invisible-island.net/xterm/">xterm</a> for various test cases</li>
-</ul>
+bash profiler.sh <span class="comment">--help
+</span># <span class="keyword">for</span> example profile tde (<span class="keyword">for</span> <span class="number">10</span> seconds) <span class="keyword">and</span> <span class="keyword">return</span> the top <span class="number">100</span> functions (<span class="keyword">in</span> terms of cpu time)
+bash profiler.sh -t <span class="number">10</span> -F <span class="number">100</span>
+# Same as above but use realtime instead of cpu time
+bash profiler.sh -t <span class="number">10</span> -F <span class="number">100</span> -r
 
-<hr/>
+# Save the result to tde-functions.result
+bash profiler.sh -t <span class="number">10</span> -o tde-functions.result
+
+# Run the profiler on a file
+bash profiler.sh -f tests/scripts/full
+</pre>
+
+
+<h3>Hot Reload Widgets</h3>
+
+<p>You can also quickly develop widgets for <code>tde</code> this can be done through the <code>hot-reload-widget.sh</code> file
+Note that you need to have <code>inotify-tools</code> installed.
+If you are using the <code>TOS</code> operating system, this script will auto download it for you.</p>
+
+<p>Development using this script is as followed:</p>
+
+<ol>
+    <li>create a <code>.lua</code> file in our example we will use <code>hello.lua</code></li>
+    <li>The bare minimum for this file should be the following:</li>
+</ol>
+
+
+<pre>
+<span class="keyword">local</span> wibox = <span class="global">require</span>(<span class="string">"wibox"</span>)
+<span class="keyword">return</span> wibox.widget.textbox(<span class="string">"hello"</span>)
+</pre>
+
+
+<ol>
+    <li>Run the script on this file</li>
+</ol>
+
+
+<pre>
+bash scripts/hot-reload-widget.sh hello.lua # replace hello.lua with your file
+</pre>
+
+
+<ol>
+    <li>develop your widget/plugin</li>
+</ol>
+
 <blockquote>
-    <blockquote>
-        <blockquote>
-            <blockquote>
-                <blockquote>
-                    <blockquote>
-                        <blockquote>
-                            <p>6ef3a8f059a1394a6dedee368dac7eb24a8e39bc
-                            <a name="Running_Awesome"></a></p>
-                        </blockquote>
-                    </blockquote>
-                </blockquote>
-            </blockquote>
-        </blockquote>
-    </blockquote>
+    <p>NOTE: The file you are developing on needs to return a <a href="../libraries/wibox.widget.html#">wibox.widget</a> object
+    Otherwise <code>TDE</code> doesn't know how to display it</p>
+
+    <p>Second NOTE: the script listens for filesystem event and reloads your widget each time it is changed</p>
 </blockquote>
-<h2>Running Awesome</h2>
 
-<p>You can directly select Awesome from your display manager. If not, you can
-add the following line to your <code>.xinitrc</code> to start Awesome using <code>startx</code>
-or to <code>.xsession</code> to start Awesome using your display manager:</p>
+<p>Some people don't like that the hot-reloaded widget consumes the entire space.
+If that is the case then use the <code>-s</code> option this will make the widget consume 50% of the screen instead of everything. (This issue is not present with multi monitor setups)</p>
 
+<h4>closing the widget</h4>
 
-<pre>
-exec awesome
-</pre>
+<p>We don't use the Escape key to close the widget
+This is because we would need to consume the Escape key.
+This would result it the underlying widget from not being able to capture this event.
+Thus we decided to strictly use the backdrop/close button to close the widget.</p>
 
+<h3>Commit hooks</h3>
 
-<p>In order to connect Awesome to a specific display, make sure that
-the <code>DISPLAY</code> environment variable is set correctly, e.g.:</p>
+<p>Before creating commits you need to setup commit hooks.
+These commit hooks perform a series of checks to make sure you didn't forget something important</p>
 
+<p>This ranges from linting, license checks, correct usage of branching etc</p>
 
-<pre>
-DISPLAY=foo.bar:<span class="number">1</span> exec awesome
-</pre>
+<p>It is not mandatory to use this feature, however it will make it more likely to be allowed.</p>
 
-
-<p>(This will start Awesome on display <code>:1</code> of the host foo.bar.)</p>
-
-<p><a name="Configuration"></a></p>
-<h2>Configuration</h2>
-
-<p>The configuration of Awesome is done by creating a
-<code>$XDG_CONFIG_HOME/awesome/rc.lua</code> file, typically <code>~/.config/awesome/rc.lua</code>.</p>
-
-<p>An example configuration named <code>awesomerc.lua</code> is provided in the source.</p>
-
-<p><a name="Troubleshooting"></a></p>
-<h2>Troubleshooting</h2>
-
-<p>On most systems any message printed by Awesome (including warnings and errors)
-is written to <code>~/.xsession-errors</code>.</p>
-
-<p>If Awesome does not start or the configuration file is not producing the
-desired results the user should examine this file to gain insight into the
-problem.</p>
-
-<h3>Debugging tips</h3>
-
-<p>You can call <a href="../core_components/awesome.html#">awesome</a> with <code>gdb</code> like this:</p>
+<p>Setting the commit hooks is as easy as executing the following commands from the project root:</p>
 
 
 <pre>
-DISPLAY=:<span class="number">2</span> gdb awesome
+ln -s <span class="string">"$PWD"</span>/hooks/pre-commit .git/hooks/pre-commit
+ln -s <span class="string">"$PWD"</span>/hooks/commit-msg .git/hooks/commit-msg
+ln -s <span class="string">"$PWD"</span>/hooks/pre-push .git/hooks/pre-push
 </pre>
 
 
-<p>Then in <code>gdb</code> set any arguments and run it:</p>
 
-<pre><code> (gdb) set args --replace
- (gdb) run
-</code></pre>
+<!-- ROADMAP -->
 
 
-<p><a name="Asking_questions"></a></p>
-<h2>Asking questions</h2>
+<p><a name="Roadmap"></a></p>
+<h2>Roadmap</h2>
 
-<h4>IRC</h4>
+<p>See the
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment/issues">open issues</a> for a
+list of proposed features (and known issues).</p>
 
-<p>You can join us in the <code>#awesome</code> channel on the <a href="http://www.oftc.net/">OFTC</a> IRC network.</p>
 
-<p><a href="https://webchat.oftc.net/?channels=awesome">IRC Webchat</a></p>
+<!-- CONTRIBUTING -->
 
-<h4>Stack Overflow</h4>
 
-<p>You can ask questions on <a href="http://stackoverflow.com/questions/tagged/awesome-wm">Stack Overflow</a>.</p>
+<p><a name="Contributing"></a></p>
+<h2>Contributing</h2>
 
-<h4>Reddit</h4>
+<p>Contributions are what make the open source community such an amazing place to
+be learn, inspire, and create. Any contributions you make are <strong>greatly
+appreciated</strong>. First ensure you have read the <a href="https://wiki.odex.be">wiki</a>
+especially the <a href="https://wiki.odex.be/Developer/style-guide">style guide</a> page</p>
 
-<p>We also have a <a href="https://www.reddit.com/r/awesomewm/">awesome subreddit</a> where you can share your work and ask questions.</p>
+<ol>
+    <li>Fork the Project</li>
+    <li>Create your Feature Branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+    <li>Commit your Changes (<code>git commit -m &apos;Add some AmazingFeature&apos;</code>)</li>
+    <li>Push to the Branch (<code>git push origin feature/AmazingFeature</code>)</li>
+    <li>Open a Pull Request</li>
+</ol>
 
-<p><a name="Reporting_issues"></a></p>
-<h2>Reporting issues</h2>
 
-<p>Please report any issues you may find on <a href="https://github.com/awesomeWM/awesome/issues">our bugtracker</a>.</p>
+<!-- LICENSE -->
 
-<p><a name="Contributing_code"></a></p>
-<h2>Contributing code</h2>
-
-<p>You can submit pull requests on the <a href="https://github.com/awesomeWM/awesome">github repository</a>.
-Please read the <a href="https://github.com/awesomeWM/awesome/blob/master/docs/02-contributing.md">contributing guide</a> for any coding, documentation or patch guidelines.</p>
-
-<p><a name="Status"></a></p>
-<h2>Status</h2>
-
-<p><a href="https://travis-ci.com/awesomeWM/awesome"><img src="https://travis-ci.com/awesomeWM/awesome.svg?branch=master" alt="Build Status"/></a></p>
-
-<p><a name="Documentation"></a></p>
-<h2>Documentation</h2>
-
-<p>Online documentation is available <a href="https://awesomewm.org/apidoc/">here</a>.</p>
 
 <p><a name="License"></a></p>
 <h2>License</h2>
 
-<p>The project is licensed under GNU General Public License v2 or later.
-You can read it online at (<a href="http://www.gnu.org/licenses/gpl-2.0.html">v2</a>
-or <a href="http://www.gnu.org/licenses/gpl.html">v3</a>).</p>
+<p>Distributed under the MIT License. See <code>LICENSE</code> for more information.</p>
+
+
+<!-- CONTACT -->
+
+
+<p><a name="Contact"></a></p>
+<h2>Contact</h2>
+
+<p>Tom Meyers - tom@odex.be</p>
+
+<p>Project Link:
+<a href="https://github.com/ODEX-TOS/tos-desktop-environment">https://github.com/ODEX-TOS/tos-desktop-environment</a></p>
+
+
+<!-- ACKNOWLEDGEMENTS -->
+
+
+<p><a name="Acknowledgments"></a></p>
+<h2>Acknowledgments</h2>
+
+<ul>
+    <li><a href="https://www.odex.be">F0xedb</a></li>
+    <li><a href="https://tos.odex.be">TOS Homepage</a></li>
+</ul>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+
 
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-20 10:25:39 </i>
+<i style="float:right;">Last updated 2021-05-20 13:14:59 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
