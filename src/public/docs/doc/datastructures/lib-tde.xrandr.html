@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tdedatamod lib-tde.datastructure.set - TDE API documentation</title>
+    <title>Tdedatamod lib-tde.xrandr - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
      function show_extra(id) {
@@ -56,10 +56,10 @@
   <li><a href="../datastructures/lib-tde.datastructure.hashmap.html">lib-tde.datastructure.hashmap</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.queue.html">lib-tde.datastructure.queue</a></li>
-  <li><strong>lib-tde.datastructure.set</strong></li>
+  <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
-  <li><a href="../datastructures/lib-tde.xrandr.html">lib-tde.xrandr</a></li>
+  <li><strong>lib-tde.xrandr</strong></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -273,45 +273,12 @@
 
 <div id="content">
 
-<h1>Module: <code>lib-tde.datastructure.set</code></h1>
-<p>Lua Implementation of a set</p>
-<p>
-<p> This module describes the api usage of a set (List with only unique elements)
- You can add items to the set or remove them</p>
+<h1>Module: <code>lib-tde.xrandr</code></h1>
+<p>Lua bindings for the xrandr interface/cli</p>
 
-
-<pre>
-<span class="keyword">local</span> set = <span class="global">require</span>(<span class="string">"lib-tde.datastructure.set"</span>)
-<span class="keyword">local</span> list = set()
-list.add(<span class="string">"first"</span>)
-list.add(<span class="string">"second"</span>)
-list.remove(<span class="string">"first"</span>) <span class="comment">-- returns true, to indicate that it exists
-</span>list.add(<span class="string">"second"</span>) <span class="comment">-- returns false, to indicate it already exists
-</span>
-list.to_list() <span class="comment">-- Returns a plain lua list with all elements
-</span>list.to_ordered_list() <span class="comment">-- returns a plain lua list with all elements, ordered in the way you put them in</span>
-</pre>
-
-<p> Time complexity:</p>
-
-<ul>
-    <li><code>Insert element</code>    O(1)</li>
-    <li><code>Remove element</code>    O(1)</li>
-    <li><code>To List</code>           O(1)</li>
-    <li><code>To Ordered List</code>   O(1)</li>
-</ul>
-</p>
+<p> xrandr is an official configuration utility to the RandR (Resize and Rotate) X Window System extension.</p>
+<p> It can be used to set the size, orientation or reflection of the outputs for a screen.</p>
     <div class="extra-header">
-  <div class="extra-header__section">
-    <h3>Class Hierarchy</h3>
-    <div class="inheritance">
-    <ul class="inheritance__level inheritance__level--root">
-        <li class="inheritance__level__node inheritance__level__node--root">
-            <strong>lib-tde.datastructure.set</strong>
-        </li>
-    </ul>
-    </div>
-  </div>
 
 
   <div class="extra-header__section">
@@ -329,52 +296,52 @@ list.to_list() <span class="comment">-- Returns a plain lua list with all elemen
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set">lib-tde.datastrucuture.set <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <a href="#outputs"><span class='function_modname'>lib-tde.xrandr.</span>outputs <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Create a new Set (List with only unique values)</td>
+      <td colspan="2" class="summary">Get the active screen outputs</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set.add">lib-tde.datastrucuture.set.add <span class='function_args'> <b>(</b>value<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#arrange"><span class='function_modname'>lib-tde.xrandr.</span>arrange <span class='function_args'> <b>(</b>list<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Add an element to the set, if it was successfully added return true (didn't exist yet)</td>
+      <td colspan="2" class="summary">Arrange all possible permutations of a given list of screens</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set.remove">lib-tde.datastrucuture.set.remove <span class='function_args'> <b>(</b>value<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#menu"><span class='function_modname'>lib-tde.xrandr.</span>menu <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Remove an element from the set, if it was successfully removed return true</td>
+      <td colspan="2" class="summary">Build available screen orientations with accompanying xrandr commands</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set.to_ordered_list">lib-tde.datastrucuture.set.to_ordered_list <span class='function_args'> <b>(</b><b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#output_data"><span class='function_modname'>lib-tde.xrandr.</span>output_data <span class='function_args'> <b>(</b><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Convert the set to a regular lua list, in the order that you added the elements</td>
+      <td colspan="2" class="summary">Get a list of all existing screens with their resolutions and refresh rates</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set.to_list">lib-tde.datastrucuture.set.to_list <span class='function_args'> <b>(</b><b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#highest_resolution"><span class='function_modname'>lib-tde.xrandr.</span>highest_resolution <span class='function_args'> <b>(</b>output<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(string, table)</span></span>
       </td>
-      <td colspan="2" class="summary">Convert the set to a regular lua list</td>
+      <td colspan="2" class="summary">Find the highest resolution of a given monitor with all possible refresh rates</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set.iterate">lib-tde.datastrucuture.set.iterate <span class='function_args'> <b>(</b><b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#highest_refresh_rate"><span class='function_modname'>lib-tde.xrandr.</span>highest_refresh_rate <span class='function_args'> <b>(</b>output<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, string, table)</span></span>
       </td>
-      <td colspan="2" class="summary">Iterate over the set with an iterator (much like ipairs())</td>
+      <td colspan="2" class="summary">Find the highest refresh rate of a given monitor with the accompanying resolution</td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#lib-tde.datastrucuture.set.exists">lib-tde.datastrucuture.set.exists <span class='function_args'> <b>(</b>value<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+        <a href="#highest_refresh_rate_from_resolution"><span class='function_modname'>lib-tde.xrandr.</span>highest_refresh_rate_from_resolution <span class='function_args'> <b>(</b>res_tbl<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
       </td>
-      <td colspan="2" class="summary">Check if an element exists in the set</td>
+      <td colspan="2" class="summary">Find the highest refresh rate of a given resolution</td>
     </tr>
 </table>
 
@@ -386,237 +353,257 @@ list.to_list() <span class="comment">-- Returns a plain lua list with all elemen
 
     <dl class="function">
     <dt>
-    <a name = "lib-tde.datastrucuture.set"></a>
-    <strong>lib-tde.datastrucuture.set <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <a name = "outputs"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>outputs <span class='function_args'> <b>(</b><b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Create a new Set (List with only unique values)
+    Get the active screen outputs
 
 
     <h3>Returns:</h3>
     <ol>
 
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        An empty set
+        A list containing the names of all screens
     </ol>
 
 
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- This will create a new set
-</span> lib-tde.datastrucuture.set()</pre>
+        <pre class="example"><span class="comment">-- Get all active screens
+</span> lib-tde.xrandr.outputs() <span class="comment">-- Returns (For example) {'eDP1', 'DP1', 'DP2'}</span></pre>
     </ul>
 
 
-    <span id=item954 class="hide_extra">
+    <span id=item967 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "lib-tde.datastrucuture.set.add"></a>
-    <strong>lib-tde.datastrucuture.set.add <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <a name = "arrange"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>arrange <span class='function_args'> <b>(</b>list<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Add an element to the set, if it was successfully added return true (didn't exist yet)
+    Arrange all possible permutations of a given list of screens
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">value</span>
-            <span class="types"><span class="type">object</span></span>
-         The value to put into the set
+        <li><span class="parameter">list</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A list of screen outputs
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        boolean Returns true if a new element was inserted, false if it already exists
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A list containing all screen permutations
     </ol>
 
 
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- Add the string 'tde' to the set
-</span>   set.add(<span class="string">"tde"</span>)</pre>
+        <pre class="example"><span class="comment">-- Get all list of all permutations
+</span> lib-tde.xrandr.arrange({<span class="string">'eDP1'</span>, <span class="string">'DP2'</span>}) <span class="comment">-- Returns {1: {'eDP1'}, 2: {'DP2'}, 3: {'eDP1', 'DP2'}, 4: {'DP2', 'eDP1'}}</span></pre>
     </ul>
 
 
-    <span id=item955 class="hide_extra">
+    <span id=item968 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "lib-tde.datastrucuture.set.remove"></a>
-    <strong>lib-tde.datastrucuture.set.remove <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
+    <a name = "menu"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>menu <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Remove an element from the set, if it was successfully removed return true
+    Build available screen orientations with accompanying xrandr commands
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A list of tables with the following signature: {label, cmd, choice}
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Get all list of all permutations with labels, command and choice
+</span> lib-tde.xrandr.menu({<span class="string">'eDP1'</span>, <span class="string">'DP2'</span>})</pre>
+    </ul>
+
+
+    <span id=item969 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "output_data"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>output_data <span class='function_args'> <b>(</b><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Get a list of all existing screens with their resolutions and refresh rates
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        A table of tables with the following signature: {'eDP1': {resolution: {'Refresh Rate 1', 'Refresh Rate 2', ...}, '1920x1080': {'60'}, ...}, ...}
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Get a list of all screens
+</span> <span class="keyword">local</span> xrandr_data = lib-tde.xrandr.output_data()</pre>
+    </ul>
+
+
+    <span id=item970 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "highest_resolution"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>highest_resolution <span class='function_args'> <b>(</b>output<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;(string, table)</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Find the highest resolution of a given monitor with all possible refresh rates
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">value</span>
-            <span class="types"><span class="type">object</span></span>
-         The value to remove from the set
+        <li><span class="parameter">output</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A screen table from lib-tde.xrandr.output_data or the string representation of an randr screen
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        A string representation of the highest resolution of a given monitor eg 1920x1080</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The seconds return element is a table of possible refresh rates</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Get back the highest resolution of the 'eDP1' monitor
+</span> <span class="keyword">local</span> xrandr_data = lib-tde.xrandr.highest_resolution(<span class="string">'eDP1'</span>) <span class="comment">-- Returns for example: 1920x1080, {'60', '120', '144'}</span></pre>
+    </ul>
+
+
+    <span id=item971 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "highest_refresh_rate"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>highest_refresh_rate <span class='function_args'> <b>(</b>output<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;(number, string, table)</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Find the highest refresh rate of a given monitor with the accompanying resolution
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">output</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A screen table from lib-tde.xrandr.output_data or the string representation of an randr screen
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        The highest refresh rate found in Hertz</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The seconds return element is a string representation of the resolution linked to this refresh rate</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The third return element is a table of possible refresh rates linked to the resolution</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- Get back the highest refresh rate of the 'eDP1' monitor
+</span> <span class="keyword">local</span> xrandr_data = lib-tde.xrandr.highest_refresh_rate(<span class="string">'eDP1'</span>) <span class="comment">-- Returns for example: 144, '1920x1080', {'60', '120', '144'}</span></pre>
+    </ul>
+
+
+    <span id=item972 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "highest_refresh_rate_from_resolution"></a>
+    <strong><span class='function_modname'>lib-tde.xrandr.</span>highest_refresh_rate_from_resolution <span class='function_args'> <b>(</b>res_tbl<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Find the highest refresh rate of a given resolution
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">res_tbl</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A resolution table from lib-tde.xrandr.output_data, the reolsution table must be taken from a given screen
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-        boolean Returns true if the element was removed, false if it didn't exist
+           <span class="types"><span class="type">number</span></span>
+        The highest refresh rate found in Hertz
     </ol>
 
 
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- Remove the string 'tde' from the set
-</span>   set.remove(<span class="string">"tde"</span>)</pre>
+        <pre class="example"><span class="comment">-- Get back the highest refresh rate of the 'eDP1' monitor with resolution '1920x1080'
+</span><span class="keyword">local</span> xrandr_data = lib-tde.xrandr.highest_refresh_rate_from_resolution(output[<span class="string">'eDP1'</span>][<span class="string">'1920x1080'</span>]) <span class="comment">-- Returns for example 144
+</span><span class="keyword">local</span> xrandr_data = lib-tde.xrandr.highest_refresh_rate_from_resolution({<span class="string">'60'</span>, <span class="string">'120'</span>, <span class="number">144</span>'}) <span class="comment">-- Returns for example 144</span></pre>
     </ul>
 
 
-    <span id=item956 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "lib-tde.datastrucuture.set.to_ordered_list"></a>
-    <strong>lib-tde.datastrucuture.set.to_ordered_list <span class='function_args'> <b>(</b><b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Convert the set to a regular lua list, in the order that you added the elements
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-        table A regular lua list with elements in the order that you added them
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="keyword">local</span> list = set.to_ordered_list()</pre>
-    </ul>
-
-
-    <span id=item957 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "lib-tde.datastrucuture.set.to_list"></a>
-    <strong>lib-tde.datastrucuture.set.to_list <span class='function_args'> <b>(</b><b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Convert the set to a regular lua list
-
-
-    <h3>Returns:</h3>
-    <ol>
-
-        table A regular lua list
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="keyword">local</span> list = set.to_list()</pre>
-    </ul>
-
-
-    <span id=item958 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "lib-tde.datastrucuture.set.iterate"></a>
-    <strong>lib-tde.datastrucuture.set.iterate <span class='function_args'> <b>(</b><b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Iterate over the set with an iterator (much like ipairs())
-
-
-    <h3>Returns:</h3>
-    <ol>
-        <li>
-        fun(t: table, i?: integer):integer, any iterator</li>
-        <li>
-        table t</li>
-        <li>
-        integer i</li>
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example"><span class="keyword">for</span> index, value <span class="keyword">in</span> set.iterate() <span class="keyword">do</span>
- <span class="global">print</span>(<span class="string">"Index: "</span> .. index)
- <span class="global">print</span>(<span class="string">"Value: "</span> .. value)
-<span class="keyword">end</span></pre>
-    </ul>
-
-
-    <span id=item959 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "lib-tde.datastrucuture.set.exists"></a>
-    <strong>lib-tde.datastrucuture.set.exists <span class='function_args'> <b>(</b>value<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Check if an element exists in the set
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">value</span>
-            <span class="types"><span class="type">object</span></span>
-         The value to find in the set
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        boolean Returns true if the element exists
-    </ol>
-
-
-
-    <h3>Usage:</h3>
-    <ul>
-        <pre class="example">set.exists(<span class="string">"tde"</span>)</pre>
-    </ul>
-
-
-    <span id=item960 class="hide_extra">
+    <span id=item973 class="hide_extra">
     </span>
 
 </dd>

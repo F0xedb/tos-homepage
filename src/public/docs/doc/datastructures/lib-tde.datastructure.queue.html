@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tdedatamod lib-tde.datastructure.queue - TDE API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
    <script>
@@ -46,6 +47,7 @@
 <h2>Contents</h2>
 <ul>
 <li><a href="#Static_module_functions">Static module functions</a></li>
+<li><a href="#Object_properties">Object properties</a></li>
 </ul>
 
 
@@ -58,6 +60,7 @@
   <li><a href="../datastructures/lib-tde.datastructure.set.html">lib-tde.datastructure.set</a></li>
   <li><a href="../datastructures/lib-tde.datastructure.stack.html">lib-tde.datastructure.stack</a></li>
   <li><a href="../datastructures/lib-tde.sort.quicksort.html">lib-tde.sort.quicksort</a></li>
+  <li><a href="../datastructures/lib-tde.xrandr.html">lib-tde.xrandr</a></li>
 </ul>
 <h2>Core components</h2>
 <ul class="nowrap">
@@ -299,6 +302,23 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
 </ul>
 </p>
     <div class="extra-header">
+  <div class="extra-header__section">
+    <h3>Class Hierarchy</h3>
+    <div class="inheritance">
+    <ul class="inheritance__level inheritance__level--root">
+        <li class="inheritance__level__node inheritance__level__node--root">
+            <a href="../datastructures/lib-tde.datastructure.linkedList.html">lib-tde.datastructure.linkedList</a>
+        </li>
+        <li>
+    <ul class="inheritance__level ">
+        <li class="inheritance__level__node ">
+            <strong>lib-tde.datastructure.queue</strong>
+        </li>
+    </ul>
+        </li>
+    </ul>
+    </div>
+  </div>
 
 
   <div class="extra-header__section">
@@ -350,6 +370,41 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
       <td colspan="2" class="summary">This function returns the amount of elements in the queue</td>
     </tr>
 </table>
+<h2><a href="#Object_properties">Object properties</a></h2>
+<table class="function_list">
+    <tr>
+      <td class="shortname" ><a href="#head">head</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
+      <td colspan="1" class="summary">The current pointer in the linked list</td>
+      <td class="baseclass" nowrap>
+        Inherited from lib-tde.datastructure.linkedList
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#head.next">next</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
+      <td colspan="1" class="summary">The next pointer in the linked list</td>
+      <td class="baseclass" nowrap>
+        Inherited from lib-tde.datastructure.linkedList
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#head.previous">previous</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
+      <td colspan="1" class="summary">The previous pointer in the linked list</td>
+      <td class="baseclass" nowrap>
+        Inherited from lib-tde.datastructure.linkedList
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#head.value">value</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>object</span></td>
+      <td colspan="1" class="summary">The value that is stored in the linked list</td>
+      <td class="baseclass" nowrap>
+        Inherited from lib-tde.datastructure.linkedList
+      </td>
+    </tr>
+</table>
 
 <br/>
 <br/>
@@ -385,7 +440,7 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
     </ul>
 
 
-    <span id=item948 class="hide_extra">
+    <span id=item949 class="hide_extra">
     </span>
 
 </dd>
@@ -417,7 +472,7 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
     </ul>
 
 
-    <span id=item949 class="hide_extra">
+    <span id=item950 class="hide_extra">
     </span>
 
 </dd>
@@ -442,7 +497,7 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
     </ul>
 
 
-    <span id=item950 class="hide_extra">
+    <span id=item951 class="hide_extra">
     </span>
 
 </dd>
@@ -467,7 +522,7 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
     </ul>
 
 
-    <span id=item951 class="hide_extra">
+    <span id=item952 class="hide_extra">
     </span>
 
 </dd>
@@ -492,7 +547,95 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
     </ul>
 
 
-    <span id=item952 class="hide_extra">
+    <span id=item953 class="hide_extra">
+    </span>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "head"></a>
+    <strong>head</strong>
+    <span class="proptype"><span class='summary_type'>table</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from lib-tde.datastructure.linkedList
+    </span>
+    </dt>
+    <dd>
+    The current pointer in the linked list
+
+
+
+
+
+
+
+    <span id=item945 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "head.next"></a>
+    <strong>next</strong>
+    <span class="proptype"><span class='summary_type'>table</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from lib-tde.datastructure.linkedList
+    </span>
+    </dt>
+    <dd>
+    The next pointer in the linked list
+
+
+
+
+
+
+
+    <span id=item946 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "head.previous"></a>
+    <strong>previous</strong>
+    <span class="proptype"><span class='summary_type'>table</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from lib-tde.datastructure.linkedList
+    </span>
+    </dt>
+    <dd>
+    The previous pointer in the linked list
+
+
+
+
+
+
+
+    <span id=item947 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "head.value"></a>
+    <strong>value</strong>
+    <span class="proptype"><span class='summary_type'>object</span></span>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from lib-tde.datastructure.linkedList
+    </span>
+    </dt>
+    <dd>
+    The value that is stored in the linked list
+
+
+
+
+
+
+
+    <span id=item948 class="hide_extra">
     </span>
 
 </dd>
@@ -504,7 +647,7 @@ list.<span class="global">next</span>() <span class="comment">-- returns the nex
 <div id="about">
 <i style="float:left;">generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
 <i>Build with 💜 By F0xedb</i>
-<i style="float:right;">Last updated 2021-05-20 15:13:50 </i>
+<i style="float:right;">Last updated 2021-06-01 11:30:37 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
