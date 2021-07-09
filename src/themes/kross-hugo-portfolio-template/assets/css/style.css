@@ -908,3 +908,28 @@ blockquote {
   width: 80vw;
   max-width: 80vw;
 }
+
+@media only screen and (max-width: 600px) {
+  /* On a phone this logo is to big and unreadable*/
+  .logo {
+    display: none;
+  }
+  
+  .navigation {
+    padding 0px;
+  }
+  
+  .navbar {
+    width: 100vw;
+    padding: 0px;
+  }
+  
+  .navbar-toggler {
+    margin: 10px;
+  }
+  
+  #navigation {
+    width: 100vw;
+    background-color: rgb(65, 34, 142);
+  }
+}
