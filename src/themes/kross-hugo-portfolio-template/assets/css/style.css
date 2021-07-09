@@ -916,7 +916,7 @@ blockquote {
   }
   
   .navigation {
-    padding 0px;
+    padding: 0px !important;
   }
   
   .navbar {
@@ -925,7 +925,7 @@ blockquote {
   }
   
   .navbar-toggler {
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
   }
   
   #navigation {
