@@ -9,7 +9,7 @@ services:
     environment:
       - HUGO_REFRESH_TIME=3600
       - HUGO_THEME=kross-hugo-portfolio-template
-      - HUGO_BASEURL=https://tos.pbfp.xyz
+      - HUGO_BASEURL=https://tos.odex.be
     restart: unless-stopped
 
   web:
@@ -17,7 +17,7 @@ services:
     volumes:
       - ./output:/var/www
     environment:
-      - VIRTUAL_HOST=tos.pbfp.xyz
+      - VIRTUAL_HOST=tos.odex.be
     ports:
-      - 80:80
+      - 8080:80
     restart: unless-stopped

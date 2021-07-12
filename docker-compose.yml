@@ -9,7 +9,7 @@ services:
     environment:
       - HUGO_REFRESH_TIME=3600
       - HUGO_THEME=kross-hugo-portfolio-template
-      - HUGO_BASEURL=https://tos.pbfp.xyz
+      - HUGO_BASEURL=https://tos.odex.be
     restart: unless-stopped
 
   web:
@@ -17,14 +17,14 @@ services:
     volumes:
       - gen:/var/www
     environment:
-      - VIRTUAL_HOST=tos.pbfp.xyz
+      - VIRTUAL_HOST=tos.odex.be
     ports:
       - 80
     labels:
       - "traefik.enable=true"
       - "traefik.backend=tos"
       - "traefik.docker.network=web"
-      - "traefik.frontend.rule=Host:tos.pbfp.xyz"
+      - "traefik.frontend.rule=Host:tos.odex.be"
       - "traefik.port=80"
     networks:
       - web
