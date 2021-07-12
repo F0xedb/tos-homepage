@@ -7,7 +7,13 @@
 [![Build Status](https://jenkins.pbfp.xyz/buildStatus/icon?job=Hugo)](https://jenkins.pbfp.xyz/job/Hugo/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FF0xedb%2Ftos-homepage.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FF0xedb%2Ftos-homepage?ref=badge_shield)
 
-### 🏠 [Homepage](https://tos.pbfp.xyz)
+<p align="center">
+   <a href="https://www.paypal.com/donate?hosted_button_id=X892LWMTDU6D6">
+     <img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Donate with PayPal" width="300" height="100"/>
+   </a>
+</p>
+
+### 🏠 [Homepage](https://tos.odex.be)
 
 ## explanation
 
