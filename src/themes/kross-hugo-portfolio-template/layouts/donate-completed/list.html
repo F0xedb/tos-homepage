@@ -19,9 +19,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	--planet-blue-shadow: #36C6CD;
 }
 html { background: var(--planet-cosmos); }
+body { background: var(--planet-cosmos) !important; }
 
 .planet {
-  position: relative;
+    position: relative;
+    top: calc(50vh - 250px);
 	width: 800px;
 	height: 500px;
 	margin: auto;
@@ -583,7 +585,7 @@ h1 {
 	margin: auto;
 	left: 0;
 	right: 0;
-	top:0;
+	top: 10vh;
 	bottom:0;
 	text-align: center;
 	height: 100vh;
